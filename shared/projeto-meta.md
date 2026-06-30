@@ -1,0 +1,49 @@
+# Meta do Projeto - Vitrine MOOC Ifes
+
+Fatos estaveis do projeto. Fonte canonica para os estagios. Atualize aqui quando algo mudar, nunca duplique em outros arquivos.
+
+## Identidade
+
+| Campo | Valor |
+|-------|-------|
+| Produto | Vitrine dos cursos abertos (MOOC) do Ifes |
+| Organizacao | Ifes - CEFOR (Centro de Referencia em Formacao e em Educacao a Distancia) |
+| URL atual | https://mooc.cefor.ifes.edu.br/ |
+| Setores envolvidos | CGTI (infraestrutura) e CGTE (desenvolvimento) |
+| Equipe de desenvolvimento | Elton Vinicius e Marcos "Marquito" Forecchi Accioly (CGTE) |
+| Infraestrutura | Eduardo "Dudu" Moura da Silva (CGTI) |
+
+## Tecnologia
+
+| Campo | Valor |
+|-------|-------|
+| Plataforma | WordPress |
+| Versao alvo | 7.0 (a Vitrine atual roda 5.9) |
+| Tema atual | `vitrinemooctheme` (Bootstrap 4.2.1, Font Awesome 4.7) |
+| Ambiente de trabalho | Local (WP7) e depois ambiente de teste dedicado (VM da CGTI) |
+| Banco de dados | Dump do banco atual fornecido pela CGTI para trabalho local |
+| Modelo de referencia | Estrutura de pastas do repositorio da Base de Conhecimento |
+
+## Escopo do Catalogo
+
+| Campo | Valor |
+|-------|-------|
+| Cursos publicados | 165 (ver `stages/02-catalogo/references/cursos-fonte.md`) |
+| Cursos em producao | 65 (previstos ate 10/06/26) |
+
+## Itens a confirmar no `setup`
+
+Os valores abaixo dependem da CGTI e do design final. Sao preenchidos no onboarding.
+
+| Item | Placeholder |
+|------|-------------|
+| Branch de producao (Master) | {{BRANCH_PRODUCAO}} |
+| Branch de teste / destino dos PRs | {{BRANCH_TESTE}} |
+| URL do ambiente de teste | {{URL_TESTE}} |
+| Repositorio modelo (Base de Conhecimento) | {{REPO_BASE_CONHECIMENTO}} |
+| Estagio inicial padrao | {{ESTAGIO_INICIAL}} |
+
+## Prazos
+
+- Ambiente de teste da Vitrine: inicio previsto por volta de 06/07.
+- Ate la, a equipe trabalha localmente.
