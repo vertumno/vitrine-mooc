@@ -7,7 +7,7 @@ Planejamento e desenvolvimento da nova Vitrine dos cursos abertos (MOOC) do Ifes
 | Tipo de Tarefa | Ir para | Descricao |
 |----------------|---------|-----------|
 | Descoberta | `stages/01-descoberta/CONTEXT.md` | Requisitos, analise da Vitrine atual e do modelo da Base de Conhecimento |
-| Catalogo | `stages/02-catalogo/CONTEXT.md` | Inventario, taxonomia e metadados dos cursos (165 publicados + 65 em producao) |
+| Catalogo | `stages/02-catalogo/CONTEXT.md` | Inventario, taxonomia, metadados e indicadores dos cursos (165 publicados + 65 em producao) |
 | Design/UX | `stages/03-design-ux/CONTEXT.md` | Organizar interfaces do AI/UX Studio e definir templates de pagina |
 | Setup de ambiente | `stages/04-setup-ambiente/CONTEXT.md` | WordPress 7 local, estrutura do repo, dump do banco e fluxo Git |
 | Desenvolvimento | `stages/05-desenvolvimento/CONTEXT.md` | Construir tema, blocos e templates do WordPress |
@@ -23,3 +23,10 @@ Planejamento e desenvolvimento da nova Vitrine dos cursos abertos (MOOC) do Ifes
 | Resumo da reuniao | `shared/resumo-reuniao.md` | Sintese do kickoff (decisoes e proximos passos) |
 | Design system | `design-system/CONTEXT.md` | Paleta de cores e tipografia da Vitrine |
 | Skills | `skills/README.md` | Conhecimento de dominio bundled para os agentes |
+| Indicadores MOOC | `stages/02-catalogo/output/powerbi-mooc-ifes/` | Extracao do Power BI, planilha, CSVs e insights para decisao |
+
+## Dados Analiticos Disponiveis
+
+O estagio 02 possui uma extracao do Painel de Indicadores dos MOOC do Ifes em `stages/02-catalogo/output/powerbi-mooc-ifes/`.
+
+Use essa fonte quando a tarefa envolver priorizacao, destaques, ordenacao de cursos, estrategia de catalogo, alcance geografico, conclusao/certificacao ou UX baseada em dados reais.

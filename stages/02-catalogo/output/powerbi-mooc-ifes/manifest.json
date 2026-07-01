@@ -1,0 +1,103 @@
+{
+  "source_url": "https://app.powerbi.com/view?r=eyJrIjoiMWMyN2UxZTktY2FiMi00ZDI1LWE5NTctOGZiZjUzOTdhMjUyIiwidCI6IjQ0ZTllMTcyLWZmYTUtNDNmMy1iMjJjLTM3MWNmY2QyNzJlZCJ9&pageName=ReportSection",
+  "resource_key": "1c27e1e9-cab2-4d25-a957-8fbf5397a252",
+  "dataset_last_refresh": "2026-06-29T11:15:54.177",
+  "extracted_at_utc": "2026-07-01T20:06:10.423881+00:00",
+  "sheets": [
+    {
+      "sheet": "Indicadores por curso",
+      "page": "Indicadores por curso",
+      "visual_type": "tableEx",
+      "title": "",
+      "rows": 171,
+      "columns": 10,
+      "csv": "indicadores-por-curso.csv"
+    },
+    {
+      "sheet": "Dados por UF",
+      "page": "Tabelas Localidade",
+      "visual_type": "tableEx",
+      "title": "Dados por UF",
+      "rows": 29,
+      "columns": 2,
+      "csv": "dados-por-uf.csv"
+    },
+    {
+      "sheet": "Dados por pais",
+      "page": "Tabelas Localidade",
+      "visual_type": "tableEx",
+      "title": "Dados por país",
+      "rows": 58,
+      "columns": 2,
+      "csv": "dados-por-pais.csv"
+    },
+    {
+      "sheet": "Matriculas por ano",
+      "page": "Matrículas",
+      "visual_type": "stackedAreaChart",
+      "title": "Matrículas por ano",
+      "rows": 12,
+      "columns": 1,
+      "csv": "matriculas-por-ano.csv"
+    },
+    {
+      "sheet": "Top cursos matriculas",
+      "page": "Matrículas",
+      "visual_type": "donutChart",
+      "title": "Top 5 - Cursos com mais matrículas",
+      "rows": 5,
+      "columns": 2,
+      "csv": "top-cursos-matriculas.csv"
+    },
+    {
+      "sheet": "Certificados por ano",
+      "page": "Certificados",
+      "visual_type": "stackedAreaChart",
+      "title": "Certificados por ano",
+      "rows": 87,
+      "columns": 3,
+      "csv": "certificados-por-ano.csv"
+    },
+    {
+      "sheet": "Top cursos certificados",
+      "page": "Certificados",
+      "visual_type": "donutChart",
+      "title": "Top 5 - Cursos com mais certificados",
+      "error": "'DS'"
+    },
+    {
+      "sheet": "Cursos por unidade",
+      "page": "Cursos",
+      "visual_type": "columnChart",
+      "title": "Quantidade de Cursos",
+      "rows": 18,
+      "columns": 2,
+      "csv": "cursos-por-unidade.csv"
+    },
+    {
+      "sheet": "Crescimento matriculas",
+      "page": "Indicadores de Escala e Crescimento",
+      "visual_type": "lineClusteredColumnComboChart",
+      "title": "Crescimento Anual de Matrículas",
+      "rows": 7,
+      "columns": 3,
+      "csv": "crescimento-matriculas.csv"
+    },
+    {
+      "sheet": "Crescimento certificados",
+      "page": "Indicadores de Escala e Crescimento",
+      "visual_type": "lineClusteredColumnComboChart",
+      "title": "Crescimento Anual de Certificados",
+      "rows": 7,
+      "columns": 3,
+      "csv": "crescimento-certificados.csv"
+    },
+    {
+      "sheet": "Top cursos populares",
+      "page": "Indicadores de Escala e Crescimento",
+      "visual_type": "donutChart",
+      "title": "Top 5 - Cursos mais populares",
+      "error": "'DS'"
+    }
+  ]
+}

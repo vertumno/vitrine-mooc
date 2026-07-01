@@ -31,6 +31,18 @@ Fatos estaveis do projeto. Fonte canonica para os estagios. Atualize aqui quando
 | Cursos publicados | 165 (ver `stages/02-catalogo/references/cursos-fonte.md`) |
 | Cursos em producao | 65 (previstos ate 10/06/26) |
 
+## Fontes Analiticas
+
+| Fonte | Valor |
+|-------|-------|
+| Painel de Indicadores MOOC | `stages/02-catalogo/output/powerbi-mooc-ifes/` |
+| Planilha extraida | `stages/02-catalogo/output/powerbi-mooc-ifes/painel-indicadores-mooc-ifes.xlsx` |
+| Analise executiva | `stages/02-catalogo/output/powerbi-mooc-ifes/analise-insights-powerbi-mooc-ifes.md` |
+| Dataset Power BI - ultimo refresh conhecido | 2026-06-29T11:15:54.177 |
+| Data da extracao documentada | 2026-07-01 |
+
+Use esses dados para decisoes sobre priorizacao, destaque, filtros, ordenacao e estrategia de catalogo. Nao use 2026 como ano fechado; a extracao atual foi feita em 2026-07-01.
+
 ## Itens a confirmar no `setup`
 
 Os valores abaixo dependem da CGTI e do design final. Sao preenchidos no onboarding.

@@ -1,0 +1,1832 @@
+﻿PRD
+Product Requirements Document
+Vitrine MOOC CEFOR
+Redesign Evolutivo + Hub Profissional + Ferramenta Inteligente
+Produto: mooc.cefor.ifes.edu.br
+Versao: 1.0
+Data: 02 de abril de 2026
+Autor: Elton Vinicius (Design) + Marquito (Desenvolvimento)
+Equipe: CEFOR / CGTE - Instituto Federal do Espirito Santo
+Deadline: Agosto 2026 (CONCEFOR)
+________________
+
+
+1. Visao Geral do Produto
+A Vitrine MOOC CEFOR (mooc.cefor.ifes.edu.br) e a plataforma de cursos abertos do Instituto Federal do Espirito Santo. Possui 284.595 matriculas, 100+ cursos em 20 categorias, gratuitos e certificados (conceito MEC 5 estrelas). Avaliacao maxima INEP/MEC em Educacao a Distancia.
+Este PRD define a estrategia de evolucao da Vitrine em tres camadas complementares, entregues de forma faseada ate agosto de 2026 (CONCEFOR):
+1. Vitrine Evolutiva — Redesign visual e funcional sobre a estrutura WordPress existente, mantendo tudo que ja temos
+2. Hub de Qualificacao Profissional — Pagina interna com Planejador de Licenca Capacitacao, navegacao por objetivo e trilhas
+3. Ferramenta Inteligente — Wizard de Descoberta que recomenda cursos por perfil (unico entre IFs)
+
+
+Versao futura prevista: Area do Aluno com dashboard pessoal, integracao Moodle via API, historico de cursos e progresso.
+2. Contexto e Estado Atual
+2.1 O que Marquito ja construiu (reuniao 17/03/2026)
+Funcionalidades implementadas no tema WordPress customizado:
+* Secoes tipo Netflix: "Em destaque" (manual), "Adicionados recentemente" (por data), "Mais cursados" (por matriculas)
+* Busca por texto + filtro por categoria combinados, com indicador de categoria ativa
+* Lazy loading ("carregar mais cursos")
+* Menu reorganizado: Duvidas frequentes, Validacao de certificado, Painel de indicadores, Suporte
+* Campo de carga horaria criado no cadastro WordPress (pendente: popular dados)
+* Titulo do curso fora da imagem (aparece no hover)
+* FAQ reduzido a 5 perguntas com botao "ver todas"
+
+
+2.2 Conteudo existente que será mantido
+Secao "O que e"
+Os Cursos Abertos do Ifes seguem a tendencia mundial na oferta de cursos 100% on-line, no formato MOOC (Massive Open Online Courses). Sao cursos gratuitos e sem tutoria, abertos (sem processo seletivo), certificados pelo Ifes (aproveitamento minimo de 60%), com carga horaria maxima de 60 horas, onde o aluno escolhe a melhor hora e lugar para estudar.
+Secao "Como Funciona"
+Fluxo em 4 etapas: 1) Cadastre-se (criar conta gratuita); 2) Escolha o Curso; 3) Faca o Curso (autoestudo, no seu ritmo); 4) Emita seu Certificado (reconhecido pelo MEC, formato digital validavel).
+Selo de Qualidade
+5 Estrelas INEP/MEC — Somos conceito maximo em educacao a distancia. Qualidade reconhecida — Ifes Avaliacao INEP/MEC. Este selo deve ter destaque visual na vitrine.
+FAQ Completo
+O FAQ atual possui 34 perguntas cobrindo: o que e MOOC, vantagens, carga horaria, prazos, inscricao, criacao de conta, senha, ativacao, licenca capacitacao (perguntas 16-20), certificado, validacao, turmas anteriores, painel de indicadores. Sera implementado com lazy load (mostrar 5, expandir sob demanda).
+Catalogo de Cursos
+Todos os 100 cursos existentes serao mantidos com suas imagens atuais. Os cards serao enriquecidos com informacoes adicionais (ver secao 4). A lista completa de cursos e categorias esta no Anexo A.
+
+
+2.3 Problemas atuais a resolver
+Problema
+	Descricao
+	Impacto
+	Hero vago
+	"Reconexoes com o saber" nao comunica proposta de valor
+	Conversão baixa
+	Cards sem info
+	Sem carga horaria, badges, descricao nos cards
+	Cliques desperdicados
+	Alt texts genéricos
+	"Como criar Mooc" em todas as imagens
+	Acessibilidade + SEO
+	Licença para Capacitação enterrada
+	Info vital esta na pergunta 16 do FAQ, nao na navegação principal
+	Perde servidores públicos
+	Email Hotmail/Outlook
+	Restricao nao comunicada antes do cadastro
+	Abandono silencioso
+	
+
+2.4 Papeis definidos
+Elton: Design, identidade visual, UX, wireframes, prioridades de design
+Marquito: Desenvolvimento WordPress, implementacao, backend, integracao Moodle
+Fluxo: Elton desenha → Marquito implementa → Comissao MOOC aprova
+________________
+
+
+3. Arquitetura da Solucao
+A nova Vitrine se organiza em tres camadas. A pagina principal evolui sobre o que existe. Hub Profissional e Ferramenta Inteligente sao paginas/modulos internos acessiveis a partir da home.
+Camada
+	O que e
+	Onde vive
+	Vitrine Evolutiva
+	Redesign da pagina principal sobre estrutura WordPress existente
+	mooc.cefor.ifes.edu.br (home)
+	Hub Profissional
+	Planejador de Licenca, navegacao por objetivo, trilhas de aprendizagem
+	mooc.cefor.ifes.edu.br/qualificacao (pagina interna)
+	Ferramenta Inteligente
+	Wizard 3-4 perguntas que recomenda cursos por perfil do visitante
+	Modal ou pagina interna via CTA do hero
+	
+
+3.1 Fluxo do usuário
+1) Visitante chega na home → ve hero com proposta de valor + duplo CTA (busca ou wizard). 2) Pode explorar cursos nas seções curadas (destaque, recentes, populares). 3) Pode navegar por objetivo profissional (4 cards). 4) Se servidor publico, ve banner de Licenca para Capacitacao → acessa pagina interna do Hub → usa Planejador → recebe plano imprimivel com links de matricula. 5) Se quer orientacao, usa Wizard → responde 3-4 perguntas → recebe recomendacoes. 6) Em qualquer momento, acessa FAQ (lazy load), secao O que e / Como funciona, ou cria conta.
+________________
+
+
+4. Camada 1: Vitrine Evolutiva
+4.1 Prioridades de Design
+4. Hero com proposta de valor direta — "Qualificacao profissional gratuita e certificada pelo Ifes". Duplo CTA: campo de busca + botao Wizard. Selo 5 estrelas MEC visivel.
+5. Cards enriquecidos — Alem da imagem existente: carga horaria visivel (ex: 20h), badge "Novo", selo Libras, numero de inscritos. Ao clicar, abre detalhes expandidos com descricao, objetivos, estrutura modular.
+6. Barra de estatisticas — 284.595 matriculas | 100+ cursos | 5 estrelas MEC | 100% gratuito. Prova social acima da dobra.
+7. Secoes curadas — "Em destaque" (manual) / "Recentes" (por data) / "Mais cursados" (por matriculas). Estrutura do Marquito evolui, nao e refeita.
+8. Navegacao por objetivo — 4 cards: Inovar na sala de aula / Licenca Capacitacao / Aprender tecnologia / Crescer na carreira.
+9. Banner Licenca Capacitacao — CTA proeminente na home levando para pagina interna do Hub. Tira o tema do FAQ e coloca em destaque.
+10. Secao O que e + Como funciona — Mantidas com conteudo atual, visual renovado.
+11. FAQ com lazy load — Mostra 5 primeiras perguntas, botao "Ver todas" expande restante. 34 perguntas mantidas.
+12. Paleta e tipografia — Design system: Serif para titulos, Sans para corpo, Mono para dados numericos.
+13. Projetos parceiros — Rio Doce Escolar e UnAC com descricao, imagem e link. Visiveis na home.
+14. Filtros avancados — Categoria + carga horaria + Libras. Sinalizacao visual quando busca esta ativa.
+15. Correcoes tecnicas — Alt texts corrigidos, cookie consent, warning de email pre-cadastro, proporcao de imagens.
+
+
+4.2 Card do curso — especificacao
+Visao fechada (grid)
+* Imagem do curso (existente, mantida)
+* Selo Libras (quando aplicavel)
+* Badge "Novo" (cursos dos ultimos 3 meses)
+* Carga horaria (ex: "20h")
+* Titulo do curso
+* Numero de inscritos como prova social
+Visao expandida (ao clicar)
+* Descricao do curso
+* Objetivos de aprendizagem
+* Categoria e tags
+* Botao "Acessar curso" → direciona ao Moodle
+* Botao "Compartilhar" (WhatsApp, link)
+
+
+4.3 O que NAO muda
+* Estrutura WordPress + tema customizado do Marquito
+* Moodle como backend de cursos
+* Fluxo de cadastro/inscricao existente
+* Catalogo completo de cursos e imagens atuais
+* Secoes Netflix ja implementadas (evoluem visualmente)
+________________
+
+
+5. Camada 2: Hub de Qualificacao Profissional
+Pagina interna dedicada (mooc.cefor.ifes.edu.br/qualificacao) que reposiciona os cursos MOOC como ferramenta de qualificacao profissional. Acessivel via banner/CTA na home.
+5.1 Planejador de Licenca para Capacitacao
+Ferramenta principal do Hub. Unica no Brasil entre Institutos Federais. Da home, o CTA leva direto para esta pagina interna.
+Fluxo do usuario
+16. Servidor acessa pagina de Licenca Capacitacao (via banner na home ou menu)
+17. Le orientações: o que e licenca, quem tem direito, legislacao, como funciona no Moodle
+18. Preenche formulario: dias de licenca + data inicio + area de interesse
+19. Sistema calcula CH minima (30h/semana conforme legislacao)
+20. Sugere combinacao de cursos que atendem a CH no periodo
+21. Gera resultado com: nome dos cursos + links diretos de matricula + datas estimadas + carga horaria
+22. Servidor pode imprimir/exportar PDF do plano para anexar ao processo administrativo
+23. Orientacoes de como fazer a matricula dentro da plataforma Moodle
+
+
+Requisitos funcionais
+ID
+	Requisito
+	Prioridade
+	PLC-01
+	Formulario: dias de licenca, data inicio, area de interesse
+	Essencial
+	PLC-02
+	Calculo automatico de CH minima (30h/semana)
+	Essencial
+	PLC-03
+	Algoritmo de sugestao de cursos por CH + categoria disponivel
+	Essencial
+	PLC-04
+	Resultado com: curso + link de matricula + CH + periodo estimado
+	Essencial
+	PLC-05
+	Exportar/imprimir plano em PDF para processo administrativo
+	Essencial
+	PLC-06
+	Orientacoes de como fazer matricula na plataforma Moodle
+	Essencial
+	PLC-07
+	Pagina de contexto: o que e licenca, quem tem direito, legislacao
+	Essencial
+	PLC-08
+	Funcionar sem autenticacao (usuario nao precisa estar logado)
+	Importante
+	PLC-09
+	Destacar quantidade de matriculas da plataforma como prova social
+	Importante
+	
+
+Por que e o maior gerador de matriculas
+* Matriculas multiplas: cada servidor se matricula em 3-4 cursos por uso
+* SEO: "licenca capacitacao cursos gratuitos" sem concorrente indexado
+* Viralidade: servidor compartilha com colegas via WhatsApp
+* Independente: pode ir ao ar antes do redesign completo da vitrine
+
+
+5.2 Navegacao por Objetivo Profissional
+4 cards que organizam cursos por intencao real do usuario, nao por categoria academica:
+Inovar na sala de aula
+	Licenca Capacitacao
+	Aprender tecnologia
+	Crescer na carreira
+	
+
+5.3 Trilhas de Aprendizagem
+Percursos tematicos com 3-4 cursos sequenciados. Cada trilha gera multiplas matriculas e cria progressao.
+Trilha
+	Descricao
+	CH
+	Professor Inovador
+	Metodologias ativas + gamificacao + ferramentas digitais
+	3 cursos / 90h
+	Maker na Educacao
+	Pensamento computacional + robotica educacional
+	4 cursos / 120h
+	Educacao Ambiental
+	Cursos do Projeto Rio Doce Escolar
+	5 cursos / 100h
+	Atendimento e Vendas
+	Fundamentos + Intermediario + Avancado
+	3 cursos
+	________________
+
+
+6. Camada 3: Ferramenta Inteligente (Wizard)
+Wizard de Descoberta: 3-4 perguntas que recomendam cursos personalizados. Nenhum Instituto Federal no Brasil possui ferramenta similar.
+6.1 Fluxo do Wizard
+24. Pergunta 1 — Quem e voce? Professor / Servidor publico / Estudante / Profissional / Outro
+25. Pergunta 2 — O que busca? Area de interesse (categorias simplificadas)
+26. Pergunta 3 — Tempo disponivel? Ate 20h / 20-40h / 40-60h
+27. Resultado — Lista filtrada de cursos recomendados, ordenada por relevancia
+
+
+6.2 Requisitos
+ID
+	Requisito
+	Prioridade
+	WIZ-01
+	Interface passo-a-passo com 3-4 etapas, navegavel por clique
+	Essencial
+	WIZ-02
+	Filtragem combinada por perfil + area + carga horaria (sem IA, logica de filtro)
+	Essencial
+	WIZ-03
+	Resultado com cards enriquecidos dos cursos recomendados
+	Essencial
+	WIZ-04
+	Acessivel via CTA no hero da home + link no menu
+	Essencial
+	WIZ-05
+	Captura anonima de perfil para analytics (sem login necessario)
+	Importante
+	WIZ-06
+	Possibilidade de refazer/ajustar respostas sem reiniciar
+	Desejavel
+	
+
+6.3 Valor estrategico
+* Diferenciacao: unico entre IFs brasileiros
+* Dados de perfil: cada uso gera informacoes sobre o publico (quem sao, o que buscam, quanto tempo tem)
+* Conversao: reduz a barreira de descoberta para visitantes que nao sabem o que procurar
+* Narrativa CONCEFOR: demonstra inovacao na oferta de cursos abertos
+________________
+
+
+7. Faseamento e Cronograma
+Fase
+	Entregas
+	Periodo
+	Dependencia
+	Fase 1
+	Pagina Licenca Capacitacao + Planejador (pode ir ao ar independente)
+	Abr — Mai 2026
+	Dados de CH dos cursos
+	Fase 2
+	Design System + Redesign visual da home (paleta, tipografia, cards, hero, FAQ lazy load)
+	Mai — Jun 2026
+	Fase 1 concluida
+	Fase 3
+	Navegacao por objetivo + Trilhas + Projetos parceiros visiveis
+	Jun — Jul 2026
+	Fase 2 concluida
+	Fase 4
+	Wizard de Descoberta + Lancamento CONCEFOR
+	Jul — Ago 2026
+	Fase 3 concluida
+	Futuro
+	Area do Aluno (dashboard, integracao Moodle API, progresso)
+	Pos-CONCEFOR
+	Decisao institucional
+	
+
+7.1 Dependencias criticas
+* Dados de carga horaria: Campo ja existe no WordPress, mas precisa ser populado para todos os 100+ cursos (Raquel)
+* Comissao MOOC: Aprovacao do conceito antes de implementacao
+* Banda do Marquito: Desenvolvimento em paralelo com Knowledge Base
+* Heatmap: Marquito sugeriu ferramenta JS propria para mapear navegacao (pode ser implementada em qualquer fase)
+________________
+
+
+8. Métricas de Sucesso
+Metrica
+	Como medir
+	Meta
+	Matriculas via Planejador
+	Tracking de origem (parametro URL)
+	+15% matriculas novas
+	Uso do Wizard
+	Eventos de analytics (inicio, conclusao, abandono)
+	>500 usos/mes
+	Tempo na pagina
+	Google Analytics
+	Aumento de 40%
+	Taxa de conclusao de cursos
+	Moodle analytics
+	Aumento via trilhas
+	SEO: licenca capacitacao
+	Google Search Console
+	Top 3 resultados
+	________________
+
+
+Anexo A: Catalogo Completo de Cursos
+Total: 152 cursos. Imagens sao as mesmas disponiveis atualmente na vitrine. Cards serao enriquecidos conforme secao 4.2.
+#
+	Curso
+	Categoria
+	Libras
+	Img
+	1
+	Como criar um MOOC
+	Educacao a Distancia
+	Sim
+	vitrine_ComoCriarMOO...
+	2
+	Moodle 4 para Educadores
+	Educacao a Distancia
+	
+
+	vitrine_Moodle4_Educ...
+	3
+	Moodle 4 para Estudantes
+	Educacao a Distancia
+	
+
+	unac-moodle4-estudan...
+	4
+	Mediacao pedagogica no Moodle
+	Educacao a Distancia
+	
+
+	vitrine_mediacao_ped...
+	5
+	Educacao Ambiental de Base Comunitaria
+	Ciencias Humanas
+	
+
+	XXX-vitrine_Educacao...
+	6
+	Saberes para o professor do Seculo XXI
+	Desenvolvimento Educacional
+	
+
+	XXX-vitrine_Saberes-...
+	7
+	Operador de Computador
+	Tecnologias e Informatica
+	
+
+	XXX-vitrine_Operador...
+	8
+	Gestao Escolar e Educacao Ambiental
+	Ambiente e Saude
+	
+
+	vitrine_Gestao-Escol...
+	9
+	Seguranca hidrica do Rio Doce pela Perspectiva CTSA
+	Ambiente e Saude
+	
+
+	vitrine_Seguranca-hi...
+	10
+	Producao de videos em ambientes naturais utilizando smartphone
+	Ambiente e Saude
+	
+
+	vitrine_Producao-de-...
+	11
+	Geomorfologia do Rio Piraque-acu
+	Ambiente e Saude
+	
+
+	vitrine_Geomorfologi...
+	12
+	Guardioes da natureza: Educacao Ambiental
+	Ambiente e Saude
+	
+
+	vitrine_Guardioes-da...
+	13
+	Educacao em Saude Ambiental
+	Ambiente e Saude
+	
+
+	vitrine_Educacao-em-...
+	14
+	Desvendando a tabela periodica do Rio Doce
+	Ambiente e Saude
+	
+
+	vitrine_Desvendando-...
+	15
+	Arvores e Numeros: Matematica para Preservacao Ambiental
+	Ambiente e Saude
+	
+
+	vitrine_Arvores-e-Nu...
+	16
+	Geofisica para o Ensino de Ciencias
+	Ambiente e Saude
+	
+
+	vitrine_Geofisica-pa...
+	17
+	Biopirataria de Abelhas Nativas
+	Ambiente e Saude
+	
+
+	vitrine_Biopirataria...
+	18
+	Tecnologia Verde: Robotica Sustentavel na Educacao
+	Ambiente e Saude
+	
+
+	vitrine_Tecnologia-V...
+	19
+	Educacao Ambiental em Tres Momentos Pedagogicos
+	Ambiente e Saude
+	
+
+	vitrine_Educacao-Amb...
+	20
+	Conservacao e Restauracao de Nascentes
+	Ambiente e Saude
+	
+
+	vitrine_Conservacao-...
+	21
+	Literatura em acao com enfoque CTSA
+	Ambiente e Saude
+	
+
+	vitrine_Literatura-e...
+	22
+	Plastinacao como Recurso Didatico
+	Ciencias da Natureza
+	
+
+	194-vitrine_A-Plasti...
+	23
+	Atendente e Vendedor: Fundamentos
+	Desenvolvimento Educacional
+	
+
+	180-vitrine_Atendent...
+	24
+	Atendente e Vendedor: Intermediario
+	Desenvolvimento Educacional
+	
+
+	181-vitrine_Atendent...
+	25
+	Atendente e Vendedor: Avancado
+	Desenvolvimento Educacional
+	
+
+	204-vitrine_Atendent...
+	26
+	Ingles para Turismo
+	Linguas
+	
+
+	199-vitrine_Ingles-p...
+	27
+	Alfabetizacao Cientifica na Pratica Pedagogica
+	Educacao
+	
+
+	121-vitrine_Alfabeti...
+	28
+	Pensamento Computacional com Comunidade Surda
+	Educacao / Inclusao
+	Sim
+	pens-comp-com-surda-...
+	29
+	Digipeda - Competencias Digitais e Pedagogicas
+	Educacao
+	
+
+	vitrine_MOOC1_embrac...
+	30
+	Pedagogias ativas com ferramentas digitais
+	Educacao
+	
+
+	vitrine_MOOC2_embrac...
+	31
+	Competencias digitais para desenvolvimento profissional
+	Educacao
+	
+
+	vitrine_MOOC3_embrac...
+	32
+	Gestao de Cursos EaD
+	Educacao a Distancia
+	
+
+	vitrine-gestao-ead.j...
+	33
+	Gestao de Financas Pessoais
+	Gestao
+	
+
+	vitrine-gestao-de-fi...
+	34
+	Explorando Estilos de Aprendizagem
+	Educacao
+	
+
+	vitrine-explorand-es...
+	35
+	Introducao a Educacao Comparada e Internacional
+	Educacao
+	
+
+	vitrine-introducao-e...
+	36
+	Node.js para iniciantes
+	Tecnologias e Informatica
+	
+
+	vitrine-nodejs-para-...
+	37
+	Trilhas Cientificas: Produtos Educacionais
+	Ambiente e Saude
+	
+
+	163-vitrine_Trilhas-...
+	38
+	Planejamento e Producao de Eventos
+	Producao Cultural
+	
+
+	187-vitrine_Planejam...
+	39
+	Matematica da Informatica
+	Educacao
+	
+
+	190-vitrine_Matemati...
+	40
+	Robotica e Prototipagem para Professores
+	Desenvolvimento Educacional
+	
+
+	177-vitrine_Escola-d...
+	41
+	Pomerisch Ekogame
+	Ambiente e Saude
+	
+
+	176-vitrine_Pomerisc...
+	42
+	Saude, Meio Ambiente e Seguranca nas Escolas
+	Ciencias Sociais
+	
+
+	157-vitrine_Introduc...
+	43
+	Pedagogia de Freinet em aula-passeio
+	Ciencias Humanas
+	
+
+	127-vitrine_Pedagogi...
+	44
+	IA e Alfabetizacao Cientifica na abordagem CTSA
+	Ciencias Humanas
+	
+
+	118-vitrine_Intelige...
+	45
+	Introducao a Educacao Matematica Critica
+	Ciencias Exatas
+	
+
+	83-vitrine_Introduca...
+	46
+	Direito da Tecnologia da Informacao
+	Ciencias Humanas
+	
+
+	vitrine_direito-da-t...
+	47
+	Introducao a NoSQL com MongoDB
+	Tecnologias
+	
+
+	vitrine_Introducao-a...
+	48
+	Neurodiversidade no autismo
+	Educacao
+	
+
+	vitrine_Neurodiversi...
+	49
+	Planejamento: como (se) preparar?
+	Educacao
+	
+
+	vitrine_Planejamento...
+	50
+	Mapas Conceituais no ensino-aprendizagem
+	Educacao
+	
+
+	xvitrine_Mapas-Conce...
+	51
+	Avaliacao com Mapas Conceituais
+	Educacao
+	
+
+	xvitrine_Estrategias...
+	52
+	Micropraticas de Pensamento Computacional em Ciencias
+	Ciencias Exatas
+	
+
+	xvitrine_micropratic...
+	53
+	Fisica aplicada para bombeiros
+	Ciencias da Natureza
+	
+
+	vitrine_fisica_bombe...
+	54
+	Manguezais: Restauracao sustentavel
+	Ambiente e Saude
+	
+
+	2.png...
+	55
+	Biologia Celular: Membrana Plasmatica
+	Ambiente e Saude
+	
+
+	1.png...
+	56
+	Gestao Estrategica em Instituicoes Publicas
+	Gestao
+	Sim
+	gestao.png...
+	57
+	Educacao Especial: aspectos introdutorios
+	Educacao / Inclusao
+	Sim
+	edae.png...
+	58
+	Aprendizagem baseada em equipes
+	Educacao
+	Sim
+	ap2.png...
+	59
+	Pilares do Estado Democratico de Direito
+	Gestao
+	
+
+	pilar.png...
+	60
+	Educacao Matematica Critica nos processos
+	Educacao / Matematica
+	
+
+	edu.png...
+	61
+	Algebra no Ensino Fundamental
+	Matematica
+	Sim
+	algebra.png...
+	62
+	Introducao a Logica Digital
+	Tecnologias
+	
+
+	logica.png...
+	63
+	Tecnologias Digitais no Ensino Medio Integrado
+	Tecnologias Educacionais
+	
+
+	tec-1.png...
+	64
+	Catadores como Ecoeducadores Ambientais
+	Ambiente e Saude
+	
+
+	vitrine_Catadores-co...
+	65
+	Plantando um Rio mais Doce
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	66
+	Hortas e meliponarios educativos
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	67
+	Cultura oceanica e poluicao dos rios
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	68
+	Comunidades Quilombolas e Saberes
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	69
+	Residuos Solidos e Educacao Ambiental
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	70
+	Topicos de Geociencias socioambientais
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	71
+	Saberes Populares e Educacao Ambiental
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	72
+	Reflorestamento de Matas Ciliares
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	73
+	Legislacao em Educacao Ambiental
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	74
+	O que e Laboratorio Vivo?
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	75
+	Educacao ambiental - pedagogia Freinet
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	76
+	Praticas Experimentais em Ciencias
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	77
+	Jardins terapeuticos educativos
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	78
+	Aulas de Campo para Geociencia
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	79
+	Clube de Ciencias: Educacao Ambiental
+	Ambiente e Saude
+	
+
+	1.-Vitrine.png...
+	80
+	Avaliacao no Contexto da Educacao Ambiental
+	Ambiente e Saude
+	
+
+	Screenshot_20231114_...
+	81
+	Moodle para Estudantes
+	Educacao a Distancia
+	Sim
+	xvitrine_MoodleEstud...
+	82
+	Moodle para Educadores
+	Educacao a Distancia
+	Sim
+	vitrine_mooc_Moodle-...
+	83
+	Moodle 3.9 para Estudantes
+	Educacao a Distancia
+	
+
+	xMoodle-para-Estudan...
+	84
+	Moodle 3.9 para Educadores
+	Educacao a Distancia
+	
+
+	vitrine_moodle_educa...
+	85
+	Introducao a Iniciacao Cientifica
+	Educacao
+	
+
+	vitrine_introducao_i...
+	86
+	Hamilton: Desenvolvimento de Aplicativos
+	Tecnologias
+	
+
+	MOOC-Vitrine-MOOC-de...
+	87
+	Licenciamento ambiental
+	Ambiente e Saude
+	
+
+	MOOC-Vitrine-Licenci...
+	88
+	Saneamento Basico Urbano
+	Ambiente e Saude
+	
+
+	MOOC-Vitrine-Saneame...
+	89
+	Saude mental no contexto da educacao
+	Ambiente e Saude
+	
+
+	MOOC-Vitrine-Saude-M...
+	90
+	Bem-Estar e Substancias Psicoativas
+	Ambiente e Saude
+	
+
+	MOOC-Vitrine-Bem-est...
+	91
+	Escrita Academica sem Sofrimento
+	Educacao
+	
+
+	vitrine_Escrita_Acad...
+	92
+	Inovacao Social nas Politicas Publicas
+	Gestao
+	
+
+	vitrine_INovacao_Soc...
+	93
+	Aprendendo a licitar com Adm. Publica
+	Gestao
+	
+
+	vitrine_Licitar_adm_...
+	94
+	Desvendando o PEI
+	Educacao / Inclusao
+	Sim
+	vitrine_Desvendando_...
+	95
+	Caminhos para alfabetizacao - deficiencia visual
+	Educacao / Inclusao
+	Sim
+	vitrine_Caminhos_Alf...
+	96
+	Estrategias de Pesquisa Qualitativa
+	Educacao
+	Sim
+	vitrine_Estrategias_...
+	97
+	Estatistica com o R
+	Tecnologias
+	
+
+	vitrine_Estatistica_...
+	98
+	Introducao a Metodologia da Pesquisa
+	Educacao
+	Sim
+	vitrine_Intro_Met_Pe...
+	99
+	Educacao para relacoes etnico-raciais
+	Educacao
+	
+
+	xvitrine_EducEtnicoR...
+	100
+	Introducao a Producao de Audiolivros
+	Tecnologias Educacionais
+	
+
+	vitrine_introducao_a...
+	101
+	Nocoes de Prevencao e Combate a Incendios
+	Engenharia
+	
+
+	vitrine_incendio.png...
+	102
+	Gestao Academica de Cursos de Graduacao
+	Gestao
+	
+
+	vitrine_GestaoAcadem...
+	103
+	Introducao a Libras
+	Inclusao / Linguas
+	Sim
+	Vitrine_MOOC_Introdu...
+	104
+	Introducao a Educacao de Surdos
+	Educacao / Linguas
+	Sim
+	Vitrine_MOOC_Educaca...
+	105
+	Lovelace: Arte e Game Design
+	Design / Educacao
+	
+
+	xvitrine_Lovelace_Ar...
+	106
+	Lovelace: Robotica Educacional
+	Tecnologias
+	
+
+	vitrine_RoboticaEduc...
+	107
+	Lovelace: Programacao Python e C
+	Tecnologias
+	
+
+	vitrine_MoocLovelace...
+	108
+	Lovelace: Pensamento Computacional com Scratch
+	Tecnologias
+	
+
+	vitrine_Mooc_Lovelac...
+	109
+	Lovelace: Pensamento Computacional
+	Tecnologias
+	Sim
+	vitrine_MoocLovelace...
+	110
+	Lovelace: Pensamento Computacional Feminino
+	Tecnologias
+	
+
+	vitrine_MoocLovelace...
+	111
+	Educador Maker: Primeiros Passos
+	Educacao
+	
+
+	1_Vitrine_Educador_M...
+	112
+	Educador Maker: Aprendizagem Baseada em Projetos
+	Educacao
+	
+
+	vitrine_EducadorMake...
+	113
+	Educador Maker: ensino mao na massa
+	Educacao
+	
+
+	vitrine_EducadorMake...
+	114
+	Educador Maker: Alfabetizacao Cientifica Da Vinci
+	Educacao
+	
+
+	xvitrine_EMaker_DaVi...
+	115
+	Ingles Comunicativo - Basico Essencial
+	Linguas
+	
+
+	ingles-comunicativo....
+	116
+	Competencias em informacoes academicas
+	Educacao
+	
+
+	VITRINE_DesenvCompet...
+	117
+	PROGRAMAKIDS
+	Tecnologias
+	
+
+	vitrine_Programakids...
+	118
+	Educacao Ambiental em foco
+	Ciencias da Natureza
+	
+
+	EducAmbientalEmFoco_...
+	119
+	Mary Keller: Robotica para Educadores
+	Tecnologias
+	
+
+	Mooc_de_MaryKeller_V...
+	120
+	Desmistificando o Cubo magico
+	Matematica
+	
+
+	DesmistificandoCuboM...
+	121
+	Estrategias Flexiveis em Pandemia
+	Educacao
+	
+
+	vitrine_EstrFlexEnsi...
+	122
+	Ensino de astronomia: Ceu noturno
+	Ciencias da Natureza
+	
+
+	xvitrine_EnsinoAstro...
+	123
+	Praticas Educativas em Saneamento Basico
+	Ambiente e Saude
+	
+
+	vitrine_PraticasEduc...
+	124
+	Quimica para Iniciantes
+	Ciencias da Natureza
+	
+
+	xvitrine_QuimicaInic...
+	125
+	Compreendendo a EPT Integrada
+	Educacao
+	Sim
+	xvitrine_Compreenden...
+	126
+	Avaliacao por Rubrica no Moodle
+	Educacao a Distancia
+	
+
+	xAvaliacao-por-rubri...
+	127
+	Acessibilidade em Processos Seletivos
+	Inclusao
+	
+
+	vitrine_Acessibilida...
+	128
+	Metodologias Ativas: Educacao Inovadora
+	Educacao
+	
+
+	xvitrine_MetAtivasEd...
+	129
+	Gestao da Lideranca para Resultados
+	Gestao
+	
+
+	xvitrine_GestaoLider...
+	130
+	Vacinas: O que e preciso saber?
+	Ambiente e Saude
+	
+
+	xvitrine_Vacinas.png...
+	131
+	Ferramentas Digitais para Curadoria
+	Tecnologias Educacionais
+	
+
+	vitrine_FerramentasD...
+	132
+	Introducao a gestao da inovacao
+	Gestao
+	
+
+	xIntroducao-a-gestao...
+	133
+	Bons habitos de estudo
+	Desenvolvimento Pessoal
+	
+
+	vitrine_ComoDesenvol...
+	134
+	Inclusao Sociodigital para Multiplicadores
+	Tecnologias Educacionais
+	
+
+	Inclusao-Sociodigita...
+	135
+	Gamificacao no Moodle
+	EaD / Tecnologias Educacionais
+	
+
+	vitrine_Gamificacaon...
+	136
+	Acessibilidade e Tecnologia
+	Inclusao
+	Sim
+	xAcessibilidade_Tecn...
+	137
+	Ferramenta para gravacao de videoaulas
+	Tecnologias Educacionais
+	Sim
+	vitrine_FerramentaGr...
+	138
+	Diversidade Cultural, Economia Criativa
+	Artes e Humanidades
+	
+
+	Miniatura_Diversidad...
+	139
+	Introducao a projetos
+	Gestao
+	
+
+	Vitrine_Introducao-a...
+	140
+	Ambientes virtuais com Unity 3D
+	Tecnologias Educacionais
+	
+
+	Criando_Amb_Virtuais...
+	141
+	Introducao ao Google Classroom
+	Tecnologias Educacionais
+	
+
+	Google-Classroom_Vit...
+	142
+	Google Arts and Culture em Sala de Aula
+	Artes / Tecnologias Educacionais
+	
+
+	Vitrine_Curso_Google...
+	143
+	Google Drive: Colaboracao na pratica
+	EaD / Tecnologias Educacionais
+	Sim
+	mooc_drive_colab.png...
+	144
+	Softwares educacionais para Matematica
+	Matematica / Tecnologias Educacionais
+	
+
+	Softwares_Educaciona...
+	145
+	Programacao Basica: Scratch
+	Tecnologias
+	
+
+	vitrine_ProgramacaoB...
+	146
+	Realidade Virtual como apoio ao ensino
+	Tecnologias Educacionais
+	
+
+	xRealidade_Virtual_V...
+	147
+	Uso Educacional do Canva
+	Design / Tecnologias Educacionais
+	Sim
+	Uso_Educacional_Canv...
+	148
+	Protagonismo feminino na politica
+	Artes / Gestao
+	
+
+	vitrine_Mulheres_Pro...
+	149
+	Habilidades na carreira politica
+	Artes / Desenvolvimento
+	
+
+	vitrine_Mulheres_Hab...
+	150
+	Lesson Study - versao Portugues
+	Educacao
+	
+
+	Lesson_Study_1_V_Por...
+	151
+	Lesson Study - English version
+	Educacao
+	
+
+	Lesson_Study_1_V_Ing...
+	152
+	Por que Lesson Study?
+	Educacao
+	
+
+	Lesson_Study_2_Por_q...
+	________________
+
+
+Anexo B: URLs de Imagens e Cursos
+Referencia completa com URLs das imagens da vitrine e links dos cursos no Moodle, para facilitar a implementacao.
+
+
+1. Como criar um MOOC
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?como-criar-mooc
+Libras: Sim
+2. Moodle 4 para Educadores
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-4-para-educadores
+Libras: Nao
+3. Moodle 4 para Estudantes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/unac-moodle4-estudantes-vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-4-para-estudantes
+Libras: Nao
+4. Mediacao pedagogica no Moodle
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mediacao_pedagogica.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mediacao-pedagogica-no-moodle
+Libras: Nao
+5. Educacao Ambiental de Base Comunitaria
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/XXX-vitrine_Educacao-Ambiental-de-Base-Comunitaria.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?id=642
+Libras: Nao
+6. Saberes para o professor do Seculo XXI
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/XXX-vitrine_Saberes-para-o-Professor-do-Seculo-XXI.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?id=793
+Libras: Nao
+7. Operador de Computador
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/XXX-vitrine_Operador-de-Computador.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?id=796
+Libras: Nao
+8. Gestao Escolar e Educacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Gestao-Escolar-e-Educacao-Ambiental_-conexoes-Interdisciplinares-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?gestao-escolar-e-educacao-ambiental
+Libras: Nao
+9. Seguranca hidrica do Rio Doce pela Perspectiva CTSA
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Seguranca-hidrica-do-Rio-Doce-pela-Perspectiva-CTSA-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?seguranca-hidrica-rio-doce-ctsa
+Libras: Nao
+10. Producao de videos em ambientes naturais utilizando smartphone
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Producao-de-videos-em-ambientes-naturais-utilizando-smartphone-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?producao-videos-ambientes-naturais-smartphone
+Libras: Nao
+11. Geomorfologia do Rio Piraque-acu
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Geomorfologia-do-Rio-Piraque-acu-Da-Nascente-ao-Manguezal-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?geomorfologia-piraqueacu-nascente-maguezal
+Libras: Nao
+12. Guardioes da natureza: Educacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Guardioes-da-natureza_-Educacao-Ambiental-em-espacos-educativos-nao-formais-na-primeira-infancia-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?guardioes-natureza-educacao-ambiental
+Libras: Nao
+13. Educacao em Saude Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Educacao-em-Saude-Ambiental-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-saude-ambiental
+Libras: Nao
+14. Desvendando a tabela periodica do Rio Doce
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Desvendando-a-tabela-periodica-do-Rio-Doce-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?desvendando-tabela-periodica-rio-doce
+Libras: Nao
+15. Arvores e Numeros: Matematica para Preservacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Arvores-e-Numeros_-Uma-abordagem-Matematica-para-a-Preservacao-Ambiental-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?arvore-numero-matematica-preservacao-ambiental
+Libras: Nao
+16. Geofisica para o Ensino de Ciencias
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Geofisica-para-o-Ensino-de-Ciencias-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?geofisica-ensino-ciencias
+Libras: Nao
+17. Biopirataria de Abelhas Nativas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Biopirataria-de-Abelhas-Nativas_-Impactos-Socioambientais-e-Economicos-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?biopirataria-abelhas-nativas-impactos
+Libras: Nao
+18. Tecnologia Verde: Robotica Sustentavel na Educacao
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Tecnologia-Verde_-Robotica-Sustentavel-na-Educacao-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?tecnologia-verde-robotica-sustentavel-educacao
+Libras: Nao
+19. Educacao Ambiental em Tres Momentos Pedagogicos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Educacao-Ambiental-em-Tres-Momentos-Pedagogicos-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-ambiental-tres-momentos-pedagogicos
+Libras: Nao
+20. Conservacao e Restauracao de Nascentes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Conservacao-e-Restauracao-de-Nascentes-aplicada-a-Educacao-Ambiental-2.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?conservacao-restauracao-nascentes-educacao-ambiental
+Libras: Nao
+21. Literatura em acao com enfoque CTSA
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Literatura-em-acao-com-enfoque-CTSA.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?literatura-acao-enfoque-ctsa
+Libras: Nao
+22. Plastinacao como Recurso Didatico
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/12/194-vitrine_A-Plastinacao-como-Recurso-Didatico-no-Ensino-de-Ciencias-e-Biologia.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?plastinacao-recurso-didatico-ciencias-biologia
+Libras: Nao
+23. Atendente e Vendedor: Fundamentos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/12/180-vitrine_Atendente-e-Vendedor_-Fundamentos-do-Atendimento-e-Vendas.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?id=646
+Libras: Nao
+24. Atendente e Vendedor: Intermediario
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/12/181-vitrine_Atendente-e-Vendedor_-Nivel-Intermediario.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?id=647
+Libras: Nao
+25. Atendente e Vendedor: Avancado
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/12/204-vitrine_Atendente-e-Vendedor_-Nivel-Avancado.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?atendente-vendedor-avancado
+Libras: Nao
+26. Ingles para Turismo
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/12/199-vitrine_Ingles-para-Turismo.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ingles-para-turismo
+Libras: Nao
+27. Alfabetizacao Cientifica na Pratica Pedagogica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/12/121-vitrine_Alfabetizacao-Cientifica-na-Pratica-Pedagogica.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?alfabetizacao-cientifica-pratica-pedagogica
+Libras: Nao
+28. Pensamento Computacional com Comunidade Surda
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/09/pens-comp-com-surda-vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?pensamento-computacional-alfabetizacao-comunidade-surda
+Libras: Sim
+29. Digipeda - Competencias Digitais e Pedagogicas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine_MOOC1_embrace_pt.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?digipeda-competencias-digitais-pedagogicas
+Libras: Nao
+30. Pedagogias ativas com ferramentas digitais
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine_MOOC2_embrace_pt.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?pedagogias-ativas-ferramentas-digitais
+Libras: Nao
+31. Competencias digitais para desenvolvimento profissional
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine_MOOC3_embrace_pt.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?competencias-digitais-desenvolvimento-profissional
+Libras: Nao
+32. Gestao de Cursos EaD
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine-gestao-ead.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?gestao-cursos-ead
+Libras: Nao
+33. Gestao de Financas Pessoais
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine-gestao-de-financas.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?gestao-financas-pessoais
+Libras: Nao
+34. Explorando Estilos de Aprendizagem
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine-explorand-estilos-de-aprendizagem.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?explorando-estilos-aprendizagem
+Libras: Nao
+35. Introducao a Educacao Comparada e Internacional
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine-introducao-educacao-comparada.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-educacao-comparada-internacional
+Libras: Nao
+36. Node.js para iniciantes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/05/vitrine-nodejs-para-iniciantes.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?node-js-iniciantes
+Libras: Nao
+37. Trilhas Cientificas: Produtos Educacionais
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/12/163-vitrine_Trilhas-Pedagogicas-Produtos-Educacionais-na-Educacao-Ambiental.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?trilhas-cientificas-produtos-educacao-ambiental
+Libras: Nao
+38. Planejamento e Producao de Eventos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/12/187-vitrine_Planejamento-e-Producao-de-Eventos-Escolares-Culturais-e-Academicos.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?planejamento-producao-eventos-escolares
+Libras: Nao
+39. Matematica da Informatica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/12/190-vitrine_Matematica-da-Informatica.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?matematica-da-informatica
+Libras: Nao
+40. Robotica e Prototipagem para Professores
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/10/177-vitrine_Escola-de-Inovacao_-Robotica-e-Prototipagem-para-Professores.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?escola-inovacao-robotica-prototipagem-professores
+Libras: Nao
+41. Pomerisch Ekogame
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/10/176-vitrine_Pomerisch-Ekogame_-Cultura-Pomerana-ambiente-e-diversao.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?pomerisch-ekogame-cultura-pomerana
+Libras: Nao
+42. Saude, Meio Ambiente e Seguranca nas Escolas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/10/157-vitrine_Introducao-a-Saude-ao-Meio-Ambiente-e-a-Seguranca-nas-Escolas.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-saude-ambiente-seguranca-escolar
+Libras: Nao
+43. Pedagogia de Freinet em aula-passeio
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/10/127-vitrine_Pedagogia-de-Freinet-em-aula-passeio-.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?pedagogia-freinet-aula-passeio
+Libras: Nao
+44. IA e Alfabetizacao Cientifica na abordagem CTSA
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/10/118-vitrine_Inteligencia-Artificial-e-Alfabetizacao-Cientifica-na-Abordagem-CTSA.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?alfabetizacao-cientifica-baseada-abordagem-ctsa
+Libras: Nao
+45. Introducao a Educacao Matematica Critica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/10/83-vitrine_Introducao-a-Educacao-Matematica-Critica.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-educacao-matematica-critica
+Libras: Nao
+46. Direito da Tecnologia da Informacao
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/09/vitrine_direito-da-tecnologia-da-informacao.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?direito-tecnologia-informacao
+Libras: Nao
+47. Introducao a NoSQL com MongoDB
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/08/vitrine_Introducao-a-NoSQL-com-MongoDB.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-nosql-mongodb
+Libras: Nao
+48. Neurodiversidade no autismo
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/08/vitrine_Neurodiversidade-no-Autismo.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?neurodiversidade-autismo
+Libras: Nao
+49. Planejamento: como (se) preparar?
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/08/vitrine_Planejamento_-como-se-preparar.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?planejamento-como-se-preparar
+Libras: Nao
+50. Mapas Conceituais no ensino-aprendizagem
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/08/xvitrine_Mapas-Conceituais-no-processo-de-ensino-aprendizagem.png.pagespeed.ic.9zd-PoaNcz.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mapas-conceituais-processo-ensino-aprendizagem
+Libras: Nao
+51. Avaliacao com Mapas Conceituais
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/08/xvitrine_Estrategias-de-Avaliacao.png.pagespeed.ic.0uUn46s0td.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?estrategias-avaliacao
+Libras: Nao
+52. Micropraticas de Pensamento Computacional em Ciencias
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/07/xvitrine_micropraticas.png.pagespeed.ic.QuXhlkpd1R.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?micro-praticas-pensamento-computacional-ciencias
+Libras: Nao
+53. Fisica aplicada para bombeiros
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/07/vitrine_fisica_bombeiros.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?fisica-aplicada-para-bombeiros
+Libras: Nao
+54. Manguezais: Restauracao sustentavel
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/03/2.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?manguezais-restauracao-futuro-sustentavel
+Libras: Nao
+55. Biologia Celular: Membrana Plasmatica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2024/03/1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?biologia-celular-membrana-plasmatica
+Libras: Nao
+56. Gestao Estrategica em Instituicoes Publicas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/gestao.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?gestao-estrategica-instituicoes-publicas-superior
+Libras: Sim
+57. Educacao Especial: aspectos introdutorios
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/edae.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-especial-aspectos-introdutorios
+Libras: Sim
+58. Aprendizagem baseada em equipes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/ap2.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?aprendizagem-baseada-equipes-para-professores
+Libras: Sim
+59. Pilares do Estado Democratico de Direito
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/pilar.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?pilares-estado-democratico-direito-constituicao
+Libras: Nao
+60. Educacao Matematica Critica nos processos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/edu.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-matematica-critica-processos-aprendizagem
+Libras: Nao
+61. Algebra no Ensino Fundamental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/algebra.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?algebra-ensino-fundamental
+Libras: Sim
+62. Introducao a Logica Digital
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/logica.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-logica-digital
+Libras: Nao
+63. Tecnologias Digitais no Ensino Medio Integrado
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/12/tec-1.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?tecnologias-digitais-aplicadas-ensino-medio
+Libras: Nao
+64. Catadores como Ecoeducadores Ambientais
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/11/vitrine_Catadores-como-Ecoeducadores-Ambientais.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?catadores-como-ecoeducadores-ambientais
+Libras: Nao
+65. Plantando um Rio mais Doce
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002609_Slides-2.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?plantando-rio-mais-doce-terra
+Libras: Nao
+66. Hortas e meliponarios educativos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002204_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?hortas-meliponarios-educativos
+Libras: Nao
+67. Cultura oceanica e poluicao dos rios
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002234_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?cultura-oceanica-poluicao-rios-relacao
+Libras: Nao
+68. Comunidades Quilombolas e Saberes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002252_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?comunidades-quilombolas-saberes-socioambientais
+Libras: Nao
+69. Residuos Solidos e Educacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002337_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?residuos-solidos-educacao-ambiental
+Libras: Nao
+70. Topicos de Geociencias socioambientais
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002356_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?topicos-geociencias-saberes-socioambientais
+Libras: Nao
+71. Saberes Populares e Educacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002435_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?saberes-populares-educacao-ambiental
+Libras: Nao
+72. Reflorestamento de Matas Ciliares
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002519_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?reflorestamento-matas-ciliares
+Libras: Nao
+73. Legislacao em Educacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002541_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?legislacao-educacao-ambiental-meio-ambiente
+Libras: Nao
+74. O que e Laboratorio Vivo?
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002118_Slides-2.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?laboratorio-vivo
+Libras: Nao
+75. Educacao ambiental - pedagogia Freinet
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002143_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-ambiental-pedagogia-celestin-freinet
+Libras: Nao
+76. Praticas Experimentais em Ciencias
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002313_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?praticas-experimentais-ensino-ciencias
+Libras: Nao
+77. Jardins terapeuticos educativos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002419_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?jardins-terapeuticos-educativos
+Libras: Nao
+78. Aulas de Campo para Geociencia
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002507_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?aulas-campo-ensino-geociencias
+Libras: Nao
+79. Clube de Ciencias: Educacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/1.-Vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?clube-ciencias-como-espaco-aprendizagem
+Libras: Nao
+80. Avaliacao no Contexto da Educacao Ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/11/Screenshot_20231114_002449_Slides-1.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?avaliacao-aprendizagem-contexto-educacao-ambiental
+Libras: Nao
+81. Moodle para Estudantes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/05/xvitrine_MoodleEstudantes.jpg.pagespeed.ic.Edxtd9vOcp.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-para-estudantes
+Libras: Sim
+82. Moodle para Educadores
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mooc_Moodle-01.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-para-educadores
+Libras: Sim
+83. Moodle 3.9 para Estudantes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/02/xMoodle-para-Estudantes.png.pagespeed.ic.KqjL2aSq95.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-39-para-estudantes
+Libras: Nao
+84. Moodle 3.9 para Educadores
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/05/vitrine_moodle_educadores3.9.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-39-para-educadores
+Libras: Nao
+85. Introducao a Iniciacao Cientifica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/vitrine_introducao_iniciacao_cientifica.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-iniciacao-cientifica
+Libras: Nao
+86. Hamilton: Desenvolvimento de Aplicativos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/03/MOOC-Vitrine-MOOC-de-Hamilton-Desenvolvimento-de-Aplicativos.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-hamilton-desenvolvimento-aplicativos
+Libras: Nao
+87. Licenciamento ambiental
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/03/MOOC-Vitrine-Licenciamento-Ambiental.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?licenciamento-ambiental-legislacao-impactos-ambientais
+Libras: Nao
+88. Saneamento Basico Urbano
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/03/MOOC-Vitrine-Saneamento-Basico.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?saneamento-basico-urbano-historico-aspectos
+Libras: Nao
+89. Saude mental no contexto da educacao
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/03/MOOC-Vitrine-Saude-Mental.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?saude-mental-contexto-educacao-itinerario
+Libras: Nao
+90. Bem-Estar e Substancias Psicoativas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/03/MOOC-Vitrine-Bem-estar-e-Substancias.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?bemestar-substancias-psicoativas-saude-publica
+Libras: Nao
+91. Escrita Academica sem Sofrimento
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_Escrita_Academica_sem_Sofrimento.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?escrita-academica-sem-sofrimento
+Libras: Nao
+92. Inovacao Social nas Politicas Publicas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_INovacao_Social_Politicas_Publicas.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?inovacao-social-ambito-politicas-publicas
+Libras: Nao
+93. Aprendendo a licitar com Adm. Publica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_Licitar_adm_publica.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?aprendendo-licitar-administracao-publica
+Libras: Nao
+94. Desvendando o PEI
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_Desvendando_PEI.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?desvendando-plano-educacional-individualizado-pei
+Libras: Sim
+95. Caminhos para alfabetizacao - deficiencia visual
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_Caminhos_Alfabetizacao_Deficiencia_Visual.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?caminhos-alfabetizacao-contexto-deficiencia-visual
+Libras: Sim
+96. Estrategias de Pesquisa Qualitativa
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_Estrategias_Pesquisa_Qualitativa.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?estrategias-pesquisa-qualitativa-aspectos-praticos
+Libras: Sim
+97. Estatistica com o R
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_Estatistica_R.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?estatistica-com-r
+Libras: Nao
+98. Introducao a Metodologia da Pesquisa
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/vitrine_Intro_Met_Pesquisa.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-metodologia-pesquisa
+Libras: Sim
+99. Educacao para relacoes etnico-raciais
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/xvitrine_EducEtnicoRacial.png.pagespeed.ic_.Br3WgHAF_x.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-para-relacoes-etnico-raciais
+Libras: Nao
+100. Introducao a Producao de Audiolivros
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_introducao_audiolivro.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-producao-audiolivros
+Libras: Nao
+101. Nocoes de Prevencao e Combate a Incendios
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_incendio.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?nocoes-prevencao-combate-incendios
+Libras: Nao
+102. Gestao Academica de Cursos de Graduacao
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_GestaoAcademicaCursosGraduacao.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?gestao-academica-cursos-graduacao
+Libras: Nao
+103. Introducao a Libras
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Vitrine_MOOC_Introducao_Libras.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-libras
+Libras: Sim
+104. Introducao a Educacao de Surdos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Vitrine_MOOC_Educacao_Surdos.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-educacao-surdos
+Libras: Sim
+105. Lovelace: Arte e Game Design
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/xvitrine_Lovelace_Arte_Game_Design.png.pagespeed.ic_.Y1J52ZCFGU.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-lovelace-arte-game-design
+Libras: Nao
+106. Lovelace: Robotica Educacional
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_RoboticaEducacional.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-lovelace-robotica-educacional
+Libras: Nao
+107. Lovelace: Programacao Python e C
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_MoocLovelace_ProgramacaoPython.png.pagespeed.ce.VZsHYEKgaD.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-lovelace-programacao-python-c
+Libras: Nao
+108. Lovelace: Pensamento Computacional com Scratch
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_Mooc_Lovelace_PensCompScratch.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-lovelace-pensamento-computacional-scratch
+Libras: Nao
+109. Lovelace: Pensamento Computacional
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_MoocLovelace_pensamentoComputacional.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-lovelace-pensamento-computacional
+Libras: Sim
+110. Lovelace: Pensamento Computacional Feminino
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_MoocLovelace_pccf.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?lovelace-pensamento-computacional-cotidiano-feminino
+Libras: Nao
+111. Educador Maker: Primeiros Passos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/1_Vitrine_Educador_Maker_PP_primeiro_curso.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educador-maker-primeiros-passos
+Libras: Nao
+112. Educador Maker: Aprendizagem Baseada em Projetos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_EducadorMaker_Projetos.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educador-maker-aprendizagem-baseada-projetos
+Libras: Nao
+113. Educador Maker: ensino mao na massa
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_EducadorMaker_EnsinoMaonaMassa.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educador-maker-ensino-mao-massa
+Libras: Nao
+114. Educador Maker: Alfabetizacao Cientifica Da Vinci
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/xvitrine_EMaker_DaVinci.png.pagespeed.ic_.NQXNH2a2yG.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educador-maker-alfabetizacao-cientifica-inspirada
+Libras: Nao
+115. Ingles Comunicativo - Basico Essencial
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/ingles-comunicativo.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ingles-comunicativo-basico-essencial
+Libras: Nao
+116. Competencias em informacoes academicas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/VITRINE_DesenvCompetencias-3.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?desenvolvendo-competencias-informacoes-academicas-profissionais
+Libras: Nao
+117. PROGRAMAKIDS
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_Programakids.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?programakids-apresentando-programacao-para-criancas
+Libras: Nao
+118. Educacao Ambiental em foco
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/EducAmbientalEmFoco_vitrine.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-ambiental-foco-discussoes-praticas
+Libras: Nao
+119. Mary Keller: Robotica para Educadores
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Mooc_de_MaryKeller_Vitrine_MOOC.gif
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-mary-keller-robotica-educadores
+Libras: Nao
+120. Desmistificando o Cubo magico
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/DesmistificandoCuboMagico_VITRINE.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?desmistificando-cubo-magico
+Libras: Nao
+121. Estrategias Flexiveis em Pandemia
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_EstrFlexEnsinoPandemia.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?estrategias-flexiveis-ensino-tempos-pandemia
+Libras: Nao
+122. Ensino de astronomia: Ceu noturno
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xvitrine_EnsinoAstronomia.png.pagespeed.ic.oKszFSMPDd.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ensino-astronomia-reconhecimento-ceu-noturno
+Libras: Nao
+123. Praticas Educativas em Saneamento Basico
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_PraticasEducativasSaneamentoBasico.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?praticas-educativas-saneamento-basico
+Libras: Nao
+124. Quimica para Iniciantes
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xvitrine_QuimicaIniciantes.png.pagespeed.ic.1N6mW-s69K.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?quimica-para-iniciantes
+Libras: Nao
+125. Compreendendo a EPT Integrada
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xvitrine_CompreendendoEPT.png.pagespeed.ic.HeTr0pzhBE.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?compreendo-educacao-profissional-tecnologica-integrada
+Libras: Sim
+126. Avaliacao por Rubrica no Moodle
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xAvaliacao-por-rubrica-no-moodle.png.pagespeed.ic.bBuomgcUXr.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?avaliacao-rubrica-moodle
+Libras: Nao
+127. Acessibilidade em Processos Seletivos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_AcessibilidadeProcessoSeletivoDiscente.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?acessibilidade-processos-seletivos-discentes
+Libras: Nao
+128. Metodologias Ativas: Educacao Inovadora
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xvitrine_MetAtivasEducInovadora.png.pagespeed.ic.fDTFHlRy1K.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?metodologias-ativas-educacao-inovadora
+Libras: Nao
+129. Gestao da Lideranca para Resultados
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xvitrine_GestaoLiderancaResultados.png.pagespeed.ic.37kVScbnDp.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?gestao-lideranca-para-melhores-resultados
+Libras: Nao
+130. Vacinas: O que e preciso saber?
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xvitrine_Vacinas.png.pagespeed.ic.iYYfNgq1QD.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?vacinas-preciso-saber
+Libras: Nao
+131. Ferramentas Digitais para Curadoria
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_FerramentasDigCuradoriaEduc.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ferramentas-digitais-para-curadoria-educacional
+Libras: Nao
+132. Introducao a gestao da inovacao
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xIntroducao-a-gestao-da-inovacao.png.pagespeed.ic.DnL-pkHl6s.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-gestao-inovacao
+Libras: Nao
+133. Bons habitos de estudo
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoDesenvolverEstudos.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?como-desenvolver-bons-habitos-estudo
+Libras: Nao
+134. Inclusao Sociodigital para Multiplicadores
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Inclusao-Sociodigital-para-multiplicadores.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?inclusao-sociodigital-para-multiplicadores
+Libras: Nao
+135. Gamificacao no Moodle
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_GamificacaonoMoodle.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?gamificacao-moodle
+Libras: Nao
+136. Acessibilidade e Tecnologia
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xAcessibilidade_Tecnologia_Vitrine.jpg.pagespeed.ic.ltcRftlFiD.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?acessibilidade-tecnologia
+Libras: Sim
+137. Ferramenta para gravacao de videoaulas
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_FerramentaGravacaoVideo.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ferramenta-para-gravacao-videoaulas
+Libras: Sim
+138. Diversidade Cultural, Economia Criativa
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Miniatura_Diversidade_Cultural_EC_D.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?curso-livre-sobre-diversidade-cultural
+Libras: Nao
+139. Introducao a projetos
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Vitrine_Introducao-a-Projetos.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-projetos
+Libras: Nao
+140. Ambientes virtuais com Unity 3D
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Criando_Amb_Virtuais_Unity3D_Vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?criando-ambientes-virtuais-unity
+Libras: Nao
+141. Introducao ao Google Classroom
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Google-Classroom_Vitrine.jpg
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-google-classroom
+Libras: Nao
+142. Google Arts and Culture em Sala de Aula
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Vitrine_Curso_GoogleArts_Culture.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?utilizando-google-arts-culture-aula
+Libras: Nao
+143. Google Drive: Colaboracao na pratica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/mooc_drive_colab.png.pagespeed.ce.wfs6DjmzpN.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?google-drive-colaboracao-pratica
+Libras: Sim
+144. Softwares educacionais para Matematica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Softwares_Educacionais_Vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?catalogacao-softwares-educacionais-ensino-matematica
+Libras: Nao
+145. Programacao Basica: Scratch
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ProgramacaoBasica_Scratch.png.pagespeed.ce.W_OgTdj_AY.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?programacao-basica-scratch
+Libras: Nao
+146. Realidade Virtual como apoio ao ensino
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/xRealidade_Virtual_Vitrine.png.pagespeed.ic.X6klgEP30O.webp
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?realidade-virtual-como-apoio-ensino
+Libras: Nao
+147. Uso Educacional do Canva
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Uso_Educacional_Canva_Vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?uso-educacional-canva
+Libras: Sim
+148. Protagonismo feminino na politica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_Mulheres_ProtagonismoFeminino.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?maratona-mulheres-politica-oratoria-marketing
+Libras: Nao
+149. Habilidades na carreira politica
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_Mulheres_HabilidadesHumanas.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?maratona-mulheres-politica-habilidades-humanas
+Libras: Nao
+150. Lesson Study - versao Portugues
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Lesson_Study_1_V_Portugues_Vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?lesson-study-versao-portugues
+Libras: Nao
+151. Lesson Study - English version
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Lesson_Study_1_V_Ingles_Vitrine.png.pagespeed.ce.kwguJlLTpz.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?lesson-study-english-version
+Libras: Nao
+152. Por que Lesson Study?
+Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Lesson_Study_2_Por_que_Vitrine.png
+Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?id=390
+Libras: Nao

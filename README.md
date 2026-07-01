@@ -18,7 +18,7 @@ O roteamento completo esta em [CLAUDE.md](CLAUDE.md) e [CONTEXT.md](CONTEXT.md).
 | Estagio | Faz |
 |---------|-----|
 | [01-descoberta](stages/01-descoberta/CONTEXT.md) | Requisitos + analise da Vitrine atual + modelo da Base |
-| [02-catalogo](stages/02-catalogo/CONTEXT.md) | Inventario e taxonomia dos cursos (165 + 65) |
+| [02-catalogo](stages/02-catalogo/CONTEXT.md) | Inventario, taxonomia e indicadores dos cursos (165 + 65) |
 | [03-design-ux](stages/03-design-ux/CONTEXT.md) | Interfaces do AI/UX Studio + templates de pagina |
 | [04-setup-ambiente](stages/04-setup-ambiente/CONTEXT.md) | WordPress 7 local + repo + dump + fluxo Git |
 | [05-desenvolvimento](stages/05-desenvolvimento/CONTEXT.md) | Tema, blocos e templates (codigo WordPress) |
@@ -27,3 +27,12 @@ O roteamento completo esta em [CLAUDE.md](CLAUDE.md) e [CONTEXT.md](CONTEXT.md).
 ## Metodologia
 
 Estrutura de pastas como arquitetura de agente: estagios numerados, contratos `CONTEXT.md` (Inputs, Process, Outputs), handoff via pastas `output/` e carregamento de contexto em camadas. Referencia: `C:\Users\elton\mmos\icm`.
+
+## Artefatos Analiticos
+
+O projeto inclui uma extracao do Painel de Indicadores dos MOOC do Ifes em:
+
+- [Power BI MOOC Ifes](stages/02-catalogo/output/powerbi-mooc-ifes/README.md)
+- [Analise de insights](stages/02-catalogo/output/powerbi-mooc-ifes/analise-insights-powerbi-mooc-ifes.md)
+
+Esses arquivos apoiam decisoes de priorizacao, UX, destaque de cursos, filtros, ordenacao e estrategia de catalogo.

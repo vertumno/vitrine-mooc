@@ -1,0 +1,5391 @@
+{
+  "schemas": [
+    {
+      "modelId": 4885670,
+      "schema": {
+        "Entities": [
+          {
+            "Name": "campus",
+            "EdmName": "Sandbox.campus",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ae108f67-607a-438f-af08-8941335b7cef"
+              },
+              {
+                "Name": "created_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_84d59c90-252b-4603-a4a3-5c12b99892fd_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "c3307473-8ee4-46c6-9609-038b2619a2a6"
+              },
+              {
+                "Name": "updated_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_9f260401-6da3-4de8-9881-60d73d9efce5_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "f20fc926-0ce5-4da6-9dc5-8393df03128c"
+              },
+              {
+                "Name": "nome",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f1c37459-da42-4afc-b6e8-79ac7039da8f"
+              },
+              {
+                "Name": "email",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "bdf6efe5-247a-46ca-b5c0-cca2ae4e1698"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "LocalDateTable_84d59c90-252b-4603-a4a3-5c12b99892fd_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_84d59c90-252b-4603-a4a3-5c12b99892fd",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_9f260401-6da3-4de8-9881-60d73d9efce5_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_9f260401-6da3-4de8-9881-60d73d9efce5",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "57cb649a-f99f-4569-a566-e910cb0954f4"
+          },
+          {
+            "Name": "DateTableTemplate_a27b9731-4a08-4625-867f-f1ba86e3b95c",
+            "EdmName": "Sandbox.DateTableTemplate_a27b9731_4a08_4625_867f_f1ba86e3b95c",
+            "Private": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "e9cd08cb-0997-4f68-94cd-739e353b59b6"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "fbecfbb3-b9a8-4c15-9fad-8f67361e7ca5"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ddbd0370-1c2c-49ef-9e3e-98c46eeee762"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "bf88cb89-7e66-4aa0-9529-cbc5a9450713"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c75fed78-c770-42e5-b215-33b5a9d41b4a"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "7356951c-a7d6-42ac-bfea-52579c9f27ce"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "cc0486a2-8630-4c86-be5a-3f33354aa95f"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "8c0d69d8-423e-4afd-9fcc-44202f921f65"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "97f227c6-3b3d-4f9a-9352-1a1993207e90"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "1d2c2984-bec3-4f25-850e-64df7eb3fa09"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "4707fe5d-63e2-4162-b0f5-40bc14f7bfdd"
+                  }
+                ],
+                "StableName": "583de819-a84b-42ed-9838-845c73caaca1"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "4c7774ca-97ee-4fed-9235-ae6b7fea365f"
+          },
+          {
+            "Name": "LocalDateTable_84d59c90-252b-4603-a4a3-5c12b99892fd",
+            "EdmName": "Sandbox.LocalDateTable_84d59c90_252b_4603_a4a3_5c12b99892fd",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "4925bfaf-cec8-4ad5-a951-7088a3014890"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "0651e6a1-c960-4bec-bc34-0db77e031965"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "18fa36bf-7378-4811-8f8e-75a727b07c6e"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "4c6ea100-b30a-48d5-aa2f-df316ab95765"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "967f305a-725a-4a15-addf-4f7ef85ff6cf"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "1df747e6-2e5b-491a-b834-6c4d9633b709"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "257f86c4-6fbc-4236-8f3a-983a45de846f"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "dfc7390c-a7d5-44aa-8126-82d336a2e738"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "25d919c4-eb0c-49b1-ae4d-899cbe8e3d67"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "06a2e9ca-4faa-48f8-a8e1-c49b5ad7f0d9"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "fb9c0e6b-209f-4c0a-9993-b070334a7bf6"
+                  }
+                ],
+                "StableName": "1cae5782-d576-482d-8edf-25cf252c642b"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "33a4d644-f24b-4a36-a81c-6015cd393d1b"
+          },
+          {
+            "Name": "LocalDateTable_9f260401-6da3-4de8-9881-60d73d9efce5",
+            "EdmName": "Sandbox.LocalDateTable_9f260401_6da3_4de8_9881_60d73d9efce5",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "23ca86fc-265d-4f41-876b-223b8c343117"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "383a28e6-bce4-40a5-a8e1-38061eb5bc57"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "19e7117a-6be5-4895-b8dc-92ba3d9c5657"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "217ce0b6-550e-420b-9d63-23a9bc7bf274"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "4b7917e9-6c83-4421-b28f-d9bc8ddc8425"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "10028d4c-9b96-43bd-8adc-06f2cafb3ffd"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "74ede55a-5bce-40d7-8c8f-af4f72d5a024"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "01a081fd-cb98-4b97-b8e4-4c0c5232ec68"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "86d73b44-28a6-4e03-b873-98e85150bffb"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "13187eaa-743f-4c90-96f8-67f1cc164f1e"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "a9842493-588f-4fb3-ace7-a08fa0f8a632"
+                  }
+                ],
+                "StableName": "82306109-fc93-4744-9c20-59f5d0767c13"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "63783038-0504-45d3-b3f8-267fd37c3709"
+          },
+          {
+            "Name": "curso",
+            "EdmName": "Sandbox.curso",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "9f96be09-ff7e-4414-996f-847e3610c00a"
+              },
+              {
+                "Name": "created_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_f15c3c45-ff8d-4e5d-a356-6eeb6828cbaa_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "f221da60-a16a-4901-9d94-c5eb091dcb56"
+              },
+              {
+                "Name": "updated_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_517f9a95-79d0-4d20-8296-c30c14a08bdf_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "f0cd6f64-78dc-4679-8d14-9d9e23b90bf0"
+              },
+              {
+                "Name": "nome",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "b3b0d938-61f3-4690-821a-ba31e50c470d"
+              },
+              {
+                "Name": "carga_horaria",
+                "DataType": 3,
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "a1fa6781-5344-4a6e-95c1-03a28600290c"
+              },
+              {
+                "Name": "conteudo",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "984b56da-2e78-45b0-9e08-41ea9518a047"
+              },
+              {
+                "Name": "percentual_aprovacao",
+                "DataType": 3,
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "36713145-4e84-49aa-9389-dfe34366f37f"
+              },
+              {
+                "Name": "situacao",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "2eb81d9d-f4db-4075-804f-ea71ce1afe99"
+              },
+              {
+                "Name": "id_campus",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "1ab779f9-a510-471b-bfe5-1398972401d2"
+              },
+              {
+                "Name": "num_processo",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c8fb42c3-5988-44f7-b0f8-d418323ee02a"
+              },
+              {
+                "Name": "resumo",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "4988a1fb-9981-4472-9d01-aa2bfc3fcac5"
+              },
+              {
+                "Name": "id_tipo_curso",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f6d9047d-708e-4ddd-9d7a-8434abeb3f04"
+              },
+              {
+                "Name": "slug",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "da73c0cc-2aa1-41fc-9b20-cdd19b49848f"
+              },
+              {
+                "Name": "id_programa_curso",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "64b5f77d-45a0-479e-bc8b-11a5b9776e7b"
+              },
+              {
+                "Name": "Tem no Ciclo Sistec",
+                "EdmName": "Tem_no_Ciclo_Sistec",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "062e0c6e-1617-49ed-8fa2-e6323da261ec"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "LocalDateTable_f15c3c45-ff8d-4e5d-a356-6eeb6828cbaa_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_f15c3c45-ff8d-4e5d-a356-6eeb6828cbaa",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_517f9a95-79d0-4d20-8296-c30c14a08bdf_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_517f9a95-79d0-4d20-8296-c30c14a08bdf",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "campus_id",
+                "Active": true,
+                "TargetEntity": "campus",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "tipo_curso_id",
+                "Active": true,
+                "TargetEntity": "tipo_curso",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "programa_curso_id",
+                "Active": true,
+                "TargetEntity": "programa_curso",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              },
+              {
+                "Name": "media_avaliacao_curso_id",
+                "Active": false,
+                "TargetEntity": "media_avaliacao_curso",
+                "SourceMultiplicity": 0,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "0ad1a128-abbe-4c2a-a9a5-7a984c17075b"
+          },
+          {
+            "Name": "LocalDateTable_f15c3c45-ff8d-4e5d-a356-6eeb6828cbaa",
+            "EdmName": "Sandbox.LocalDateTable_f15c3c45_ff8d_4e5d_a356_6eeb6828cbaa",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "d2c689de-f947-46e3-95e3-1ed7368080e7"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "d0031972-3bde-4c38-8b88-74f45b67a7ad"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "a67a73b9-2fcf-48bd-8768-53cec8e96013"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "61891083-5fad-45d7-9a8b-ba34608f2a81"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "7bdce5a9-2f0f-4847-b13d-85ab3e603b2c"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "276961dd-b2d5-4c80-bdd1-80899ad84485"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "6bccb25b-8a70-4638-98af-4a35f61c6f4c"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "ac9c78fe-6490-4b6c-97a5-404bee183013"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "b3e6f25e-b54a-49e6-90a4-a5941fe33dfd"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "a6735a4b-e7ec-4250-99ce-a2333fbb7ea1"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "2b11ef75-7ac3-46ca-afb0-b0fac77d49f9"
+                  }
+                ],
+                "StableName": "777970ce-fea7-4cec-8c3b-d1999957b112"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "11172557-3f09-4b80-98a6-a1ce0df10875"
+          },
+          {
+            "Name": "LocalDateTable_517f9a95-79d0-4d20-8296-c30c14a08bdf",
+            "EdmName": "Sandbox.LocalDateTable_517f9a95_79d0_4d20_8296_c30c14a08bdf",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "1319c1b1-d25d-44ba-84e9-5e3248c9d77c"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "d43229ab-1222-42b5-a50c-53637169c377"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "503daa0e-701a-4130-b41b-59eb21aa78ae"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "27ff7f4d-fc7f-408c-88be-d6f158f9e71f"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "df5ea56f-4235-40a4-b9a3-fc2e63ba1aee"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "778577f9-5bff-4084-b4c4-c68b4bb303ec"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "0682c1ec-6ced-409f-b8c2-445461f63ff6"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "6c576553-2629-49cf-9963-b509839f14ef"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "76c2cc19-9329-4ed8-8c20-7792e04e5ff9"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "5d4929b6-f111-4eab-ac2a-b61d6548df58"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "0efd32b1-d004-49dc-8aa7-988c4d4a2e0d"
+                  }
+                ],
+                "StableName": "e226d1bb-aacd-4a41-a08d-fa33736fef93"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "b50dcb60-4ef4-442a-bd96-994d6704b963"
+          },
+          {
+            "Name": "parametros_ciclos_sistec",
+            "EdmName": "Sandbox.parametros_ciclos_sistec",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "28abb51f-773b-4756-9c78-4c954300defc"
+              },
+              {
+                "Name": "created_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_7ca7e3c9-f5b2-4b7d-9225-7647207776c7_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "9e927a5d-0f85-484f-a508-22c8081aa5cb"
+              },
+              {
+                "Name": "updated_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_20fd1e6d-013d-4e17-a0f0-501a392180a9_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "80b6e0c1-9014-47d4-9c42-fc007a2ba4ea"
+              },
+              {
+                "Name": "data_inicio",
+                "DataType": 7,
+                "FormatString": "D",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_a4c8877e-fbe4-440e-9333-b168939639fd_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "731ddcca-98e4-41a1-a298-f1b5e3830d3d"
+              },
+              {
+                "Name": "data_fim",
+                "DataType": 7,
+                "FormatString": "D",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_4af2b179-8df8-46ec-9286-23a1a315fb28_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "62a439d8-7428-422c-a6d2-12b564124d6d"
+              },
+              {
+                "Name": "dia_inicial",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "df439863-230d-492d-9b92-7b3b3666b7a2"
+              },
+              {
+                "Name": "dia_final",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "99267d6b-005b-4f05-b904-67b42b5d5cbf"
+              },
+              {
+                "Name": "situacao",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "09f83c2e-cc45-4e51-aed8-6ccb73fa6c53"
+              },
+              {
+                "Name": "id_curso_moodle",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "fa21541e-fda1-4b76-a272-c0b7ace07477"
+              },
+              {
+                "Name": "id_categoria_insc_encerrada",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "7886139f-e6ed-4711-8d9c-606949b8477d"
+              },
+              {
+                "Name": "id_curso",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "5e60c155-f61d-41e0-bccc-51699fea696f"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "791135d0-bafc-4732-b950-d92ebec2951f"
+              },
+              {
+                "Name": "Mes",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "mesnum"
+                  ]
+                },
+                "StableName": "3f6d0860-f290-4497-9d3e-d84c56d5a392"
+              },
+              {
+                "Name": "mesnum",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "37e47dc4-fdf2-48a0-b6c0-d1da66697a23"
+              },
+              {
+                "Name": "Data_lancamento",
+                "DataType": 7,
+                "FormatString": "D",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_02e37229-4340-4245-b522-6daecd3a4141_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "16b0b2be-5860-4be2-80d7-efbb64e3386e"
+              },
+              {
+                "Name": "Total Cursos Ativos",
+                "EdmName": "Total_Cursos_Ativos",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "b1cfa2be-b233-407b-a984-69a8e2f4411f"
+              },
+              {
+                "Name": "Índice de Escala",
+                "EdmName": "Índice_de_Escala",
+                "DataType": 3,
+                "Measure": {},
+                "StableName": "aba88013-ede7-4f05-a575-23d4cf0058b2"
+              },
+              {
+                "Name": "Tempo de Existência do Curso (meses)",
+                "EdmName": "Tempo_de_Existência_do_Curso__meses_",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "5cfd59d2-e9ce-464d-b159-789257c99842"
+              },
+              {
+                "Name": "Popularidade do Curso (Medida)",
+                "EdmName": "Popularidade_do_Curso__Medida_",
+                "DataType": 3,
+                "Measure": {},
+                "StableName": "988dcac3-b622-4f68-9c05-4bb9c59a824f"
+              },
+              {
+                "Name": "Classificação Popularidade",
+                "EdmName": "Classificação_Popularidade",
+                "DataType": 1,
+                "Measure": {},
+                "StableName": "4e3ff485-ac0c-4b1d-820b-90046432af4e"
+              },
+              {
+                "Name": "Ordem Popularidade",
+                "EdmName": "Ordem_Popularidade",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "937a986a-fbe6-43a8-bdb9-348ce202dd45"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "LocalDateTable_7ca7e3c9-f5b2-4b7d-9225-7647207776c7_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_7ca7e3c9-f5b2-4b7d-9225-7647207776c7",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_20fd1e6d-013d-4e17-a0f0-501a392180a9_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_20fd1e6d-013d-4e17-a0f0-501a392180a9",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_a4c8877e-fbe4-440e-9333-b168939639fd_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_a4c8877e-fbe4-440e-9333-b168939639fd",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_4af2b179-8df8-46ec-9286-23a1a315fb28_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_4af2b179-8df8-46ec-9286-23a1a315fb28",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "mdl_course_id",
+                "Active": true,
+                "TargetEntity": "mdl_course",
+                "SourceMultiplicity": 0,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              },
+              {
+                "Name": "curso_id2",
+                "Active": true,
+                "TargetEntity": "curso",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_02e37229-4340-4245-b522-6daecd3a4141_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_02e37229-4340-4245-b522-6daecd3a4141",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "9d062843-2550-4e6b-b91e-8d191771255d"
+          },
+          {
+            "Name": "LocalDateTable_7ca7e3c9-f5b2-4b7d-9225-7647207776c7",
+            "EdmName": "Sandbox.LocalDateTable_7ca7e3c9_f5b2_4b7d_9225_7647207776c7",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "79415622-ded7-4e1b-82ed-5d2bffb0ac33"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "a6583128-6319-4afc-87a4-ff9d2d8bf1b3"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "50c0614c-311f-4a64-9698-188764947529"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "fcdd58e1-0079-4ad4-8466-32fe698adbaa"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "13858d36-82e1-470f-bbcd-4121b3ac0797"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "305d466a-76ec-4ff3-8bd7-be7cf4e4f4b6"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "81359757-793d-4f61-990e-12d8e9cdeb7c"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "f39da0d0-6def-4814-b622-095c8a5dd95e"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "5bab65b0-71e8-4033-9835-bcdb1f06e390"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "bc35a429-0afb-461f-92f5-123ff3f6c504"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "800d6493-bd7d-459e-9800-9efabfec6a72"
+                  }
+                ],
+                "StableName": "0eb07cce-97df-4f3f-9969-f448c74e045c"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "c5dc6894-394b-47f3-8df8-e2c58aaa451c"
+          },
+          {
+            "Name": "LocalDateTable_20fd1e6d-013d-4e17-a0f0-501a392180a9",
+            "EdmName": "Sandbox.LocalDateTable_20fd1e6d_013d_4e17_a0f0_501a392180a9",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "62be11da-3554-460a-a944-4e6aa60bd3ef"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "8c78fa63-ba9e-4ef5-a12f-f0c1256f4128"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "415c87cb-5e6e-4d0f-9c6b-de8008623165"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "6f4fedca-6fd4-49dc-8375-98fffc81ae30"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "afc60204-e573-4ccc-a1bc-863cf02ba650"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "84064e54-91f3-41b7-92a2-675e72786c41"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c7b0c217-3fb5-477c-8587-024bd77f0d2e"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "4e1ad13f-6f9b-41cb-9147-593db12afd87"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "0aa47c36-60df-4352-b2bf-b6e0c2ac4384"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "1ac91d37-f867-47a3-aff8-ac177494a780"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "949bed6c-c08e-419d-b7bd-7d37671cd8ef"
+                  }
+                ],
+                "StableName": "d1c3c17b-bb39-406a-b03d-50881ee960a6"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "1d0f3478-3b52-4cda-9b7f-8236a2770e4d"
+          },
+          {
+            "Name": "LocalDateTable_a4c8877e-fbe4-440e-9333-b168939639fd",
+            "EdmName": "Sandbox.LocalDateTable_a4c8877e_fbe4_440e_9333_b168939639fd",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "997d4b8d-04d2-4c8a-9639-d32137246307"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "22f286ab-0468-42fa-88a7-8bcdd0d7848c"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "af2712fd-26c1-4a11-acd9-fc128100266b"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "4639958d-91d7-41c8-900f-7170963d368d"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "51a6116c-47e1-44b6-8520-87e8cc3e1d60"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "fdf895b7-08e4-43c9-97d7-4cde0f389fb0"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "70eac671-7f8a-43c1-b018-76e5fe344985"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "3c8d0775-9bb2-43d0-9871-f297c9125332"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "6a41e6a4-e916-44be-832e-be73ebabc4e1"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "596a7e07-e998-4354-baf5-6ed18399e3e1"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "fc489eb5-99cb-457b-be79-c276f7722ad0"
+                  }
+                ],
+                "StableName": "ec270ecc-84d1-4fb9-b1a6-13e4e6305560"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "7ffe78db-da85-4c26-b34d-49f79fe9b83c"
+          },
+          {
+            "Name": "LocalDateTable_4af2b179-8df8-46ec-9286-23a1a315fb28",
+            "EdmName": "Sandbox.LocalDateTable_4af2b179_8df8_46ec_9286_23a1a315fb28",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "9fc1162c-1ef2-4a1a-8948-23af72d05ebe"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "845a3aed-8280-4cb3-8a89-03fc2b7c7754"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "9bf99acb-45c4-4c54-b53e-3f95c1ca3891"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "f90e20a8-366b-4a71-99ea-ed1f38068a9f"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "a058f820-8826-4298-8f6e-6157122be27e"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "44fbfcd6-1785-4476-b814-81a311b71c1a"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "3eb64fb5-cf73-440d-b2bd-150badb699e5"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "17f2b12b-e1ac-41df-84cd-25b00f14e012"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "39588dac-a47d-485c-b52b-287bdd1eb526"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "97e5721c-e2a7-411c-b330-63ba8d72bec9"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "815426f9-b722-4986-a662-7eafed440870"
+                  }
+                ],
+                "StableName": "8cf59c29-9417-4904-b704-99ea252f91ff"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "2a0b80b4-e769-4e18-ad5a-52fa5b26219f"
+          },
+          {
+            "Name": "tipo_documentos",
+            "EdmName": "Sandbox.tipo_documentos",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "8b6db571-eebd-4003-8491-a58068d5a8d3"
+              },
+              {
+                "Name": "created_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_25456bb7-269d-4a5a-a294-2c5de207acb5_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "43fc0be2-19e6-40d2-a1da-01ca8e3e434a"
+              },
+              {
+                "Name": "updated_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_f43d60ac-b4bf-46fa-9fe3-840abf164223_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "27a4f616-5202-4ed0-af45-d0d889d8d9cc"
+              },
+              {
+                "Name": "descricao",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "7e2cbe82-8c0c-46ea-a797-2bf8806df289"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "LocalDateTable_25456bb7-269d-4a5a-a294-2c5de207acb5_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_25456bb7-269d-4a5a-a294-2c5de207acb5",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_f43d60ac-b4bf-46fa-9fe3-840abf164223_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_f43d60ac-b4bf-46fa-9fe3-840abf164223",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "410ab0ef-1f94-43fc-839e-dad958a230e5"
+          },
+          {
+            "Name": "LocalDateTable_25456bb7-269d-4a5a-a294-2c5de207acb5",
+            "EdmName": "Sandbox.LocalDateTable_25456bb7_269d_4a5a_a294_2c5de207acb5",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "807a32df-0c5c-4425-be10-ba11f319f141"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "9e7a5344-135e-458c-93ea-4eec08651b59"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "d6eec5a0-51f9-46dc-9535-ebc08867ed9d"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "bb76883d-ea8a-4a51-88b8-bdb48612c86c"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "dc6afbf5-f260-4027-8c30-28428e527dc5"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "23202c8b-8469-459c-84e9-b573240b227f"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "8728e00d-9098-4075-adc8-f0fe8e39623a"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "9c804870-ebcf-467d-ad0d-eb90bce1f7c4"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "80872439-457a-44d9-b0b8-6301ab86bbd9"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "4956cf9a-fd6d-4532-bdc0-af8d26f30f0e"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "060d6969-c2af-43e4-baa1-49a32a014cb7"
+                  }
+                ],
+                "StableName": "e342c9e7-2e72-4cbe-9279-9e88749bec1e"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "e1d37059-e562-4811-a9f4-8e56103d39c8"
+          },
+          {
+            "Name": "LocalDateTable_f43d60ac-b4bf-46fa-9fe3-840abf164223",
+            "EdmName": "Sandbox.LocalDateTable_f43d60ac_b4bf_46fa_9fe3_840abf164223",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f7d0ff9e-b733-48c7-82b4-d0fc08b1d077"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "beac360a-6939-4c4e-8b15-ec1256aa8729"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "8cfdbfc0-9348-4af7-8dd2-cb89dd4309c0"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "97eaacbb-0d81-4fc2-bc25-88291cec2910"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "607ceea4-b265-4c12-9b74-7b73109fc31b"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "283f0a58-3737-4f3b-b536-6a5236e9d543"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "98daff16-2c96-468b-bd2a-79fffc8c32e0"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "50eb52f2-a3b5-431a-895c-1d2929234770"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "b7576178-9c40-4b63-ae94-6e8940f0d1fc"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "30f59ae1-e9f3-4d66-9130-455b522a928c"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "e3da91a6-3c5f-446e-8e01-f78169eac2bd"
+                  }
+                ],
+                "StableName": "6bb7a553-37ec-41ef-b403-91dcc29d167f"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "dcb13155-f7ca-46f7-8cff-c0ca3af45172"
+          },
+          {
+            "Name": "tipo_curso",
+            "EdmName": "Sandbox.tipo_curso",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "437fbc7d-746b-4936-a48e-7fa9817fdb9c"
+              },
+              {
+                "Name": "created_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_4bc950c7-979b-4a59-851b-3183de8fed95_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "7d71833e-5d91-4e4a-b4e3-24b3d4134fa8"
+              },
+              {
+                "Name": "updated_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_7ab6e341-4222-4b0e-832d-5f5d4438a388_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "e1559043-3e15-407e-b928-4d6e12b0f72c"
+              },
+              {
+                "Name": "descricao",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ffcd9591-cc9f-453e-aaf6-69b5ebc94822"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "LocalDateTable_4bc950c7-979b-4a59-851b-3183de8fed95_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_4bc950c7-979b-4a59-851b-3183de8fed95",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_7ab6e341-4222-4b0e-832d-5f5d4438a388_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_7ab6e341-4222-4b0e-832d-5f5d4438a388",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "9fc72c5a-c246-437a-b73a-0bcd512af9a1"
+          },
+          {
+            "Name": "LocalDateTable_4bc950c7-979b-4a59-851b-3183de8fed95",
+            "EdmName": "Sandbox.LocalDateTable_4bc950c7_979b_4a59_851b_3183de8fed95",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "6b35243c-af8c-4c4c-9fb1-db225380f3ed"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "555ace07-f60e-4194-b85c-28aa39955431"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c42dd36c-885f-4fe5-a975-d123e844774f"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "12cd0bdd-97db-467c-b4c1-bfbec4736227"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "a19f708b-ab4a-4e06-8d99-70262d5ad6b2"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "2bf8cff4-ef82-4f57-877b-905988b54fc3"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "4aba20a0-69a3-4ea3-8355-7d1f8fbc257d"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "7404be96-4850-43c5-8faa-19640f132748"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "f02ec321-078e-4f81-bc3a-a8647d1d6348"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "50e75748-8d8c-4426-a36b-520edeeeece2"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "9acf705a-48a7-4611-a080-2947a500bd83"
+                  }
+                ],
+                "StableName": "86ae3057-8790-49cd-8704-00508d0aba7b"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "c4363569-a81e-4d7a-9879-7abceb079f73"
+          },
+          {
+            "Name": "LocalDateTable_7ab6e341-4222-4b0e-832d-5f5d4438a388",
+            "EdmName": "Sandbox.LocalDateTable_7ab6e341_4222_4b0e_832d_5f5d4438a388",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f75ef09a-e7ec-4be9-906b-fb4d9c55d0e6"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f2254af9-4c18-4f74-be1b-883ce2f669f5"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f16a54dc-e15e-4b53-bc27-d773212c348e"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "750138f7-077a-4c90-bfd6-120afa7c2576"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "0bc6b6ab-3ec4-4022-8752-7f728a778b61"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "748da666-435f-4d3d-9063-abea746f4c78"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "79716ce7-9cc5-4d03-900a-e77cf6b8e667"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "8ec2f5cf-2ed5-47ed-abab-52e7977fe35d"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "4ff9888d-a4da-4f50-a83c-90854889d7b3"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "060b9b83-9f9c-4685-a942-bdcecd373fd7"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "e1e85873-14da-4e39-b4bc-5d8100d9475b"
+                  }
+                ],
+                "StableName": "09a66cef-2a97-4204-bc75-3c55c6b2caaf"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "e8e0bda4-8286-4e00-94eb-dd99bfd714b4"
+          },
+          {
+            "Name": "mdl_simplecertificate_issues",
+            "EdmName": "Sandbox.mdl_simplecertificate_issues",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "fa067b21-02dc-4f62-8bd5-0dd6d98e9cc7"
+              },
+              {
+                "Name": "certificateid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ce402bae-625c-47d8-b901-1461d07d03b4"
+              },
+              {
+                "Name": "userid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "06fe267c-d30d-4043-8a26-d87696772b90"
+              },
+              {
+                "Name": "certificatename",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "1ed286f7-cac3-4099-a6f4-4294f350959c"
+              },
+              {
+                "Name": "code",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "8ceeb7df-ef3f-430c-a7ca-4e675027b944"
+              },
+              {
+                "Name": "timecreated",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "96fd6607-6a75-43a0-8eb9-5f7dafdc1981"
+              },
+              {
+                "Name": "timedeleted",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "bc737aaf-8d80-4735-9dc2-4aaeec0dad84"
+              },
+              {
+                "Name": "haschange",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "dccc23c8-c560-4485-92a3-1c889ba7c5b2"
+              },
+              {
+                "Name": "pathnamehash",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "3be59baa-c0fa-42cf-930f-f9fc3faa882b"
+              },
+              {
+                "Name": "coursename",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "06138c6f-8c8d-4b99-8f8e-d229e1c755f7"
+              },
+              {
+                "Name": "timestart",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "e5b5191e-2d00-4145-9732-9ab1dccb70f7"
+              },
+              {
+                "Name": "timeend",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "d6dbc09c-e099-4560-a369-b70075c29754"
+              },
+              {
+                "Name": "Data Emissão",
+                "EdmName": "Data_Emissão",
+                "DataType": 7,
+                "FormatString": "dd/MM/yyyy",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_be2cfd04-1dd1-4c48-ad64-6ecbf9e52ccc_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "c846b9f1-0ef6-4304-9a34-623254f2e0ae"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "bd2ca239-ea70-4491-9b89-94c05442f828"
+              },
+              {
+                "Name": "Mes",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "mesnum"
+                  ]
+                },
+                "StableName": "88c8b121-b6d0-4b40-9987-164acbb32f18"
+              },
+              {
+                "Name": "mesnum",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "581692c9-0ffa-4c18-9022-af5716694375"
+              },
+              {
+                "Name": "Contagem de id % de diferença de Contagem de id",
+                "EdmName": "Contagem_de_id___de_diferença_de_Contagem_de_id",
+                "DataType": 3,
+                "FormatString": "0.00%;-0.00%;0.00%",
+                "Measure": {
+                  "Template": {
+                    "DaxTemplateName": "MathematicalPercentageDifference"
+                  }
+                },
+                "StableName": "6e7253b5-6558-4197-b9ca-23f5b53fa904"
+              },
+              {
+                "Name": "Contagem de id % de diferença de Contagem de id 2",
+                "EdmName": "Contagem_de_id___de_diferença_de_Contagem_de_id_2",
+                "DataType": 3,
+                "FormatString": "0.00%;-0.00%;0.00%",
+                "Measure": {
+                  "Template": {
+                    "DaxTemplateName": "MathematicalPercentageDifference"
+                  }
+                },
+                "StableName": "145eedce-1944-4215-8875-c11d9cc6182b"
+              },
+              {
+                "Name": "% Certificados",
+                "EdmName": "v__Certificados",
+                "DataType": 3,
+                "FormatString": "0.00%;-0.00%;0.00%",
+                "Measure": {},
+                "StableName": "84d45e16-1c01-4311-ae85-42b65e8d039b"
+              },
+              {
+                "Name": "Horas Formacao",
+                "EdmName": "Horas_Formacao",
+                "DataType": 3,
+                "Measure": {
+                  "DistributiveAggregate": 0,
+                  "DistributiveBy": [
+                    "mdl_simplecertificate_issues"
+                  ]
+                },
+                "StableName": "31ae109a-39a2-4902-89ee-97a8bfe20e86"
+              },
+              {
+                "Name": "Tempo Médio de Conclusão (dias)",
+                "EdmName": "Tempo_Médio_de_Conclusão__dias_",
+                "DataType": 3,
+                "Measure": {},
+                "StableName": "d39a1f26-c473-45b7-b3fd-52bf53a27e5d"
+              },
+              {
+                "Name": "Usuarios Certificados",
+                "EdmName": "Usuarios_Certificados",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "6d66f166-7cfd-4da2-8cae-09d2eeb3830f"
+              },
+              {
+                "Name": "Certificados Válidos",
+                "EdmName": "Certificados_Válidos",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "72bf952d-97f9-4685-8213-6273a8bee1ae"
+              },
+              {
+                "Name": "Certificados Válidos Ano Anterior",
+                "EdmName": "Certificados_Válidos_Ano_Anterior",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "94573149-5463-4611-b149-52b3719a3b03"
+              },
+              {
+                "Name": "Crescimento Certificados YoY %",
+                "EdmName": "Crescimento_Certificados_YoY__",
+                "DataType": 3,
+                "FormatString": "0.00%;-0.00%;0.00%",
+                "Measure": {},
+                "StableName": "4fe1c601-97f9-4f7f-b4cc-7482a4e424ff"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_simplecertificate_id",
+                "Active": true,
+                "TargetEntity": "mdl_simplecertificate",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              },
+              {
+                "Name": "LocalDateTable_be2cfd04-1dd1-4c48-ad64-6ecbf9e52ccc_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_be2cfd04-1dd1-4c48-ad64-6ecbf9e52ccc",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "mdl_user_id",
+                "Active": true,
+                "TargetEntity": "mdl_user",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "53e308ab-0a9a-47db-be19-b194add8c688"
+          },
+          {
+            "Name": "mdl_simplecertificate",
+            "EdmName": "Sandbox.mdl_simplecertificate",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ec2e3dcb-769e-4ddd-9e38-819b30039a24"
+              },
+              {
+                "Name": "course",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "5aa81210-8e41-4d2a-96b8-dd8ee57f032d"
+              },
+              {
+                "Name": "name",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "0f0ce0d2-bbef-459c-afde-fed9b025e081"
+              },
+              {
+                "Name": "intro",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "9e106128-df06-4fea-9f6d-8b5506467c3b"
+              },
+              {
+                "Name": "introformat",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "99ee8327-c236-4d04-bfb1-564d337a376b"
+              },
+              {
+                "Name": "timecreated",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "fe9da223-8cd5-4017-bc37-2fc3684b4006"
+              },
+              {
+                "Name": "timemodified",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "052b4cce-b4e3-4287-a58b-bf244a7eaa3f"
+              },
+              {
+                "Name": "width",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "e1781e7a-c817-4414-9688-a4f5fc03c08d"
+              },
+              {
+                "Name": "height",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "23e9432d-4c95-44de-bd57-24ef8bbc8937"
+              },
+              {
+                "Name": "certificateimage",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "0cdee1c1-3858-49e5-9408-f07957f62694"
+              },
+              {
+                "Name": "certificatetext",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "8a8f3214-32a0-4794-8f2f-8d379ca780c1"
+              },
+              {
+                "Name": "certificatetextformat",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "6d082363-d8d8-46ff-ae72-644bc6893729"
+              },
+              {
+                "Name": "certificatetextx",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "0d56b6df-1656-4631-ad3b-6303260b6893"
+              },
+              {
+                "Name": "certificatetexty",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "02019fb1-d10d-4bc6-bb96-103c65e3b911"
+              },
+              {
+                "Name": "coursename",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "33b42c68-5ec3-4e8a-a048-ed6c54b146d8"
+              },
+              {
+                "Name": "outcome",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "2448a802-999f-4f71-8a01-48e396db9020"
+              },
+              {
+                "Name": "certdate",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "60594df4-60e8-4e95-b328-dfa4556fe279"
+              },
+              {
+                "Name": "certdatefmt",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "dc861365-1e37-4b89-b1a9-0a13e9337553"
+              },
+              {
+                "Name": "certgrade",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "c926e62c-5893-4f81-a544-204ae494cf23"
+              },
+              {
+                "Name": "gradefmt",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "85c23aac-4b2d-4611-8af6-ff18427e4bf1"
+              },
+              {
+                "Name": "emailfrom",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "b5508347-7be9-4b76-ad3c-0c163a3a84a8"
+              },
+              {
+                "Name": "emailothers",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "b6b0ca56-cf77-414e-9659-3220e821b744"
+              },
+              {
+                "Name": "emailteachers",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "97dd2ba5-1cf1-4616-bd61-2083a7016543"
+              },
+              {
+                "Name": "reportcert",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "5938d496-3546-494a-abab-d74b7c336c58"
+              },
+              {
+                "Name": "delivery",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "27c2cffb-2ad7-4f45-b379-7ed8749e5933"
+              },
+              {
+                "Name": "requiredtime",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "4e897816-09be-4c53-b99a-9f8c2b88a4da"
+              },
+              {
+                "Name": "printqrcode",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "b993884f-f152-4b7b-a4ef-f691bcd98c8f"
+              },
+              {
+                "Name": "qrcodefirstpage",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "0c6d9361-086d-490d-a2a9-db672d60cb80"
+              },
+              {
+                "Name": "codex",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "251b7efe-10c2-4cf5-9fde-d821b622de7c"
+              },
+              {
+                "Name": "codey",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "6623521f-ddee-466e-93d1-1fe58653e2b9"
+              },
+              {
+                "Name": "enablesecondpage",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "8502f3d4-88f3-403a-929f-cad329ff4fee"
+              },
+              {
+                "Name": "secondpagex",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "401f4668-5efb-478a-ae65-48e35082d363"
+              },
+              {
+                "Name": "secondpagey",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "89005da1-8537-432a-9232-7289affef623"
+              },
+              {
+                "Name": "secondpagetext",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "31b5d627-f4e5-465c-be29-229cab0523be"
+              },
+              {
+                "Name": "secondpagetextformat",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "0c1f59f2-8950-454c-b4b2-a5a93b4a5aa2"
+              },
+              {
+                "Name": "secondimage",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "dfb8e840-1025-424e-829d-26e8bff4be2f"
+              },
+              {
+                "Name": "timestartdatefmt",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "fc4c8e8b-2137-4d01-85ee-665720dd89f7"
+              },
+              {
+                "Name": "Tipo Certificado",
+                "EdmName": "Tipo_Certificado",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "649a9344-0fbe-47d4-91c7-8eda584465a6"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_course_id2",
+                "Active": true,
+                "TargetEntity": "mdl_course",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "48f13328-0927-415f-ba4e-f590916fdf30"
+          },
+          {
+            "Name": "mdl_course",
+            "EdmName": "Sandbox.mdl_course",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "d896ea86-5744-4b64-b019-b6d9f9f09066"
+              },
+              {
+                "Name": "category",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "0b8c0f47-9524-4ef2-9b30-f6f2ad376df7"
+              },
+              {
+                "Name": "sortorder",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "e78eecc0-4337-4a83-b491-97af6a4d1adf"
+              },
+              {
+                "Name": "fullname",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "9ccb6510-f9f8-49f1-b7e6-b785d2f86798"
+              },
+              {
+                "Name": "shortname",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "dd413081-b124-42f0-88c0-354c43241890"
+              },
+              {
+                "Name": "idnumber",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "e94594b6-9132-4238-bfd9-ad49855a55a2"
+              },
+              {
+                "Name": "summary",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f42e5a4d-67b4-4337-a9e5-54725aa7e6f7"
+              },
+              {
+                "Name": "summaryformat",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "0125cc5e-3138-4e28-86ab-6d1fa1175468"
+              },
+              {
+                "Name": "format",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "5b51318e-24f2-4a7d-8b9a-60ebb67fada3"
+              },
+              {
+                "Name": "showgrades",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "d5d1eb1d-c1ea-43d2-bc30-892d01c19a03"
+              },
+              {
+                "Name": "newsitems",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "e0405256-c6a1-420d-9a62-583758ab34be"
+              },
+              {
+                "Name": "startdate",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "805219b5-c2fa-4287-8c8a-572dae2bc27d"
+              },
+              {
+                "Name": "enddate",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "ed659d48-4b76-47bf-a7dc-7f6049c343bd"
+              },
+              {
+                "Name": "marker",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "4542c6d6-fde2-49f8-973a-1aeec46904f2"
+              },
+              {
+                "Name": "maxbytes",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "9a62ae3f-7dba-4f02-bb25-139f0dc667ae"
+              },
+              {
+                "Name": "legacyfiles",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "32d56c3e-8ad3-47f4-a706-4839fe959c92"
+              },
+              {
+                "Name": "showreports",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "ae1626a9-55d0-48df-a7a3-16ef7a51bf49"
+              },
+              {
+                "Name": "visible",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "2da87143-146e-4568-a9bb-b6322e0ba434"
+              },
+              {
+                "Name": "visibleold",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "0021617f-b486-4d89-83c5-c0d5bbcf6632"
+              },
+              {
+                "Name": "groupmode",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "e147c1a4-f5f3-4527-9cc8-56c06a6a7b1d"
+              },
+              {
+                "Name": "groupmodeforce",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "f85095e2-7f70-4b3d-b8e7-6f7c439c3776"
+              },
+              {
+                "Name": "defaultgroupingid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "d41455b5-ae07-4ce2-8cff-22c477388811"
+              },
+              {
+                "Name": "lang",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "7c343144-f14c-4ba0-b9ac-4620214e6dcd"
+              },
+              {
+                "Name": "calendartype",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "e7697fe2-7198-4197-b836-3491723531dd"
+              },
+              {
+                "Name": "theme",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "851f2b4e-c945-4eed-93e1-606e32d4c2d3"
+              },
+              {
+                "Name": "timecreated",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "eae59502-9fee-4dfa-9d52-b572d63298ee"
+              },
+              {
+                "Name": "timemodified",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "ec1a5dc5-c2f9-436b-bba8-ba1a9c887440"
+              },
+              {
+                "Name": "requested",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "dbfdd769-bccf-494b-a4a0-0751fb8882f4"
+              },
+              {
+                "Name": "enablecompletion",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "25495dee-a17a-4c50-a975-f5b56d3f1d11"
+              },
+              {
+                "Name": "completionnotify",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "1d2bf777-554a-4fa8-aa0a-e5ffb892f1ca"
+              },
+              {
+                "Name": "cacherev",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "ad8fae7d-32a1-4a65-9319-d3727298d066"
+              },
+              {
+                "Name": "relativedatesmode",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "b19103f1-09a2-43e7-81d9-f45a0821527a"
+              },
+              {
+                "Name": "originalcourseid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "7f38c81d-fb6a-484b-8caf-9729005db817"
+              },
+              {
+                "Name": "downloadcontent",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "c9b3d6d9-2179-46ec-9fa1-38efe6167336"
+              },
+              {
+                "Name": "showactivitydates",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "9d0efbbf-7573-42d6-aa43-f9d6cf746bff"
+              },
+              {
+                "Name": "showcompletionconditions",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "a2f8d72d-9f03-403c-ac41-64ac38cc5891"
+              },
+              {
+                "Name": "pdfexportfont",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "4222da27-73f2-47cb-85ca-437b956c31d7"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "parametros_ciclos_sistec_id_curso_moodle2",
+                "Active": true,
+                "TargetEntity": "parametros_ciclos_sistec",
+                "SourceMultiplicity": 0,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "ed6d556c-dc2a-45df-9280-f7e1a70f562c"
+          },
+          {
+            "Name": "mdl_context",
+            "EdmName": "Sandbox.mdl_context",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "8979dc8b-6908-42f2-854b-4c5dc74a0b53"
+              },
+              {
+                "Name": "contextlevel",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "6172448f-4589-4475-afa2-07aeb866dbf5"
+              },
+              {
+                "Name": "instanceid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "87c4d1e5-9aff-4af3-97f0-d4e76d844605"
+              },
+              {
+                "Name": "path",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "7736317f-918d-4649-b4dd-61115ee1cc69"
+              },
+              {
+                "Name": "depth",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "337178c4-d095-4689-a8bf-803af4e00e6d"
+              },
+              {
+                "Name": "locked",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "8df5839c-ea32-429c-a5e2-59556d32de47"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_course_id4",
+                "Active": true,
+                "TargetEntity": "mdl_course",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "6b283f6e-0d68-4119-9646-db8c67ac4994"
+          },
+          {
+            "Name": "mdl_role_assignments",
+            "EdmName": "Sandbox.mdl_role_assignments",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "89ef2fad-f0c1-4c81-84dd-f8b1f4506095"
+              },
+              {
+                "Name": "roleid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "aff9cd5a-58ad-4154-86fc-791227c495c7"
+              },
+              {
+                "Name": "contextid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "91fbbddb-b856-4c09-915c-322def0c747a"
+              },
+              {
+                "Name": "userid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "787dcba1-c9f3-474d-8e9a-a215bc3f7424"
+              },
+              {
+                "Name": "timemodified",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "6b262123-1067-4fb3-9164-da407a4f7c38"
+              },
+              {
+                "Name": "modifierid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "a7b2cada-4979-426a-a747-12a007774994"
+              },
+              {
+                "Name": "component",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "880021d0-45e6-47aa-aebd-307930353bcb"
+              },
+              {
+                "Name": "itemid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "f4b359e7-5973-43c8-9d88-ad8a7fddc5a3"
+              },
+              {
+                "Name": "sortorder",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "7538e068-f80c-4ddc-894b-9a756484c922"
+              },
+              {
+                "Name": "Data Matrícula",
+                "EdmName": "Data_Matrícula",
+                "DataType": 7,
+                "FormatString": "d",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_12184806-d42a-4c9c-89a4-fdb3114e77dd_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "1135729a-b69a-4b8f-80f4-62e54c4f3b42"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "90ed3678-3324-4980-b4c7-a1588c702fd0"
+              },
+              {
+                "Name": "Mes",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "mesnum"
+                  ]
+                },
+                "StableName": "e5d83a23-cb9b-4262-a429-b14561a3e28c"
+              },
+              {
+                "Name": "mesnum",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "15901e8c-8b91-4f7e-bb71-0fbd74b36cb9"
+              },
+              {
+                "Name": "UF Usuario",
+                "EdmName": "UF_Usuario",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f08a94d5-cc24-403c-803d-74882318be87"
+              },
+              {
+                "Name": "UF Texto Usuario",
+                "EdmName": "UF_Texto_Usuario",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "6b116412-32ba-4024-89fa-35e20ad75e85"
+              },
+              {
+                "Name": "courseid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "b430538e-83b5-4162-b643-f808afb9105c"
+              },
+              {
+                "Name": "contextlevel_ra",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "26bca4be-1ddb-4298-a5c1-036fd5d26ac8"
+              },
+              {
+                "Name": "Contagem de id YoY%",
+                "EdmName": "Contagem_de_id_YoY_",
+                "DataType": 3,
+                "FormatString": "0.00%;-0.00%;0.00%",
+                "Measure": {
+                  "Template": {
+                    "DaxTemplateName": "YearOverYear"
+                  }
+                },
+                "StableName": "163d663b-9e34-4710-95a2-71f12240d546"
+              },
+              {
+                "Name": "Contagem de id YoY% 2",
+                "EdmName": "Contagem_de_id_YoY__2",
+                "DataType": 3,
+                "FormatString": "0.00%;-0.00%;0.00%",
+                "Measure": {
+                  "Template": {
+                    "DaxTemplateName": "YearOverYear"
+                  }
+                },
+                "StableName": "ffb18e60-c5e9-47f4-80dc-22823f3f6f5c"
+              },
+              {
+                "Name": "Alunos Internacionais",
+                "EdmName": "Alunos_Internacionais",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "1ccc9ce8-74d8-4384-83de-8290bf4404f5"
+              },
+              {
+                "Name": "Total Alunos",
+                "EdmName": "Total_Alunos",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "b3c9da0c-2b8d-48d2-93f8-29a586908d65"
+              },
+              {
+                "Name": "% Alunos Internacionais",
+                "EdmName": "v__Alunos_Internacionais",
+                "DataType": 3,
+                "Measure": {},
+                "StableName": "c80f192c-8f4f-428e-8f62-05dd148bd42d"
+              },
+              {
+                "Name": "Estados Atendidos",
+                "EdmName": "Estados_Atendidos",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "5a705f50-ae3e-4b0e-9988-954c706de8f4"
+              },
+              {
+                "Name": "% Estados Brasileiros Atendidos",
+                "EdmName": "v__Estados_Brasileiros_Atendidos",
+                "DataType": 3,
+                "Measure": {},
+                "StableName": "426a3021-31c8-4239-8f5b-a99dd8f76aa4"
+              },
+              {
+                "Name": "Matrículas Válidas",
+                "EdmName": "Matrículas_Válidas",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "051b810a-a674-443c-a356-3fb020e83038"
+              },
+              {
+                "Name": "Matrículas Válidas Ano Anterior",
+                "EdmName": "Matrículas_Válidas_Ano_Anterior",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "777b1ca9-5a2b-4ef2-a9e8-a90e59efe849"
+              },
+              {
+                "Name": "Crescimento Matrículas YoY %",
+                "EdmName": "Crescimento_Matrículas_YoY__",
+                "DataType": 3,
+                "FormatString": "0.00%;-0.00%;0.00%",
+                "Measure": {},
+                "StableName": "6f551e88-dc50-47ac-ba64-c9328046d662"
+              },
+              {
+                "Name": "Pessoas Inscritas em Curso",
+                "EdmName": "Pessoas_Inscritas_em_Curso",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "1c11b01f-2358-4179-847d-a7cedef7edbe"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_user_id2",
+                "Active": true,
+                "TargetEntity": "mdl_user",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "mdl_context_id",
+                "Active": true,
+                "TargetEntity": "mdl_context",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_12184806-d42a-4c9c-89a4-fdb3114e77dd_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_12184806-d42a-4c9c-89a4-fdb3114e77dd",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "9b82882a-0543-4fd8-8774-f3441c5d6a04"
+          },
+          {
+            "Name": "mdl_user",
+            "EdmName": "Sandbox.mdl_user",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "bf41b24f-e517-4897-9aea-811c73352b08"
+              },
+              {
+                "Name": "auth",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "2e2accbe-0762-43a2-9fdd-4bf1b8f54ebf"
+              },
+              {
+                "Name": "confirmed",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "067cdea3-8d10-40be-a49e-50482f927de7"
+              },
+              {
+                "Name": "policyagreed",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "63a64b88-f6cb-4c08-a5b6-5b3b2faebcaf"
+              },
+              {
+                "Name": "deleted",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "eacbab61-7ee3-47db-90cf-7afd49dd34ec"
+              },
+              {
+                "Name": "suspended",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "10208732-e5c9-40b4-96a9-66708f458d90"
+              },
+              {
+                "Name": "mnethostid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "e7e2c6a2-b3a7-4ea8-b872-7048aa14f8e9"
+              },
+              {
+                "Name": "username",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "73e6e2ad-08ea-4f00-8b63-c493eeef1e08"
+              },
+              {
+                "Name": "password",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "3ff64dba-4589-4d71-b390-8de68efe0991"
+              },
+              {
+                "Name": "idnumber",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "034aca08-9b29-4ea6-90c1-f50c0a4cfcfd"
+              },
+              {
+                "Name": "firstname",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "e6f115e5-4298-413c-98df-13e4dc8e0789"
+              },
+              {
+                "Name": "lastname",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "e9f885e8-a3b0-4c03-bcdd-db44138c5734"
+              },
+              {
+                "Name": "email",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c06f0f59-9eab-4da6-9abf-92c36f6110da"
+              },
+              {
+                "Name": "emailstop",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "82259077-f19c-4bf1-b265-ef610cd82661"
+              },
+              {
+                "Name": "phone1",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c6925ae9-1444-4fc5-a7c5-415c07224c7c"
+              },
+              {
+                "Name": "phone2",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "902aecc0-cd0b-4512-8784-f2cbdeef4c6a"
+              },
+              {
+                "Name": "institution",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "aa02c4ad-f6b8-491b-b09a-51d528130ae4"
+              },
+              {
+                "Name": "department",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "1732ca5a-4bc9-463a-9d40-85ef3fed5024"
+              },
+              {
+                "Name": "address",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "cb3cd97c-bd3b-4c5c-b7b9-af8733031e11"
+              },
+              {
+                "Name": "city",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c1d13823-fd16-4fc4-bf53-f9c63bbe9c19"
+              },
+              {
+                "Name": "country",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "fcd6d713-2b28-4700-baae-7bc46cf15b56"
+              },
+              {
+                "Name": "lang",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "2d0ba314-f7c2-47c9-ac92-3dda619d30a4"
+              },
+              {
+                "Name": "calendartype",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "e06706b7-c99b-486c-8ab9-004ecb25a9a0"
+              },
+              {
+                "Name": "theme",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c06f9f60-a74e-4a1e-96c6-fbe4d7f3e1e9"
+              },
+              {
+                "Name": "timezone",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ac8388e8-db46-4518-8586-f056f4205175"
+              },
+              {
+                "Name": "firstaccess",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "58c48996-f3c8-4145-8dda-a43c6bfe5eb3"
+              },
+              {
+                "Name": "lastaccess",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "bea02e72-b8d6-4ccc-9bb8-2b04ce601bf6"
+              },
+              {
+                "Name": "lastlogin",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "85b1fd6a-2f59-4ecd-a87b-cf41f2152c97"
+              },
+              {
+                "Name": "currentlogin",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "6af98ff3-629a-45ba-b369-0ad242ec5c93"
+              },
+              {
+                "Name": "lastip",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "16fdfc24-c077-4c26-a309-4292e8e4dea8"
+              },
+              {
+                "Name": "secret",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "9be6b3c0-cf22-4b7b-8a6c-c759c30313ff"
+              },
+              {
+                "Name": "picture",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "c5c56b1f-74a1-4db0-8fd3-f807e16b730c"
+              },
+              {
+                "Name": "description",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "30f93d9f-3e7b-4898-b7ad-a83c8bcc20af"
+              },
+              {
+                "Name": "descriptionformat",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "a4b7c71d-91ee-47af-91d2-b0f3d3cc7122"
+              },
+              {
+                "Name": "mailformat",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "b75ffe80-c159-4ab0-af77-766938ef73c7"
+              },
+              {
+                "Name": "maildigest",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "89875d25-74cc-4324-bdef-ebc9114fc102"
+              },
+              {
+                "Name": "maildisplay",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "318d3e37-fc22-46a2-96de-ffc8e8b843f9"
+              },
+              {
+                "Name": "autosubscribe",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "1c317ffe-e05e-4df7-8666-4680b51ffdba"
+              },
+              {
+                "Name": "trackforums",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "b0ec7485-e70b-4057-8916-53ea3c312a4a"
+              },
+              {
+                "Name": "timecreated",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "158c23a9-8db0-4865-9c86-1209c7787fd2"
+              },
+              {
+                "Name": "timemodified",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "5521b9e7-b30d-4026-a579-a49927f8dd34"
+              },
+              {
+                "Name": "trustbitmask",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "750ba1f2-8192-408d-a01e-c18b8ecae259"
+              },
+              {
+                "Name": "imagealt",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f56da213-670d-4804-b720-7476c913a1e5"
+              },
+              {
+                "Name": "lastnamephonetic",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "5997653e-11c2-41ae-8241-20173115b958"
+              },
+              {
+                "Name": "firstnamephonetic",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "18056743-fef9-47c6-a77b-117ded01e704"
+              },
+              {
+                "Name": "middlename",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "a7e19b35-b36c-4140-a9c7-386c80592165"
+              },
+              {
+                "Name": "alternatename",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "747af5ed-2402-4aab-834a-d3905d12ecfc"
+              },
+              {
+                "Name": "moodlenetprofile",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "2ca15c49-3d26-4190-90c1-64b6a9cefc5c"
+              },
+              {
+                "Name": "UF Texto Usuario",
+                "EdmName": "UF_Texto_Usuario",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "62fbae0c-e22f-4438-b890-4a54031f4f06"
+              },
+              {
+                "Name": "Países Atendidos 2",
+                "EdmName": "Países_Atendidos_2",
+                "DataType": 4,
+                "FormatString": "0",
+                "Measure": {},
+                "StableName": "56b0f257-a79b-4cc4-8b2e-769c858e8023"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "c271f93d-5765-4db5-b88f-a646fefcc060"
+          },
+          {
+            "Name": "mdl_user_info_data",
+            "EdmName": "Sandbox.mdl_user_info_data",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "23b0108f-634a-44df-a395-b45b49f1dda2"
+              },
+              {
+                "Name": "userid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "74891cbe-1e2c-471d-a823-27ce0ba014df"
+              },
+              {
+                "Name": "fieldid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "1ab182fe-46dc-4188-b623-c50afdd39803"
+              },
+              {
+                "Name": "data",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "7b408263-0d07-474a-841d-8188a62ad6c4"
+              },
+              {
+                "Name": "dataformat",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "d6575557-860a-4c5b-b557-5541df69aeab"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_user_id3",
+                "Active": true,
+                "TargetEntity": "mdl_user",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "6aaf4f51-f2d6-4be1-aff9-2d90dac1ab3d"
+          },
+          {
+            "Name": "LocalDateTable_12184806-d42a-4c9c-89a4-fdb3114e77dd",
+            "EdmName": "Sandbox.LocalDateTable_12184806_d42a_4c9c_89a4_fdb3114e77dd",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "6eeca739-dc39-436d-8122-bf39aa148342"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "63d6be68-1cbb-43e6-917c-967eadcb12df"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c80f0590-b990-4707-ab9b-c82be6b59698"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "189d1e73-996c-4dda-9a8c-f8e93f02ae98"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "79416757-757f-45c1-bcd1-815e5807ebe6"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "837fe64c-9030-4394-b370-18b4459cde0f"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "baeadd4b-117e-400c-80f6-49604d37bd34"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "8f488682-e09c-4076-abc1-7484028ac36d"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "131291e4-3fe1-47ce-ac9a-cb36a0b2adbe"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "f4edc38f-a976-4dc8-895f-948166f15f3f"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "8ff2a7e2-0fc3-4b36-9f1f-296b0a8f5f39"
+                  }
+                ],
+                "StableName": "706d6097-8721-44de-9a50-92749c0e94d3"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "6af5f73a-cb1e-4a47-859d-0f842c59482b"
+          },
+          {
+            "Name": "LocalDateTable_02e37229-4340-4245-b522-6daecd3a4141",
+            "EdmName": "Sandbox.LocalDateTable_02e37229_4340_4245_b522_6daecd3a4141",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "98bc033e-f0dc-4c9c-aad6-de857f5f7c1d"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ea5f597e-db25-4237-9fbf-c8bddf6b6f6f"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "90015bb1-f941-4254-9757-6f60c5973255"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "a1debada-810c-4215-bd7b-eeb88f8cde61"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f8dc187d-3731-4854-b884-00c88b3dfccb"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "79f8c943-9544-42d3-be53-e538f6eb2459"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "4a3643dd-6abe-4606-9118-f8e8b0ef02fc"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "5c8ee016-69d5-4b32-854c-f8d23ffe3be6"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "7029a090-a939-467f-8dd0-f6b998f3b520"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "31406aa6-b08a-4c55-b3d3-f2ed5211bfd9"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "e28a99bf-f2be-4c9c-84c9-b0a2c1f6c031"
+                  }
+                ],
+                "StableName": "80bc014c-b5df-47d8-9375-412989d938d4"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "9cb03495-98d4-4309-a5ff-d2479166c19d"
+          },
+          {
+            "Name": "LocalDateTable_be2cfd04-1dd1-4c48-ad64-6ecbf9e52ccc",
+            "EdmName": "Sandbox.LocalDateTable_be2cfd04_1dd1_4c48_ad64_6ecbf9e52ccc",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "e2f73b2f-9974-4b3f-aa8c-2b21fde848c1"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "1a75ad93-a79e-46b7-9d63-202c858373ef"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "a2bc76f1-7e07-438b-bc53-c82eb495b736"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "02b557d3-9f2f-4da9-ab4c-1bcab97376f9"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f2613033-397e-4040-ba54-c75569c3d3f3"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "c41affae-da61-49e6-a621-0172bafd6286"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "590a3739-5db7-4e37-b86d-ad6397663118"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "79d053fa-0deb-45e0-af62-d940e37ab623"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "ec3b728d-9896-493e-9fe0-d6f05e2f292a"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "e11205d8-5010-42dd-90c4-dcff053df78a"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "ca62beb5-9fb9-4538-8f15-b808822f903a"
+                  }
+                ],
+                "StableName": "b68c0a5c-b3a9-406d-8d25-c430bf6b94e9"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "4599fe44-03ed-43d2-9c77-9162ec1fabed"
+          },
+          {
+            "Name": "mdl_feedback",
+            "EdmName": "Sandbox.mdl_feedback",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "f78d6dfb-3fc0-4979-bed3-b9c6d8a51dc5"
+              },
+              {
+                "Name": "course",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "566c1549-2cf5-45a6-b1e2-7e0bf4d4270c"
+              },
+              {
+                "Name": "name",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "328233f4-47cb-4fbe-80da-21dc1cdcb860"
+              },
+              {
+                "Name": "intro",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "7b807eef-9ee7-4784-a6f5-79cae7530152"
+              },
+              {
+                "Name": "introformat",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "95fd5881-2f8e-4254-beed-e71cf32bde92"
+              },
+              {
+                "Name": "anonymous",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "e85d9117-0289-4c3e-b46b-99847b86bdf6"
+              },
+              {
+                "Name": "email_notification",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "6982a6d7-9193-4975-be90-1081d6876c60"
+              },
+              {
+                "Name": "multiple_submit",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "d7d89951-6a6d-44d7-98f8-2ed82f161858"
+              },
+              {
+                "Name": "autonumbering",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "96406234-6c4c-4c65-acba-73c18fc2a119"
+              },
+              {
+                "Name": "site_after_submit",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "d5d195ce-596d-47cc-9ac2-13e47b1981ca"
+              },
+              {
+                "Name": "page_after_submit",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "398e497d-83ea-4fd3-a4c6-ee6561e98123"
+              },
+              {
+                "Name": "page_after_submitformat",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "836e96e3-0847-41f2-a78c-4da7d667d592"
+              },
+              {
+                "Name": "publish_stats",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "9e887a33-1d21-4f4a-b62e-b5317a1f266f"
+              },
+              {
+                "Name": "timeopen",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "06d95d1d-b7a3-4381-9170-9df4bb273591"
+              },
+              {
+                "Name": "timeclose",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "f1495281-60c8-42cf-b866-44e65b43ba8e"
+              },
+              {
+                "Name": "timemodified",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "9c23eded-55a4-46b3-86c7-56c6c7493eb0"
+              },
+              {
+                "Name": "completionsubmit",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "9ea7028d-07c0-4f58-8276-f40c9b66cc12"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_course_id5",
+                "Active": true,
+                "TargetEntity": "mdl_course",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "a83f15b9-f6a4-477f-9979-c48f738da9f6"
+          },
+          {
+            "Name": "mdl_feedback_completed",
+            "EdmName": "Sandbox.mdl_feedback_completed",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "5010ee74-57cb-447b-9128-408d8cd09be9"
+              },
+              {
+                "Name": "feedback",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "77571cbe-c7e3-4914-9386-8fe8b34dde8c"
+              },
+              {
+                "Name": "userid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "2f8c643b-e204-415b-9cf6-4d08d205cbba"
+              },
+              {
+                "Name": "timemodified",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "0937c88a-484c-4793-8f09-ab893075c1fd"
+              },
+              {
+                "Name": "random_response",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "f9cda28f-2f7a-48e0-94e1-e84676f16633"
+              },
+              {
+                "Name": "anonymous_response",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "c210b881-3473-4957-87b7-17bf7320e059"
+              },
+              {
+                "Name": "courseid",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "8e2abf0d-5f3f-472e-80a7-e93146f500a5"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_feedback_id",
+                "Active": false,
+                "TargetEntity": "mdl_feedback",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "mdl_user_id4",
+                "Active": true,
+                "TargetEntity": "mdl_user",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "8e6bd3a7-ecfc-422e-a4bc-ec2bb7bb32de"
+          },
+          {
+            "Name": "mdl_feedback_item",
+            "EdmName": "Sandbox.mdl_feedback_item",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "b97950d7-5dbd-413a-ab3b-ad99f1bb1fe9"
+              },
+              {
+                "Name": "feedback",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "78727e26-88ea-4312-b02a-97d7843cd38d"
+              },
+              {
+                "Name": "template",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "297a17ce-c866-4ad3-8104-ca205ee18aae"
+              },
+              {
+                "Name": "name",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "85a0ee44-f9b8-48c7-8b3f-7f661be51b67"
+              },
+              {
+                "Name": "label",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "eb8574c0-d88f-4034-b7d4-ac9b45ea2ae5"
+              },
+              {
+                "Name": "presentation",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "388cb2b3-6412-433b-9cf9-7d9a2de0c495"
+              },
+              {
+                "Name": "typ",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "07d3800e-1290-45e4-bcd2-166ce715e82e"
+              },
+              {
+                "Name": "hasvalue",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "4ca3fa63-aace-44e0-955b-71fa8d9d05f1"
+              },
+              {
+                "Name": "position",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "80752f82-8939-4d99-a6d5-092126f879e2"
+              },
+              {
+                "Name": "required",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "7e7748c5-560e-4645-9711-66671c2ff183"
+              },
+              {
+                "Name": "dependitem",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "fe818d6c-e581-4be2-840d-36a1a6f65a61"
+              },
+              {
+                "Name": "dependvalue",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "dcf4c838-2513-4052-8f50-9c0cd6f52161"
+              },
+              {
+                "Name": "options",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "27851199-59ad-4082-aead-a21b2775b5fe"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_feedback_id2",
+                "Active": true,
+                "TargetEntity": "mdl_feedback",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "3925c5cc-0cce-431a-adf4-0dd421fdac27"
+          },
+          {
+            "Name": "mdl_feedback_value",
+            "EdmName": "Sandbox.mdl_feedback_value",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "c4f39307-bd79-45f4-b05d-88254720aac5"
+              },
+              {
+                "Name": "course_id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "6f22e9f9-d1fd-4786-baa8-56b0edebceae"
+              },
+              {
+                "Name": "item",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "327452b9-7502-4f67-93e1-6e8dc8cc3a9c"
+              },
+              {
+                "Name": "completed",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "d09403b9-f86e-45cc-8adb-7813550e9be2"
+              },
+              {
+                "Name": "tmp_completed",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "4170a26f-b6d1-4769-ac86-9106065c85dd"
+              },
+              {
+                "Name": "value",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "da8be44f-ae34-44f2-8464-3566ea4a474f"
+              },
+              {
+                "Name": "situacao_trabalho",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "cea806ab-eb26-45c3-814f-c130281235dc"
+              },
+              {
+                "Name": "Trabalho",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "eb8a4871-9a18-48b1-9d6f-e3f7e8827b50"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "mdl_feedback_item_id",
+                "Active": true,
+                "TargetEntity": "mdl_feedback_item",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              },
+              {
+                "Name": "mdl_feedback_completed_id",
+                "Active": true,
+                "TargetEntity": "mdl_feedback_completed",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "109923c8-58a0-4fae-8224-75c3a84a1cd6"
+          },
+          {
+            "Name": "programa_curso",
+            "EdmName": "Sandbox.programa_curso",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "c81b0c1a-e709-4dfa-8219-24260d64b7f7"
+              },
+              {
+                "Name": "created_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_5f9c18e9-a1fd-439c-a89f-62575c1a4f04_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "92500c89-8334-4b04-8e70-e199d23740b6"
+              },
+              {
+                "Name": "updated_at",
+                "DataType": 7,
+                "FormatString": "G",
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "Variations": [
+                    {
+                      "Name": "Variation",
+                      "Default": true,
+                      "NavigationProperty": "LocalDateTable_e09c65bd-901b-4397-afa4-d250b2ca4891_Date",
+                      "DefaultHierarchy": "Hierarquia de datas"
+                    }
+                  ]
+                },
+                "StableName": "4b8244e3-c998-410f-8243-58e2b73663bd"
+              },
+              {
+                "Name": "descricao",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "1dd630bd-6ba5-442b-8ab4-7411406b5203"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "LocalDateTable_5f9c18e9-a1fd-439c-a89f-62575c1a4f04_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_5f9c18e9-a1fd-439c-a89f-62575c1a4f04",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              },
+              {
+                "Name": "LocalDateTable_e09c65bd-901b-4397-afa4-d250b2ca4891_Date",
+                "Active": true,
+                "TargetEntity": "LocalDateTable_e09c65bd-901b-4397-afa4-d250b2ca4891",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "96b65b6a-691b-4452-b4d4-8a68367530e2"
+          },
+          {
+            "Name": "LocalDateTable_5f9c18e9-a1fd-439c-a89f-62575c1a4f04",
+            "EdmName": "Sandbox.LocalDateTable_5f9c18e9_a1fd_439c_a89f_62575c1a4f04",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "02e3809e-a917-469d-9b23-b4bc2ffd975d"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "379fe003-1056-47a8-a26f-6ba574669cf9"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "ef424e35-8def-48ca-8610-a44feef43695"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "c3496d94-fd57-4585-8664-eac241dae78c"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "4fc64fc3-97fa-4d5f-b9ca-b9f9b9386f53"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "fe23ad68-4eff-4b29-ad0a-14d77cdefb65"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "548b0fbd-31c8-4553-b429-4a7275d63a39"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "e6a38329-c272-4a61-a410-ba0021423bdd"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "3e961f93-e706-4f75-a64b-7f686e8500ae"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "7f023d9b-e49f-40a3-aa6e-e11943aa78a7"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "21d709e0-747b-4787-858a-532b17b45649"
+                  }
+                ],
+                "StableName": "7e0cc9fe-f417-40a2-bd73-7674526d2059"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "ea61dfac-74c3-4b2e-89a7-25ddbe6981bb"
+          },
+          {
+            "Name": "LocalDateTable_e09c65bd-901b-4397-afa4-d250b2ca4891",
+            "EdmName": "Sandbox.LocalDateTable_e09c65bd_901b_4397_afa4_d250b2ca4891",
+            "ShowAsVariationsOnly": true,
+            "Properties": [
+              {
+                "Name": "Date",
+                "DataType": 7,
+                "DataCategory": "PaddedDateTableDates",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "2b5eb623-396c-4798-8036-c90cd30b38f5"
+              },
+              {
+                "Name": "Ano",
+                "DataType": 4,
+                "DataCategory": "Years",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "86075d38-2f47-4dbf-ab08-f9f9337649d3"
+              },
+              {
+                "Name": "MonthNo",
+                "DataType": 4,
+                "DataCategory": "MonthOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "38ddde93-af65-4d15-9767-77b6154c581a"
+              },
+              {
+                "Name": "Mês",
+                "DataType": 1,
+                "DataCategory": "Months",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "MonthNo"
+                  ]
+                },
+                "StableName": "7c89de83-5e79-42af-bad1-1812acf4106d"
+              },
+              {
+                "Name": "QuarterNo",
+                "DataType": 4,
+                "DataCategory": "QuarterOfYear",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "1093e8a5-a934-45d8-9fc2-1c53e4014ee2"
+              },
+              {
+                "Name": "Trimestre",
+                "DataType": 1,
+                "DataCategory": "Quarters",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1,
+                  "OrderBy": [
+                    "QuarterNo"
+                  ]
+                },
+                "StableName": "682eff73-eb3b-4d4f-9c55-00a79310c9a7"
+              },
+              {
+                "Name": "Dia",
+                "DataType": 4,
+                "DataCategory": "DayOfMonth",
+                "Hidden": true,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "a9a4a574-b866-4008-9353-6ee3ae80f4cd"
+              }
+            ],
+            "Hierarchies": [
+              {
+                "Name": "Hierarquia de datas",
+                "Levels": [
+                  {
+                    "Name": "Ano",
+                    "Column": "Ano",
+                    "StableName": "dbf4fa3a-0e9f-4e8a-bcba-202e0844cae6"
+                  },
+                  {
+                    "Name": "Trimestre",
+                    "Column": "Trimestre",
+                    "StableName": "aa429929-41b5-464c-bfe7-5255780ecc90"
+                  },
+                  {
+                    "Name": "Mês",
+                    "Column": "Mês",
+                    "StableName": "cd4cc03f-7965-45fd-8eaf-e3eca881f9d0"
+                  },
+                  {
+                    "Name": "Dia",
+                    "Column": "Dia",
+                    "StableName": "cee3f4d0-6b1c-455b-b835-7b4083872075"
+                  }
+                ],
+                "StableName": "9cb511b0-c912-4041-a3a4-1b3a7b4c50c4"
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "d704bd53-d693-4ffd-956a-f47c0604b858"
+          },
+          {
+            "Name": "media_avaliacao_curso",
+            "EdmName": "Sandbox.media_avaliacao_curso",
+            "Properties": [
+              {
+                "Name": "id",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "1d60fcab-0620-4d8b-bbe1-6dd139dbd42f"
+              },
+              {
+                "Name": "id_programa_curso",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "dc063eb5-cfc4-444e-b955-70f7ccf07181"
+              },
+              {
+                "Name": "nome_curso",
+                "DataType": 1,
+                "Column": {
+                  "DefaultAggregate": 1
+                },
+                "StableName": "32bd93f7-dc68-4b7f-aea4-2a7841af9ab9"
+              },
+              {
+                "Name": "media_avaliacoes",
+                "DataType": 3,
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "c3e12c92-7579-4d0a-bff8-7995c843144f"
+              },
+              {
+                "Name": "total_avaliacoes",
+                "DataType": 4,
+                "FormatString": "0",
+                "Column": {
+                  "DefaultAggregate": 2
+                },
+                "StableName": "1a7359c3-28e8-4fa6-9caf-de0e07b46bd0"
+              },
+              {
+                "Name": "Média de Avaliações dos Cursos",
+                "EdmName": "Média_de_Avaliações_dos_Cursos",
+                "DataType": 3,
+                "Measure": {},
+                "StableName": "0d58f6ed-d999-4515-ab1b-42a38e40ad81"
+              }
+            ],
+            "NavigationProperties": [
+              {
+                "Name": "programa_curso_id2",
+                "Active": true,
+                "TargetEntity": "programa_curso",
+                "SourceMultiplicity": 2,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              },
+              {
+                "Name": "curso_id3",
+                "Active": false,
+                "TargetEntity": "curso",
+                "SourceMultiplicity": 0,
+                "TargetMultiplicity": 0,
+                "CrossFilterDirection": 1
+              }
+            ],
+            "Capabilities": {
+              "CanEditStorageMode": false,
+              "SupportsClustering": false,
+              "SupportsBinByCount": false
+            },
+            "StableName": "742ee3a4-9d0f-47b2-8251-3ff062b4fbb0"
+          }
+        ],
+        "Capabilities": {
+          "SupportsMedian": true,
+          "SupportsPercentile": true,
+          "SupportsScopedEval": true,
+          "SupportsStringMinMax": true,
+          "SupportsMultiTableTupleFilters": true,
+          "SupportsTimeIntelligenceQuickMeasures": true,
+          "SupportsBinnedLineSample": true,
+          "SupportsOverlappingPointsSample": true,
+          "SupportsInsights": true,
+          "SupportsQna": true,
+          "SupportsInstanceFilters": true,
+          "Insights": {
+            "SupportsDistributionFactors": true,
+            "SupportsExplainChange": true,
+            "SupportsExplore": true,
+            "SupportsKeyDrivers": true,
+            "SupportsRelatedInsights": true,
+            "SupportsDecomposition": true,
+            "SupportsExplainAnomalies": true,
+            "SupportsCompatibleFields": true,
+            "SupportsQuerySuggestions": true,
+            "SupportsExplainVarianceToTarget": true,
+            "SupportsGenerateSummaries": true
+          },
+          "SupportsSubqueryRegrouping": true,
+          "SupportsTopNPerLevel": true,
+          "SupportsScopedAggregates": true,
+          "SupportsExtensionColumns": true,
+          "IsQnaEnabled": true,
+          "SupportsScopedDataReduction": true,
+          "TransformCapabilities": {
+            "SupportedTransforms": [
+              "KMeansClustering",
+              "SpatialClustering",
+              "Unpivot",
+              "TrendSummary",
+              "ExtractTrend",
+              "TopRightHandCornerSummary",
+              "RegionWithMostPointsSummary",
+              "SampleTimeSeriesData",
+              "LargestDivergenceSummary",
+              "LargestCategorySummary",
+              "LargestDifferenceSummary",
+              "CorrelationSummary",
+              "ChangeSummary",
+              "AggregateSummary",
+              "DetectAnomaly",
+              "HighPointLowPointSummary",
+              "SampleAndDetectAnomaly"
+            ]
+          },
+          "SupportsGroupSynchronization": true,
+          "SupportsSparklineData": true,
+          "SupportsVisualCalculations": true,
+          "IsNaturalLanguageSupported": true,
+          "IsNaturalLanguageEnabled": true
+        }
+      },
+      "error": null
+    }
+  ]
+}

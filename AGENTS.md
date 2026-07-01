@@ -6,7 +6,7 @@ Workspace de planejamento e desenvolvimento da nova Vitrine dos cursos abertos (
 
 ```
 vitrine-mooc/
-├── CLAUDE.md              (voce esta aqui - roteamento)
+├── AGENTS.md              (voce esta aqui - roteamento)
 ├── CONTEXT.md            (comece aqui para rotear tarefas)
 ├── setup/
 │   └── questionnaire.md  (onboarding unico - identidade, design, convencoes)
