@@ -12,7 +12,7 @@ Documento canônico de requisitos. A **v2 incorpora o PRD** (que define o produt
 
 ## 1. Contexto e estratégia
 
-- Produto: **mooc.cefor.ifes.edu.br** — cursos abertos (MOOC) do Ifes. Reposicionado pelo PRD como **ferramenta de qualificação profissional gratuita e certificada** (conceito **5 estrelas INEP/MEC**). `[PRD]`
+- Produto: **mooc.cefor.ifes.edu.br** — cursos abertos (MOOC) do Ifes: cursos a distância **abertos à comunidade**, gratuitos e certificados (conceito **5 estrelas INEP/MEC**). Objetivo oficial na **Resolução CS 72/2020, Art. 1º**. `[Resolução]`
 - Vitrine atual em produção: WordPress 5.9, tema `vitrinemooctheme` (Bootstrap 4.2.1, FA 4.7), single-page. `[Vitrine atual]`
 - **Estratégia técnica:** migrar para WP7, replicar a estrutura de repositório da Base de Conhecimento e desenvolver em **ambiente de teste** (nunca direto em produção). `[Reunião]`
 - **Estratégia de produto (PRD):** evolução em **3 camadas** entregues de forma faseada até **agosto/2026 (CONCEFOR)**. `[PRD]`
@@ -51,7 +51,7 @@ Prioridades do usuário `[Usuário]`, alinhadas ao PRD `[PRD]`:
 | FR-07 | Criar conta e login integrados ao Moodle. | `[Vitrine atual]` |
 | FR-08 | **Barra de estatísticas** (matrículas | nº de cursos | 5 estrelas MEC | 100% gratuito) com **dado dinâmico**, não hardcoded. | `[PRD §4.3]` |
 | FR-09 | Rodapé com links úteis + institucionais. | `[Vitrine atual]` |
-| FR-10 | **Hero com proposta de valor** ("Qualificação profissional gratuita e certificada pelo Ifes") + **duplo CTA** (busca + Wizard) + selo MEC. | `[PRD §4.1]` |
+| FR-10 | **Hero com proposta de valor** alinhada ao objetivo oficial (**cursos abertos à comunidade**, gratuitos e certificados pelo Ifes) + **duplo CTA** (busca + Wizard) + selo MEC. **Não usar "qualificação profissional"** (decisão 02/07 — contraria a Resolução CS 72/2020). | `[Resolução]` |
 | FR-11 | **Selo 5 estrelas INEP/MEC** com destaque visual. | `[PRD §2.2]` |
 | FR-12 | **Cards enriquecidos** — fechado: CH, badge "Novo" (últimos 3 meses), Libras, nº de inscritos; expandido: descrição, objetivos, categoria/tags, "Acessar curso", **"Compartilhar" (WhatsApp/link)**. | `[PRD §4.2]` |
 | FR-13 | **Seções curadas** tipo Netflix: "Em destaque" (manual), "Recentes" (data), "Mais cursados" (matrículas). | `[PRD §4.4]` |

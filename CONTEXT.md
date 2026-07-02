@@ -21,6 +21,7 @@ Planejamento e desenvolvimento da nova Vitrine dos cursos abertos (MOOC) do Ifes
 | Convencoes Git e deploy | `shared/convencoes-git-deploy.md` | Fluxo de branches, regra de PR, migracao teste/producao |
 | Glossario | `shared/glossario.md` | Termos do dominio (MOOC, Vitrine, CGTI, CGTE, CEFOR) |
 | Resumo da reuniao | `shared/resumo-reuniao.md` | Sintese do kickoff (decisoes e proximos passos) |
+| SEO/GEO/AEO | `shared/seo-geo-aeo.md` | Guia transversal de encontrabilidade em busca tradicional, IA generativa e mecanismos de resposta |
 | Design system | `design-system/CONTEXT.md` | Paleta de cores e tipografia da Vitrine |
 | Skills | `skills/README.md` | Conhecimento de dominio bundled para os agentes |
 | Indicadores MOOC | `stages/02-catalogo/output/powerbi-mooc-ifes/` | Extracao do Power BI, planilha, CSVs e insights para decisao |

@@ -1,8 +1,8 @@
 # Decisão em aberto — Taxonomia e Navegação (cenários)
 
-> **Estágio:** 02 — Catálogo · **Data:** 01/07/2026 · **Status:** ⏳ DECISÃO PENDENTE (retomar aqui)
-> **Complementa:** `arquitetura-informacao.md` (v2) e `taxonomia.md`.
-> **Para retomar amanhã:** ler este documento; a decisão-chave é escolher entre os cenários A, B ou C (§3) e definir se validamos por teste com usuários (§2g).
+> **Estágio:** 02 — Catálogo · **Data:** 01/07/2026 · **Status:** ✅ DECIDIDO — **Cenário C** (02/07/2026).
+> **Modelo final:** ver `arquitetura-informacao.md` **v3** (Cenário C + separação área oficial × navegação + selos Libras/Audiodescrição/Idioma + SEO). Este documento fica como **registro histórico** de como se chegou à decisão.
+> **Complementa:** `arquitetura-informacao.md` (v3) e `taxonomia.md`.
 
 Documento de apoio à decisão sobre **como a nova Vitrine organiza e apresenta os 165 cursos**. Reúne o inventário das camadas, os fatores que pesam (inclusive os menos óbvios) e três cenários. Nada aqui é oficial: é subsídio para o CEFOR/Comissão MOOC decidir.
 

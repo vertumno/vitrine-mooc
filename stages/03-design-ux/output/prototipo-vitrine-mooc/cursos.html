@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cursos abertos MOOC do Ifes | Protótipo</title>
+  <meta name="description" content="Listagem protótipo dos cursos abertos MOOC do Ifes, com busca, filtros, cards enriquecidos e metadados visíveis.">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Navegação principal">
+      <a class="brand" href="../prototipo-vitrine-mooc.html"><span class="brand-mark">IFES</span><span>Vitrine MOOC Ifes</span></a>
+      <div class="nav-links">
+        <a aria-current="page" href="cursos.html">Cursos</a>
+        <a href="area-educacao.html">Áreas</a>
+        <a href="publico-professores.html">Para quem</a>
+        <a href="qualificacao.html">Licença capacitação</a>
+        <a href="perguntas-frequentes.html">Dúvidas</a>
+      </div>
+      <a class="btn secondary" href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="shell hero-grid">
+        <div>
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../prototipo-vitrine-mooc.html">Home</a> / Cursos</nav>
+          <p class="eyebrow">Catálogo rastreável</p>
+          <h1>Cursos abertos MOOC do Ifes</h1>
+          <p class="lead">Página de listagem com busca por texto, filtros facetados e cards com as informações que ajudam a escolher antes de sair para o Moodle.</p>
+          <div class="actions">
+            <a class="btn" href="#lista">Ver resultados</a>
+            <a class="btn secondary" href="curso-como-criar-mooc.html">Abrir página de curso</a>
+          </div>
+        </div>
+        <aside class="panel aside-card">
+          <strong>164+</strong>
+          <p>cursos válidos na base de indicadores analisada, com métricas de matrícula, certificados e conversão.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="lista">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Encontrar um curso</h2>
+          <p>O protótipo mostra a combinação esperada de busca, categoria, público, acessibilidade e carga horária.</p>
+        </div>
+
+        <div class="panel search-box" role="search">
+          <input id="q" type="search" placeholder="Buscar por Moodle, Libras, tecnologia, ambiente">
+          <select id="area" aria-label="Filtrar por área">
+            <option value="">Todas as áreas</option>
+            <option value="educacao">Educação</option>
+            <option value="tecnologia">Tecnologia</option>
+            <option value="ambiente">Ambiente e Saúde</option>
+            <option value="linguas">Línguas</option>
+          </select>
+          <button class="btn" type="button" id="clear">Limpar</button>
+        </div>
+
+        <div class="filters" aria-label="Filtros ativos sugeridos">
+          <span class="chip">Certificado</span>
+          <span class="chip">Até 60h</span>
+          <span class="chip">Com Libras</span>
+          <span class="chip">Alta procura</span>
+          <span class="chip">Novos cursos</span>
+        </div>
+
+        <div class="grid" id="cards" style="margin-top: 22px" aria-live="polite">
+          <article class="course-card" data-search="moodle educacao professores ead alta">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores">
+            <div class="card-body">
+              <div class="badges"><span class="badge">Alta procura</span><span class="badge neutral">60h</span></div>
+              <h3>Moodle 4 para Educadores</h3>
+              <p>Curso de grande demanda para docentes que atuam com ambiente virtual de aprendizagem.</p>
+              <div class="meta"><span>Educação a Distância</span><span>Intermediário</span></div>
+              <a href="curso-como-criar-mooc.html">Ver modelo de página de curso</a>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="mooc educacao ead libras professores">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg" alt="Imagem do curso Como criar um MOOC">
+            <div class="card-body">
+              <div class="badges"><span class="badge">Libras</span><span class="badge neutral">60h</span></div>
+              <h3>Como criar um MOOC</h3>
+              <p>Curso para compreender, planejar, desenvolver e avaliar cursos abertos na plataforma.</p>
+              <div class="meta"><span>Educação a Distância</span><span>Básico</span></div>
+              <a href="curso-como-criar-mooc.html">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="ambiente saude rio doce ciencias">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_A-Quimica-dos-produtos-de-limpeza.png" alt="Imagem do curso A Química dos produtos de limpeza">
+            <div class="card-body">
+              <div class="badges"><span class="badge">Novo</span><span class="badge neutral">45h</span></div>
+              <h3>A Química dos produtos de limpeza</h3>
+              <p>Exemplo de curso de ciências aplicado ao cotidiano, com apelo de descoberta temática.</p>
+              <div class="meta"><span>Ambiente e Saúde</span><span>Básico</span></div>
+              <a href="#">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="tecnologia informatica realidade aumentada unac">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_uso-de-realidade-aumentada-1.png" alt="Imagem do curso Uso de Realidade Aumentada no Ensino de Ciências">
+            <div class="card-body">
+              <div class="badges"><span class="badge">UnAC</span><span class="badge neutral">30h</span></div>
+              <h3>Uso de Realidade Aumentada no Ensino de Ciências</h3>
+              <p>Curso que cruza tecnologia, ensino de ciências e práticas educacionais.</p>
+              <div class="meta"><span>Tec. e Informática</span><span>Básico</span></div>
+              <a href="#">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="linguas espanhol ingles comunidade alta">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_espanhol-comunicativo-1.png" alt="Imagem do curso Espanhol Comunicativo para Brasileiros">
+            <div class="card-body">
+              <div class="badges"><span class="badge">Línguas</span><span class="badge neutral">60h</span></div>
+              <h3>Inglês Comunicativo</h3>
+              <p>Curso representativo da alta demanda nacional por formação aberta em línguas.</p>
+              <div class="meta"><span>Línguas</span><span>Básico</span></div>
+              <a href="#">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="tecnologia dados estatistica r alta">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/Logo_UnAC_WhatsApp.png" alt="Logo da UnAC relacionado a cursos de dados">
+            <div class="card-body">
+              <div class="badges"><span class="badge">Alta procura</span><span class="badge neutral">Dados</span></div>
+              <h3>Estatística com o R</h3>
+              <p>Curso citado entre os casos de alta demanda e conversão abaixo do primeiro quartil.</p>
+              <div class="meta"><span>Tec. e Informática</span><span>Dados</span></div>
+              <a href="#">Ver detalhes</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>Protótipo de listagem</span><span>Estágio 03 Design/UX</span></div></footer>
+  <script>
+    const norm = (v) => v.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const q = document.querySelector("#q");
+    const area = document.querySelector("#area");
+    const cards = Array.from(document.querySelectorAll(".course-card"));
+    function filter() {
+      const query = norm(q.value);
+      const a = area.value;
+      let count = 0;
+      cards.forEach((card) => {
+        const text = norm(card.textContent + " " + card.dataset.search);
+        const ok = (!query || text.includes(query)) && (!a || text.includes(a));
+        card.hidden = !ok;
+        if (ok) count += 1;
+      });
+      document.querySelector("#cards").setAttribute("aria-label", `${count} cursos encontrados`);
+    }
+    q.addEventListener("input", filter);
+    area.addEventListener("change", filter);
+    document.querySelector("#clear").addEventListener("click", () => {
+      q.value = "";
+      area.value = "";
+      filter();
+      q.focus();
+    });
+  </script>
+</body>
+</html>

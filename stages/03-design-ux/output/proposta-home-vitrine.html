@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitrine MOOC Ifes — Cursos abertos, gratuitos e certificados</title>
+<meta name="description" content="Cursos on-line abertos a toda a comunidade, gratuitos e com certificado do Ifes. Plataforma 5 estrelas MEC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ Tokens ============ */
+:root{
+  --paper:#F6F8F4;
+  --paper-2:#EDF3EB;
+  --ink:#17251C;
+  --ink-soft:#44534A;
+  --green:#2F9E41;        /* verde Ifes (rede federal) */
+  --green-deep:#0E3A21;   /* floresta — hero e blocos fortes */
+  --green-mid:#1C6B34;
+  --green-mist:#DFEDDF;
+  --line:#D5E0D4;
+  --red:#C2331B;          /* badge Novo — vermelho da marca IF */
+  --amber:#D98E23;        /* estrelas MEC */
+  --radius:10px;
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Public Sans",system-ui,-apple-system,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --maxw:1160px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:var(--font-body);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.15}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--font-mono)}
+.eyebrow{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--green-mid);margin-bottom:12px;display:block;
+}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--green-deep);color:#fff;padding:10px 16px;z-index:100}
+.skip:focus{left:12px;top:12px}
+
+/* ============ Topbar gov + Header ============ */
+.topbar{background:var(--green-deep);color:#CFE3CF;font-size:.78rem;padding:6px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px}
+.topbar a{color:#CFE3CF;text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+header.site{
+  background:var(--paper);border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+}
+header.site .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{display:grid;grid-template-columns:repeat(3,8px);grid-template-rows:repeat(3,8px);gap:2px}
+.logo-mark i{background:var(--green);border-radius:1px}
+.logo-mark i:nth-child(1){background:var(--red)}
+.logo-mark i:nth-child(5){background:var(--green-deep)}
+.logo-mark i:nth-child(9){background:var(--green-mid)}
+.logo-text{line-height:1.1}
+.logo-text b{font-family:var(--font-display);font-size:1.05rem;display:block}
+.logo-text span{font-size:.7rem;color:var(--ink-soft);letter-spacing:.06em}
+nav.main{display:flex;gap:22px;margin-left:auto}
+nav.main a{
+  text-decoration:none;font-size:.9rem;font-weight:500;color:var(--ink-soft);
+  padding:6px 2px;border-bottom:2px solid transparent;
+}
+nav.main a:hover{color:var(--ink);border-bottom-color:var(--green)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+  font-family:var(--font-body);font-weight:700;font-size:.9rem;
+  border-radius:var(--radius);padding:12px 22px;text-decoration:none;
+  border:1px solid transparent;transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-mid)}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--green-mid)}
+.btn-light{background:#fff;color:var(--green-deep)}
+header.site .btn{padding:9px 16px;font-size:.82rem}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:1rem}
+
+/* ============ Hero ============ */
+.hero{background:var(--green-deep);color:#F2F7F0;overflow:hidden;position:relative}
+.hero .wrap{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:56px;
+  padding-top:72px;padding-bottom:56px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(2rem,4.4vw,3.3rem);color:#fff;letter-spacing:-.01em;
+  margin:0 0 18px;
+}
+.hero h1 em{font-style:italic;color:#9FD8A6}
+.hero p.lead{font-size:1.08rem;color:#C9DECB;max-width:34rem;margin-bottom:28px}
+.hero .eyebrow{color:#8FC996}
+.selo-mec{
+  display:inline-flex;align-items:center;gap:10px;margin-top:26px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
+  border-radius:999px;padding:8px 18px;font-size:.82rem;color:#E8EFE6;
+}
+.selo-mec .stars{color:var(--amber);letter-spacing:2px;font-size:.9rem}
+.hero-search{display:flex;gap:10px;max-width:34rem}
+.hero-search input{
+  flex:1;border:none;border-radius:var(--radius);padding:14px 18px;
+  font-size:.95rem;font-family:var(--font-body);background:#fff;color:var(--ink);
+}
+.hero-cta2{margin-top:14px;font-size:.9rem;color:#C9DECB}
+.hero-cta2 button{
+  background:none;border:none;color:#9FD8A6;font:inherit;font-weight:700;
+  cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+}
+.hero-cta2 button:hover{color:#fff}
+
+/* Assinatura: mosaico aberto (grade da marca IF) */
+.mosaico{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:10px;
+  aspect-ratio:1/1;max-width:380px;margin-left:auto;
+}
+.mosaico i{border-radius:3px;background:rgba(255,255,255,.06);animation:pulse 6s ease-in-out infinite}
+.mosaico i.g1{background:var(--green)}
+.mosaico i.g2{background:var(--green-mid)}
+.mosaico i.g3{background:#9FD8A6}
+.mosaico i.r{background:var(--red)}
+.mosaico i:nth-child(3n){animation-delay:1.5s}
+.mosaico i:nth-child(4n){animation-delay:3s}
+.mosaico i:nth-child(5n){animation-delay:4.5s}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+.mosaico-legenda{
+  font-family:var(--font-mono);font-size:.7rem;color:#8FA893;
+  text-align:right;margin-top:12px;max-width:380px;margin-left:auto;
+}
+
+/* Barra de estatísticas */
+.stats{background:#0B2E1A;border-top:1px solid rgba(255,255,255,.08)}
+.stats .wrap{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  padding-top:26px;padding-bottom:26px;
+}
+.stat b{font-family:var(--font-mono);font-weight:500;font-size:1.5rem;color:#fff;display:block}
+.stat span{font-size:.78rem;color:#8FC996;letter-spacing:.05em;text-transform:uppercase}
+
+/* ============ Seções ============ */
+section{padding:72px 0}
+section h2{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-bottom:10px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:36px}
+.sec-head p{color:var(--ink-soft);max-width:38rem}
+.sec-link{font-size:.88rem;font-weight:700;color:var(--green-mid);text-decoration:none;white-space:nowrap}
+.sec-link:hover{text-decoration:underline}
+
+/* Para quem */
+.publicos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.publico{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;text-decoration:none;transition:border-color .15s,transform .15s;
+}
+.publico:hover{border-color:var(--green);transform:translateY(-2px)}
+.publico .pico{
+  display:grid;grid-template-columns:repeat(2,7px);grid-template-rows:repeat(2,7px);
+  gap:2px;margin-bottom:14px;
+}
+.publico .pico i{background:var(--green);border-radius:1px}
+.publico .pico i:last-child{background:var(--red)}
+.publico h3{font-size:1.05rem;margin-bottom:6px}
+.publico p{font-size:.85rem;color:var(--ink-soft)}
+
+/* Áreas (15 categorias) */
+.areas-sec{background:var(--paper-2)}
+.areas{display:flex;flex-wrap:wrap;gap:10px}
+.area{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:10px 18px;font-size:.9rem;font-weight:500;
+  transition:border-color .15s,background .15s;
+}
+.area:hover{border-color:var(--green);background:var(--green-mist)}
+.area .n{font-family:var(--font-mono);font-size:.72rem;color:var(--green-mid)}
+.areas-nota{margin-top:22px;font-size:.82rem;color:var(--ink-soft)}
+
+/* Cards de curso */
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.filtro{
+  font-family:var(--font-mono);font-size:.75rem;cursor:pointer;
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+}
+.filtro[aria-pressed="true"]{background:var(--green-deep);color:#fff;border-color:var(--green-deep)}
+.cursos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.curso{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:box-shadow .15s,transform .15s;
+}
+.curso:hover{box-shadow:0 8px 24px rgba(14,58,33,.1);transform:translateY(-2px)}
+.capa{position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.capa::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+.capa b{font-family:var(--font-display);font-size:3.4rem;color:rgba(255,255,255,.85);font-weight:600}
+.selos{position:absolute;top:10px;left:10px;display:flex;gap:6px}
+.selo{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.05em;
+  background:rgba(255,255,255,.92);color:var(--green-deep);
+  border-radius:4px;padding:3px 8px;font-weight:500;
+}
+.selo.novo{background:var(--red);color:#fff}
+.curso-body{padding:18px 20px 20px}
+.curso-meta{
+  font-family:var(--font-mono);font-size:.72rem;color:var(--green-mid);
+  display:flex;gap:14px;margin-bottom:8px;
+}
+.curso h3{font-size:1.05rem;line-height:1.3}
+.curso .cat{font-size:.78rem;color:var(--ink-soft);margin-top:6px}
+.curso-toggle{
+  margin-top:14px;background:none;border:none;cursor:pointer;
+  font-family:var(--font-mono);font-size:.75rem;color:var(--green-mid);
+  display:inline-flex;align-items:center;gap:6px;padding:0;
+}
+.curso-toggle::after{content:"+";font-size:.95rem;transition:transform .2s}
+.curso.aberto .curso-toggle::after{transform:rotate(45deg)}
+.curso-det{display:none;margin-top:14px;border-top:1px dashed var(--line);padding-top:14px;font-size:.86rem;color:var(--ink-soft)}
+.curso.aberto .curso-det{display:block}
+.curso-det ul{margin:10px 0 14px 18px}
+.curso-det li{margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tag{font-family:var(--font-mono);font-size:.66rem;background:var(--paper-2);border-radius:4px;padding:3px 8px;color:var(--ink-soft)}
+.curso-det .acoes{display:flex;gap:10px}
+.curso-det .acoes .btn{padding:9px 16px;font-size:.8rem}
+
+/* Mais cursados (ranking) */
+.rank{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank-row{
+  display:grid;grid-template-columns:56px 1fr auto auto;gap:18px;align-items:center;
+  padding:18px 24px;border-bottom:1px solid var(--line);text-decoration:none;
+  transition:background .15s;
+}
+.rank-row:last-child{border-bottom:none}
+.rank-row:hover{background:var(--green-mist)}
+.rank-row .pos{font-family:var(--font-mono);font-size:1.3rem;color:var(--green-mid)}
+.rank-row .nome b{font-family:var(--font-display);font-weight:600;font-size:1.02rem;display:block}
+.rank-row .nome span{font-size:.78rem;color:var(--ink-soft)}
+.rank-row .mat{font-family:var(--font-mono);font-size:.85rem;text-align:right}
+.rank-row .mat span{display:block;font-size:.65rem;color:var(--ink-soft);letter-spacing:.05em;text-transform:uppercase}
+.rank-row .ch{font-family:var(--font-mono);font-size:.78rem;color:var(--green-mid)}
+.rank-nota{margin-top:14px;font-size:.8rem;color:var(--ink-soft)}
+
+/* Licença Capacitação */
+.licenca{background:var(--green-deep);color:#E8EFE6}
+.licenca .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.licenca h2{color:#fff}
+.licenca .eyebrow{color:#8FC996}
+.licenca p{color:#C9DECB;margin-bottom:12px}
+.licenca ul{list-style:none;margin:18px 0 28px}
+.licenca li{padding-left:26px;position:relative;margin-bottom:10px;font-size:.92rem;color:#DDEBDC}
+.licenca li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;background:var(--green);border-radius:2px}
+.plan-mock{
+  background:#fff;color:var(--ink);border-radius:var(--radius);
+  padding:28px;box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+.plan-mock h3{font-size:1.05rem;margin-bottom:18px}
+.plan-field{margin-bottom:14px}
+.plan-field label{font-size:.75rem;font-weight:700;color:var(--ink-soft);display:block;margin-bottom:5px;letter-spacing:.03em;text-transform:uppercase}
+.plan-field input,.plan-field select{
+  width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
+  font-family:var(--font-body);font-size:.9rem;background:var(--paper);
+}
+.plan-out{
+  background:var(--green-mist);border-radius:8px;padding:14px 16px;
+  font-family:var(--font-mono);font-size:.8rem;color:var(--green-deep);margin:16px 0;
+}
+.plan-out b{font-size:1.1rem;display:block}
+
+/* Projetos e séries */
+.projetos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:44px}
+.projeto{
+  border-radius:var(--radius);padding:32px;color:#fff;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:8px;min-height:200px;text-decoration:none;
+}
+.projeto::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+.projeto>*{position:relative}
+.projeto.riodoce{background:linear-gradient(135deg,#14532D,#1C6B34)}
+.projeto.unac{background:linear-gradient(135deg,#0E3A21,#2F5E3C)}
+.projeto .n{font-family:var(--font-mono);font-size:.72rem;color:#9FD8A6;letter-spacing:.1em;text-transform:uppercase}
+.projeto h3{font-size:1.5rem;color:#fff}
+.projeto p{font-size:.88rem;color:#CFE3CF;max-width:26rem}
+.projeto .link{margin-top:auto;font-size:.82rem;font-weight:700;color:#9FD8A6}
+.series{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.series .rotulo{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-right:8px}
+.serie{
+  text-decoration:none;font-size:.85rem;font-weight:500;
+  border:1px dashed var(--green-mid);color:var(--green-deep);
+  border-radius:999px;padding:8px 16px;transition:background .15s;
+}
+.serie:hover{background:var(--green-mist)}
+.serie .n{font-family:var(--font-mono);font-size:.7rem;color:var(--green-mid)}
+
+/* O que é + Como funciona */
+.oquee{background:var(--paper-2)}
+.oquee .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.oquee blockquote{
+  font-family:var(--font-display);font-size:1.3rem;line-height:1.45;
+  border-left:4px solid var(--green);padding-left:20px;margin:20px 0 14px;
+}
+.oquee cite{font-size:.78rem;color:var(--ink-soft);font-style:normal;font-family:var(--font-mono)}
+.fatos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.fato{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:.85rem}
+.fato b{font-family:var(--font-mono);font-weight:500;color:var(--green-mid);display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+.passos{list-style:none;counter-reset:p}
+.passos li{
+  counter-increment:p;position:relative;padding:0 0 26px 58px;
+}
+.passos li::before{
+  content:counter(p,decimal-leading-zero);position:absolute;left:0;top:0;
+  font-family:var(--font-mono);font-size:.85rem;color:#fff;background:var(--green-deep);
+  width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+}
+.passos li:not(:last-child)::after{
+  content:"";position:absolute;left:19px;top:46px;bottom:6px;width:2px;background:var(--line);
+}
+.passos h3{font-size:1rem;margin-bottom:4px}
+.passos p{font-size:.86rem;color:var(--ink-soft)}
+.passos .aviso{
+  display:inline-block;margin-top:6px;font-size:.75rem;background:#FBEFDC;
+  border:1px solid #ECD3A8;border-radius:6px;padding:4px 10px;color:#7A5416;
+}
+
+/* FAQ */
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:10px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:18px 22px;font-weight:700;font-size:.95rem;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--font-mono);color:var(--green-mid);font-size:1.2rem}
+.faq details[open] summary::after{content:"−"}
+.faq .resp{padding:0 22px 18px;font-size:.9rem;color:var(--ink-soft)}
+.faq-mais{text-align:center;margin-top:24px}
+
+/* Footer */
+footer{background:var(--green-deep);color:#A9C4AC;font-size:.85rem}
+footer .wrap{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;
+  padding-top:56px;padding-bottom:40px;
+}
+footer h4{color:#fff;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;font-family:var(--font-mono);font-weight:500}
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+footer a{color:#A9C4AC;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.foot-base{border-top:1px solid rgba(255,255,255,.1)}
+.foot-base .wrap{display:flex;justify-content:space-between;padding:18px 24px;font-size:.75rem}
+
+/* Wizard modal */
+.modal{
+  position:fixed;inset:0;background:rgba(14,37,24,.72);z-index:90;
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.modal.aberto{display:flex}
+.modal-box{
+  background:#fff;border-radius:14px;max-width:560px;width:100%;
+  padding:36px;max-height:90vh;overflow:auto;
+}
+.modal-box .mono-step{font-family:var(--font-mono);font-size:.72rem;color:var(--green-mid);letter-spacing:.1em;text-transform:uppercase}
+.modal-box h3{font-size:1.4rem;margin:8px 0 22px}
+.wiz-opts{display:grid;gap:10px}
+.wiz-opt{
+  text-align:left;background:var(--paper);border:1px solid var(--line);
+  border-radius:10px;padding:14px 18px;font:inherit;font-size:.92rem;cursor:pointer;
+  transition:border-color .15s,background .15s;
+}
+.wiz-opt:hover{border-color:var(--green);background:var(--green-mist)}
+.wiz-res{display:none}
+.wiz-res .mini{
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px;
+}
+.wiz-res .mini b{font-family:var(--font-display);font-weight:600;font-size:.95rem;display:block}
+.wiz-res .mini span{font-family:var(--font-mono);font-size:.72rem;color:var(--green-mid)}
+.wiz-foot{display:flex;justify-content:space-between;margin-top:24px;align-items:center}
+.wiz-foot button.link{background:none;border:none;cursor:pointer;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-soft);text-decoration:underline}
+.modal-close{float:right;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--ink-soft);line-height:1}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* ============ Responsivo ============ */
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .mosaico{margin:0;max-width:300px}
+  .mosaico-legenda{text-align:left;margin-left:0}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .publicos{grid-template-columns:repeat(2,1fr)}
+  .cursos{grid-template-columns:repeat(2,1fr)}
+  .licenca .wrap,.oquee .wrap{grid-template-columns:1fr;gap:40px}
+  .projetos{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr 1fr;gap:28px}
+  nav.main{display:none}
+  nav.main.aberta{
+    display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;
+    background:var(--paper);border-bottom:1px solid var(--line);padding:16px 24px;gap:4px;
+  }
+  .menu-toggle{display:block;margin-left:auto}
+  header.site .btn{display:none}
+}
+@media (max-width:600px){
+  .publicos,.cursos{grid-template-columns:1fr}
+  .hero-search{flex-direction:column}
+  .rank-row{grid-template-columns:40px 1fr auto;gap:12px;padding:14px 16px}
+  .rank-row .ch{display:none}
+  .sec-head{flex-direction:column;align-items:start;gap:8px}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .fatos{grid-template-columns:1fr}
+  .topbar .wrap{flex-direction:column;gap:2px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- Faixa institucional -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Instituto Federal do Espírito Santo · Cefor</span>
+    <span class="mono"><a href="#">Validar certificado</a> · <a href="#">Painel de indicadores</a> · <a href="#">Suporte</a></span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#">
+      <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="logo-text"><b>Vitrine MOOC</b><span>IFES · CEFOR</span></span>
+    </a>
+    <nav class="main" id="menu" aria-label="Navegação principal">
+      <a href="#cursos">Cursos</a>
+      <a href="#areas">Áreas</a>
+      <a href="#publicos">Para quem</a>
+      <a href="#licenca">Licença Capacitação</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">☰ Menu</button>
+    <a class="btn btn-primary" href="#" style="margin-left:8px">Criar conta</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- Hero -->
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Cursos abertos do Ifes · 100% on-line</span>
+      <h1>Conhecimento público, <em>aberto a você</em> — gratuito e certificado.</h1>
+      <p class="lead">Estude no seu ritmo, sem seleção e sem mensalidade. Cursos livres de até 60 horas, com certificado do Ifes ao concluir.</p>
+      <form class="hero-search" role="search" onsubmit="return false">
+        <input type="search" placeholder="O que você quer aprender? Ex.: inglês, Canva, Moodle…" aria-label="Buscar cursos">
+        <button class="btn btn-light" type="submit">Buscar</button>
+      </form>
+      <p class="hero-cta2">Não sabe por onde começar? <button type="button" onclick="abrirWizard()">Responda 3 perguntas e receba sugestões</button></p>
+      <span class="selo-mec"><span class="stars" aria-hidden="true">★★★★★</span> Nota máxima em EaD — 5 estrelas INEP/MEC</span>
+    </div>
+    <div>
+      <div class="mosaico" aria-hidden="true">
+        <i></i><i class="g3"></i><i></i><i class="g1"></i><i></i><i></i><i class="g2"></i>
+        <i class="g1"></i><i></i><i class="g2"></i><i></i><i class="g3"></i><i class="g1"></i><i></i>
+        <i></i><i class="g2"></i><i class="g1"></i><i class="r"></i><i class="g1"></i><i></i><i class="g3"></i>
+        <i class="g3"></i><i></i><i class="g1"></i><i class="g2"></i><i class="g1"></i><i class="g2"></i><i></i>
+        <i></i><i class="g1"></i><i></i><i class="g1"></i><i class="g3"></i><i></i><i class="g1"></i>
+        <i class="g2"></i><i></i><i class="g3"></i><i></i><i class="g1"></i><i class="g2"></i><i></i>
+        <i></i><i class="g1"></i><i></i><i class="g2"></i><i></i><i class="g3"></i><i class="g1"></i>
+      </div>
+      <p class="mosaico-legenda">165 cursos · 15 áreas · um mosaico aberto à comunidade</p>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat"><b data-contador="299000">0</b><span>matrículas realizadas</span></div>
+      <div class="stat"><b data-contador="165">0</b><span>cursos no catálogo</span></div>
+      <div class="stat"><b>5★</b><span>conceito máximo MEC</span></div>
+      <div class="stat"><b>R$ 0</b><span>gratuito, do início ao certificado</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Para quem -->
+<section id="publicos" class="reveal">
+  <div class="wrap">
+    <span class="eyebrow">Atalhos por perfil</span>
+    <div class="sec-head">
+      <div>
+        <h2>Para quem é</h2>
+        <p>Os cursos são abertos a qualquer pessoa. Se preferir, comece pelo seu perfil.</p>
+      </div>
+    </div>
+    <div class="publicos">
+      <a class="publico" href="#">
+        <span class="pico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <h3>Professores e educadores</h3>
+        <p>Metodologias, ferramentas digitais e formação continuada.</p>
+      </a>
+      <a class="publico" href="#">
+        <span class="pico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <h3>Comunidade — comece do zero</h3>
+        <p>Nenhum pré-requisito. Escolha um tema e comece hoje.</p>
+      </a>
+      <a class="publico" href="#">
+        <span class="pico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <h3>Trabalho e carreira</h3>
+        <p>Habilidades práticas para o dia a dia profissional.</p>
+      </a>
+      <a class="publico" href="#licenca">
+        <span class="pico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <h3>Servidores e setor público</h3>
+        <p>Planeje sua licença para capacitação com nossos cursos.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Áreas: navegação primária (15 categorias) -->
+<section id="areas" class="areas-sec reveal">
+  <div class="wrap">
+    <span class="eyebrow">Navegue por área</span>
+    <div class="sec-head">
+      <div>
+        <h2>15 áreas, um catálogo inteiro</h2>
+        <p>Todo curso pertence a uma ou mais áreas. Escolha a sua e veja tudo o que há nela.</p>
+      </div>
+    </div>
+    <div class="areas">
+      <a class="area" href="#">Ambiente e Saúde <span class="n">44</span></a>
+      <a class="area" href="#">Educação <span class="n">39</span></a>
+      <a class="area" href="#">Tecnologias e Informática <span class="n">18</span></a>
+      <a class="area" href="#">Educação a Distância <span class="n">16</span></a>
+      <a class="area" href="#">Tecnologias Educacionais <span class="n">15</span></a>
+      <a class="area" href="#">Gestão <span class="n">10</span></a>
+      <a class="area" href="#">Inclusão e Acessibilidade <span class="n">7</span></a>
+      <a class="area" href="#">Ciências da Natureza <span class="n">6</span></a>
+      <a class="area" href="#">Línguas <span class="n">6</span></a>
+      <a class="area" href="#">Matemática <span class="n">5</span></a>
+      <a class="area" href="#">Artes e Humanidades <span class="n">4</span></a>
+      <a class="area" href="#">Desenvolvimento Pessoal <span class="n">4</span></a>
+      <a class="area" href="#">Design <span class="n">2</span></a>
+      <a class="area" href="#">Engenharia <span class="n">2</span></a>
+      <a class="area" href="#">Finanças e Contabilidade <span class="n">3</span></a>
+    </div>
+    <p class="areas-nota">Também é possível filtrar por acessibilidade (Libras, audiodescrição), idioma, nível e carga horária dentro de cada área.</p>
+  </div>
+</section>
+
+<!-- Em destaque -->
+<section id="cursos" class="reveal">
+  <div class="wrap">
+    <span class="eyebrow">Seleção do Cefor</span>
+    <div class="sec-head">
+      <div>
+        <h2>Em destaque</h2>
+        <p>Clique em um card para ver descrição, objetivos e o botão de matrícula.</p>
+      </div>
+      <a class="sec-link" href="#">Ver todos os 165 cursos →</a>
+    </div>
+    <div class="filtros" role="group" aria-label="Filtros rápidos">
+      <button class="filtro" aria-pressed="true" data-f="todos" onclick="filtrar(this)">TODOS</button>
+      <button class="filtro" aria-pressed="false" data-f="libras" onclick="filtrar(this)">LIBRAS</button>
+      <button class="filtro" aria-pressed="false" data-f="novo" onclick="filtrar(this)">NOVOS</button>
+      <button class="filtro" aria-pressed="false" data-f="en" onclick="filtrar(this)">EM INGLÊS</button>
+    </div>
+    <div class="cursos">
+
+      <article class="curso" data-tags="todos">
+        <div class="capa" style="background:linear-gradient(135deg,#1C6B34,#2F9E41)">
+          <b aria-hidden="true">In</b>
+          <div class="selos"><span class="selo">PT</span></div>
+        </div>
+        <div class="curso-body">
+          <div class="curso-meta"><span>60h</span><span>22.390 inscritos</span></div>
+          <h3>Inglês Básico</h3>
+          <p class="cat">Línguas</p>
+          <button class="curso-toggle" onclick="expandir(this)" aria-expanded="false">Detalhes</button>
+          <div class="curso-det">
+            <p>Fundamentos do inglês para o dia a dia: leitura, vocabulário essencial e situações práticas de comunicação.</p>
+            <ul>
+              <li>Compreender frases e expressões de uso frequente</li>
+              <li>Ler textos curtos do cotidiano</li>
+              <li>Apresentar-se e interagir em situações simples</li>
+            </ul>
+            <div class="tags"><span class="tag">inglês</span><span class="tag">iniciante</span><span class="tag">idiomas</span></div>
+            <div class="acoes"><a class="btn btn-primary" href="#">Acessar curso</a><a class="btn btn-outline" href="#">Compartilhar</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="curso" data-tags="todos">
+        <div class="capa" style="background:linear-gradient(135deg,#0E3A21,#1C6B34)">
+          <b aria-hidden="true">Mo</b>
+          <div class="selos"><span class="selo">PT</span></div>
+        </div>
+        <div class="curso-body">
+          <div class="curso-meta"><span>40h</span><span>11.392 inscritos</span></div>
+          <h3>Moodle para Educadores</h3>
+          <p class="cat">Educação a Distância</p>
+          <button class="curso-toggle" onclick="expandir(this)" aria-expanded="false">Detalhes</button>
+          <div class="curso-det">
+            <p>Do zero à sala virtual pronta: configuração de turmas, atividades, avaliação e acompanhamento de estudantes no Moodle.</p>
+            <ul>
+              <li>Criar e organizar uma sala virtual completa</li>
+              <li>Configurar atividades e avaliações</li>
+              <li>Acompanhar o progresso dos estudantes</li>
+            </ul>
+            <div class="tags"><span class="tag">moodle</span><span class="tag">ead</span><span class="tag">docência</span></div>
+            <div class="acoes"><a class="btn btn-primary" href="#">Acessar curso</a><a class="btn btn-outline" href="#">Compartilhar</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="curso" data-tags="todos libras">
+        <div class="capa" style="background:linear-gradient(135deg,#2F5E3C,#4C8C5C)">
+          <b aria-hidden="true">Ca</b>
+          <div class="selos"><span class="selo">LIBRAS</span><span class="selo">PT</span></div>
+        </div>
+        <div class="curso-body">
+          <div class="curso-meta"><span>20h</span><span>8.589 inscritos</span></div>
+          <h3>Canva para materiais didáticos</h3>
+          <p class="cat">Tecnologias Educacionais</p>
+          <button class="curso-toggle" onclick="expandir(this)" aria-expanded="false">Detalhes</button>
+          <div class="curso-det">
+            <p>Produza apresentações, infográficos e materiais visuais de qualidade sem precisar de experiência em design.</p>
+            <ul>
+              <li>Dominar a interface e os modelos do Canva</li>
+              <li>Criar materiais visuais para aulas e projetos</li>
+              <li>Exportar e compartilhar nos formatos certos</li>
+            </ul>
+            <div class="tags"><span class="tag">canva</span><span class="tag">design</span><span class="tag">material didático</span></div>
+            <div class="acoes"><a class="btn btn-primary" href="#">Acessar curso</a><a class="btn btn-outline" href="#">Compartilhar</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="curso" data-tags="todos">
+        <div class="capa" style="background:linear-gradient(135deg,#14532D,#2F9E41)">
+          <b aria-hidden="true">Dr</b>
+          <div class="selos"><span class="selo">PT</span></div>
+        </div>
+        <div class="curso-body">
+          <div class="curso-meta"><span>20h</span><span>8.007 inscritos</span></div>
+          <h3>Google Drive na prática</h3>
+          <p class="cat">Tecnologias e Informática</p>
+          <button class="curso-toggle" onclick="expandir(this)" aria-expanded="false">Detalhes</button>
+          <div class="curso-det">
+            <p>Organize arquivos, colabore em documentos e use a nuvem com segurança no estudo e no trabalho.</p>
+            <ul>
+              <li>Organizar e compartilhar arquivos na nuvem</li>
+              <li>Editar documentos de forma colaborativa</li>
+              <li>Controlar permissões e segurança</li>
+            </ul>
+            <div class="tags"><span class="tag">google</span><span class="tag">nuvem</span><span class="tag">produtividade</span></div>
+            <div class="acoes"><a class="btn btn-primary" href="#">Acessar curso</a><a class="btn btn-outline" href="#">Compartilhar</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="curso" data-tags="todos novo">
+        <div class="capa" style="background:linear-gradient(135deg,#0B2E1A,#1C6B34)">
+          <b aria-hidden="true">Lv</b>
+          <div class="selos"><span class="selo novo">NOVO</span><span class="selo">PT</span></div>
+        </div>
+        <div class="curso-body">
+          <div class="curso-meta"><span>30h</span><span>Série Lovelace</span></div>
+          <h3>Programação para Meninas</h3>
+          <p class="cat">Tecnologias e Informática · Série Lovelace</p>
+          <button class="curso-toggle" onclick="expandir(this)" aria-expanded="false">Detalhes</button>
+          <div class="curso-det">
+            <p>Primeiros passos na lógica de programação, em uma série pensada para aproximar meninas e mulheres da tecnologia.</p>
+            <ul>
+              <li>Entender lógica e pensamento computacional</li>
+              <li>Escrever os primeiros programas</li>
+              <li>Conhecer trajetórias de mulheres na computação</li>
+            </ul>
+            <div class="tags"><span class="tag">programação</span><span class="tag">lovelace</span><span class="tag">iniciante</span></div>
+            <div class="acoes"><a class="btn btn-primary" href="#">Acessar curso</a><a class="btn btn-outline" href="#">Compartilhar</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="curso" data-tags="todos en libras">
+        <div class="capa" style="background:linear-gradient(135deg,#1C6B34,#4C8C5C)">
+          <b aria-hidden="true">Ls</b>
+          <div class="selos"><span class="selo">EN</span><span class="selo">LIBRAS</span></div>
+        </div>
+        <div class="curso-body">
+          <div class="curso-meta"><span>30h</span><span>Lesson Study</span></div>
+          <h3>Lesson Study <span lang="en">(English edition)</span></h3>
+          <p class="cat">Educação · também disponível em português</p>
+          <button class="curso-toggle" onclick="expandir(this)" aria-expanded="false">Detalhes</button>
+          <div class="curso-det">
+            <p>Metodologia japonesa de desenvolvimento profissional docente por planejamento colaborativo de aulas. Mesmo curso, dois idiomas.</p>
+            <ul>
+              <li>Compreender o ciclo do Lesson Study</li>
+              <li>Planejar aulas de forma colaborativa</li>
+              <li>Analisar e refinar a prática docente</li>
+            </ul>
+            <div class="tags"><span class="tag">lesson study</span><span class="tag">docência</span><span class="tag">english</span></div>
+            <div class="acoes"><a class="btn btn-primary" href="#">Acessar curso</a><a class="btn btn-outline" href="#">Compartilhar</a></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Mais cursados -->
+<section class="reveal" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Prova social</span>
+    <div class="sec-head">
+      <div>
+        <h2>Os mais cursados</h2>
+        <p>O que a comunidade mais procura, contado em matrículas reais.</p>
+      </div>
+      <a class="sec-link" href="#">Painel de indicadores →</a>
+    </div>
+    <div class="rank">
+      <a class="rank-row" href="#">
+        <span class="pos">01</span>
+        <span class="nome"><b>Inglês Básico</b><span>Línguas</span></span>
+        <span class="ch">60h</span>
+        <span class="mat">22.390<span>matrículas</span></span>
+      </a>
+      <a class="rank-row" href="#">
+        <span class="pos">02</span>
+        <span class="nome"><b>Moodle para Educadores</b><span>Educação a Distância</span></span>
+        <span class="ch">40h</span>
+        <span class="mat">11.392<span>matrículas</span></span>
+      </a>
+      <a class="rank-row" href="#">
+        <span class="pos">03</span>
+        <span class="nome"><b>Canva para materiais didáticos</b><span>Tecnologias Educacionais</span></span>
+        <span class="ch">20h</span>
+        <span class="mat">8.589<span>matrículas</span></span>
+      </a>
+      <a class="rank-row" href="#">
+        <span class="pos">04</span>
+        <span class="nome"><b>Google Drive na prática</b><span>Tecnologias e Informática</span></span>
+        <span class="ch">20h</span>
+        <span class="mat">8.007<span>matrículas</span></span>
+      </a>
+    </div>
+    <p class="rank-nota">65% das matrículas vêm de fora do Espírito Santo — os cursos do Ifes alcançam o país inteiro.</p>
+  </div>
+</section>
+
+<!-- Licença Capacitação -->
+<section id="licenca" class="licenca reveal">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Área para servidores públicos</span>
+      <h2>Planeje sua licença para capacitação</h2>
+      <p>Servidor público tem direito a até 90 dias de licença para se capacitar. Qualquer curso da Vitrine com certificado conta horas para o seu processo.</p>
+      <ul>
+        <li>Informe os dias de licença e a data de início</li>
+        <li>O Planejador calcula a carga horária mínima (30h por semana)</li>
+        <li>Receba uma combinação de cursos com links de matrícula</li>
+        <li>Imprima o plano em PDF e anexe ao processo administrativo</li>
+      </ul>
+      <a class="btn btn-light" href="#">Abrir o Planejador de Licença</a>
+    </div>
+    <div class="plan-mock" aria-label="Prévia do Planejador de Licença">
+      <h3>Planejador — prévia</h3>
+      <div class="plan-field">
+        <label for="pl-dias">Dias de licença</label>
+        <input id="pl-dias" type="number" value="30" min="5" max="90">
+      </div>
+      <div class="plan-field">
+        <label for="pl-area">Área de interesse</label>
+        <select id="pl-area">
+          <option>Educação a Distância</option>
+          <option>Gestão</option>
+          <option>Tecnologias e Informática</option>
+          <option>Qualquer área</option>
+        </select>
+      </div>
+      <div class="plan-out">
+        Carga horária mínima do seu plano
+        <b id="pl-ch">≈ 129 horas</b>
+        exemplo: Moodle 40h + Inglês 60h + Canva 20h + Drive 20h
+      </div>
+      <button class="btn btn-primary" style="width:100%" type="button" onclick="calcPlano()">Calcular meu plano</button>
+    </div>
+  </div>
+</section>
+
+<!-- Projetos e séries -->
+<section class="reveal">
+  <div class="wrap">
+    <span class="eyebrow">Coleções e parcerias</span>
+    <div class="sec-head">
+      <div>
+        <h2>Projetos parceiros e séries</h2>
+        <p>Conjuntos de cursos produzidos com parceiros ou em série — cada um com sua página própria.</p>
+      </div>
+    </div>
+    <div class="projetos">
+      <a class="projeto riodoce" href="#">
+        <span class="n">Projeto parceiro · 31 cursos</span>
+        <h3>Rio Doce Escolar</h3>
+        <p>Educação ambiental a partir da bacia do Rio Doce: água, território, escola e comunidade.</p>
+        <span class="link">Conhecer o projeto →</span>
+      </a>
+      <a class="projeto unac" href="#">
+        <span class="n">Projeto parceiro · 33 cursos</span>
+        <h3>UnAC</h3>
+        <p>Coleção de cursos em parceria institucional, com identidade e hub próprios dentro da Vitrine.</p>
+        <span class="link">Conhecer o projeto →</span>
+      </a>
+    </div>
+    <div class="series">
+      <span class="rotulo">Séries</span>
+      <a class="serie" href="#">Lovelace <span class="n">6</span></a>
+      <a class="serie" href="#">Educador Maker <span class="n">4</span></a>
+      <a class="serie" href="#">Atendente e Vendedor <span class="n">3</span></a>
+      <a class="serie" href="#">Embrace <span class="n">3</span></a>
+      <a class="serie" href="#">Lesson Study <span class="n">PT·EN</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- O que é + Como funciona -->
+<section class="oquee reveal" id="oquee">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">O que é um MOOC</span>
+      <h2>Cursos abertos à comunidade</h2>
+      <blockquote>
+        “Cursos oferecidos a distância e abertos à comunidade” — sem seleção, sem pré-requisito e sem custo.
+        <br><cite>Resolução CS 72/2020 · Ifes</cite>
+      </blockquote>
+      <div class="fatos">
+        <div class="fato"><b>100% on-line</b>Estude de onde estiver, no seu ritmo.</div>
+        <div class="fato"><b>Gratuito</b>Nenhuma taxa, do cadastro ao certificado.</div>
+        <div class="fato"><b>Sem seleção</b>Basta se cadastrar e começar.</div>
+        <div class="fato"><b>Até 60 horas</b>Cursos curtos, feitos para concluir.</div>
+        <div class="fato"><b>Certificado Ifes</b>Emitido com 60% de aproveitamento.</div>
+        <div class="fato"><b>Autoinstrucional</b>Sem tutoria: o material guia você.</div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Como funciona</span>
+      <h2 style="margin-bottom:28px">Do cadastro ao certificado</h2>
+      <ol class="passos">
+        <li>
+          <h3>Cadastre-se</h3>
+          <p>Crie sua conta gratuita na plataforma Moodle do Cefor.</p>
+          <span class="aviso">⚠ E-mails Hotmail e Outlook podem não receber a confirmação — prefira outro provedor.</span>
+        </li>
+        <li>
+          <h3>Escolha o curso</h3>
+          <p>Navegue pelas áreas, use a busca ou responda ao questionário de sugestões.</p>
+        </li>
+        <li>
+          <h3>Faça o curso</h3>
+          <p>No seu ritmo, de qualquer dispositivo, sem prazo de conclusão apertado.</p>
+        </li>
+        <li>
+          <h3>Emita seu certificado</h3>
+          <p>Com 60% de aproveitamento, o certificado do Ifes sai na hora — reconhecido pelo MEC.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq reveal">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">Dúvidas frequentes</span>
+    <div class="sec-head">
+      <div>
+        <h2>Perguntas e respostas</h2>
+        <p>As cinco mais comuns. A lista completa tem 34 perguntas.</p>
+      </div>
+    </div>
+    <details>
+      <summary>Os cursos são mesmo gratuitos?</summary>
+      <div class="resp">Sim. Não há nenhuma taxa — nem para se inscrever, nem para estudar, nem para emitir o certificado.</div>
+    </details>
+    <details>
+      <summary>Quem pode se inscrever?</summary>
+      <div class="resp">Qualquer pessoa. Os cursos são abertos à comunidade, sem processo seletivo e sem pré-requisitos de escolaridade.</div>
+    </details>
+    <details>
+      <summary>Como emito o certificado?</summary>
+      <div class="resp">Ao atingir 60% de aproveitamento nas atividades, o certificado do Ifes fica disponível para download na própria plataforma.</div>
+    </details>
+    <details>
+      <summary>Os cursos valem para a licença para capacitação?</summary>
+      <div class="resp">Sim. Qualquer curso com certificado conta horas. Use o <a href="#licenca">Planejador de Licença</a> para montar uma combinação que atenda à carga horária mínima do seu período.</div>
+    </details>
+    <details>
+      <summary>Tenho e-mail Hotmail ou Outlook. Há alguma restrição?</summary>
+      <div class="resp">Esses provedores podem bloquear o e-mail de confirmação do cadastro. Se possível, use outro endereço (Gmail, institucional etc.) ou verifique a caixa de spam.</div>
+    </details>
+    <div class="faq-mais">
+      <a class="btn btn-outline" href="#">Ver todas as 34 perguntas</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#" style="margin-bottom:14px">
+        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="logo-text" style="color:#fff"><b>Vitrine MOOC</b><span style="color:#8FA893">IFES · CEFOR</span></span>
+      </a>
+      <p style="max-width:26rem">Centro de Referência em Formação e em Educação a Distância do Instituto Federal do Espírito Santo.</p>
+    </div>
+    <div>
+      <h4>Cursos</h4>
+      <ul>
+        <li><a href="#areas">Todas as áreas</a></li>
+        <li><a href="#publicos">Para quem</a></li>
+        <li><a href="#cursos">Em destaque</a></li>
+        <li><a href="#">Projetos parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#licenca">Planejador de Licença</a></li>
+        <li><a href="#">Validar certificado</a></li>
+        <li><a href="#">Painel de indicadores</a></li>
+        <li><a href="#">Suporte</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#oquee">O que é MOOC</a></li>
+        <li><a href="#faq">Dúvidas frequentes</a></li>
+        <li><a href="#">Resolução CS 72/2020</a></li>
+        <li><a href="#">Cefor · Ifes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-base">
+    <div class="wrap">
+      <span>Ifes · Cefor — conteúdo aberto à comunidade</span>
+      <span class="mono">protótipo · estágio 03 · design/ux</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Wizard -->
+<div class="modal" id="wizard" role="dialog" aria-modal="true" aria-labelledby="wiz-titulo">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Fechar" onclick="fecharWizard()">×</button>
+    <div id="wiz-passos">
+      <span class="mono-step" id="wiz-step">Pergunta 1 de 3</span>
+      <h3 id="wiz-titulo">Quem é você?</h3>
+      <div class="wiz-opts" id="wiz-opts"></div>
+    </div>
+    <div class="wiz-res" id="wiz-res">
+      <span class="mono-step">Sugestões para você</span>
+      <h3>Comece por aqui</h3>
+      <div id="wiz-lista"></div>
+      <div class="wiz-foot">
+        <button class="link" type="button" onclick="reiniciarWizard()">Refazer respostas</button>
+        <a class="btn btn-primary" href="#cursos" onclick="fecharWizard()">Ver no catálogo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Menu mobile */
+function toggleMenu(btn){
+  const menu=document.getElementById('menu');
+  const aberto=menu.classList.toggle('aberta');
+  btn.setAttribute('aria-expanded',aberto);
+}
+
+/* Expansão do card (PRD §4.2) */
+function expandir(btn){
+  const card=btn.closest('.curso');
+  const aberto=card.classList.toggle('aberto');
+  btn.setAttribute('aria-expanded',aberto);
+}
+
+/* Filtros rápidos */
+function filtrar(btn){
+  document.querySelectorAll('.filtro').forEach(f=>f.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+  const f=btn.dataset.f;
+  document.querySelectorAll('.curso').forEach(c=>{
+    c.style.display=(f==='todos'||c.dataset.tags.split(' ').includes(f))?'':'none';
+  });
+}
+
+/* Contadores da barra de estatísticas */
+const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function animaContador(el){
+  const alvo=+el.dataset.contador;
+  if(reduz){el.textContent=alvo.toLocaleString('pt-BR')+(alvo>1000?'+':'');return}
+  const t0=performance.now(),dur=1600;
+  function tick(t){
+    const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(alvo*e).toLocaleString('pt-BR')+(p===1&&alvo>1000?'+':'');
+    if(p<1)requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* Reveal on scroll + contadores */
+const io=new IntersectionObserver(en=>{
+  en.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-contador]').forEach(animaContador);
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal,.stats').forEach(el=>io.observe(el));
+
+/* Planejador (prévia): 30h por semana */
+function calcPlano(){
+  const dias=+document.getElementById('pl-dias').value||30;
+  const ch=Math.round(dias/7*30);
+  document.getElementById('pl-ch').textContent='≈ '+ch+' horas';
+}
+
+/* Wizard de Descoberta (WIZ-01..06) */
+const wizPerguntas=[
+  {t:'Quem é você?',o:['Professor(a) ou educador(a)','Servidor(a) público(a)','Estudante','Profissional ou autônomo(a)','Outro / prefiro não dizer']},
+  {t:'O que você busca?',o:['Tecnologia e informática','Educação e sala de aula','Línguas','Gestão e carreira','Ambiente e saúde']},
+  {t:'Quanto tempo você tem?',o:['Até 20 horas','Entre 20 e 40 horas','Entre 40 e 60 horas']}
+];
+const wizSugestoes=[
+  {n:'Canva para materiais didáticos',m:'20h · Libras'},
+  {n:'Moodle para Educadores',m:'40h'},
+  {n:'Inglês Básico',m:'60h · 22 mil inscritos'}
+];
+let wizPasso=0;
+function abrirWizard(){
+  wizPasso=0;
+  document.getElementById('wizard').classList.add('aberto');
+  renderWizard();
+  document.getElementById('wiz-opts').querySelector('button')?.focus();
+}
+function fecharWizard(){document.getElementById('wizard').classList.remove('aberto')}
+function reiniciarWizard(){wizPasso=0;renderWizard()}
+function renderWizard(){
+  const passos=document.getElementById('wiz-passos'),res=document.getElementById('wiz-res');
+  if(wizPasso>=wizPerguntas.length){
+    passos.style.display='none';res.style.display='block';
+    document.getElementById('wiz-lista').innerHTML=wizSugestoes.map(s=>
+      '<div class="mini"><div><b>'+s.n+'</b><span>'+s.m+'</span></div><a class="btn btn-primary" style="padding:8px 14px;font-size:.78rem" href="#">Acessar</a></div>'
+    ).join('');
+    return;
+  }
+  passos.style.display='block';res.style.display='none';
+  const p=wizPerguntas[wizPasso];
+  document.getElementById('wiz-step').textContent='Pergunta '+(wizPasso+1)+' de '+wizPerguntas.length;
+  document.getElementById('wiz-titulo').textContent=p.t;
+  document.getElementById('wiz-opts').innerHTML=p.o.map(o=>
+    '<button class="wiz-opt" type="button" onclick="wizPasso++;renderWizard()">'+o+'</button>'
+  ).join('');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')fecharWizard()});
+document.getElementById('wizard').addEventListener('click',e=>{if(e.target.id==='wizard')fecharWizard()});
+</script>
+</body>
+</html>

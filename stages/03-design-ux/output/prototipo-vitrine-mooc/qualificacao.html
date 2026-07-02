@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Licença para Capacitação | MOOC Ifes</title>
+  <meta name="description" content="Página protótipo da área de Licença para Capacitação da Vitrine MOOC Ifes.">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Navegação principal">
+      <a class="brand" href="../prototipo-vitrine-mooc.html"><span class="brand-mark">IFES</span><span>Vitrine MOOC Ifes</span></a>
+      <div class="nav-links">
+        <a href="cursos.html">Cursos</a>
+        <a href="area-educacao.html">Áreas</a>
+        <a href="publico-professores.html">Para quem</a>
+        <a aria-current="page" href="qualificacao.html">Licença capacitação</a>
+        <a href="perguntas-frequentes.html">Dúvidas</a>
+      </div>
+      <a class="btn secondary" href="#planejador">Simular</a>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="shell hero-grid">
+        <div>
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../prototipo-vitrine-mooc.html">Home</a> / Licença para Capacitação</nav>
+          <p class="eyebrow">Serviço para servidores</p>
+          <h1>Planeje cursos para Licença Capacitação</h1>
+          <p class="lead">A área explica as regras, calcula a carga horária mínima e sugere combinações de cursos certificados conforme interesse e disponibilidade.</p>
+          <div class="actions"><a class="btn" href="#planejador">Começar simulação</a><a class="btn secondary" href="cursos.html">Ver cursos certificados</a></div>
+        </div>
+        <aside class="panel aside-card"><strong>30h/semana</strong><p>regra de referência do planejador prevista no PRD para calcular a carga horária mínima.</p></aside>
+      </div>
+    </section>
+    <section id="planejador">
+      <div class="shell two-col">
+        <div>
+          <div class="section-head"><h2>Planejador visual</h2><p>Protótipo de interface. Na implementação, o cálculo usa dias de licença, data inicial, área e carga horária real dos cursos.</p></div>
+          <div class="panel search-box">
+            <input type="number" value="30" min="1" aria-label="Dias de licença">
+            <select aria-label="Área de interesse"><option>Educação</option><option>Tecnologia</option><option>Gestão pública</option><option>Ambiente e Saúde</option></select>
+            <button class="btn" type="button">Calcular</button>
+          </div>
+          <div class="grid two" style="margin-top: 18px">
+            <article class="metric-card"><strong>128h</strong><p>Carga estimada para 30 dias, usando regra de 30h por semana.</p></article>
+            <article class="metric-card"><strong>3 a 4 cursos</strong><p>Combinação típica para montar um plano imprimível.</p></article>
+          </div>
+        </div>
+        <aside class="panel aside-card">
+          <strong>Plano sugerido</strong>
+          <p>Moodle 4 para Educadores - 60h</p>
+          <p>Como criar um MOOC - 60h</p>
+          <p>Uso Educacional do Canva - 6h</p>
+          <hr>
+          <a class="btn" href="#">Imprimir plano</a>
+        </aside>
+      </div>
+    </section>
+    <section>
+      <div class="shell">
+        <div class="section-head"><h2>Conteúdo de orientação</h2></div>
+        <div class="grid">
+          <article class="info-card"><h3>O que é</h3><p>Explicação objetiva da licença, público atendido e relação com cursos certificados.</p></article>
+          <article class="info-card"><h3>Como escolher</h3><p>Orientar por área, carga horária, nível, certificação e aderência ao plano de desenvolvimento.</p></article>
+          <article class="info-card"><h3>Como comprovar</h3><p>Indicar emissão de certificados e organização do plano para processo administrativo.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell"><span>Protótipo da área de qualificação</span><span>URL prevista: /qualificacao/</span></div></footer>
+</body>
+</html>

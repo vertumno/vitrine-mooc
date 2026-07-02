@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitrine MOOC Ifes | Protótipo visual</title>
+  <meta name="description" content="Protótipo visual da nova Vitrine MOOC Ifes, com busca, categorias, públicos, selos e áreas de destaque.">
+  <style>
+    :root {
+      --green-900: #053f2d;
+      --green-800: #075437;
+      --green-700: #0b6b43;
+      --green-600: #14824f;
+      --green-100: #dff2e8;
+      --green-050: #f0faf4;
+      --ink: #17201b;
+      --muted: #5b6b62;
+      --line: #d9e3dd;
+      --paper: #fbfdfb;
+      --surface: #ffffff;
+      --surface-2: #f4f8f5;
+      --focus: #ffbf47;
+      --shadow: 0 18px 50px rgb(5 63 45 / 0.12);
+      --radius: 14px;
+      --sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 20;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      transform: translateY(-150%);
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgb(217 227 221 / 0.9);
+      background: rgb(251 253 251 / 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--green-700);
+      color: white;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: inset 0 -6px 0 rgb(0 0 0 / 0.12);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-800);
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      background: var(--green-700);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    .btn:hover {
+      background: var(--green-800);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn.secondary {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--green-800);
+    }
+
+    .btn.secondary:hover {
+      background: var(--green-050);
+    }
+
+    .hero {
+      padding: 54px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.95fr);
+      align-items: center;
+      gap: 46px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--green-800);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: var(--serif);
+      letter-spacing: -0.035em;
+      line-height: 1.04;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(2.55rem, 6vw, 5.3rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.35rem);
+    }
+
+    h3 {
+      font-size: 1.45rem;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.06rem, 1.8vw, 1.24rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .hero-note span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+    }
+
+    .visual {
+      position: relative;
+      min-height: 520px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--green-050);
+      box-shadow: var(--shadow);
+    }
+
+    .visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgb(5 63 45 / 0.04), rgb(5 63 45 / 0.28));
+      z-index: 1;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 12px;
+      height: 100%;
+    }
+
+    .visual-grid img {
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #dfe8e1;
+    }
+
+    .visual-grid img:nth-child(2) {
+      margin-top: 48px;
+    }
+
+    .visual-card {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2;
+      width: min(310px, calc(100% - 40px));
+      padding: 20px;
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .visual-card strong {
+      display: block;
+      color: var(--green-800);
+      font-size: 1.55rem;
+      line-height: 1;
+    }
+
+    .stats-band {
+      padding: 18px 0;
+      border-block: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .stat {
+      padding: 22px;
+      background: white;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: var(--mono);
+      color: var(--green-800);
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      letter-spacing: -0.04em;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    section {
+      padding: 74px 0;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 14px;
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .search-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 10px 30px rgb(5 63 45 / 0.06);
+    }
+
+    .search-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .search-field label {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .search-field input {
+      width: 100%;
+      min-height: 54px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 18px;
+      color: var(--ink);
+      background: var(--surface-2);
+      font: inherit;
+      font-size: 1rem;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+      color: var(--green-800);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .chip.is-active {
+      border-color: var(--green-700);
+      background: var(--green-700);
+      color: white;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .course-card {
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 14px 34px rgb(5 63 45 / 0.07);
+    }
+
+    .course-card[hidden] {
+      display: none;
+    }
+
+    .thumb {
+      aspect-ratio: 16 / 10;
+      width: 100%;
+      object-fit: cover;
+      background: var(--green-050);
+    }
+
+    .course-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 14px;
+      padding: 18px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-height: 26px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 0 9px;
+      border-radius: 999px;
+      background: var(--green-100);
+      color: var(--green-900);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .badge.neutral {
+      background: var(--surface-2);
+      color: var(--muted);
+    }
+
+    .course-card h3 {
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .course-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .area-card {
+      min-height: 112px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      text-decoration: none;
+      transition: transform 120ms ease, border-color 120ms ease;
+    }
+
+    .area-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--green-600);
+    }
+
+    .area-card strong {
+      display: block;
+      line-height: 1.18;
+    }
+
+    .area-card span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .audience-card,
+    .project-card,
+    .step,
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+
+    .audience-card {
+      padding: 22px;
+    }
+
+    .audience-card p,
+    .project-card p,
+    .step p,
+    .faq-item p {
+      color: var(--muted);
+    }
+
+    .projects {
+      background: var(--surface-2);
+      border-block: 1px solid var(--line);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 22px;
+      overflow: hidden;
+      min-height: 250px;
+    }
+
+    .project-media {
+      display: grid;
+      place-items: center;
+      min-height: 100%;
+      padding: 20px;
+      background: var(--green-050);
+    }
+
+    .project-media img {
+      max-height: 110px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .project-copy {
+      padding: 24px 24px 24px 0;
+    }
+
+    .license {
+      padding: 34px;
+      border: 1px solid var(--green-100);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--green-050), white);
+      color: var(--ink);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: 0 14px 34px rgb(5 63 45 / 0.07);
+    }
+
+    .license h2 {
+      color: var(--green-900);
+    }
+
+    .license p {
+      max-width: 700px;
+      color: var(--muted);
+    }
+
+    .license .btn {
+      background: var(--green-700);
+      color: white;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .step {
+      padding: 22px;
+      counter-increment: step;
+    }
+
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--green-100);
+      color: var(--green-900);
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      max-width: 860px;
+    }
+
+    .faq-item {
+      padding: 20px;
+    }
+
+    .faq-item h3 {
+      font-family: var(--sans);
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    .footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: white;
+    }
+
+    .footer .shell {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .license {
+        grid-template-columns: 1fr;
+      }
+
+      .visual {
+        min-height: 430px;
+      }
+
+      .stats,
+      .course-grid,
+      .audience-grid,
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .area-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-copy {
+        padding: 0 24px 24px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .nav {
+        min-height: 66px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 36px;
+      }
+
+      .hero-actions,
+      .search-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn,
+      .search-panel .btn {
+        width: 100%;
+      }
+
+      .visual-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-grid img {
+        height: 168px;
+      }
+
+      .visual-grid img:nth-child(2) {
+        display: none;
+      }
+
+      .stats,
+      .course-grid,
+      .area-grid,
+      .audience-grid,
+      .project-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .footer .shell {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Navegação principal">
+      <a class="brand" href="prototipo-vitrine-mooc.html">
+        <span class="brand-mark" aria-hidden="true">IFES</span>
+        <span>Vitrine MOOC Ifes</span>
+      </a>
+      <div class="nav-links" aria-label="Links principais">
+        <a href="prototipo-vitrine-mooc/cursos.html">Cursos</a>
+        <a href="prototipo-vitrine-mooc/area-educacao.html">Áreas</a>
+        <a href="prototipo-vitrine-mooc/publico-professores.html">Para quem</a>
+        <a href="prototipo-vitrine-mooc/qualificacao.html">Licença capacitação</a>
+        <a href="prototipo-vitrine-mooc/perguntas-frequentes.html">Dúvidas</a>
+      </div>
+      <a class="btn secondary" href="prototipo-vitrine-mooc/cursos.html">Buscar cursos</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Cursos abertos a distância</p>
+          <h1 id="hero-title">Vitrine MOOC Ifes</h1>
+          <p class="lead">Encontre cursos online, gratuitos, abertos à comunidade e certificados pelo Ifes. Busque por tema, público, acessibilidade, idioma e carga horária.</p>
+          <div class="hero-actions">
+            <a class="btn" href="prototipo-vitrine-mooc/cursos.html">Explorar cursos</a>
+            <a class="btn secondary" href="prototipo-vitrine-mooc/publico-professores.html">Receber uma recomendação</a>
+          </div>
+          <div class="hero-note" aria-label="Resumo da oferta">
+            <span>Sem seleção</span>
+            <span>Sem tutoria</span>
+            <span>Certificado com 60% de aproveitamento</span>
+            <span>Cursos de até 60h</span>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="Prévia visual de cursos da Vitrine MOOC Ifes">
+          <div class="visual-grid">
+            <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores">
+            <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_uso-de-realidade-aumentada-1.png" alt="Imagem do curso Uso de Realidade Aumentada no Ensino de Ciências">
+            <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_A-Quimica-dos-produtos-de-limpeza.png" alt="Imagem do curso A Química dos produtos de limpeza">
+            <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mediacao_pedagogica.png" alt="Imagem do curso Mediação pedagógica no Moodle">
+          </div>
+          <div class="visual-card">
+            <strong>65%</strong>
+            <span>das matrículas por UF vêm de fora do Espírito Santo. A nova Vitrine precisa funcionar como porta nacional.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-band" aria-label="Indicadores da Vitrine MOOC">
+      <div class="shell stats">
+        <div class="stat">
+          <strong>165</strong>
+          <span>cursos publicados no catálogo extraído</span>
+        </div>
+        <div class="stat">
+          <strong>65</strong>
+          <span>cursos em produção a incorporar</span>
+        </div>
+        <div class="stat">
+          <strong>33,3%</strong>
+          <span>taxa média global de certificação</span>
+        </div>
+        <div class="stat">
+          <strong>5 estrelas</strong>
+          <span>qualidade EaD Ifes reconhecida</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="cursos" aria-labelledby="cursos-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Busca e descoberta</p>
+          <h2 id="cursos-title">Cursos em destaque</h2>
+          <p>Protótipo de card enriquecido com imagem real, carga horária, nível, idioma e selos. A busca abaixo simula o comportamento esperado para a listagem final.</p>
+        </div>
+
+        <div class="search-panel" role="search">
+          <div class="search-field">
+            <label for="course-search">Buscar por curso, área, público ou palavra-chave</label>
+            <input id="course-search" type="search" placeholder="Ex.: Moodle, Libras, tecnologia, professores">
+          </div>
+          <button class="btn" type="button" id="clear-search">Limpar busca</button>
+        </div>
+
+        <div class="filter-row" aria-label="Filtros rápidos">
+          <button class="chip is-active" type="button" data-filter="todos">Todos</button>
+          <button class="chip" type="button" data-filter="educacao">Educação</button>
+          <button class="chip" type="button" data-filter="tecnologia">Tecnologia</button>
+          <button class="chip" type="button" data-filter="ambiente">Ambiente e Saúde</button>
+          <button class="chip" type="button" data-filter="libras">Com Libras</button>
+          <button class="chip" type="button" data-filter="alta">Alta procura</button>
+        </div>
+
+        <div class="course-grid" id="course-grid" aria-live="polite">
+          <article class="course-card" data-tags="educacao ead moodle professores libras alta">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg" alt="Imagem do curso Como criar um MOOC">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Libras</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Como criar um MOOC</h3>
+              <p>Curso para professores, servidores, estudantes e comunidade que desejam planejar e produzir cursos abertos.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Educação a Distância</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="educacao ead moodle professores alta">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Alta procura</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Moodle 4 para Educadores</h3>
+              <p>Uma das maiores demandas da Vitrine, com foco em práticas de ensino no ambiente Moodle.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Intermediário</span>
+                <span>Educação a Distância</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="educacao ead moodle estudantes tecnologia">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/unac-moodle4-estudantes-vitrine.png" alt="Imagem do curso Moodle 4 para Estudantes">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Novo</span>
+                <span class="badge neutral">20h</span>
+              </div>
+              <h3>Moodle 4 para Estudantes</h3>
+              <p>Ajuda estudantes a navegar, estudar e concluir atividades dentro do ambiente virtual.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Tec. Educacionais</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="educacao ead professores alta">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mediacao_pedagogica.png" alt="Imagem do curso Mediação pedagógica no Moodle">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Alta procura</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Mediação pedagógica no Moodle</h3>
+              <p>Curso de apoio para docentes que querem melhorar presença, interação e acompanhamento em EaD.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>CEFOR</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="ambiente saude ciencias rio doce">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_CaminhosEudcaco.png" alt="Imagem do curso Caminhos da Educação Crítica">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Ambiente</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Caminhos da Educação Crítica</h3>
+              <p>Integra pedagogia e educação ambiental, reforçando o maior bloco temático do catálogo.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Intermediário</span>
+                <span>Ambiente e Saúde</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="ambiente saude quimica ciencias">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_A-Quimica-dos-produtos-de-limpeza.png" alt="Imagem do curso A Química dos produtos de limpeza">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Novo</span>
+                <span class="badge neutral">45h</span>
+              </div>
+              <h3>A Química dos produtos de limpeza</h3>
+              <p>Curso de ciências aplicado ao cotidiano, com bom potencial de descoberta por busca temática.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Ambiente e Saúde</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="tecnologia informatica ciencias unac">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_uso-de-realidade-aumentada-1.png" alt="Imagem do curso Uso de Realidade Aumentada no Ensino de Ciências">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">UnAC</span>
+                <span class="badge neutral">30h</span>
+              </div>
+              <h3>Uso de Realidade Aumentada no Ensino de Ciências</h3>
+              <p>Exemplo de curso que mistura tecnologia, ensino e práticas inovadoras para sala de aula.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Tec. e Informática</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="tecnologia informatica dados r alta">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/Logo_UnAC_WhatsApp.png" alt="Logo da UnAC relacionado ao curso Estatística com o R">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Alta procura</span>
+                <span class="badge neutral">Dados</span>
+              </div>
+              <h3>Estatística com o R</h3>
+              <p>Curso de alta demanda identificado nos indicadores, útil para destacar tecnologia e dados.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Tec. e Informática</span>
+                <span>UnAC</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-tags="linguas alta comunidade">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_espanhol-comunicativo-1.png" alt="Imagem do curso Espanhol Comunicativo para Brasileiros">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Línguas</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Inglês Comunicativo</h3>
+              <p>Representa o maior curso em matrículas e mostra a força da busca por formação aberta nacional.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Alta procura</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" aria-labelledby="areas-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Navegação principal</p>
+          <h2 id="areas-title">15 categorias para achar pelo tema</h2>
+          <p>As categorias abaixo seguem o modelo decidido: navegação amigável ao público, enquanto CNPq e Eixo Tecnológico ficam como metadados oficiais.</p>
+        </div>
+
+        <div class="area-grid">
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Ambiente e Saúde</strong><span>aprox. 44 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Educação</strong><span>aprox. 39 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Tecnologias e Informática</strong><span>aprox. 18 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Educação a Distância</strong><span>aprox. 16 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Tecnologias Educacionais</strong><span>aprox. 15 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Gestão</strong><span>aprox. 10 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Inclusão e Acessibilidade</strong><span>aprox. 7 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Ciências da Natureza</strong><span>aprox. 6 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Línguas</strong><span>aprox. 6 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Matemática</strong><span>aprox. 5 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Artes e Humanidades</strong><span>aprox. 4 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Desenvolvimento Pessoal</strong><span>aprox. 4 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Design</strong><span>aprox. 2 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Engenharia</strong><span>aprox. 2 cursos</span></a>
+          <a class="area-card" href="prototipo-vitrine-mooc/area-educacao.html"><strong>Finanças e Contabilidade</strong><span>novo destaque</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicos" aria-labelledby="publicos-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Atalhos de decisão</p>
+          <h2 id="publicos-title">Para quem você está procurando?</h2>
+          <p>Esta camada ajuda o usuário que não pensa em categoria acadêmica. Ela vira atalho e página indexável, sem substituir a categoria do curso.</p>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card">
+            <h3>Professores e educadores</h3>
+            <p>Formação continuada, Moodle, metodologias, acessibilidade e tecnologia educacional.</p>
+            <a href="prototipo-vitrine-mooc/publico-professores.html">Ver cursos para professores</a>
+          </article>
+          <article class="audience-card">
+            <h3>Comunidade</h3>
+            <p>Cursos abertos para começar do zero, sem seleção e com linguagem direta.</p>
+            <a href="prototipo-vitrine-mooc/publico-professores.html">Ver cursos para a comunidade</a>
+          </article>
+          <article class="audience-card">
+            <h3>Trabalho e carreira</h3>
+            <p>Temas práticos como línguas, tecnologia, gestão, atendimento e produtividade.</p>
+            <a href="prototipo-vitrine-mooc/publico-professores.html">Ver cursos para carreira</a>
+          </article>
+          <article class="audience-card">
+            <h3>Servidores públicos</h3>
+            <p>Atalho para cursos úteis e para a área de Licença para Capacitação.</p>
+            <a href="prototipo-vitrine-mooc/qualificacao.html">Planejar licença</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" aria-labelledby="projetos-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Séries e projetos</p>
+          <h2 id="projetos-title">Coleções com identidade própria</h2>
+          <p>Projetos não entram como categoria principal. Eles aparecem como hubs editoriais, selos e páginas de coleção.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/logo_riodoceescolar.png" alt="Logo do projeto Rio Doce Escolar">
+            </div>
+            <div class="project-copy">
+              <h3>Rio Doce Escolar</h3>
+              <p>Hub com 31 cursos associados por tag, forte presença em Ambiente e Saúde e boa oportunidade para páginas editoriais indexáveis.</p>
+              <a class="btn secondary" href="#">Conhecer projeto</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/Logo_UnAC_WhatsApp.png" alt="Logo da UnAC">
+            </div>
+            <div class="project-copy">
+              <h3>UnAC</h3>
+              <p>Coleção com 33 cursos associados e 8 com Libras. O escopo oficial ainda precisa ser confirmado pelo CEFOR.</p>
+              <a class="btn secondary" href="#">Ver coleção</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="qualificacao" aria-labelledby="qualificacao-title">
+      <div class="shell">
+        <div class="license">
+          <div>
+            <p class="eyebrow">Área dedicada</p>
+            <h2 id="qualificacao-title">Licença para Capacitação não é filtro. É serviço.</h2>
+            <p>Qualquer curso certificado pode gerar horas. Por isso, a proposta separa uma página própria com orientação, cálculo de carga horária e sugestão de combinações de cursos.</p>
+          </div>
+          <a class="btn" href="prototipo-vitrine-mooc/qualificacao.html">Simular plano</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="funciona-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Como funciona</p>
+          <h2 id="funciona-title">Do interesse ao certificado</h2>
+          <p>O fluxo preserva o conteúdo atual da Vitrine, com linguagem mais direta e decisões importantes antes do clique no Moodle.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>Cadastre-se</h3>
+            <p>Informe-se antes sobre e-mail, acesso e requisitos técnicos.</p>
+          </article>
+          <article class="step">
+            <h3>Escolha o curso</h3>
+            <p>Compare tema, carga horária, nível, idioma e selos.</p>
+          </article>
+          <article class="step">
+            <h3>Estude online</h3>
+            <p>Curso autoinstrucional, livre, sem tutoria e sem seleção.</p>
+          </article>
+          <article class="step">
+            <h3>Emita certificado</h3>
+            <p>Certificação a partir de 60% de aproveitamento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Perguntas frequentes</p>
+          <h2 id="faq-title">Respostas que precisam aparecer cedo</h2>
+          <p>Na versão final, a home mostra as primeiras perguntas e a página completa mantém as 34 respostas indexáveis.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>O que é um curso MOOC?</h3>
+            <p>É um curso aberto, online, sem tutoria, sem processo seletivo e voltado à comunidade.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Os cursos são gratuitos?</h3>
+            <p>Sim. A Vitrine apresenta cursos abertos do Ifes, com acesso gratuito.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Os cursos têm certificado?</h3>
+            <p>Sim, conforme as regras do curso e com aproveitamento mínimo de 60%.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Preciso ser aluno do Ifes?</h3>
+            <p>Não. A proposta oficial é de cursos abertos à comunidade.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Posso usar para Licença Capacitação?</h3>
+            <p>A Vitrine deve explicar a regra em uma página própria e ajudar o servidor a planejar a carga horária.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <span>Protótipo visual - estágio 03 Design/UX</span>
+      <span>Baseado nos outputs de descoberta, catálogo, Power BI e PRD.</span>
+    </div>
+  </footer>
+
+  <script>
+    const normalizeText = (value) =>
+      value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+    const searchInput = document.querySelector("#course-search");
+    const clearButton = document.querySelector("#clear-search");
+    const chips = Array.from(document.querySelectorAll("[data-filter]"));
+    const cards = Array.from(document.querySelectorAll(".course-card"));
+    let activeFilter = "todos";
+
+    function applyFilters() {
+      const query = normalizeText(searchInput.value.trim());
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const text = normalizeText(card.textContent + " " + card.dataset.tags);
+        const matchesQuery = !query || text.includes(query);
+        const matchesFilter = activeFilter === "todos" || text.includes(activeFilter);
+        const visible = matchesQuery && matchesFilter;
+
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      const grid = document.querySelector("#course-grid");
+      grid.setAttribute("aria-label", `${visibleCount} cursos encontrados`);
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        activeFilter = chip.dataset.filter;
+        chips.forEach((item) => item.classList.toggle("is-active", item === chip));
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener("input", applyFilters);
+    clearButton.addEventListener("click", () => {
+      searchInput.value = "";
+      activeFilter = "todos";
+      chips.forEach((item) => item.classList.toggle("is-active", item.dataset.filter === "todos"));
+      applyFilters();
+      searchInput.focus();
+    });
+  </script>
+</body>
+</html>

@@ -63,7 +63,7 @@ No tema WordPress customizado já estão implementados:
 ## 4. Camada 1 — Vitrine Evolutiva
 
 ### 4.1 Prioridades de design
-1. **Hero com proposta de valor direta** — "Qualificação profissional gratuita e certificada pelo Ifes". Duplo CTA (busca + Wizard). Selo 5 estrelas MEC visível.
+1. **Hero com proposta de valor direta** — ~~"Qualificação profissional gratuita e certificada pelo Ifes"~~ **[REMOVIDO em 02/07 — contraria o objetivo oficial "aberto à comunidade" da Resolução CS 72/2020. Usar proposta de valor de educação aberta, gratuita e certificada.]** Duplo CTA (busca + Wizard). Selo 5 estrelas MEC visível.
 2. **Cards enriquecidos** — CH visível (ex.: 20h), badge "Novo", selo Libras, nº de inscritos; ao clicar, detalhes expandidos (descrição, objetivos, estrutura).
 3. **Barra de estatísticas** — 284.595 matrículas | 100+ cursos | 5 estrelas MEC | 100% gratuito (prova social acima da dobra).
 4. **Seções curadas** — "Em destaque" / "Recentes" / "Mais cursados" (evolui o que Marquito fez).
