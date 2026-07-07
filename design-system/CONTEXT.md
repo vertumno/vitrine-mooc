@@ -6,8 +6,12 @@ Cores e tipografia da nova Vitrine. Carregado pelos estagios 03 (design) e 05 (d
 
 | Arquivo | Contem |
 |---------|--------|
-| `palette.md` | Paleta de cores institucional do Ifes e cores de apoio da Vitrine |
-| `typography.md` | Familias tipograficas, escala e pesos |
+| `design-system-oficial.md` | **Referencia canonica** — tokens, componentes, marca e regras de conteudo (extraido da proposta aprovada em 07/07/2026) |
+| `palette.md` | Paleta de cores institucional do Ifes e cores de apoio |
+| `typography.md` | Familias tipograficas, escala e pesos (mono = JetBrains Mono) |
+| `design-logo-cefor/` | Logo oficial CEFOR: pixel-mark em CSS puro + PNGs oficiais |
+
+> **Nome publico da plataforma: "Cursos Abertos do Ifes".** "Vitrine" e apenas o codinome interno do projeto — nunca aparece nas paginas.
 
 ## Origem
 

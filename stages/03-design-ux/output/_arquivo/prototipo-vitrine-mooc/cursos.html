@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cursos abertos MOOC do Ifes | Protótipo</title>
+  <meta name="description" content="Catálogo protótipo dos cursos abertos MOOC do Ifes: cursos em destaque, busca, filtros facetados na lateral e grade completa de cursos.">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Navegação principal">
+      <a class="brand" href="../prototipo-vitrine-mooc.html"><span class="brand-mark">IFES</span><span>Vitrine MOOC Ifes</span></a>
+      <div class="nav-links">
+        <a aria-current="page" href="cursos.html">Cursos</a>
+        <a href="area-educacao.html">Áreas</a>
+        <a href="publico-professores.html">Para quem</a>
+        <a href="qualificacao.html">Licença capacitação</a>
+        <a href="perguntas-frequentes.html">Dúvidas</a>
+      </div>
+      <a class="btn secondary" href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero catalog-hero">
+      <div class="shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../prototipo-vitrine-mooc.html">Home</a> / Cursos</nav>
+        <h1>Cursos</h1>
+        <p class="lead">Cursos online, gratuitos e abertos à comunidade, com certificado do Ifes. Explore os destaques ou use a busca e os filtros para encontrar o curso certo para você.</p>
+      </div>
+    </section>
+
+    <section class="featured-section" aria-labelledby="destaque-title">
+      <div class="shell">
+        <h2 id="destaque-title" class="featured-title">Em destaque</h2>
+
+        <div class="featured-track" aria-live="polite">
+          <article class="featured-card" data-slide="0">
+            <div class="featured-media">
+              <span class="flag">Curso</span>
+              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg" alt="Imagem do curso Como criar um MOOC">
+            </div>
+            <div class="featured-body">
+              <div class="featured-brand"><span class="brand-mark" aria-hidden="true">IFES</span><span>CEFOR · Ifes</span></div>
+              <h3>Como criar um MOOC</h3>
+              <p>Compreenda o que são cursos abertos e aprenda a planejar, desenvolver, publicar e avaliar um MOOC na plataforma do Ifes — da concepção ao certificado.</p>
+              <div class="chips"><span class="chip">Educação a Distância</span><span class="chip">Libras</span></div>
+              <div class="featured-foot">
+                <div class="meta"><span>60h</span><span>Básico</span><span>Português</span></div>
+                <div class="featured-actions">
+                  <a class="btn secondary" href="curso-como-criar-mooc.html">Saber mais</a>
+                  <a class="btn" href="curso-como-criar-mooc.html">Começar agora</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card" data-slide="1" hidden>
+            <div class="featured-media">
+              <span class="flag">Curso</span>
+              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores">
+            </div>
+            <div class="featured-body">
+              <div class="featured-brand"><span class="brand-mark" aria-hidden="true">IFES</span><span>CEFOR · Ifes</span></div>
+              <h3>Moodle 4 para Educadores</h3>
+              <p>Uma das maiores demandas da Vitrine: práticas de ensino no ambiente Moodle 4 para docentes que atuam com educação a distância e híbrida.</p>
+              <div class="chips"><span class="chip">Educação a Distância</span></div>
+              <div class="featured-foot">
+                <div class="meta"><span>60h</span><span>Intermediário</span><span>Português</span></div>
+                <div class="featured-actions">
+                  <a class="btn secondary" href="curso-como-criar-mooc.html">Saber mais</a>
+                  <a class="btn" href="curso-como-criar-mooc.html">Começar agora</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card" data-slide="2" hidden>
+            <div class="featured-media">
+              <span class="flag">Curso</span>
+              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/ingles-comunicativo.png" alt="Imagem do curso Inglês Comunicativo – Aprenda o Básico Essencial">
+            </div>
+            <div class="featured-body">
+              <div class="featured-brand"><span class="brand-mark" aria-hidden="true">IFES</span><span>CEFOR · Ifes</span></div>
+              <h3>Inglês Comunicativo – Aprenda o Básico Essencial</h3>
+              <p>O curso mais matriculado da Vitrine, com mais de 22 mil inscrições. Aprenda o essencial do inglês para comunicação no dia a dia.</p>
+              <div class="chips"><span class="chip">Línguas</span><span class="chip">Mais cursado</span></div>
+              <div class="featured-foot">
+                <div class="meta"><span>60h</span><span>Básico</span><span>Português</span></div>
+                <div class="featured-actions">
+                  <a class="btn secondary" href="curso-como-criar-mooc.html">Saber mais</a>
+                  <a class="btn" href="curso-como-criar-mooc.html">Começar agora</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="dots" role="tablist" aria-label="Cursos em destaque">
+          <button class="dot is-active" type="button" data-goto="0" aria-label="Destaque 1: Como criar um MOOC"></button>
+          <button class="dot" type="button" data-goto="1" aria-label="Destaque 2: Moodle 4 para Educadores"></button>
+          <button class="dot" type="button" data-goto="2" aria-label="Destaque 3: Inglês Comunicativo"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="lista" class="catalog-section">
+      <div class="shell catalog-layout">
+        <aside class="panel filters-panel" aria-label="Filtros do catálogo">
+          <div class="filter-group">
+            <label class="sr-only" for="q">Buscar curso</label>
+            <input id="q" type="search" placeholder="Buscar">
+          </div>
+
+          <div class="filter-group" data-group="categoria">
+            <h3>Categoria</h3>
+            <ul>
+              <li class="filter-option"><label><input type="checkbox" value="ambiente-e-saude"> Ambiente e Saúde</label><span class="filter-count">44</span></li>
+              <li class="filter-option"><label><input type="checkbox" value="educacao"> Educação</label><span class="filter-count">39</span></li>
+              <li class="filter-option"><label><input type="checkbox" value="tecnologias-e-informatica"> Tecnologias e Informática</label><span class="filter-count">18</span></li>
+              <li class="filter-option"><label><input type="checkbox" value="educacao-a-distancia"> Educação a Distância</label><span class="filter-count">16</span></li>
+              <li class="filter-option"><label><input type="checkbox" value="tecnologias-educacionais"> Tecnologias Educacionais</label><span class="filter-count">15</span></li>
+              <li class="filter-option"><label><input type="checkbox" value="inclusao-e-acessibilidade"> Inclusão e Acessibilidade</label><span class="filter-count">7</span></li>
+              <li class="filter-option"><label><input type="checkbox" value="linguas"> Línguas</label><span class="filter-count">6</span></li>
+              <li class="filter-option"><label><input type="checkbox" value="design"> Design</label><span class="filter-count">2</span></li>
+            </ul>
+            <button class="show-more" type="button">Mostrar mais ▾</button>
+          </div>
+
+          <div class="filter-group" data-group="carga">
+            <h3>Carga horária</h3>
+            <ul>
+              <li class="filter-option"><label><input type="checkbox" value="ate-10"> Até 10h</label></li>
+              <li class="filter-option"><label><input type="checkbox" value="10-20"> 10 a 20h</label></li>
+              <li class="filter-option"><label><input type="checkbox" value="20-40"> 20 a 40h</label></li>
+              <li class="filter-option"><label><input type="checkbox" value="40-60"> 40 a 60h</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group" data-group="nivel">
+            <h3>Nível</h3>
+            <ul>
+              <li class="filter-option"><label><input type="checkbox" value="basico"> Básico</label></li>
+              <li class="filter-option"><label><input type="checkbox" value="intermediario"> Intermediário</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group" data-group="acessibilidade">
+            <h3>Acessibilidade</h3>
+            <ul>
+              <li class="filter-option"><label><input type="checkbox" value="libras"> Com Libras</label></li>
+            </ul>
+          </div>
+
+          <button class="btn secondary" type="button" id="clear">Limpar filtros</button>
+        </aside>
+
+        <div class="catalog-main">
+          <p class="results-count" id="results-count" aria-live="polite">Mostrando 12 cursos</p>
+          <div class="results-bar">
+            <h2>Todos os cursos</h2>
+            <label class="sort-label">Ordenar por
+              <select id="sort" aria-label="Ordenar resultados">
+                <option>Relevância</option>
+                <option>Mais cursados</option>
+                <option>Recentes</option>
+                <option>A–Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="results-grid" id="cards">
+            <article class="course-card" data-categoria="linguas" data-carga="40-60" data-nivel="basico" data-search="ingles comunicativo linguas alta procura mais cursado">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/ingles-comunicativo.png" alt="Imagem do curso Inglês Comunicativo">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Mais cursado</span><span class="badge neutral">60h</span></div>
+                <h3>Inglês Comunicativo – Aprenda o Básico Essencial</h3>
+                <p>O essencial do inglês para comunicação, com mais de 22 mil matrículas registradas.</p>
+                <div class="card-foot"><div class="meta"><span>Línguas</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="educacao-a-distancia" data-carga="40-60" data-nivel="basico" data-search="moodle educadores ead professores mais cursado">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mooc_Moodle-01.jpg" alt="Imagem do curso Moodle para Educadores">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Mais cursado</span><span class="badge neutral">60h</span></div>
+                <h3>Moodle para Educadores</h3>
+                <p>Curso de grande demanda para docentes que atuam com ambiente virtual de aprendizagem.</p>
+                <div class="card-foot"><div class="meta"><span>Educação a Distância</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="design tecnologias-educacionais" data-carga="ate-10" data-nivel="basico" data-search="canva design tecnologias educacionais mais cursado">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Uso_Educacional_Canva_Vitrine.png" alt="Imagem do curso Uso Educacional do Canva">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Mais cursado</span><span class="badge neutral">6h</span></div>
+                <h3>Uso Educacional do Canva</h3>
+                <p>Produção de materiais visuais educativos com o Canva, um dos cursos mais procurados.</p>
+                <div class="card-foot"><div class="meta"><span>Design</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="educacao-a-distancia tecnologias-educacionais" data-nivel="basico" data-search="google drive colaboracao tecnologia mais cursado">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/mooc_drive_colab.png" alt="Imagem do curso Google Drive: Colaboração na prática">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Mais cursado</span></div>
+                <h3>Google Drive: Colaboração na prática</h3>
+                <p>Trabalho colaborativo com documentos, planilhas e apresentações na nuvem.</p>
+                <div class="card-foot"><div class="meta"><span>Tec. Educacionais</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="inclusao-e-acessibilidade" data-carga="40-60" data-nivel="intermediario" data-search="acessibilidade tecnologia inclusao mais cursado">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Acessibilidade_Tecnologia_Vitrine.jpg" alt="Imagem do curso Acessibilidade e Tecnologia">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Mais cursado</span><span class="badge neutral">60h</span></div>
+                <h3>Acessibilidade e Tecnologia</h3>
+                <p>Recursos e práticas de tecnologia assistiva para ambientes educacionais inclusivos.</p>
+                <div class="card-foot"><div class="meta"><span>Inclusão e Acessibilidade</span><span>Intermediário</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="educacao-a-distancia" data-carga="40-60" data-nivel="basico" data-acessibilidade="libras" data-search="como criar mooc ead libras professores">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg" alt="Imagem do curso Como criar um MOOC">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Libras</span><span class="badge neutral">60h</span></div>
+                <h3>Como criar um MOOC</h3>
+                <p>Planeje, desenvolva e avalie cursos abertos na plataforma MOOC do Ifes.</p>
+                <div class="card-foot"><div class="meta"><span>Educação a Distância</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="educacao-a-distancia" data-carga="40-60" data-nivel="intermediario" data-search="moodle 4 educadores ead professores">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Destaque</span><span class="badge neutral">60h</span></div>
+                <h3>Moodle 4 para Educadores</h3>
+                <p>Práticas de ensino no Moodle 4 para docentes de educação a distância e híbrida.</p>
+                <div class="card-foot"><div class="meta"><span>Educação a Distância</span><span>Intermediário</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="ambiente-e-saude" data-carga="40-60" data-nivel="basico" data-search="quimica produtos limpeza ciencias ambiente saude novo">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_A-Quimica-dos-produtos-de-limpeza.png" alt="Imagem do curso A Química dos produtos de limpeza">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Novo</span><span class="badge neutral">45h</span></div>
+                <h3>A Química dos produtos de limpeza</h3>
+                <p>A ciência por trás dos produtos do cotidiano, com apelo de descoberta temática.</p>
+                <div class="card-foot"><div class="meta"><span>Ambiente e Saúde</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="tecnologias-e-informatica" data-carga="20-40" data-nivel="basico" data-search="realidade aumentada ensino ciencias unac tecnologia">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_uso-de-realidade-aumentada-1.png" alt="Imagem do curso Uso de Realidade Aumentada no Ensino de Ciências">
+              <div class="card-body">
+                <div class="badges"><span class="badge">UnAC</span><span class="badge neutral">30h</span></div>
+                <h3>Uso de Realidade Aumentada no Ensino de Ciências</h3>
+                <p>Tecnologia, ensino de ciências e práticas inovadoras para a sala de aula.</p>
+                <div class="card-foot"><div class="meta"><span>Tec. e Informática</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="linguas" data-carga="40-60" data-nivel="basico" data-search="espanhol comunicativo brasileiros linguas unac novo">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_espanhol-comunicativo-1.png" alt="Imagem do curso Espanhol Comunicativo para Brasileiros">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Novo</span><span class="badge neutral">60h</span></div>
+                <h3>Espanhol Comunicativo para Brasileiros</h3>
+                <p>Comunicação em espanhol para o dia a dia, dentro da coleção UnAC.</p>
+                <div class="card-foot"><div class="meta"><span>Línguas</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="ambiente-e-saude" data-carga="10-20" data-nivel="basico" data-search="tecnologia verde robotica sustentavel educacao ambiente novo">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Tecnologia-Verde_-Robotica-Sustentavel-na-Educacao-1.png" alt="Imagem do curso Tecnologia Verde: Robótica Sustentável na Educação">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Novo</span><span class="badge neutral">20h</span></div>
+                <h3>Tecnologia Verde: Robótica Sustentável na Educação</h3>
+                <p>Robótica com materiais sustentáveis aplicada a práticas educacionais.</p>
+                <div class="card-foot"><div class="meta"><span>Ambiente e Saúde</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+
+            <article class="course-card" data-categoria="ambiente-e-saude" data-carga="10-20" data-nivel="basico" data-search="educacao saude ambiental ambiente novo">
+              <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/03/vitrine_Educacao-em-Saude-Ambiental-1.png" alt="Imagem do curso Educação em Saúde Ambiental">
+              <div class="card-body">
+                <div class="badges"><span class="badge">Novo</span><span class="badge neutral">20h</span></div>
+                <h3>Educação em Saúde Ambiental</h3>
+                <p>Relações entre saúde e ambiente para práticas educativas e comunitárias.</p>
+                <div class="card-foot"><div class="meta"><span>Ambiente e Saúde</span><span>Básico</span></div><a class="btn small" href="curso-como-criar-mooc.html">Ver curso</a></div>
+              </div>
+            </article>
+          </div>
+
+          <p class="empty-state" id="empty" hidden>Nenhum curso encontrado com esses filtros. Tente remover algum filtro ou buscar por outro termo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>Protótipo de catálogo</span><span>Estágio 03 Design/UX</span></div></footer>
+
+  <script>
+    // Carrossel de destaque
+    const slides = Array.from(document.querySelectorAll(".featured-card"));
+    const dots = Array.from(document.querySelectorAll(".dot"));
+    function goTo(i) {
+      slides.forEach((s) => (s.hidden = s.dataset.slide !== String(i)));
+      dots.forEach((d) => d.classList.toggle("is-active", d.dataset.goto === String(i)));
+    }
+    dots.forEach((d) => d.addEventListener("click", () => goTo(d.dataset.goto)));
+
+    // Filtros facetados: OR dentro do grupo, AND entre grupos + busca
+    const norm = (v) => v.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const q = document.querySelector("#q");
+    const groups = Array.from(document.querySelectorAll(".filter-group[data-group]"));
+    const cards = Array.from(document.querySelectorAll(".course-card"));
+
+    function filter() {
+      const query = norm(q.value.trim());
+      const active = groups.map((g) => ({
+        name: g.dataset.group,
+        values: Array.from(g.querySelectorAll("input:checked")).map((c) => c.value),
+      })).filter((g) => g.values.length);
+
+      let count = 0;
+      cards.forEach((card) => {
+        const text = norm(card.textContent + " " + (card.dataset.search || ""));
+        const matchesQuery = !query || text.includes(query);
+        const matchesGroups = active.every((g) => {
+          const cardValues = (card.dataset[g.name] || "").split(" ");
+          return g.values.some((v) => cardValues.includes(v));
+        });
+        const ok = matchesQuery && matchesGroups;
+        card.hidden = !ok;
+        if (ok) count += 1;
+      });
+
+      document.querySelector("#results-count").textContent =
+        count === 1 ? "Mostrando 1 curso" : `Mostrando ${count} cursos`;
+      document.querySelector("#empty").hidden = count > 0;
+    }
+
+    q.addEventListener("input", filter);
+    groups.forEach((g) => g.addEventListener("change", filter));
+    document.querySelector("#clear").addEventListener("click", () => {
+      q.value = "";
+      document.querySelectorAll(".filters-panel input:checked").forEach((c) => (c.checked = false));
+      filter();
+      q.focus();
+    });
+  </script>
+</body>
+</html>

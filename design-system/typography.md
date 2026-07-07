@@ -16,6 +16,7 @@ Famílias, escala e pesos da nova Vitrine. Fonte canônica para tema e templates
 | `--fonte-titulo` | Headings (h1–h3), seções | **Poppins** | Ifes (`@font-face`) |
 | `--fonte-corpo` | Texto corrido, descrições, UI | **Open Sans** | Ifes (`@font-face`) |
 | `--fonte-destaque` | Hero e kickers/overlines condensados (uppercase) | **Oswald** | Ifes (`@font-face`) |
+| ~~`--fonte-mono`~~ | **Removida (07/07/2026):** o usuário não quer fonte monoespaçada. Dados (números, carga horária, matrículas, selos, contagens) usam a **fonte de corpo (Open Sans)**. No CSS, `--font-mono` foi apontada para `--font-body` para neutralizar usos herdados. | — | Decisão do usuário |
 
 ## Escala (base 16px, leitura pública)
 

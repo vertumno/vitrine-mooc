@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de Cursos | Cursos Abertos do Ifes</title>
+<meta name="description" content="Catálogo dos Cursos Abertos do Ifes: cursos on-line, gratuitos e com certificado. Busca e filtros por área, carga horária, nível, acessibilidade, projetos e séries.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- Faixa institucional -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Instituto Federal do Espírito Santo · Cefor</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Cursos Abertos do Ifes">
+      <span class="site-title">Cursos Abertos do Ifes</span>
+    </a>
+    <nav class="main" id="menu" aria-label="Navegação principal">
+      <a href="cursos.html" aria-current="page">Cursos</a>
+      <a href="index.html#oquee">Como funciona</a>
+      <a href="index.html#faq">Dúvidas</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">☰ Menu</button>
+    <a class="btn btn-primary" href="#" style="margin-left:8px">Acessar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- Hero compacta (sem busca — a busca fica no catálogo) -->
+<section class="hero-compacta" style="padding:0">
+  <div class="wrap">
+    <h1>Catálogo de Cursos</h1>
+    <p class="lead">Cursos abertos a toda a comunidade, sem seleção e sem mensalidade. Explore o catálogo completo ou filtre por área, carga horária, nível, acessibilidade, projetos e séries.</p>
+  </div>
+</section>
+
+<!-- Catálogo: filtros + grade -->
+<section id="lista" class="catalogo">
+  <div class="wrap catalogo-layout">
+
+    <aside class="filtros-painel" aria-label="Filtros do catálogo">
+      <div>
+        <label class="sr-only" for="q">Buscar curso</label>
+        <input id="q" type="search" placeholder="Buscar no catálogo">
+      </div>
+
+      <div class="f-grupo" data-group="categoria">
+        <h3>Área</h3>
+        <ul id="f-categoria"></ul>
+      </div>
+
+      <div class="f-grupo" data-group="carga">
+        <h3>Carga horária</h3>
+        <ul id="f-carga"></ul>
+      </div>
+
+      <div class="f-grupo" data-group="nivel">
+        <h3>Nível</h3>
+        <ul id="f-nivel"></ul>
+      </div>
+
+      <div class="f-grupo" data-group="acessibilidade">
+        <h3>Acessibilidade</h3>
+        <ul>
+          <li class="f-opcao"><label><input type="checkbox" value="libras"> Com Libras</label></li>
+        </ul>
+      </div>
+
+      <div class="f-grupo" data-group="projeto">
+        <h3>Projetos</h3>
+        <ul id="f-projeto"></ul>
+      </div>
+
+      <div class="f-grupo" data-group="serie">
+        <h3>Séries</h3>
+        <ul id="f-serie"></ul>
+      </div>
+
+      <button class="btn btn-outline" type="button" id="limpar" style="justify-content:center">Limpar filtros</button>
+    </aside>
+
+    <div>
+      <p class="resultado-num" id="resultado-num" aria-live="polite">Mostrando 165 cursos</p>
+      <div class="resultado-barra">
+        <h2 style="margin:0">Catálogo de Cursos</h2>
+        <label class="ordenar">Ordenar por
+          <select id="ordenar" aria-label="Ordenar resultados">
+            <option>Ordem do catálogo</option>
+            <option>A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="cursos" id="cards" aria-live="polite"></div>
+
+      <p class="vazio" id="vazio" hidden>Nenhum curso encontrado com esses filtros. Tente remover algum filtro ou buscar por outro termo.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap foot-cols">
+    <div>
+      <a class="logo" href="index.html" style="margin-bottom:14px" aria-label="Cursos Abertos do Ifes">
+        <span class="site-title">Cursos Abertos do Ifes</span>
+      </a>
+      <p>Cursos on-line, gratuitos e abertos à comunidade, produzidos pelo Centro de Referência em Formação e em Educação a Distância do Instituto Federal do Espírito Santo.</p>
+    </div>
+    <div>
+      <h4>Cursos</h4>
+      <ul>
+        <li><a href="cursos.html">Todos os cursos</a></li>
+        <li><a href="index.html#areas">Áreas</a></li>
+        <li><a href="index.html#publicos">Para quem</a></li>
+        <li><a href="#">Projetos parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="index.html#licenca">Planejador de Licença</a></li>
+        <li><a href="#">Validar certificado</a></li>
+        <li><a href="#">Painel de indicadores</a></li>
+        <li><a href="#">Suporte</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="index.html#oquee">O que é MOOC</a></li>
+        <li><a href="index.html#faq">Dúvidas frequentes</a></li>
+        <li><a href="#">Resolução CS 72/2020</a></li>
+        <li><a href="#">Cefor · Ifes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-base">
+    <div class="wrap">
+      <span>Ifes · Cefor — conteúdo aberto à comunidade</span>
+      <span class="mono">protótipo · estágio 03 · design/ux</span>
+    </div>
+  </div>
+</footer>
+
+<script src="cursos-dados.js"></script>
+<script>
+/* Menu mobile */
+function toggleMenu(btn){
+  const menu=document.getElementById('menu');
+  const aberto=menu.classList.toggle('aberta');
+  btn.setAttribute('aria-expanded',aberto);
+}
+
+/* Filtros facetados: OR dentro do grupo, AND entre grupos + busca */
+const norm=v=>String(v||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const q=document.getElementById('q');
+const cardsEl=document.getElementById('cards');
+const resultadoNum=document.getElementById('resultado-num');
+const vazio=document.getElementById('vazio');
+const cursos=window.CURSOS_MOOC||[];
+let cards=[];
+
+const filtros=[
+  ['categoria','f-categoria'],
+  ['carga','f-carga'],
+  ['nivel','f-nivel'],
+  ['projeto','f-projeto'],
+  ['serie','f-serie'],
+];
+
+function esc(s){
+  return String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+function contagem(campo,valor){
+  return cursos.filter(c=>{
+    const v=c[campo];
+    return Array.isArray(v)?v.includes(valor):v===valor;
+  }).length;
+}
+
+function montarFiltros(){
+  filtros.forEach(([campo,id])=>{
+    const alvo=document.getElementById(id);
+    if(!alvo)return;
+    alvo.innerHTML=(window.CURSOS_FILTROS?.[campo]||[]).map(item=>{
+      const total=contagem(campo,item.slug);
+      return '<li class="f-opcao"><label><input type="checkbox" value="'+esc(item.slug)+'"> '+esc(item.nome)+'</label><span class="f-num">'+total+'</span></li>';
+    }).join('');
+  });
+}
+
+function selo(txt){return '<span class="selo">'+esc(txt)+'</span>';}
+
+function cardCurso(curso){
+  const selos=[];
+  if(curso.projetoNomes?.length)curso.projetoNomes.forEach(p=>selos.push(selo(p)));
+  if(curso.serieNomes?.length)curso.serieNomes.forEach(s=>selos.push(selo(s)));
+  if(curso.libras)selos.push(selo('Libras'));
+  const meta=[curso.cargaLabel,curso.nivelLabel].filter(Boolean);
+  return '<article class="curso" data-categoria="'+esc(curso.categoria.join(' '))+'" data-carga="'+esc(curso.carga)+'" data-nivel="'+esc(curso.nivel)+'" data-acessibilidade="'+(curso.libras?'libras':'')+'" data-projeto="'+esc(curso.projeto.join(' '))+'" data-serie="'+esc(curso.serie.join(' '))+'" data-search="'+esc(curso.search)+'" data-titulo="'+esc(norm(curso.titulo))+'" data-ordem="'+curso.n+'">'+
+    '<div class="capa"><img src="'+esc(curso.thumb)+'" alt="Imagem do curso '+esc(curso.titulo)+'" loading="lazy"></div>'+
+    '<div class="curso-body"><div class="selos">'+selos.join('')+'</div><div class="curso-meta">'+meta.map(m=>'<span>'+esc(m)+'</span>').join('')+'</div><h3>'+esc(curso.titulo)+'</h3><p class="cat">'+esc(curso.categoriaNomes.join(' · '))+'</p><div class="curso-foot"><a class="btn btn-primary" href="'+esc(curso.link)+'">Acessar curso</a></div></div></article>';
+}
+
+function montarCards(){
+  cardsEl.innerHTML=cursos.map(cardCurso).join('');
+  cards=Array.from(document.querySelectorAll('#cards .curso'));
+}
+
+function gruposAtivos(){
+  return Array.from(document.querySelectorAll('.f-grupo[data-group]')).map(g=>({
+    nome:g.dataset.group,
+    valores:Array.from(g.querySelectorAll('input:checked')).map(c=>c.value),
+  })).filter(g=>g.valores.length);
+}
+
+function filtrar(){
+  const query=norm(q.value.trim());
+  const ativos=gruposAtivos();
+  let n=0;
+  cards.forEach(card=>{
+    const texto=norm(card.textContent+' '+(card.dataset.search||''));
+    const okBusca=!query||texto.includes(query);
+    const okGrupos=ativos.every(g=>{
+      const doCard=(card.dataset[g.nome]||'').split(' ').filter(Boolean);
+      return g.valores.some(v=>doCard.includes(v));
+    });
+    const ok=okBusca&&okGrupos;
+    card.hidden=!ok;
+    if(ok)n+=1;
+  });
+  resultadoNum.textContent=n===1?'Mostrando 1 curso':'Mostrando '+n+' cursos';
+  vazio.hidden=n>0;
+  ordenarCards();
+}
+
+function ordenarCards(){
+  const modo=document.getElementById('ordenar').value;
+  const visiveis=cards.filter(c=>!c.hidden);
+  const escondidos=cards.filter(c=>c.hidden);
+  visiveis.sort((a,b)=>{
+    if(modo==='A-Z')return a.dataset.titulo.localeCompare(b.dataset.titulo);
+    return Number(a.dataset.ordem)-Number(b.dataset.ordem);
+  });
+  [...visiveis,...escondidos].forEach(c=>cardsEl.appendChild(c));
+}
+
+montarFiltros();
+montarCards();
+q.addEventListener('input',filtrar);
+document.querySelectorAll('.f-grupo[data-group]').forEach(g=>g.addEventListener('change',filtrar));
+document.getElementById('ordenar').addEventListener('change',filtrar);
+document.getElementById('limpar').addEventListener('click',()=>{
+  q.value='';
+  document.querySelectorAll('.filtros-painel input:checked').forEach(c=>c.checked=false);
+  filtrar();
+  q.focus();
+});
+
+const termoUrl=new URLSearchParams(location.search).get('q');
+if(termoUrl)q.value=termoUrl;
+filtrar();
+</script>
+</body>
+</html>

@@ -367,62 +367,27 @@
       font-size: 1.05rem;
     }
 
-    .search-panel {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 14px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: white;
-      box-shadow: 0 10px 30px rgb(5 63 45 / 0.06);
-    }
-
-    .search-field {
-      display: grid;
-      gap: 8px;
-    }
-
-    .search-field label {
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .search-field input {
-      width: 100%;
-      min-height: 54px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 0 18px;
-      color: var(--ink);
-      background: var(--surface-2);
-      font: inherit;
-      font-size: 1rem;
-    }
-
-    .filter-row {
+    .section-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
     }
 
-    .chip {
-      min-height: 40px;
-      padding: 0 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: white;
+    .section-row .section-head {
+      margin-bottom: 0;
+    }
+
+    .see-all {
+      white-space: nowrap;
       color: var(--green-800);
       font-weight: 800;
-      cursor: pointer;
+      text-decoration: none;
     }
 
-    .chip.is-active {
-      border-color: var(--green-700);
-      background: var(--green-700);
-      color: white;
+    .see-all:hover {
+      text-decoration: underline;
     }
 
     .course-grid {
@@ -746,12 +711,7 @@
       }
 
       .hero-actions,
-      .search-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-actions .btn,
-      .search-panel .btn {
+      .hero-actions .btn {
         width: 100%;
       }
 
@@ -861,33 +821,19 @@
       </div>
     </div>
 
-    <section id="cursos" aria-labelledby="cursos-title">
+    <section id="cursos" aria-labelledby="destaque-title">
       <div class="shell">
-        <div class="section-head">
-          <p class="eyebrow">Busca e descoberta</p>
-          <h2 id="cursos-title">Cursos em destaque</h2>
-          <p>Protótipo de card enriquecido com imagem real, carga horária, nível, idioma e selos. A busca abaixo simula o comportamento esperado para a listagem final.</p>
-        </div>
-
-        <div class="search-panel" role="search">
-          <div class="search-field">
-            <label for="course-search">Buscar por curso, área, público ou palavra-chave</label>
-            <input id="course-search" type="search" placeholder="Ex.: Moodle, Libras, tecnologia, professores">
+        <div class="section-row">
+          <div class="section-head">
+            <p class="eyebrow">Curadoria CEFOR</p>
+            <h2 id="destaque-title">Cursos em destaque</h2>
+            <p>Seleção editorial do CEFOR com os cursos que melhor apresentam a Vitrine para quem chega agora.</p>
           </div>
-          <button class="btn" type="button" id="clear-search">Limpar busca</button>
+          <a class="see-all" href="prototipo-vitrine-mooc/cursos.html">Ver todos os cursos →</a>
         </div>
 
-        <div class="filter-row" aria-label="Filtros rápidos">
-          <button class="chip is-active" type="button" data-filter="todos">Todos</button>
-          <button class="chip" type="button" data-filter="educacao">Educação</button>
-          <button class="chip" type="button" data-filter="tecnologia">Tecnologia</button>
-          <button class="chip" type="button" data-filter="ambiente">Ambiente e Saúde</button>
-          <button class="chip" type="button" data-filter="libras">Com Libras</button>
-          <button class="chip" type="button" data-filter="alta">Alta procura</button>
-        </div>
-
-        <div class="course-grid" id="course-grid" aria-live="polite">
-          <article class="course-card" data-tags="educacao ead moodle professores libras alta">
+        <div class="course-grid">
+          <article class="course-card">
             <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg" alt="Imagem do curso Como criar um MOOC">
             <div class="course-body">
               <div class="badges">
@@ -904,11 +850,11 @@
             </div>
           </article>
 
-          <article class="course-card" data-tags="educacao ead moodle professores alta">
+          <article class="course-card">
             <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores">
             <div class="course-body">
               <div class="badges">
-                <span class="badge">Alta procura</span>
+                <span class="badge">Destaque</span>
                 <span class="badge neutral">60h</span>
               </div>
               <h3>Moodle 4 para Educadores</h3>
@@ -921,58 +867,105 @@
             </div>
           </article>
 
-          <article class="course-card" data-tags="educacao ead moodle estudantes tecnologia">
-            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/unac-moodle4-estudantes-vitrine.png" alt="Imagem do curso Moodle 4 para Estudantes">
+          <article class="course-card">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Acessibilidade_Tecnologia_Vitrine.jpg" alt="Imagem do curso Acessibilidade e Tecnologia">
             <div class="course-body">
               <div class="badges">
-                <span class="badge">Novo</span>
-                <span class="badge neutral">20h</span>
-              </div>
-              <h3>Moodle 4 para Estudantes</h3>
-              <p>Ajuda estudantes a navegar, estudar e concluir atividades dentro do ambiente virtual.</p>
-              <div class="course-meta">
-                <span>Português</span>
-                <span>Básico</span>
-                <span>Tec. Educacionais</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card" data-tags="educacao ead professores alta">
-            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mediacao_pedagogica.png" alt="Imagem do curso Mediação pedagógica no Moodle">
-            <div class="course-body">
-              <div class="badges">
-                <span class="badge">Alta procura</span>
+                <span class="badge">Inclusão</span>
                 <span class="badge neutral">60h</span>
               </div>
-              <h3>Mediação pedagógica no Moodle</h3>
-              <p>Curso de apoio para docentes que querem melhorar presença, interação e acompanhamento em EaD.</p>
-              <div class="course-meta">
-                <span>Português</span>
-                <span>Básico</span>
-                <span>CEFOR</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card" data-tags="ambiente saude ciencias rio doce">
-            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_CaminhosEudcaco.png" alt="Imagem do curso Caminhos da Educação Crítica">
-            <div class="course-body">
-              <div class="badges">
-                <span class="badge">Ambiente</span>
-                <span class="badge neutral">60h</span>
-              </div>
-              <h3>Caminhos da Educação Crítica</h3>
-              <p>Integra pedagogia e educação ambiental, reforçando o maior bloco temático do catálogo.</p>
+              <h3>Acessibilidade e Tecnologia</h3>
+              <p>Recursos e práticas de tecnologia assistiva para ambientes educacionais mais inclusivos.</p>
               <div class="course-meta">
                 <span>Português</span>
                 <span>Intermediário</span>
-                <span>Ambiente e Saúde</span>
+                <span>Inclusão e Acessibilidade</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mais-cursados" aria-labelledby="mais-cursados-title">
+      <div class="shell">
+        <div class="section-row">
+          <div class="section-head">
+            <p class="eyebrow">Demanda real</p>
+            <h2 id="mais-cursados-title">Mais cursados</h2>
+            <p>Ordenados pelo número de matrículas registrado nos indicadores do Power BI da Vitrine.</p>
+          </div>
+          <a class="see-all" href="prototipo-vitrine-mooc/cursos.html">Ver todos os cursos →</a>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/ingles-comunicativo.png" alt="Imagem do curso Inglês Comunicativo – Aprenda o Básico Essencial">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">22,4 mil matrículas</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Inglês Comunicativo – Aprenda o Básico Essencial</h3>
+              <p>O curso mais matriculado da Vitrine: o essencial do inglês para comunicação no dia a dia.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Línguas</span>
               </div>
             </div>
           </article>
 
-          <article class="course-card" data-tags="ambiente saude quimica ciencias">
+          <article class="course-card">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mooc_Moodle-01.jpg" alt="Imagem do curso Moodle para Educadores">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">11,4 mil matrículas</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Moodle para Educadores</h3>
+              <p>Curso de grande procura entre docentes que atuam com ambiente virtual de aprendizagem.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Educação a Distância</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Uso_Educacional_Canva_Vitrine.png" alt="Imagem do curso Uso Educacional do Canva">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">8,6 mil matrículas</span>
+                <span class="badge neutral">6h</span>
+              </div>
+              <h3>Uso Educacional do Canva</h3>
+              <p>Produção de materiais visuais educativos com o Canva, entre os campeões de matrícula.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Design</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recentes" aria-labelledby="recentes-title">
+      <div class="shell">
+        <div class="section-row">
+          <div class="section-head">
+            <p class="eyebrow">Novidades</p>
+            <h2 id="recentes-title">Adicionados recentemente</h2>
+            <p>Últimos cursos publicados na Vitrine — esta seção absorve as novas levas automaticamente.</p>
+          </div>
+          <a class="see-all" href="prototipo-vitrine-mooc/cursos.html">Ver todos os cursos →</a>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card">
             <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_A-Quimica-dos-produtos-de-limpeza.png" alt="Imagem do curso A Química dos produtos de limpeza">
             <div class="course-body">
               <div class="badges">
@@ -989,11 +982,28 @@
             </div>
           </article>
 
-          <article class="course-card" data-tags="tecnologia informatica ciencias unac">
+          <article class="course-card">
+            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_espanhol-comunicativo-1.png" alt="Imagem do curso Espanhol Comunicativo para Brasileiros">
+            <div class="course-body">
+              <div class="badges">
+                <span class="badge">Novo</span>
+                <span class="badge neutral">60h</span>
+              </div>
+              <h3>Espanhol Comunicativo para Brasileiros</h3>
+              <p>Comunicação em espanhol para o dia a dia, publicado dentro da coleção UnAC.</p>
+              <div class="course-meta">
+                <span>Português</span>
+                <span>Básico</span>
+                <span>Línguas</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card">
             <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_uso-de-realidade-aumentada-1.png" alt="Imagem do curso Uso de Realidade Aumentada no Ensino de Ciências">
             <div class="course-body">
               <div class="badges">
-                <span class="badge">UnAC</span>
+                <span class="badge">Novo</span>
                 <span class="badge neutral">30h</span>
               </div>
               <h3>Uso de Realidade Aumentada no Ensino de Ciências</h3>
@@ -1002,40 +1012,6 @@
                 <span>Português</span>
                 <span>Básico</span>
                 <span>Tec. e Informática</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card" data-tags="tecnologia informatica dados r alta">
-            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/Logo_UnAC_WhatsApp.png" alt="Logo da UnAC relacionado ao curso Estatística com o R">
-            <div class="course-body">
-              <div class="badges">
-                <span class="badge">Alta procura</span>
-                <span class="badge neutral">Dados</span>
-              </div>
-              <h3>Estatística com o R</h3>
-              <p>Curso de alta demanda identificado nos indicadores, útil para destacar tecnologia e dados.</p>
-              <div class="course-meta">
-                <span>Português</span>
-                <span>Tec. e Informática</span>
-                <span>UnAC</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card" data-tags="linguas alta comunidade">
-            <img class="thumb" src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_espanhol-comunicativo-1.png" alt="Imagem do curso Espanhol Comunicativo para Brasileiros">
-            <div class="course-body">
-              <div class="badges">
-                <span class="badge">Línguas</span>
-                <span class="badge neutral">60h</span>
-              </div>
-              <h3>Inglês Comunicativo</h3>
-              <p>Representa o maior curso em matrículas e mostra a força da busca por formação aberta nacional.</p>
-              <div class="course-meta">
-                <span>Português</span>
-                <span>Básico</span>
-                <span>Alta procura</span>
               </div>
             </div>
           </article>
@@ -1219,53 +1195,5 @@
     </div>
   </footer>
 
-  <script>
-    const normalizeText = (value) =>
-      value
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-
-    const searchInput = document.querySelector("#course-search");
-    const clearButton = document.querySelector("#clear-search");
-    const chips = Array.from(document.querySelectorAll("[data-filter]"));
-    const cards = Array.from(document.querySelectorAll(".course-card"));
-    let activeFilter = "todos";
-
-    function applyFilters() {
-      const query = normalizeText(searchInput.value.trim());
-      let visibleCount = 0;
-
-      cards.forEach((card) => {
-        const text = normalizeText(card.textContent + " " + card.dataset.tags);
-        const matchesQuery = !query || text.includes(query);
-        const matchesFilter = activeFilter === "todos" || text.includes(activeFilter);
-        const visible = matchesQuery && matchesFilter;
-
-        card.hidden = !visible;
-        if (visible) visibleCount += 1;
-      });
-
-      const grid = document.querySelector("#course-grid");
-      grid.setAttribute("aria-label", `${visibleCount} cursos encontrados`);
-    }
-
-    chips.forEach((chip) => {
-      chip.addEventListener("click", () => {
-        activeFilter = chip.dataset.filter;
-        chips.forEach((item) => item.classList.toggle("is-active", item === chip));
-        applyFilters();
-      });
-    });
-
-    searchInput.addEventListener("input", applyFilters);
-    clearButton.addEventListener("click", () => {
-      searchInput.value = "";
-      activeFilter = "todos";
-      chips.forEach((item) => item.classList.toggle("is-active", item.dataset.filter === "todos"));
-      applyFilters();
-      searchInput.focus();
-    });
-  </script>
 </body>
 </html>
