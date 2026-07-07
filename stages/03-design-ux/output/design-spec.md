@@ -1,6 +1,6 @@
 # Especificação de Design — Vitrine MOOC Ifes
 
-> **Estágio:** 03 — Design/UX · **Versão:** 1.0 · **Data:** 06/07/2026
+> **Estágio:** 03 — Design/UX · **Versão:** 1.1 · **Data:** 07/07/2026
 > **Base:** `design-system/palette.md` + `design-system/typography.md` (destilados via skill `design-md`)
 > · `stages/02-catalogo/output/arquitetura-informacao.md` v4.1 (taxonomia/navegação)
 > · `stages/02-catalogo/output/powerbi-mooc-ifes/analise-insights-powerbi-mooc-ifes.md` (demanda)
@@ -116,7 +116,7 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 ### 2.6 Header
 
 - bg `#ffffff`, borda inferior `#dee2e6`, altura 64px, sticky.
-- Logo Ifes/Vitrine à esquerda → home. Navegação: **Cursos · Áreas · Para quem · Licença Capacitação · Sobre**. Item ativo em `--cor-primaria`.
+- Logo Ifes/Vitrine à esquerda → home. Navegação: **Cursos · Áreas · Licença Capacitação · Sobre**. Item ativo em `--cor-primaria`.
 - Busca acessível (ícone que expande). Barra de acessibilidade governamental no topo (contraste, A- A+), padrão gov.
 
 ### 2.7 Footer
@@ -158,7 +158,7 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 | xl | ≥1200px | 4 colunas | container 1140px |
 
 ### 3.3 SEO/GEO/AEO
-- 1 URL canônica por curso (`/cursos/{slug}/`). Páginas indexáveis: `/cursos/`, `/areas/{cat}/`, `/publicos/{pub}/`, `/certificacao/`, `/qualificacao/`. Combinações de faceta = `noindex`/canonical.
+- 1 URL canônica por curso (`/cursos/{slug}/`). Páginas indexáveis: `/cursos/`, `/areas/{cat}/`, `/certificacao/`, `/qualificacao/`. Combinações de faceta, inclusive `/cursos/?publico=…`, = `noindex`/canonical.
 - Schema.org: `Course` + `ItemList` + `BreadcrumbList` + `Organization` + `inLanguage`/`accessibilityFeature`. Conteúdo principal no HTML (evitar "carregar mais" sem fallback rastreável).
 
 ### 3.4 Consistência com o design-system

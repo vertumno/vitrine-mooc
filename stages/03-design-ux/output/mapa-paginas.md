@@ -1,9 +1,11 @@
 # Mapa de Páginas — Vitrine MOOC Ifes
 
-> **Estágio:** 03 — Design/UX · **Versão:** 1.0 · **Data:** 06/07/2026
+> **Estágio:** 03 — Design/UX · **Versão:** 1.2 · **Data:** 07/07/2026
 > **Base:** `stages/02-catalogo/output/arquitetura-informacao.md` v4.1 (navegação/URLs) ·
-> `design-spec.md` (componentes) · `design-system/` (tokens).
-> **Protótipos:** `stages/03-design-ux/output/prototipo-vitrine-mooc/` (HTML navegável).
+> `design-system/design-system-oficial.md` (tokens, componentes e regras — canônico).
+> **Protótipos oficiais:** `stages/03-design-ux/output/prototipo-cursos-abertos/` (Home + Catálogo).
+> Protótipos anteriores arquivados em `_arquivo/` (ver README de lá).
+> **Nome público da plataforma: "Cursos Abertos do Ifes"** — "Vitrine" é só codinome interno.
 
 Cada página lista: **propósito**, **seções** (ordem de leitura), **dados exibidos** (com a fonte),
 e **indexável?** (SEO). Metadados do curso seguem o **Art. 14 da Resolução CS 72/2020** e o
@@ -13,21 +15,22 @@ e **indexável?** (SEO). Metadados do curso seguem o **Art. 14 da Resolução CS
 
 ## Inventário de páginas
 
-| # | Página | URL | Indexável | Protótipo existente |
+| # | Página | URL | Indexável | Protótipo oficial (`prototipo-cursos-abertos/`) |
 |---|--------|-----|:---------:|---------------------|
-| 1 | Home | `/` | ✅ | `proposta-home-vitrine.html` |
+| 1 | Home | `/` | ✅ | `index.html` |
 | 2 | Catálogo / Busca | `/cursos/` | ✅ | `cursos.html` |
-| 3 | Página do curso | `/cursos/{slug}/` | ✅ | `curso-como-criar-mooc.html` |
-| 4 | Área (categoria) | `/areas/{slug}/` | ✅ | `area-educacao.html` |
-| 5 | Para quem (público) | `/publicos/{slug}/` | ✅ | `publico-professores.html` |
-| 6 | Série | `/series/{slug}/` | ✅ | — |
-| 7 | Projeto parceiro | `/v/{slug}/` (Rio Doce, UnAC) | ✅ | — |
-| 8 | Licença Capacitação + Planejador | `/qualificacao/` | ✅ | `qualificacao.html` |
-| 9 | Certificação | `/certificacao/` | ✅ | — |
-| 10 | Sobre | `/sobre/` | ✅ | `sobre.html` |
-| 11 | Perguntas frequentes | `/faq/` | ✅ | `perguntas-frequentes.html` |
+| 3 | Página do curso | `/cursos/{slug}/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/curso-como-criar-mooc.html`) |
+| 4 | Área (categoria) | `/areas/{slug}/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/area-educacao.html`) |
+| 5 | Série | `/series/{slug}/` | ✅ | — |
+| 6 | Projeto parceiro | `/v/{slug}/` (Rio Doce, UnAC) | ✅ | — |
+| 7 | Licença Capacitação + Planejador | `/qualificacao/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/qualificacao.html`) |
+| 8 | Certificação | `/certificacao/` | ✅ | — |
+| 9 | Sobre | `/sobre/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/sobre.html`) |
+| 10 | Perguntas frequentes | `/faq/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/perguntas-frequentes.html`) |
 
-Combinações de faceta (`/cursos/?categoria=…&carga=…`) = **não indexáveis** (`noindex`/canonical).
+Combinações de faceta (`/cursos/?categoria=…&carga=…&publico=…`) = **não indexáveis** (`noindex`/canonical).
+
+> **Removido (v1.2):** as páginas `/publicos/{slug}/` ("Para quem") foram eliminadas como páginas dedicadas. A navegação por público funciona apenas como **atalhos na Home** que apontam para o catálogo pré-filtrado (`/cursos/?publico=professores`). Justificativa: 107/165 cursos declaram 2+ públicos — páginas por audiência geram repetição e auto-exclusão falsa (ver `decisao-taxonomia-cenarios.md` §2b).
 
 ---
 
@@ -37,7 +40,7 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…`) = **não indexávei
 
 **Seções (ordem):**
 1. **Hero** — título/proposta de valor ("Cursos gratuitos e abertos do Ifes, com certificado"), busca proeminente, CTA.
-2. **Atalhos "Para quem"** — 3–4 cards de público (professores/educadores · comunidade/começar do zero · trabalho e carreira · servidores/setor público). *Atalhos, nunca rota única.*
+2. **Atalhos "Para quem"** — 3–4 cards de público (professores/educadores · comunidade/começar do zero · trabalho e carreira · servidores/setor público). *Atalhos na Home que linkam para `/cursos/?publico=…` (catálogo pré-filtrado). Sem página própria.*
 3. **Em destaque** — curadoria manual (CEFOR).
 4. **Mais cursados** — ordenado por matrículas (Power BI). Expõe demanda: Inglês, Moodle p/ Educadores, Canva, Google Drive.
 5. **Recentes** — últimos publicados (absorve levas trimestrais automaticamente).
@@ -52,15 +55,14 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…`) = **não indexávei
 
 ## 2. Catálogo / Busca — `/cursos/`
 
-**Propósito:** encontrar cursos por busca + facetas combináveis.
+**Propósito:** encontrar cursos por busca + facetas combináveis. Estrutura de referência: página de catálogo da DeepLearning.AI (destaques em carrossel no topo + grade com filtros laterais).
 
 **Seções:**
-1. Barra de busca (título + tags, tolerante a acento).
-2. Facetas (sidebar desktop / bottom-sheet mobile): Categoria (15) · Para quem · Carga horária (≤10/10–20/20–40/40–60h) · Acessibilidade (Libras/AD) · Idioma.
-3. Chips de filtros ativos + "Limpar".
-4. Ordenação: Relevância · Mais cursados · Recentes · A–Z.
-5. Grade de cards (paginação/scroll com fallback rastreável).
-6. Estado vazio (microcopy + sugestões).
+1. **Cursos em destaque** — carrossel com card grande (imagem + título + descrição + chips + carga/nível + CTAs "Saber mais"/"Começar agora"), curadoria CEFOR, indicadores de navegação (dots).
+2. Facetas em **sidebar** com checkboxes e contagem por faceta (desktop; bottom-sheet mobile): Categoria (15) · Para quem · Carga horária (≤10/10–20/20–40/40–60h) · Nível · Acessibilidade (Libras/AD) · Idioma. Busca (título + tags, tolerante a acento) no topo da sidebar + "Limpar filtros".
+3. **"Mostrando N cursos"** + título "Todos os cursos" + Ordenação: Relevância · Mais cursados · Recentes · A–Z.
+4. Grade de cards com CTA por card (paginação/scroll com fallback rastreável).
+5. Estado vazio (microcopy + sugestões).
 
 **Dados:** cards de curso; contagem por faceta; total de resultados.
 
@@ -106,17 +108,11 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…`) = **não indexávei
 
 ---
 
-## 5. Para quem (público) — `/publicos/{slug}/`
-
-**Propósito:** atalho de autoidentificação (professores, comunidade, trabalho/carreira, servidores). Indexável ("cursos para professores" é busca-alvo).
-
-**Seções:** título voltado ao público · texto curto · grade de cursos com aquele público-alvo · CTA (para servidores → liga à Licença Capacitação).
-
-**Dados:** cards filtrados por `público-alvo`. *Atalho, não rota única (107/165 cursos têm 2+ públicos).*
-
 ---
 
-## 6. Série — `/series/{slug}/`
+> **Nota (v1.2):** a página dedicada "Para quem (público)" (`/publicos/{slug}/`) foi **removida**. A autoidentificação por público agora funciona exclusivamente como **atalhos na Home** (seção 1, item 2) que direcionam para o catálogo pré-filtrado (`/cursos/?publico=professores`). O filtro "Para quem" continua disponível como **faceta** na sidebar do catálogo (página 2).
+
+## 5. Série — `/series/{slug}/`
 
 **Propósito:** contar a história de uma coleção de marca/produção.
 
@@ -126,7 +122,7 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…`) = **não indexávei
 
 ---
 
-## 7. Projeto parceiro — `/v/{slug}/`
+## 6. Projeto parceiro — `/v/{slug}/`
 
 **Propósito:** hub de projeto com identidade institucional.
 
@@ -136,7 +132,7 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…`) = **não indexávei
 
 ---
 
-## 8. Licença Capacitação + Planejador — `/qualificacao/`
+## 7. Licença Capacitação + Planejador — `/qualificacao/`
 
 **Propósito:** serviço para servidores públicos (não é filtro de conteúdo).
 
@@ -146,19 +142,19 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…`) = **não indexávei
 
 ---
 
-## 9. Certificação — `/certificacao/`
+## 8. Certificação — `/certificacao/`
 
 **Propósito:** explicar como funciona o certificado (aproveitamento ≥60%, autoinstrucional, sem tutoria). Página indexável (busca "curso gratuito com certificado").
 
 ---
 
-## 10. Sobre — `/sobre/`
+## 9. Sobre — `/sobre/`
 
 **Propósito:** o que é a Vitrine MOOC, o CEFOR/Ifes, o objetivo (Resolução CS 72/2020 — democratização/inclusão), como participar.
 
 ---
 
-## 11. Perguntas frequentes — `/faq/`
+## 10. Perguntas frequentes — `/faq/`
 
 **Propósito:** dúvidas comuns (como me inscrevo, certificado, gratuidade, pré-requisitos, Libras). Formato acordeão. Schema `FAQPage` para AEO.
 
@@ -177,6 +173,6 @@ Fonte: `stages/02-catalogo/output/catalogo-cursos-completo.csv`.
 
 ## Rastreabilidade
 
-- **Cobertura:** as 11 páginas cobrem toda a navegação da arquitetura v4.1 (Categorias, Para quem, Séries, Projetos, Licença, Certificação, Sobre, FAQ).
-- **Protótipos:** 7 das 11 já têm HTML em `prototipo-vitrine-mooc/`; faltam Série, Projeto e Certificação (derivam de padrões já definidos).
-- **Escopo:** 165 cursos publicados (os 65 "em produção" ficam fora — ver `arquitetura-informacao.md` v4.1).
+- **Cobertura:** as 10 páginas cobrem toda a navegação da arquitetura v4.2 (Categorias, Séries, Projetos, Licença, Certificação, Sobre, FAQ). "Para quem" funciona como atalho na Home + faceta no catálogo (sem página própria).
+- **Protótipos oficiais:** Home e Catálogo prontos em `prototipo-cursos-abertos/` (design system oficial). As demais páginas serão recriadas lá gradualmente; as versões antigas estão em `_arquivo/prototipo-vitrine-mooc/` apenas como consulta.
+- **Escopo:** 165 cursos publicados (os 65 "em produção" ficam fora — ver `arquitetura-informacao.md` v4.2).

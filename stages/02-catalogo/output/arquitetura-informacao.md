@@ -1,7 +1,7 @@
 # Arquitetura de Informação — Vitrine MOOC (modelo definitivo)
 
-> **Estágio:** 02 — Catálogo · **Versão:** 4.1 · **Data:** 06/07/2026 · **Papel:** arquitetura de informação
-> **Decisões travadas:** (1) **objetivo** ancorado na Resolução CS 72/2020 — "abertos à comunidade" (**"qualificação profissional" removido**); (2) **navegação primária = as 15 Categorias do formulário**; (3) **Eixo Tecnológico + Área CNPq = metadados oficiais**; (4) **trilha removida** (só Séries + Projetos); (5) **Licença Capacitação = área**, não objetivo; (6) selos **Libras + Audiodescrição + Idioma**; (7) **escopo = 165 cursos publicados** — os 65 "em produção" ficam **fora deste projeto**; (8) **carga horária resolvida** — populada em `catalogo-cursos-completo.csv` (coluna `carga_horaria`); (9) **UnAC definido** (§7); (10) **sem tree test** — rótulos "Para quem" são decisão editorial do CEFOR.
+> **Estágio:** 02 — Catálogo · **Versão:** 4.2 · **Data:** 07/07/2026 · **Papel:** arquitetura de informação
+> **Decisões travadas:** (1) **objetivo** ancorado na Resolução CS 72/2020 — "abertos à comunidade" (**"qualificação profissional" removido**); (2) **navegação primária = as 15 Categorias do formulário**; (3) **Eixo Tecnológico + Área CNPq = metadados oficiais**; (4) **trilha removida** (só Séries + Projetos); (5) **Licença Capacitação = área**, não objetivo; (6) selos **Libras + Audiodescrição + Idioma**; (7) **escopo = 165 cursos publicados** — os 65 "em produção" ficam **fora deste projeto**; (8) **carga horária resolvida** — populada em `catalogo-cursos-completo.csv` (coluna `carga_horaria`); (9) **UnAC definido** (§7); (10) **sem tree test** — rótulos "Para quem" são decisão editorial do CEFOR; (11) **"Para quem" = atalho na Home + faceta** — sem página dedicada `/publicos/` (v4.2).
 > **Âncoras:** `shared/resolucao-cs-72-2020-mooc.md`, `shared/seo-geo-aeo.md`, `comparativo-taxonomias.md`, `relatorio-publicos-alvo-mooc-ifes.md`, `powerbi-mooc-ifes/`.
 > **Substitui** as §3–4 de `taxonomia.md` e encerra `decisao-taxonomia-cenarios.md` e `comparativo-taxonomias.md`.
 
@@ -70,11 +70,13 @@ Cada Categoria vira **`/areas/{slug}/`** (página editorial indexável: texto + 
 
 > **⚠️ AÇÃO DE MIGRAÇÃO (obrigatória):** na migração, **recategorizar todos os cursos conforme as 15 Categorias**. Os cursos legados carregam o esquema antigo (19, com CNPq e Eixo infiltrados). É preciso: (a) remapear os 5 rótulos infiltrados (Ciências Humanas/Sociais/Exatas → Área CNPq metadado; Desenv. Educacional e Social / Produção Cultural e Design → Eixo Tecnológico metadado); (b) atribuir a cada curso **1+ das 15 Categorias**; (c) conferir/preencher **Eixo Tecnológico (1), Idioma, Nível, Público-alvo, carga horária**. Executar nos **Estágios 04 (setup/dump) e 06 (QA/entrega)**; validar com o CEFOR.
 
-## 5. "Para quem" (camada de atalho — não é a espinha)
+## 5. "Para quem" (atalho na Home + faceta — sem página dedicada)
 
-Atalhos por público na home + **`/publicos/{slug}/`** (indexáveis — "cursos para professores" é busca-alvo `[SEO]`). São atalhos, nunca rota única (107/165 cursos têm 2+ públicos):
+Atalhos por público na Home (3–4 cards) que direcionam para o **catálogo pré-filtrado** (`/cursos/?publico=professores`). Também disponível como **faceta** na sidebar do catálogo. **Sem página dedicada** `/publicos/{slug}/`.
 
 - Para professores e educadores (~66%) · Para a comunidade (comece do zero) (~48%) · Para o trabalho e a carreira · Para servidores e setor público (→ liga à área de Licença).
+
+**Justificativa da remoção de `/publicos/`:** 107/165 cursos declaram 2+ públicos — páginas por audiência geram repetição massiva e auto-exclusão falsa ("não sou professor, ignoro"). Navegação por audiência falha quando a sobreposição é alta (Nielsen). "Para quem" é **merchandising de Home**, não fundação de navegação (ver `decisao-taxonomia-cenarios.md` §2b/§2f).
 
 Rótulos definidos por decisão editorial do CEFOR (rótulo concreto > esperto). **Sem tree test.**
 
@@ -100,7 +102,7 @@ Qualquer curso certificado gera horas → Licença não filtra conteúdo. `/qual
 
 ## 9. SEO/GEO/AEO `[SEO]`
 
-URLs slug (`/cursos/{slug}/`, `/areas/{categoria}/`, `/publicos/{publico}/`, `/certificacao/`, `/qualificacao/`); **1 URL canônica por curso** (resolve multi-categoria/multi-público sem duplicar índice); indexável = categorias + públicos + certificação (páginas editoriais reais); **não indexável** = combinações de filtro (`noindex`/canonical); schema `Course` + `ItemList` + `BreadcrumbList` + `Organization` + `inLanguage`/`accessibilityFeature`; conteúdo principal no HTML (cuidado com "carregar mais" — fallback rastreável).
+URLs slug (`/cursos/{slug}/`, `/areas/{categoria}/`, `/certificacao/`, `/qualificacao/`); **1 URL canônica por curso** (resolve multi-categoria/multi-público sem duplicar índice); indexável = categorias + certificação + qualificação (páginas editoriais reais); **não indexável** = combinações de filtro, inclusive `/cursos/?publico=…` (`noindex`/canonical); schema `Course` + `ItemList` + `BreadcrumbList` + `Organization` + `inLanguage`/`accessibilityFeature`; conteúdo principal no HTML (cuidado com "carregar mais" — fallback rastreável).
 
 ## 10. Metadados por curso = Art. 14 da resolução (Camada A)
 
@@ -113,34 +115,34 @@ URLs slug (`/cursos/{slug}/`, `/areas/{categoria}/`, `/publicos/{publico}/`, `/c
 | **Área do conhecimento (CNPq)** | Art. 14 VIII | ✅ (metadado) |
 | **Eixo Tecnológico** (1 de 13) | Art. 14 IX | ✅ (metadado/filtro) |
 | **Categorias (15)** | formulário | ✅ ≥1 (**navegação**) |
-| **Público-alvo** | Art. 14 XII | ✅ (atalho "Para quem") |
+| **Público-alvo** | Art. 14 XII | ✅ (atalho Home + faceta catálogo) |
 | Objetivos, ementa, metodologia, perfil do egresso, avaliação, bibliografia | Art. 14 XV–XXII | ✅ (página/SEO) |
 | Certificação, status (publicado/produção/encerrado) | resolução | ✅ |
 | **Libras, Audiodescrição** | Arts. 13/16 | ➖ (selo) |
 | Série, Projeto | editorial | ➖ |
 | tags | formulário | ✅ (busca) |
 
-**Regra de publicação:** preenchido o Art. 14, o curso entra em busca, filtros, `/areas/`, `/publicos/`, "Recentes" e selos **automaticamente**.
+**Regra de publicação:** preenchido o Art. 14, o curso entra em busca, filtros, `/areas/`, "Recentes" e selos **automaticamente**.
 
 ## 11. Navegação (o teste de "achar o curso")
 
 | Usuário | Caminho | Camada |
 |---------|---------|--------|
 | Sabe o tema | Busca / **Categoria** (`/areas/`) | B |
-| Sabe quem é | **"Para quem"** (`/publicos/`) | B |
+| Sabe quem é | **Atalho "Para quem"** na Home → `/cursos/?publico=…` | B |
 | Precisa de acessibilidade | Filtro/selo (Libras/Audiodescrição/Idioma) | D |
 | Não sabe o que quer | Wizard | B |
 | Servidor querendo horas | Área Licença + Planejador | E |
 | Quer o mais buscado | "Mais cursados" | B |
 | Interessado num projeto/marca | Página do Projeto/Série | C |
-| Chega pelo Google | `/cursos/`, `/areas/`, `/publicos/` indexáveis | B+SEO |
+| Chega pelo Google | `/cursos/`, `/areas/` indexáveis | B+SEO |
 
 ## 12. Pendências
 
 1. **Migração:** recategorizar cursos nas 15 Categorias + conferir/popular Eixo/Idioma/Nível/Público no destino (§4, Estágios 04/06). Carga horária já disponível como fonte em `catalogo-cursos-completo.csv`.
 2. **Dados:** extrair os campos reais do **dump** (nosso `catalogo-cursos.csv` tem as 19 legadas).
 
-**Resolvidas (06/07/2026):** **UnAC** definido (§7); **carga horária** populada em `catalogo-cursos-completo.csv`; **escopo = 165 publicados** (os 65 "em produção" ficam fora deste projeto); **sem tree test** (rótulos "Para quem" = decisão editorial do CEFOR).
+**Resolvidas (06/07/2026):** **UnAC** definido (§7); **carga horária** populada em `catalogo-cursos-completo.csv`; **escopo = 165 publicados** (os 65 "em produção" ficam fora deste projeto); **sem tree test** (rótulos "Para quem" = decisão editorial do CEFOR). **(07/07/2026):** **"Para quem" sem página dedicada** — atalho na Home + faceta no catálogo (v4.2).
 
 ---
 
