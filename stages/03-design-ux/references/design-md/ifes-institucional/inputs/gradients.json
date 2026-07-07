@@ -1,0 +1,47 @@
+{
+  "primary": "linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent)",
+  "secondary": "linear-gradient(top, #fbb450, #f89406)",
+  "total_unique": 53,
+  "top": [
+    {
+      "value": "linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent)",
+      "count": 20
+    },
+    {
+      "value": "linear-gradient(top, #fbb450, #f89406)",
+      "count": 6
+    },
+    {
+      "value": "linear-gradient(top, #0088cc, #0077b3)",
+      "count": 6
+    },
+    {
+      "value": "radial-gradient(center,ellipse cover,#17882c 1%,#00510f 100%)",
+      "count": 4
+    },
+    {
+      "value": "linear-gradient(top,#4f82d0 0,#275292 100%)",
+      "count": 4
+    },
+    {
+      "value": "linear-gradient(top,#6c0aa3 0,#2c0443 100%)",
+      "count": 4
+    },
+    {
+      "value": "linear-gradient(top,#ff5601 0,#9a3400 100%)",
+      "count": 4
+    },
+    {
+      "value": "linear-gradient(top,#1672ad 0,#0a3653 100%)",
+      "count": 4
+    },
+    {
+      "value": "linear-gradient(top,#1cac03 0,#0c4801 100%)",
+      "count": 4
+    },
+    {
+      "value": "radial-gradient(center,ellipse cover,#000 1%,#000 100%)",
+      "count": 4
+    }
+  ]
+}

@@ -9,6 +9,7 @@ Construir o tema, os templates e o modelo de dados do catalogo no WordPress 7.
 | Design | `../03-design-ux/output/` | Arquivos completos | Spec de design e mapa de paginas |
 | Ambiente | `../04-setup-ambiente/output/` | Arquivo completo | Estado do ambiente e estrutura do repo |
 | Catalogo | `../02-catalogo/output/` | Arquivos completos | Taxonomia e metadados a modelar |
+| Modelo de origem | `../01-descoberta/output/modelo-dados-vitrine-atual.md` | Arquivo completo | Schema atual (CPT `curso` + ACF) de onde os dados migram |
 | Design system | `../../design-system/palette.md`, `../../design-system/typography.md` | Arquivos completos | Tokens de cor e tipografia |
 | Skill | `../../skills/README.md` | Indice, depois regras | WordPress e frontend-design |
 

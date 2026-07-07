@@ -3,6 +3,7 @@
 > **Estágio:** 01 — Descoberta
 > **Data:** 01/07/2026
 > **Fonte:** `stages/01-descoberta/references/html-vitrine-atual.md` (HTML renderizado de `https://mooc.cefor.ifes.edu.br/`).
+> **Complemento (06/07/2026):** modelo de dados interno (CPT `curso` + ACF, taxonomia, plugins) em `modelo-dados-vitrine-atual.md`, extraído do export WXR em `references/vitrinemooc.WordPress.2026-07-06.xml`.
 
 Levantamento da estrutura, recursos e débitos da Vitrine atual, classificando o que **manter**, **mudar/melhorar** e **descartar** na nova versão. Serve de base para o catálogo (estágio 02) e o design (estágio 03).
 
@@ -18,6 +19,7 @@ Levantamento da estrutura, recursos e débitos da Vitrine atual, classificando o
 | Arquitetura | **Single-page**: uma única página com navegação por âncoras |
 | Analytics | Google Analytics **Universal (UA-96660984-4)** + Hotjar (hjid 4968339) |
 | Integração | Cursos e login apontam para o **Moodle** (`/moodle/...`) |
+| Modelo de dados | CPT `curso` + ACF "Curso Vitrine" (6 campos), 21 categorias, 452 tags — detalhes em `modelo-dados-vitrine-atual.md` |
 
 ## 2. Mapa de seções (ordem da página)
 
@@ -79,8 +81,9 @@ Levantamento da estrutura, recursos e débitos da Vitrine atual, classificando o
 ## 7. Riscos técnicos
 
 - **Migração de dados:** a Vitrine não pode ser travada; risco de divergência entre o dump usado no dev e o estado em produção no momento da migração — mitigado refazendo o dump na hora. `[CON-03]`
-- **Paridade de conteúdo:** garantir que os ~165 cursos (+65) e suas categorias/tags sejam preservados na migração — validar contra o catálogo (estágio 02).
-- **Dependência da CGTI:** ambiente de teste, dump e definição de branches são pré-requisitos externos. `[Dependências]`
+- **Paridade de conteúdo:** garantir que os 167 cursos do banco (165 publicados + 2 privados, +65 em produção) e suas categorias/tags sejam preservados na migração — validar contra o catálogo (estágio 02) e o dump (`modelo-dados-vitrine-atual.md`).
+- **Dependência de plugin para os dados:** o CPT `curso` é registrado pelo plugin Custom Post Type UI (configuração no banco), não pelo tema — ambiente sem o plugin "perde" os cursos no admin. A nova arquitetura (estágio 05) deve registrar o CPT em código versionado.
+- **Dependência da CGTI:** dump **entregue em 03/07/2026** (`stages/04-setup-ambiente/references/backup_vitrine_mooc.sql`); seguem pendentes o ambiente de teste, a definição de branches e a cópia de `wp-content/uploads` (as imagens não vêm no dump). `[Dependências]`
 
 ---
 

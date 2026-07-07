@@ -1,6 +1,6 @@
 # Comparativo de Taxonomias — qual vira a navegação primária
 
-> **Estágio:** 02 — Catálogo · **Data:** 02/07/2026 · **Status:** ✅ DECIDIDO — **navegação primária = as 15 Categorias do formulário** (02/07). Modelo final em `arquitetura-informacao.md` v4. Ação registrada: recategorizar cursos nas 15 Categorias na migração.
+> **Estágio:** 02 — Catálogo · **Data:** 02/07/2026 · **Status:** ✅ DECIDIDO — **navegação primária = as 15 Categorias do formulário** (02/07). Modelo final em `arquitetura-informacao.md` **v4.1**. Ação registrada: recategorizar cursos nas 15 Categorias na migração.
 > **Âncora:** objetivo oficial da plataforma (Resolução CS 72/2020, Art. 1º): **"cursos oferecidos a distância e abertos à comunidade"** → público **leigo, nacional, de descoberta**. A navegação tem que falar a língua do cidadão comum, cobrir o catálogo e **escalar sozinha** (curso novo a cada 3 meses).
 > **Novidade decisiva:** o **formulário de cadastro** que o professor preenche já coleta, **na fonte**, três campos de classificação.
 

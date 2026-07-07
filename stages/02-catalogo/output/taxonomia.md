@@ -1,9 +1,10 @@
 # Taxonomia — Catálogo Vitrine MOOC Ifes
 
-> **Estágio:** 02 — Catálogo · **Data:** 01/07/2026
+> **Estágio:** 02 — Catálogo · **Data:** 01/07/2026 (atualizado 06/07/2026)
 > **Base:** `catalogo-cursos.csv` (165 cursos publicados, extração ao vivo jul/2026) + `shared/prd-vitrine-mooc-v1.md` (objetivos e trilhas) + `deep-research-ux-descoberta-mooc.md` (R7 — reforço de taxonomia).
 > **Mapa por curso:** `taxonomia-cursos.csv` (curso → categorias, objetivos, trilhas).
-> **⚠️ Refinamento:** as seções 3 (Objetivos) e 4 (Trilhas) foram **repensadas** em `arquitetura-informacao.md` (modelo de 5 construtos, distinção trilha × projeto, Licença Capacitação como área e navegação por público). Leia aquele documento antes de usar os objetivos/trilhas abaixo.
+> **⚠️ Documento oficial:** `arquitetura-informacao.md` **v4.1** é o modelo definitivo. As seções 3 (Objetivos) e 4 (Trilhas) abaixo foram **substituídas** — **trilha removida** (só Séries + Projetos), objetivo ancorado na Resolução CS 72/2020, navegação primária = 15 Categorias, Licença Capacitação = área. Mantidas aqui como registro histórico.
+> **Decisões travadas (06/07/2026):** escopo = **165 publicados** (os 65 "em produção" ficam fora deste projeto); **carga horária populada** em `catalogo-cursos-completo.csv`; **UnAC** definido (Universidade Aberta Capixaba — ver `projetos-especiais.md`); **sem tree test** (rótulos = decisão editorial do CEFOR).
 
 O catálogo é fatiado por **quatro lentes**. Duas são **fato** (extraídas do site); duas são **proposta** derivada do PRD, a validar com o CEFOR/Comissão MOOC.
 
@@ -119,26 +120,28 @@ Campos que estruturam cada card/curso na nova Vitrine (alinhado ao card enriquec
 | `libras` | site (selo) | ✅ |
 | `link_curso` | site (Moodle) | ✅ (padronizar slug × `?id=`) |
 | `imagem` | site | ✅ |
-| `carga_horaria` | WP (campo existe) | ❌ **não populado (Raquel)** |
+| `carga_horaria` | `catalogo-cursos-completo.csv` | ✅ **populado** |
 | `nº_inscritos` | Moodle/banco | ❌ a definir |
 | `descricao` / `objetivos_aprendizagem` | a produzir | ❌ novo (card expandido) |
 | `badge_novo` | derivar da data (< 3 meses) | ⚠️ regra |
-| `status` | publicado / em produção | ✅ (165 publicados; 65 em produção pendentes) |
+| `status` | publicado | ✅ (165 publicados — **escopo do projeto**; 65 "em produção" fora deste projeto) |
 
 ## 6. Perguntas para o CEFOR / Comissão MOOC (validação)
+
+> **Histórico — em grande parte resolvido pela v4.1.** Objetivos/Trilhas (1–2) foram substituídos: trilhas removidas, navegação por 15 Categorias. Categorias/Tags (3–4) tratados na consolidação da v4.1. **Carga horária (5): resolvida** — populada em `catalogo-cursos-completo.csv`. **65 em produção (6): resolvido** — ficam **fora deste projeto** (escopo = 165 publicados).
 
 1. **Objetivos:** aceitam os 4 como atalhos parciais (opção a) ou querem um 5º tema "Educação Ambiental e Ciências" (opção b)?
 2. **Trilhas:** confirmam os membros propostos? Quais 5 cursos oficiais da trilha Rio Doce e os 4 da Maker?
 3. **Categorias:** podemos fundir as de 1–3 cursos com afins?
 4. **Tags:** aprovam a consolidação das tags fragmentadas do Rio Doce?
-5. **Carga horária:** cronograma da Raquel para popular os dados (bloqueia trilhas, filtros por CH e o Planejador).
-6. **Em produção:** onde está a lista dos 65 cursos em produção (para incluir no catálogo)?
+5. ~~**Carga horária:** cronograma da Raquel para popular os dados.~~ → **Resolvido:** populada em `catalogo-cursos-completo.csv`.
+6. ~~**Em produção:** onde está a lista dos 65 cursos em produção?~~ → **Resolvido:** fora deste projeto (escopo = 165 publicados).
 
 ---
 
 ## Rastreabilidade (Audit)
 - **Cobertura:** os 165 cursos publicados estão no `catalogo-cursos.csv` e no `taxonomia-cursos.csv`.
 - **Classificação:** todo curso tem ≥1 categoria (fato). Objetivos/trilhas são proposta rastreável (regra explícita nas §3–4).
-- **Status:** 165 = publicado; os 65 em produção estão **pendentes** (fonte `references/cursos-fonte.md`, a incorporar).
+- **Status:** 165 = publicado (**escopo do projeto**); os 65 "em produção" ficam **fora deste projeto**.
 - **Esquema:** campos definidos na §5; lacunas marcadas (carga horária, inscritos, descrição).
 - **Fato × Proposta:** categorias/tags = fato; objetivos/trilhas = proposta a validar (No Invention).

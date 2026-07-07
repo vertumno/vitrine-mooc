@@ -68,7 +68,7 @@ Pipeline: vitrine-mooc
 | Catalogo | `stages/01-descoberta/output/`, `stages/02-catalogo/references/cursos-fonte.md`, `stages/02-catalogo/output/powerbi-mooc-ifes/` quando houver priorizacao/indicadores | `design-system/`, `skills/`, estagios 03 a 06 |
 | Design/UX | `stages/02-catalogo/output/`, `stages/02-catalogo/output/powerbi-mooc-ifes/analise-insights-powerbi-mooc-ifes.md`, `stages/03-design-ux/references/*`, `design-system/*`, `skills/` (frontend) | estagios 04 a 06, transcricao |
 | Setup ambiente | `stages/01-descoberta/output/`, `shared/convencoes-git-deploy.md`, `stages/04-setup-ambiente/references/*` | `design-system/`, `stages/02-catalogo/` |
-| Desenvolvimento | `stages/03-design-ux/output/`, `stages/04-setup-ambiente/output/`, `design-system/*`, `skills/` | estagios 01 e 02 (brutos), transcricao |
+| Desenvolvimento | `stages/03-design-ux/output/`, `stages/04-setup-ambiente/output/`, `stages/01-descoberta/output/modelo-dados-vitrine-atual.md` (schema de origem da migracao), `design-system/*`, `skills/` | estagios 01 e 02 (brutos), transcricao |
 | QA e entrega | `stages/05-desenvolvimento/output/`, `shared/convencoes-git-deploy.md`, `stages/06-qa-entrega/references/*` | estagios 01 a 03 |
 
 ## Handoff entre estagios

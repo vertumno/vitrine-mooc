@@ -1,0 +1,15 @@
+{
+  "primary": "linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.3) 70%,transparent)",
+  "secondary": "linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)",
+  "total_unique": 2,
+  "top": [
+    {
+      "value": "linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.3) 70%,transparent)",
+      "count": 2
+    },
+    {
+      "value": "linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)",
+      "count": 1
+    }
+  ]
+}

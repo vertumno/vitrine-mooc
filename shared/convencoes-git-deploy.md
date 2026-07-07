@@ -21,6 +21,7 @@ branch de trabalho (dev) ---PR---> {{BRANCH_TESTE}} ---validacao---> {{BRANCH_PR
 
 - Desenvolve-se em teste, com banco de teste. Nada sobe em producao para depois "virar".
 - A Vitrine NAO pode ser travada para insercoes: trabalha-se com uma "fotografia de hoje" (dump) e refaz-se o dump no momento da migracao.
+- Dumps de banco (`*.sql`) NUNCA sao versionados: contem dados pessoais (e-mails, hashes de senha, IPs — LGPD). O `.gitignore` da raiz ja bloqueia. Dump atual: `stages/04-setup-ambiente/references/backup_vitrine_mooc.sql` (CGTI, 03/07/2026).
 - O diretorio de HTML puro que existia era rascunho e foi descartado. O HTML da Vitrine atual fica preservado apenas como referencia em `stages/01-descoberta/references/html-vitrine-atual.md`.
 
 ## Estrutura do Repositorio

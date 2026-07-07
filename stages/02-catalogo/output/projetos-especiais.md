@@ -59,6 +59,7 @@ Os cursos abaixo são associados a cada projeto pela `data-tag` correspondente n
 
 ## UnAC
 
+- **O que é (oficial):** **Universidade Aberta Capixaba (UnAC)** — programa do **Governo do Estado do Espírito Santo** que visa **expandir e democratizar o Ensino Superior gratuito**. O Instituto Federal do Espírito Santo (Ifes), por meio do **Centro de Referência em Formação e em Educação a Distância (CEFOR)**, mantém parceria com o Governo do Estado do ES na oferta de **cursos abertos, massivos e online de alta qualidade para toda a sociedade**.
 - **Hub (página do programa):** [https://mooc.cefor.ifes.edu.br/v/unac/](https://mooc.cefor.ifes.edu.br/v/unac/)
 - **Logo:** [https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/Logo_UnAC_WhatsApp.png](https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2023/10/Logo_UnAC_WhatsApp.png)
 - **Cursos associados (por tag):** **33** · com Libras: 8
@@ -105,4 +106,4 @@ Os cursos abaixo são associados a cada projeto pela `data-tag` correspondente n
 ## Observações
 
 - Estes projetos são **coleções temáticas**, não cursos. No redesign, podem virar **páginas de programa** ou **filtros/coleções destacadas** (ver deep-research, R7 — reforço de taxonomia).
-- `UnAC` e `Rio Doce Escolar` aparecem como **tags** em muitos cursos; o significado/escopo oficial de cada sigla deve ser confirmado com o CEFOR (evitar invenção).
+- `UnAC` e `Rio Doce Escolar` aparecem como **tags** em muitos cursos. **UnAC** já tem descrição oficial (acima). O escopo de **Rio Doce Escolar** e a associação exata dos cursos ainda podem ser confirmados com o CEFOR (evitar invenção).

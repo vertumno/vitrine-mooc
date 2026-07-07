@@ -1,0 +1,4 @@
+# Dumps de banco: contem dados pessoais (e-mails, hashes de senha, IPs) - LGPD.
+# Ficam locais; a documentacao do conteudo esta em
+# stages/01-descoberta/output/modelo-dados-vitrine-atual.md
+*.sql

@@ -1,0 +1,45 @@
+{
+  "durations": [
+    {
+      "value": "0.5s",
+      "count": 9
+    },
+    {
+      "value": "2s",
+      "count": 8
+    },
+    {
+      "value": "0.6s",
+      "count": 8
+    },
+    {
+      "value": "3s",
+      "count": 8
+    },
+    {
+      "value": "0.1s",
+      "count": 4
+    },
+    {
+      "value": "0.2s",
+      "count": 4
+    },
+    {
+      "value": "0.15s",
+      "count": 4
+    },
+    {
+      "value": "0.35s",
+      "count": 4
+    },
+    {
+      "value": "6s",
+      "count": 4
+    }
+  ],
+  "easings": [],
+  "keyframes": [
+    "progress-bar-stripes",
+    "spin"
+  ]
+}

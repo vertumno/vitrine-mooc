@@ -1,20 +1,31 @@
+/* Fontes institucionais Ifes (design-system/typography.md) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Poppins:wght@500;600;700&family=Oswald:wght@500;700&display=swap');
+
 :root {
-  --green-900: #053f2d;
-  --green-800: #075437;
-  --green-700: #0b6b43;
-  --green-100: #dff2e8;
-  --green-050: #f0faf4;
-  --ink: #17201b;
-  --muted: #5b6b62;
-  --line: #d9e3dd;
-  --paper: #fbfdfb;
-  --surface: #ffffff;
-  --surface-2: #f4f8f5;
-  --focus: #ffbf47;
-  --shadow: 0 14px 34px rgb(5 63 45 / 0.08);
+  /* Marca — verde institucional Ifes (design-system/palette.md) */
+  --green-900: #195128;   /* verde profundo — rodapé, texto de badge */
+  --green-800: #066017;   /* verde escuro — links, hover, eyebrow */
+  --green-700: #147a02;   /* verde Ifes — primária (botões, brand) */
+  --green-100: #dcefd3;   /* verde claro — badge bg */
+  --green-050: #eff7ea;   /* verde muito claro — placeholder/hover */
+  /* Apoio e acento (herança da Vitrine atual) */
+  --teal: #008080;        /* apoio — chips de categoria */
+  --teal-050: #e6f2f2;
+  --gold: #ffbc00;        /* acento/ação (usar texto escuro por cima) */
+  /* Neutros (design-system) */
+  --ink: #212529;         /* texto */
+  --muted: #6c757d;       /* texto suave */
+  --line: #dee2e6;        /* bordas e divisores */
+  --paper: #f8f9fa;       /* fundo da página */
+  --surface: #ffffff;     /* cards / superfície */
+  --surface-2: #f1f6f2;   /* inputs / fundo sutil */
+  --focus: #ffbc00;       /* anel de foco (dourado alto-contraste — padrão gov.br) */
+  --shadow: 0 14px 34px rgb(21 81 40 / 0.08);
   --radius: 14px;
-  --sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --serif: Georgia, "Times New Roman", serif;
+  /* Tipografia (design-system/typography.md) */
+  --sans: "Open Sans", Arial, "Helvetica Neue", sans-serif;  /* corpo */
+  --serif: "Poppins", "Segoe UI", sans-serif;                /* títulos (h1, h2) */
+  --display: "Oswald", "Arial Narrow", sans-serif;           /* hero / kicker condensado */
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -174,9 +185,10 @@ img {
 .eyebrow {
   margin: 0 0 12px;
   color: var(--green-800);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -191,7 +203,8 @@ h3 {
 h1,
 h2 {
   font-family: var(--serif);
-  letter-spacing: -0.035em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 h1 {

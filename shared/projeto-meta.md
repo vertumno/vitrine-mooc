@@ -21,7 +21,7 @@ Fatos estaveis do projeto. Fonte canonica para os estagios. Atualize aqui quando
 | Versao alvo | 7.0 (a Vitrine atual roda 5.9) |
 | Tema atual | `vitrinemooctheme` (Bootstrap 4.2.1, Font Awesome 4.7) |
 | Ambiente de trabalho | Local (WP7) e depois ambiente de teste dedicado (VM da CGTI) |
-| Banco de dados | Dump do banco atual fornecido pela CGTI para trabalho local |
+| Banco de dados | Dump da CGTI de 03/07/2026 em `stages/04-setup-ambiente/references/backup_vitrine_mooc.sql` (não versionado — LGPD, ver `.gitignore`); análise em `stages/01-descoberta/output/modelo-dados-vitrine-atual.md` |
 | Modelo de referencia | Estrutura de pastas do repositorio da Base de Conhecimento |
 
 ## Escopo do Catalogo

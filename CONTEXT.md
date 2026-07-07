@@ -25,6 +25,7 @@ Planejamento e desenvolvimento da nova Vitrine dos cursos abertos (MOOC) do Ifes
 | Design system | `design-system/CONTEXT.md` | Paleta de cores e tipografia da Vitrine |
 | Skills | `skills/README.md` | Conhecimento de dominio bundled para os agentes |
 | Indicadores MOOC | `stages/02-catalogo/output/powerbi-mooc-ifes/` | Extracao do Power BI, planilha, CSVs e insights para decisao |
+| Modelo de dados da Vitrine atual | `stages/01-descoberta/output/modelo-dados-vitrine-atual.md` | CPT `curso` + ACF, taxonomia vigente, plugins ativos, dump da CGTI |
 
 ## Dados Analiticos Disponiveis
 

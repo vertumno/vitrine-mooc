@@ -1,0 +1,18 @@
+{
+  "external": [
+    "https://www.ifes.edu.br/templates/padraogoverno01/bootstrap/css/bootstrap.min.css",
+    "https://www.ifes.edu.br/templates/padraogoverno01/css/template-verde.css",
+    "https://www.ifes.edu.br/templates/padraogoverno01/css/icones-bmp-verde.css",
+    "https://www.ifes.edu.br/templates/padraogoverno01/font-awesome/css/font-awesome.min.css",
+    "https://www.ifes.edu.br/templates/padraogoverno01/css/custom.css",
+    "https://cdn.jsdelivr.net/npm/simple-line-icons@2.4.1/css/simple-line-icons.css",
+    "https://www.ifes.edu.br/components/com_k2/css/k2.css?v=2.10.3&b=20200429",
+    "https://www.ifes.edu.br/templates/padraogoverno01/html/mod_banners/css/banner-rotativo-home.css",
+    "https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,800,700"
+  ],
+  "preload": [],
+  "inline_style_blocks": 2,
+  "inline_style_attrs": 2,
+  "imports_resolved": 0,
+  "failed": []
+}

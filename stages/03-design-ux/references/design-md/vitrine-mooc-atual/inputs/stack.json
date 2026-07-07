@@ -1,0 +1,32 @@
+[
+  {
+    "name": "WordPress",
+    "kind": "cms",
+    "evidence": "wp-content / wp-includes paths",
+    "confidence": "high"
+  },
+  {
+    "name": "Bootstrap",
+    "kind": "css-framework",
+    "evidence": "bootstrap markers",
+    "confidence": "medium"
+  },
+  {
+    "name": "Google Analytics / GTM",
+    "kind": "analytics",
+    "evidence": "gtag or googletagmanager",
+    "confidence": "high"
+  },
+  {
+    "name": "Hotjar",
+    "kind": "analytics",
+    "evidence": "hotjar",
+    "confidence": "high"
+  },
+  {
+    "name": "Cloudflare",
+    "kind": "cdn",
+    "evidence": "cloudflare CDN",
+    "confidence": "medium"
+  }
+]

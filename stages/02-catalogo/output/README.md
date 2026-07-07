@@ -2,6 +2,20 @@
 
 Esta pasta reúne os artefatos produzidos no estágio de catálogo da Vitrine MOOC Ifes.
 
+> **Documento oficial:** `arquitetura-informacao.md` **v4.1** é o modelo definitivo de taxonomia e navegação. `taxonomia.md`, `decisao-taxonomia-cenarios.md` e `comparativo-taxonomias.md` são registro histórico (decisões já incorporadas na v4.1).
+
+## Decisões travadas (06/07/2026)
+
+| Decisão | Estado |
+|---|---|
+| **Escopo** | **165 cursos publicados**. Os 65 "em produção" ficam **fora deste projeto**. |
+| **Navegação primária** | As **15 Categorias** do formulário de cadastro. |
+| **Trilhas** | **Removidas** — só Séries + Projetos parceiros. |
+| **Carga horária** | **Populada** em `catalogo-cursos-completo.csv` (coluna `carga_horaria`). |
+| **UnAC** | **Definido** — Universidade Aberta Capixaba (programa do Governo do ES; parceria Ifes/CEFOR). Ver `projetos-especiais.md`. |
+| **Tree test / card sorting** | **Não será feito** — rótulos por decisão editorial do CEFOR. |
+| **Objetivo da plataforma** | Ancorado na Resolução CS 72/2020 ("abertos à comunidade"). |
+
 ## Artefatos de catálogo
 
 | Arquivo | Descrição |

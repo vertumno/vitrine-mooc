@@ -1,0 +1,12 @@
+{
+  "external": [
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css",
+    "https://mooc.cefor.ifes.edu.br/v/wp-content/themes/vitrinemooctheme/style.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  ],
+  "preload": [],
+  "inline_style_blocks": 0,
+  "inline_style_attrs": 2,
+  "imports_resolved": 0,
+  "failed": []
+}

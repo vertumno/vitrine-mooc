@@ -1,7 +1,7 @@
 # Arquitetura de Informação — Vitrine MOOC (modelo definitivo)
 
-> **Estágio:** 02 — Catálogo · **Versão:** 4.0 · **Data:** 02/07/2026 · **Papel:** arquitetura de informação
-> **Decisões travadas:** (1) **objetivo** ancorado na Resolução CS 72/2020 — "abertos à comunidade" (**"qualificação profissional" removido**); (2) **navegação primária = as 15 Categorias do formulário**; (3) **Eixo Tecnológico + Área CNPq = metadados oficiais**; (4) **trilha removida** (só Séries + Projetos); (5) **Licença Capacitação = área**, não objetivo; (6) selos **Libras + Audiodescrição + Idioma**.
+> **Estágio:** 02 — Catálogo · **Versão:** 4.1 · **Data:** 06/07/2026 · **Papel:** arquitetura de informação
+> **Decisões travadas:** (1) **objetivo** ancorado na Resolução CS 72/2020 — "abertos à comunidade" (**"qualificação profissional" removido**); (2) **navegação primária = as 15 Categorias do formulário**; (3) **Eixo Tecnológico + Área CNPq = metadados oficiais**; (4) **trilha removida** (só Séries + Projetos); (5) **Licença Capacitação = área**, não objetivo; (6) selos **Libras + Audiodescrição + Idioma**; (7) **escopo = 165 cursos publicados** — os 65 "em produção" ficam **fora deste projeto**; (8) **carga horária resolvida** — populada em `catalogo-cursos-completo.csv` (coluna `carga_horaria`); (9) **UnAC definido** (§7); (10) **sem tree test** — rótulos "Para quem" são decisão editorial do CEFOR.
 > **Âncoras:** `shared/resolucao-cs-72-2020-mooc.md`, `shared/seo-geo-aeo.md`, `comparativo-taxonomias.md`, `relatorio-publicos-alvo-mooc-ifes.md`, `powerbi-mooc-ifes/`.
 > **Substitui** as §3–4 de `taxonomia.md` e encerra `decisao-taxonomia-cenarios.md` e `comparativo-taxonomias.md`.
 
@@ -76,7 +76,7 @@ Atalhos por público na home + **`/publicos/{slug}/`** (indexáveis — "cursos 
 
 - Para professores e educadores (~66%) · Para a comunidade (comece do zero) (~48%) · Para o trabalho e a carreira · Para servidores e setor público (→ liga à área de Licença).
 
-Rótulos a validar por *tree test* (rótulo concreto > esperto).
+Rótulos definidos por decisão editorial do CEFOR (rótulo concreto > esperto). **Sem tree test.**
 
 ## 6. Selos transversais (oficiais — Art. 14 VI + Arts. 13/16)
 
@@ -91,7 +91,7 @@ Idioma resolve duplicatas: "Lesson Study" PT e EN = **mesmo curso, dois selos de
 ## 7. Séries e Projetos (proveniência)
 
 - **Séries** (marca/produção; selo + página de coleção): Atendente e Vendedor (3, com níveis), Educador Maker (4), Lovelace (6, paralelos), Embrace (3), Lesson Study (PT/EN = mesmo curso).
-- **Projetos parceiros** (parceria + hub próprio): **Rio Doce Escolar** (31, `/v/riodoce/`), **UnAC** (33, `/v/unac/` — *confirmar o que é*).
+- **Projetos parceiros** (parceria + hub próprio): **Rio Doce Escolar** (31, `/v/riodoce/`), **UnAC** (33, `/v/unac/`) — **Universidade Aberta Capixaba**, programa do Governo do Estado do Espírito Santo para expandir e democratizar o Ensino Superior gratuito; parceria Ifes (via CEFOR) × Governo do ES na oferta de cursos abertos, massivos e online de alta qualidade para toda a sociedade.
 - Um Projeto é uma Série grande com identidade institucional.
 
 ## 8. Licença para Capacitação = área
@@ -107,7 +107,7 @@ URLs slug (`/cursos/{slug}/`, `/areas/{categoria}/`, `/publicos/{publico}/`, `/c
 | Campo | Origem | Obrigatório |
 |-------|--------|:---:|
 | Nome, proponente, campus, ano/semestre | Art. 14 I–IV | ✅ |
-| Carga horária (≤60h) | Art. 14 V | ✅ (dep. Raquel popular) |
+| Carga horária (≤60h) | Art. 14 V | ✅ (populada em `catalogo-cursos-completo.csv`) |
 | **Idioma** | Art. 14 VI | ✅ (selo) |
 | **Nível** (básico/interm./avançado) | Art. 14 VII | ✅ |
 | **Área do conhecimento (CNPq)** | Art. 14 VIII | ✅ (metadado) |
@@ -137,9 +137,10 @@ URLs slug (`/cursos/{slug}/`, `/areas/{categoria}/`, `/publicos/{publico}/`, `/c
 
 ## 12. Pendências
 
-1. **Migração:** recategorizar cursos nas 15 Categorias + popular Eixo/Idioma/Nível/Público/carga (§4, Estágios 04/06).
+1. **Migração:** recategorizar cursos nas 15 Categorias + conferir/popular Eixo/Idioma/Nível/Público no destino (§4, Estágios 04/06). Carga horária já disponível como fonte em `catalogo-cursos-completo.csv`.
 2. **Dados:** extrair os campos reais do **dump** (nosso `catalogo-cursos.csv` tem as 19 legadas).
-3. **CEFOR:** o que é **UnAC**; **carga horária** (Raquel); **65 cursos em produção**; *tree test* dos rótulos "Para quem".
+
+**Resolvidas (06/07/2026):** **UnAC** definido (§7); **carga horária** populada em `catalogo-cursos-completo.csv`; **escopo = 165 publicados** (os 65 "em produção" ficam fora deste projeto); **sem tree test** (rótulos "Para quem" = decisão editorial do CEFOR).
 
 ---
 

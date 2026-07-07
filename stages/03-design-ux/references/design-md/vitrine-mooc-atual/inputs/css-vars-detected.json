@@ -1,0 +1,198 @@
+[
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--blue",
+    "value": "#007bff",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--indigo",
+    "value": "#6610f2",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--purple",
+    "value": "#6f42c1",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--pink",
+    "value": "#e83e8c",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--red",
+    "value": "#dc3545",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--orange",
+    "value": "#fd7e14",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--yellow",
+    "value": "#ffc107",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--green",
+    "value": "#28a745",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--teal",
+    "value": "#20c997",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--cyan",
+    "value": "#17a2b8",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--white",
+    "value": "#fff",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--gray",
+    "value": "#6c757d",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--gray-dark",
+    "value": "#343a40",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--primary",
+    "value": "#007bff",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--secondary",
+    "value": "#6c757d",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--success",
+    "value": "#28a745",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--info",
+    "value": "#17a2b8",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--warning",
+    "value": "#ffc107",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--danger",
+    "value": "#dc3545",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--light",
+    "value": "#f8f9fa",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--dark",
+    "value": "#343a40",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--breakpoint-xs",
+    "value": "0",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--breakpoint-sm",
+    "value": "576px",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--breakpoint-md",
+    "value": "768px",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--breakpoint-lg",
+    "value": "992px",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--breakpoint-xl",
+    "value": "1200px",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--font-family-sans-serif",
+    "value": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+    "is_alias": false,
+    "line": 1
+  },
+  {
+    "selector": "/* ── https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css ── */ /*! * Bootstrap v4.2.1 (https://getbootstrap.com/) * Copyright 2011-2018 The Bootstrap Authors * Copyright 2011-201",
+    "name": "--font-family-monospace",
+    "value": "SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+    "is_alias": false,
+    "line": 1
+  }
+]

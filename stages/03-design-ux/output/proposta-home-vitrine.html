@@ -7,25 +7,27 @@
 <meta name="description" content="Cursos on-line abertos a toda a comunidade, gratuitos e com certificado do Ifes. Plataforma 5 estrelas MEC.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Poppins:wght@500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
-/* ============ Tokens ============ */
+/* ============ Tokens (design-system/palette.md + typography.md) ============ */
 :root{
-  --paper:#F6F8F4;
-  --paper-2:#EDF3EB;
-  --ink:#17251C;
-  --ink-soft:#44534A;
-  --green:#2F9E41;        /* verde Ifes (rede federal) */
-  --green-deep:#0E3A21;   /* floresta — hero e blocos fortes */
-  --green-mid:#1C6B34;
-  --green-mist:#DFEDDF;
-  --line:#D5E0D4;
-  --red:#C2331B;          /* badge Novo — vermelho da marca IF */
-  --amber:#D98E23;        /* estrelas MEC */
+  --paper:#f8f9fa;
+  --paper-2:#f1f6f2;
+  --ink:#212529;
+  --ink-soft:#6c757d;
+  --green:#147a02;        /* verde institucional Ifes — primária */
+  --green-deep:#195128;   /* verde profundo — hero e blocos fortes */
+  --green-mid:#066017;    /* verde escuro — hover, links */
+  --green-mist:#dcefd3;   /* verde claro — badges, chips */
+  --line:#dee2e6;
+  --teal:#008080;         /* apoio (herança da Vitrine atual) */
+  --red:#dc3545;          /* badge Novo / destaque */
+  --amber:#ffbc00;        /* dourado — acento (texto escuro por cima) */
   --radius:10px;
-  --font-display:"Fraunces",Georgia,serif;
-  --font-body:"Public Sans",system-ui,-apple-system,sans-serif;
-  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --font-display:"Poppins","Segoe UI",sans-serif;   /* títulos */
+  --font-body:"Open Sans",system-ui,-apple-system,sans-serif;  /* corpo */
+  --font-cond:"Oswald","Arial Narrow",sans-serif;   /* hero / kicker condensado */
+  --font-mono:ui-monospace,"SFMono-Regular",Consolas,monospace;
   --maxw:1160px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -48,7 +50,7 @@ img{max-width:100%}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .mono{font-family:var(--font-mono)}
 .eyebrow{
-  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;
+  font-family:var(--font-cond);font-size:.9rem;font-weight:500;letter-spacing:.1em;
   text-transform:uppercase;color:var(--green-mid);margin-bottom:12px;display:block;
 }
 :focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:4px}
@@ -146,7 +148,7 @@ header.site .btn{padding:9px 16px;font-size:.82rem}
 }
 
 /* Barra de estatísticas */
-.stats{background:#0B2E1A;border-top:1px solid rgba(255,255,255,.08)}
+.stats{background:#195128;border-top:1px solid rgba(255,255,255,.08)}
 .stats .wrap{
   display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
   padding-top:26px;padding-bottom:26px;
@@ -300,8 +302,8 @@ section h2{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-bottom:10px}
   background-size:26px 26px;
 }
 .projeto>*{position:relative}
-.projeto.riodoce{background:linear-gradient(135deg,#14532D,#1C6B34)}
-.projeto.unac{background:linear-gradient(135deg,#0E3A21,#2F5E3C)}
+.projeto.riodoce{background:linear-gradient(135deg,#195128,#147a02)}
+.projeto.unac{background:linear-gradient(135deg,#195128,#066017)}
 .projeto .n{font-family:var(--font-mono);font-size:.72rem;color:#9FD8A6;letter-spacing:.1em;text-transform:uppercase}
 .projeto h3{font-size:1.5rem;color:#fff}
 .projeto p{font-size:.88rem;color:#CFE3CF;max-width:26rem}
@@ -596,7 +598,7 @@ footer a:hover{color:#fff;text-decoration:underline}
     <div class="cursos">
 
       <article class="curso" data-tags="todos">
-        <div class="capa" style="background:linear-gradient(135deg,#1C6B34,#2F9E41)">
+        <div class="capa" style="background:linear-gradient(135deg,#147a02,#4caf50)">
           <b aria-hidden="true">In</b>
           <div class="selos"><span class="selo">PT</span></div>
         </div>
@@ -619,7 +621,7 @@ footer a:hover{color:#fff;text-decoration:underline}
       </article>
 
       <article class="curso" data-tags="todos">
-        <div class="capa" style="background:linear-gradient(135deg,#0E3A21,#1C6B34)">
+        <div class="capa" style="background:linear-gradient(135deg,#195128,#147a02)">
           <b aria-hidden="true">Mo</b>
           <div class="selos"><span class="selo">PT</span></div>
         </div>
@@ -642,7 +644,7 @@ footer a:hover{color:#fff;text-decoration:underline}
       </article>
 
       <article class="curso" data-tags="todos libras">
-        <div class="capa" style="background:linear-gradient(135deg,#2F5E3C,#4C8C5C)">
+        <div class="capa" style="background:linear-gradient(135deg,#066017,#4caf50)">
           <b aria-hidden="true">Ca</b>
           <div class="selos"><span class="selo">LIBRAS</span><span class="selo">PT</span></div>
         </div>
@@ -665,7 +667,7 @@ footer a:hover{color:#fff;text-decoration:underline}
       </article>
 
       <article class="curso" data-tags="todos">
-        <div class="capa" style="background:linear-gradient(135deg,#14532D,#2F9E41)">
+        <div class="capa" style="background:linear-gradient(135deg,#195128,#4caf50)">
           <b aria-hidden="true">Dr</b>
           <div class="selos"><span class="selo">PT</span></div>
         </div>
@@ -688,7 +690,7 @@ footer a:hover{color:#fff;text-decoration:underline}
       </article>
 
       <article class="curso" data-tags="todos novo">
-        <div class="capa" style="background:linear-gradient(135deg,#0B2E1A,#1C6B34)">
+        <div class="capa" style="background:linear-gradient(135deg,#195128,#147a02)">
           <b aria-hidden="true">Lv</b>
           <div class="selos"><span class="selo novo">NOVO</span><span class="selo">PT</span></div>
         </div>
@@ -711,7 +713,7 @@ footer a:hover{color:#fff;text-decoration:underline}
       </article>
 
       <article class="curso" data-tags="todos en libras">
-        <div class="capa" style="background:linear-gradient(135deg,#1C6B34,#4C8C5C)">
+        <div class="capa" style="background:linear-gradient(135deg,#147a02,#4caf50)">
           <b aria-hidden="true">Ls</b>
           <div class="selos"><span class="selo">EN</span><span class="selo">LIBRAS</span></div>
         </div>

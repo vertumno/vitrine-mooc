@@ -1,8 +1,9 @@
 # Decisão em aberto — Taxonomia e Navegação (cenários)
 
 > **Estágio:** 02 — Catálogo · **Data:** 01/07/2026 · **Status:** ✅ DECIDIDO — **Cenário C** (02/07/2026).
-> **Modelo final:** ver `arquitetura-informacao.md` **v3** (Cenário C + separação área oficial × navegação + selos Libras/Audiodescrição/Idioma + SEO). Este documento fica como **registro histórico** de como se chegou à decisão.
-> **Complementa:** `arquitetura-informacao.md` (v3) e `taxonomia.md`.
+> **Modelo final:** ver `arquitetura-informacao.md` **v4.1** (Cenário C + separação área oficial × navegação + selos Libras/Audiodescrição/Idioma + SEO). Este documento fica como **registro histórico** de como se chegou à decisão.
+> **Complementa:** `arquitetura-informacao.md` (v4.1) e `taxonomia.md`.
+> **Atualização (06/07/2026):** **sem tree test / card sorting** — rótulos definidos por decisão editorial do CEFOR. Pendências da §5 resolvidas: **UnAC** definido; **carga horária** populada em `catalogo-cursos-completo.csv`; **65 "em produção"** ficam fora deste projeto (escopo = 165 publicados).
 
 Documento de apoio à decisão sobre **como a nova Vitrine organiza e apresenta os 165 cursos**. Reúne o inventário das camadas, os fatores que pesam (inclusive os menos óbvios) e três cenários. Nada aqui é oficial: é subsídio para o CEFOR/Comissão MOOC decidir.
 
@@ -21,7 +22,7 @@ Documento de apoio à decisão sobre **como a nova Vitrine organiza e apresenta 
 | **Séries** (Lovelace, Educador Maker, Atendente e Vendedor, Embrace, Lesson Study) | ✅ Decidido | Selo no card + página de coleção | Storytelling; quem conhece a marca acha junto | Baixo — é fato |
 | **Projetos parceiros** (Rio Doce, UnAC) | ✅ Decidido | Série grande com identidade + hub | Casa aos 31+33 cursos sem inundar o grid | Descrição oficial (UnAC indefinido) |
 | **Área Licença Capacitação** | ✅ Decidido | Página + Planejador (não é filtro) | Corrige erro conceitual; maior gerador de matrículas | Depende de carga horária (Raquel) |
-| **Facetas** (carga horária, nível, Libras) | 📄 PRD + deep-research | Refinamento combinável na listagem | O que realmente estreita a escolha | `nivel` **não existe hoje**; CH não populada |
+| **Facetas** (carga horária, nível, Libras) | 📄 PRD + deep-research | Refinamento combinável na listagem | O que realmente estreita a escolha | `nivel` **não existe hoje**; CH **já populada** (`catalogo-cursos-completo.csv`) |
 | **Wizard** | 📄 PRD | 3 perguntas → recomenda | Serve quem não sabe o que quer | **Consome** os metadados acima; só funciona se existirem |
 
 ## 2. Fatores que pesam na decisão (inclusive os menos óbvios)
@@ -53,7 +54,7 @@ Documento de apoio à decisão sobre **como a nova Vitrine organiza e apresenta 
 
 **f) Cada camada só se justifica se tiver função única.** Categorias = navegar+SEO · Tags = busca · Seções curadas = demanda · Séries/Projetos = marca/proveniência · Facetas = estreitar · Wizard = quem não sabe. **Que função os objetivos cumprem que as outras não?** Só uma: *atalho de autoidentificação na home*. É útil, mas é **merchandising, não fundação**.
 
-**g) Dá para testar barato (recomendado).** *Card sorting* (usuários agrupam cursos) e *tree testing* ("onde você clicaria para achar X?") resolvem com 15–20 participantes. Há Hotjar/GA instalados + acesso a alunos reais. **Decidir rótulos e entradas por teste, não por opinião.**
+**g) Dá para testar barato.** *Card sorting* e *tree testing* resolveriam com 15–20 participantes. **Decisão (06/07/2026): não faremos tree test/card sorting** — os rótulos são definidos por decisão editorial do CEFOR. (Hotjar/GA seguem instalados para monitorar o comportamento real pós-lançamento.)
 
 ## 3. Os três cenários
 
@@ -71,10 +72,10 @@ Documento de apoio à decisão sobre **como a nova Vitrine organiza e apresenta 
 
 **Cenário C.** Espinha dorsal = **temas consolidados e balanceados** (~10; estáveis, SEO, regra automática para as levas trimestrais) + **seções curadas por demanda** + **3–4 atalhos "Para quem"** na home (camada fina de conveniência) + **facetas** (CH, nível, Libras) + **Wizard** por cima. Assim os objetivos deixam de ser decisão estrutural arriscada e viram o que são: atalhos de home, ajustáveis sem quebrar nada.
 
-**Validação antes de fixar:** *tree test* com 15–20 usuários para os rótulos.
+**Validação antes de fixar:** ~~*tree test* com 15–20 usuários~~ → **decidido (06/07/2026): sem tree test**; rótulos definidos por decisão editorial do CEFOR.
 
 ## 5. O que decidir ao retomar
-1. Escolher cenário: **A, B ou C** (recomendado C).
-2. Se C: aprovar (ou ajustar) a consolidação de categorias da §2a.
-3. Definir se rodamos card sorting / tree test antes de fixar rótulos.
-4. Pendências que seguem valendo: o que é **UnAC**; **carga horária** (Raquel); **65 cursos em produção**; duplicatas (Lesson Study PT/EN, Lovelace PC/PC-Feminino).
+1. ~~Escolher cenário~~ → **decidido: Cenário C.**
+2. Se C: aprovar (ou ajustar) a consolidação de categorias da §2a. → tratado na v4.1 (15 Categorias).
+3. ~~Definir se rodamos card sorting / tree test~~ → **decidido: sem tree test** (rótulos = decisão editorial do CEFOR).
+4. Pendências: ~~o que é **UnAC**~~ (definido — Universidade Aberta Capixaba); ~~**carga horária**~~ (populada em `catalogo-cursos-completo.csv`); ~~**65 cursos em produção**~~ (fora deste projeto); **duplicatas** (Lesson Study PT/EN = mesmo curso com selo de idioma; Lovelace PC/PC-Feminino) seguem para tratamento na migração.

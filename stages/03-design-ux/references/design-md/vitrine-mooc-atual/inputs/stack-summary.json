@@ -1,0 +1,27 @@
+[
+  {
+    "name": "WordPress",
+    "kind": "cms",
+    "confidence": "high"
+  },
+  {
+    "name": "Google Analytics / GTM",
+    "kind": "analytics",
+    "confidence": "high"
+  },
+  {
+    "name": "Hotjar",
+    "kind": "analytics",
+    "confidence": "high"
+  },
+  {
+    "name": "Bootstrap",
+    "kind": "css-framework",
+    "confidence": "medium"
+  },
+  {
+    "name": "Cloudflare",
+    "kind": "cdn",
+    "confidence": "medium"
+  }
+]
