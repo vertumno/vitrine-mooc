@@ -1,8 +1,8 @@
-# Reunião Vitrine MOOC - CGTI E CGTE
+﻿# ReuniÃ£o Vitrine MOOC - CGTI E CGTE
 
   Meeting started: 23/06/2026, 09:27:35
   Duration: 84 minutes
-  Participants: Eduardo Moura da Silva, Elton Vinicius, Marcos Vinícius Forecchi Accioly
+  Participants: Eduardo Moura da Silva, Elton Vinicius, Marcos VinÃ­cius Forecchi Accioly
 
   [View original transcript](https://app.tactiq.io/api/2/u/m/r/53trCl0tOf2LZ1pjfQOu?o=txt)
 
@@ -13,420 +13,421 @@
   
     ## Highlights
 
-    > 17:41 Marcos Vinícius Forecchi Accioly: beleza Porque é um modelo que funcionou funcionou bem até a gente conseguir pensar no modelo melhor. Vamos usar esse faz um rap para a gente trabalhar dentro pode ser no github para a gente trabalhar dentro enfim copiar o modelo da base.
+    > 17:41 Marcos VinÃ­cius Forecchi Accioly: beleza Porque Ã© um modelo que funcionou funcionou bem atÃ© a gente conseguir pensar no modelo melhor. Vamos usar esse faz um rap para a gente trabalhar dentro pode ser no github para a gente trabalhar dentro enfim copiar o modelo da base.
 
   ## Transcript
 
   00:00 Elton Vinicius: fala
-03:42 Eduardo Moura da Silva: beleza, é acabou que Simon não vai conseguir participar, né também hoje porque tem outra eu treinamento lá na cidade da Inovação
+03:42 Eduardo Moura da Silva: beleza, Ã© acabou que Simon nÃ£o vai conseguir participar, nÃ© tambÃ©m hoje porque tem outra eu treinamento lÃ¡ na cidade da InovaÃ§Ã£o
 03:55 Elton Vinicius: Ah pode crer.
-03:56 Eduardo Moura da Silva: Não vai conseguir participar não, mas eu acho que dá para a gente tocar sem ele mesmo.
-04:02 Elton Vinicius: É o show eu falei aqui com o Marquito também, ele tá para entrar aqui. Aí a gente já vê isso aqui velho.
+03:56 Eduardo Moura da Silva: NÃ£o vai conseguir participar nÃ£o, mas eu acho que dÃ¡ para a gente tocar sem ele mesmo.
+04:02 Elton Vinicius: Ã‰ o show eu falei aqui com a equipe tambÃ©m, ele tÃ¡ para entrar aqui. AÃ­ a gente jÃ¡ vÃª isso aqui velho.
 04:23 Eduardo Moura da Silva: Para entender.
-04:49 Elton Vinicius: que acho que assim, a ideia é fazer parecido com o que a gente fez no Na base, né?
-04:57 Eduardo Moura da Silva: Uma olhada e aí tinha realmente aqueles lá do passado acabou não impactando
-05:18 Eduardo Moura da Silva: assim, né? Porque ele não teve outras versões e atualização na vitrine atual, então não impacto em produção não, mas até
-05:30 Elton Vinicius: Mas se abriu ainda não né?
-05:32 Eduardo Moura da Silva: Isso a prima doente copiando tudo que tava lá na Master e repeti para o status anterior aos cometas que ele tinha feito para ficar sincronizado isso aí eu resolvi só que aí eu acho que vai ter que ver umas coisinhas. Que bom que a gente vai precisar fazer que por exemplo a versão que tá lá 5.9, ainda tem a versão 7, né? Eu acho que a gente vai ter que dar uma atualizada nessas versões aí para você já trabalharem, né em cima da versão mais recente, né? Quando a gente foi plantar então.
-06:19 Elton Vinicius: É um total Exatamente isso e se a gente conseguir fazer aquele. Um formato até mais utilizado do que foi no na base, né? Tipo já com um banco do Banco separado, né? Um banco que a gente consiga também trabalhar no banco, né? E aí depois.
-06:42 Eduardo Moura da Silva: Esse bicho até testar aqui, eu acho que eu até tenho uma vitrine de ambiente em ambiente de teste aí tipo aí realmente eu trabalharia a gente trabalharia no ambiente de teste em vez de adotar aquela estratégia de subir lá em nos meus servidor de produção para depois fazer a virada, né? Eu acho que o ideal é a gente trabalhar direto no momento de teste mesmo num banco de teste e depois faz migração de dados, né? Se forem para aquela se tiver necessidade de fazer aquela abordagem.
-07:17 Elton Vinicius: E assim então exatamente acho que eu acho que é melhor mesmo, até porque essa é a melhor prática mesmo, né, Dudu? Então, tipo se é a melhor prática não
+04:49 Elton Vinicius: que acho que assim, a ideia Ã© fazer parecido com o que a gente fez no Na base, nÃ©?
+04:57 Eduardo Moura da Silva: Uma olhada e aÃ­ tinha realmente aqueles lÃ¡ do passado acabou nÃ£o impactando
+05:18 Eduardo Moura da Silva: assim, nÃ©? Porque ele nÃ£o teve outras versÃµes e atualizaÃ§Ã£o na vitrine atual, entÃ£o nÃ£o impacto em produÃ§Ã£o nÃ£o, mas atÃ©
+05:30 Elton Vinicius: Mas se abriu ainda nÃ£o nÃ©?
+05:32 Eduardo Moura da Silva: Isso a prima doente copiando tudo que tava lÃ¡ na Master e repeti para o status anterior aos cometas que ele tinha feito para ficar sincronizado isso aÃ­ eu resolvi sÃ³ que aÃ­ eu acho que vai ter que ver umas coisinhas. Que bom que a gente vai precisar fazer que por exemplo a versÃ£o que tÃ¡ lÃ¡ 5.9, ainda tem a versÃ£o 7, nÃ©? Eu acho que a gente vai ter que dar uma atualizada nessas versÃµes aÃ­ para vocÃª jÃ¡ trabalharem, nÃ© em cima da versÃ£o mais recente, nÃ©? Quando a gente foi plantar entÃ£o.
+06:19 Elton Vinicius: Ã‰ um total Exatamente isso e se a gente conseguir fazer aquele. Um formato atÃ© mais utilizado do que foi no na base, nÃ©? Tipo jÃ¡ com um banco do Banco separado, nÃ©? Um banco que a gente consiga tambÃ©m trabalhar no banco, nÃ©? E aÃ­ depois.
+06:42 Eduardo Moura da Silva: Esse bicho atÃ© testar aqui, eu acho que eu atÃ© tenho uma vitrine de ambiente em ambiente de teste aÃ­ tipo aÃ­ realmente eu trabalharia a gente trabalharia no ambiente de teste em vez de adotar aquela estratÃ©gia de subir lÃ¡ em nos meus servidor de produÃ§Ã£o para depois fazer a virada, nÃ©? Eu acho que o ideal Ã© a gente trabalhar direto no momento de teste mesmo num banco de teste e depois faz migraÃ§Ã£o de dados, nÃ©? Se forem para aquela se tiver necessidade de fazer aquela abordagem.
+07:17 Elton Vinicius: E assim entÃ£o exatamente acho que eu acho que Ã© melhor mesmo, atÃ© porque essa Ã© a melhor prÃ¡tica mesmo, nÃ©, Dudu? EntÃ£o, tipo se Ã© a melhor prÃ¡tica nÃ£o
 07:24 Eduardo Moura da Silva: Com certeza
-07:26 Elton Vinicius: deu para fazer na base, né? Não deu para fazer na base, mas tipo, já que vou
-07:26 Eduardo Moura da Silva: É bom seguir.
-07:32 Elton Vinicius: tentar fazer nessa agora porque a gente também já Fica organizado para até para outros outros, né? Tipo formatando esse modelinho padrão assim de trabalho. Estamos conversando aqui Marquito lembrando já da do que que o do lembrou aqui que a versão atual é 5 ponto alguma coisa, né? Que já tenha sete então, talvez eles vão fazer vai precisar fazer essa atualização, né dos WordPress para quando a gente for trabalhar já tá com as sete.
-08:15 Marcos Vinícius Forecchi Accioly: A versão de qual que tá na cinco?
+07:26 Elton Vinicius: deu para fazer na base, nÃ©? NÃ£o deu para fazer na base, mas tipo, jÃ¡ que vou
+07:26 Eduardo Moura da Silva: Ã‰ bom seguir.
+07:32 Elton Vinicius: tentar fazer nessa agora porque a gente tambÃ©m jÃ¡ Fica organizado para atÃ© para outros outros, nÃ©? Tipo formatando esse modelinho padrÃ£o assim de trabalho. Estamos conversando aqui com a equipe lembrando jÃ¡ da do que que o do lembrou aqui que a versÃ£o atual Ã© 5 ponto alguma coisa, nÃ©? Que jÃ¡ tenha sete entÃ£o, talvez eles vÃ£o fazer vai precisar fazer essa atualizaÃ§Ã£o, nÃ© dos WordPress para quando a gente for trabalhar jÃ¡ tÃ¡ com as sete.
+08:15 Marcos VinÃ­cius Forecchi Accioly: A versÃ£o de qual que tÃ¡ na cinco?
 08:17 Elton Vinicius: a da vitrine
-08:21 Marcos Vinícius Forecchi Accioly: Isso mesmo.
-08:22 Eduardo Moura da Silva: Então, aí eu tava comentando com Elton, né? Sobre o repositório lá, né? Que tinha aqueles comícios lá realmente estavam com medo estavam na Master, né? Aí se eu ajustei criei uma brente uma cliente nova lá com que tinha na
-08:32 Marcos Vinícius Forecchi Accioly: isso
-08:39 Eduardo Moura da Silva: Master, né? Perdeu o que você já tinha feito e revestir, né? Eu joguei a
-08:40 Marcos Vinícius Forecchi Accioly: ok ok
-08:47 Eduardo Moura da Silva: Master para um convite anterior as coisas que você tinha feito lá.
-08:52 Marcos Vinícius Forecchi Accioly: Maravilha obrigado, desculpa aí por ter feito isso porque foi sem querer mesmo.
-08:56 Eduardo Moura da Silva: Não tranquilo Eu acho assim como esse acabou não tendo impacto em produção porque não teve versões, né? Não teve atualização da vitrine atual a nível de código, né? E aí não preciso atualizar e sincronizar nada lá no servidor. E aí nesse repositório também não tem ainda não tem configurado o Deploy automático, né? Então não teve Impacto não deu para reverter aqui de boas. Só que aí eu tava falando em relação a essa versão, né? Porque né? Vocês iniciaram trabalhando em cima da versão que estava no repositório, né? Como teve comícios ali, eu acho que vocês devem ter usado aquelas essas versões nos testes que vocês estavam fazendo até então locais, né? Deve ficar utilizando essa versão 5.9 aí.
-09:43 Marcos Vinícius Forecchi Accioly: Possivelmente tudo eu acho que sim.
-09:46 Eduardo Moura da Silva: Porque aí o que que a gente vai precisar fazer para gente já começar atualizado subir aí para o repo, né? Uma outra brente e a pressão mais atual do WordPress e vocês levarem né? Abordagem a mesma né? Vocês estão criando é um tema. Eu não olhei no detalhe ali da implementação. Eu vi que vocês criaram um diretório ali de htm Puro, mas não sei se
-10:15 Marcos Vinícius Forecchi Accioly: Na verdade isso daí foi errado mesmo ali ajudaria a gente enquanto a gente está trabalhando, por isso que tem que estar numa Branch, só quando for para o Master não iria algumas coisas que foram ali não foi um erro mesmo. Acho que pode desconsiderar o que tá ali. Entendeu o que a gente vai fazer só para já dar um direcionamento para a gente
+08:21 Marcos VinÃ­cius Forecchi Accioly: Isso mesmo.
+08:22 Eduardo Moura da Silva: EntÃ£o, aÃ­ eu tava comentando com Elton, nÃ©? Sobre o repositÃ³rio lÃ¡, nÃ©? Que tinha aqueles comÃ­cios lÃ¡ realmente estavam com medo estavam na Master, nÃ©? AÃ­ se eu ajustei criei uma brente uma cliente nova lÃ¡ com que tinha na
+08:32 Marcos VinÃ­cius Forecchi Accioly: isso
+08:39 Eduardo Moura da Silva: Master, nÃ©? Perdeu o que vocÃª jÃ¡ tinha feito e revestir, nÃ©? Eu joguei a
+08:40 Marcos VinÃ­cius Forecchi Accioly: ok ok
+08:47 Eduardo Moura da Silva: Master para um convite anterior as coisas que vocÃª tinha feito lÃ¡.
+08:52 Marcos VinÃ­cius Forecchi Accioly: Maravilha obrigado, desculpa aÃ­ por ter feito isso porque foi sem querer mesmo.
+08:56 Eduardo Moura da Silva: NÃ£o tranquilo Eu acho assim como esse acabou nÃ£o tendo impacto em produÃ§Ã£o porque nÃ£o teve versÃµes, nÃ©? NÃ£o teve atualizaÃ§Ã£o da vitrine atual a nÃ­vel de cÃ³digo, nÃ©? E aÃ­ nÃ£o preciso atualizar e sincronizar nada lÃ¡ no servidor. E aÃ­ nesse repositÃ³rio tambÃ©m nÃ£o tem ainda nÃ£o tem configurado o Deploy automÃ¡tico, nÃ©? EntÃ£o nÃ£o teve Impacto nÃ£o deu para reverter aqui de boas. SÃ³ que aÃ­ eu tava falando em relaÃ§Ã£o a essa versÃ£o, nÃ©? Porque nÃ©? VocÃªs iniciaram trabalhando em cima da versÃ£o que estava no repositÃ³rio, nÃ©? Como teve comÃ­cios ali, eu acho que vocÃªs devem ter usado aquelas essas versÃµes nos testes que vocÃªs estavam fazendo atÃ© entÃ£o locais, nÃ©? Deve ficar utilizando essa versÃ£o 5.9 aÃ­.
+09:43 Marcos VinÃ­cius Forecchi Accioly: Possivelmente tudo eu acho que sim.
+09:46 Eduardo Moura da Silva: Porque aÃ­ o que que a gente vai precisar fazer para gente jÃ¡ comeÃ§ar atualizado subir aÃ­ para o repo, nÃ©? Uma outra brente e a pressÃ£o mais atual do WordPress e vocÃªs levarem nÃ©? Abordagem a mesma nÃ©? VocÃªs estÃ£o criando Ã© um tema. Eu nÃ£o olhei no detalhe ali da implementaÃ§Ã£o. Eu vi que vocÃªs criaram um diretÃ³rio ali de htm Puro, mas nÃ£o sei se
+10:15 Marcos VinÃ­cius Forecchi Accioly: Na verdade isso daÃ­ foi errado mesmo ali ajudaria a gente enquanto a gente estÃ¡ trabalhando, por isso que tem que estar numa Branch, sÃ³ quando for para o Master nÃ£o iria algumas coisas que foram ali nÃ£o foi um erro mesmo. Acho que pode desconsiderar o que tÃ¡ ali. Entendeu o que a gente vai fazer sÃ³ para jÃ¡ dar um direcionamento para a gente
 10:33 Eduardo Moura da Silva: Entendi.
-10:37 Marcos Vinícius Forecchi Accioly: não ficar dando volta, talvez é o mesmo que a gente fez para base de conhecimento.
-10:44 Eduardo Moura da Silva: Certo, o que que eu vou aí nesse sentido que eu tava comendo, a gente tava
-10:45 Marcos Vinícius Forecchi Accioly: tá
-10:50 Eduardo Moura da Silva: comentando aqui também que a para vitrine né? E para o muco em si, a gente já tem todo um ambiente de teste ali preparado, né? Eu tava até tentando resgatar a URL da vitrine aqui, mas eu não consegui localizar não, mas eu sei que já tem as máquinas virtuais criadas, já tem toda uma estrutura de máquina de desenvolvimento que roda o mundo por exemplo que ele deve multi atualização que a gente usou para para validar, né? Atualização, então o que que eu tô querendo fazer seguir uma abordagem um pouco diferente do que foi feito, né? Não sei se lembra certinho subiu tudo nas máquinas de produção nas máquinas virtuais no banco de produção e aí a gente adotou, beleza.
-11:38 Eduardo Moura da Silva: Como já tá assim, vamos seguir assim e quando for fazer a virada a gente só faz os apontamentos para Nova para nova base, né? Só que eu quero fazer um pouco diferente dessa vez, eu quero subir essas coisas já em ambiente de teste não subir nas máquinas de produção para depois fazer virada, entendeu? Vocês trabalharem nas máquinas de teste, né no banco realmente de teste num servidor ali onde o código fonte tá exclusivo para teste. Então eu vou
-12:08 Marcos Vinícius Forecchi Accioly: Esse é o melhor cenário, né? Para nós também.
-12:12 Eduardo Moura da Silva: precisar de um tempinho para preparar esse ambiente então assim. Estalaria ali, né? Nesse ambiente uma versão mais recente aí do WordPress. Acho que lançou recentemente a sete ponto zero aí.
-12:27 Marcos Vinícius Forecchi Accioly: Já Podemos trabalhar com ela?
-12:29 Eduardo Moura da Silva: E isso acho que o ideal já é para ela e sob o banco, né? Você acha que precisaria de dump também é bom pegar um dano? ou não
-12:45 Marcos Vinícius Forecchi Accioly: Sim, porque o damp e o backup no backup a gente consegue fazer igual eu fiz da
+10:37 Marcos VinÃ­cius Forecchi Accioly: nÃ£o ficar dando volta, talvez Ã© o mesmo que a gente fez para base de conhecimento.
+10:44 Eduardo Moura da Silva: Certo, o que que eu vou aÃ­ nesse sentido que eu tava comendo, a gente tava
+10:45 Marcos VinÃ­cius Forecchi Accioly: tÃ¡
+10:50 Eduardo Moura da Silva: comentando aqui tambÃ©m que a para vitrine nÃ©? E para o muco em si, a gente jÃ¡ tem todo um ambiente de teste ali preparado, nÃ©? Eu tava atÃ© tentando resgatar a URL da vitrine aqui, mas eu nÃ£o consegui localizar nÃ£o, mas eu sei que jÃ¡ tem as mÃ¡quinas virtuais criadas, jÃ¡ tem toda uma estrutura de mÃ¡quina de desenvolvimento que roda o mundo por exemplo que ele deve multi atualizaÃ§Ã£o que a gente usou para para validar, nÃ©? AtualizaÃ§Ã£o, entÃ£o o que que eu tÃ´ querendo fazer seguir uma abordagem um pouco diferente do que foi feito, nÃ©? NÃ£o sei se lembra certinho subiu tudo nas mÃ¡quinas de produÃ§Ã£o nas mÃ¡quinas virtuais no banco de produÃ§Ã£o e aÃ­ a gente adotou, beleza.
+11:38 Eduardo Moura da Silva: Como jÃ¡ tÃ¡ assim, vamos seguir assim e quando for fazer a virada a gente sÃ³ faz os apontamentos para Nova para nova base, nÃ©? SÃ³ que eu quero fazer um pouco diferente dessa vez, eu quero subir essas coisas jÃ¡ em ambiente de teste nÃ£o subir nas mÃ¡quinas de produÃ§Ã£o para depois fazer virada, entendeu? VocÃªs trabalharem nas mÃ¡quinas de teste, nÃ© no banco realmente de teste num servidor ali onde o cÃ³digo fonte tÃ¡ exclusivo para teste. EntÃ£o eu vou
+12:08 Marcos VinÃ­cius Forecchi Accioly: Esse Ã© o melhor cenÃ¡rio, nÃ©? Para nÃ³s tambÃ©m.
+12:12 Eduardo Moura da Silva: precisar de um tempinho para preparar esse ambiente entÃ£o assim. Estalaria ali, nÃ©? Nesse ambiente uma versÃ£o mais recente aÃ­ do WordPress. Acho que lanÃ§ou recentemente a sete ponto zero aÃ­.
+12:27 Marcos VinÃ­cius Forecchi Accioly: JÃ¡ Podemos trabalhar com ela?
+12:29 Eduardo Moura da Silva: E isso acho que o ideal jÃ¡ Ã© para ela e sob o banco, nÃ©? VocÃª acha que precisaria de dump tambÃ©m Ã© bom pegar um dano? ou nÃ£o
+12:45 Marcos VinÃ­cius Forecchi Accioly: Sim, porque o damp e o backup no backup a gente consegue fazer igual eu fiz da
 12:46 Elton Vinicius: Acho que sim
-12:51 Marcos Vinícius Forecchi Accioly: base a gente entra pelo próprio WordPress e faz o backup lá, entendeu? Para a gente poder ter todas as imagens da vitrine que a gente quer testar com dados reais, né? Foi isso que acelerou, muita gente. A gente preparou toda a migração com os dados reais já localmente na minha máquina lá no cefor, entendeu? E aí quando a gente tava com isso disponível, eu fui experimentei fazer a importação na versão antiga para Nova. E aí deu tudo certo tá lá, entendeu? Porque assim tem que considerar que a gente tá trabalhando com tipos personalizados de conteúdo. Não tem coisa que às vezes na versão nova na hora que a gente implementa não ia funcionar, mas na base de conhecimento deu tudo certo. Então a gente precisa sim do dump.
-13:35 Marcos Vinícius Forecchi Accioly: Que é só vocês que conseguem disponibilizar do banco atual pelo menos para a gente ter uma parte, né? Tipo assim dos dados na base de conhecimento do que a gente fez foi? Não inserir dados novos durante esse período que a gente estava fazendo essa virada tipo inseriu nada na base a base está travada para inserção. Entendeu, mas eu acho que na vitrine isso não vai ser possível então pegar um dump a gente vai trabalhar com o que tem hoje uma fotografia de hoje, quando a gente for fazer a migração a gente pega de novo e faz o mesmo processo.
-14:16 Eduardo Moura da Silva: Provavelmente o lançamento vai ter né, mas
-14:16 Marcos Vinícius Forecchi Accioly: Né? Porque a gente vai ter que ter não vai poder ter nada novo lá, né? Se não entrar nenhum curso de hoje a gente não fizer nenhuma alteração de hoje ou do momento em que você disponibilizar até a hora que a gente for fazer a virada Certo, entendeu? Não precisa fazer de novo. É possivelmente, mas não sei não tem lançamento, tá?
+12:51 Marcos VinÃ­cius Forecchi Accioly: base a gente entra pelo prÃ³prio WordPress e faz o backup lÃ¡, entendeu? Para a gente poder ter todas as imagens da vitrine que a gente quer testar com dados reais, nÃ©? Foi isso que acelerou, muita gente. A gente preparou toda a migraÃ§Ã£o com os dados reais jÃ¡ localmente na minha mÃ¡quina lÃ¡ no cefor, entendeu? E aÃ­ quando a gente tava com isso disponÃ­vel, eu fui experimentei fazer a importaÃ§Ã£o na versÃ£o antiga para Nova. E aÃ­ deu tudo certo tÃ¡ lÃ¡, entendeu? Porque assim tem que considerar que a gente tÃ¡ trabalhando com tipos personalizados de conteÃºdo. NÃ£o tem coisa que Ã s vezes na versÃ£o nova na hora que a gente implementa nÃ£o ia funcionar, mas na base de conhecimento deu tudo certo. EntÃ£o a gente precisa sim do dump.
+13:35 Marcos VinÃ­cius Forecchi Accioly: Que Ã© sÃ³ vocÃªs que conseguem disponibilizar do banco atual pelo menos para a gente ter uma parte, nÃ©? Tipo assim dos dados na base de conhecimento do que a gente fez foi? NÃ£o inserir dados novos durante esse perÃ­odo que a gente estava fazendo essa virada tipo inseriu nada na base a base estÃ¡ travada para inserÃ§Ã£o. Entendeu, mas eu acho que na vitrine isso nÃ£o vai ser possÃ­vel entÃ£o pegar um dump a gente vai trabalhar com o que tem hoje uma fotografia de hoje, quando a gente for fazer a migraÃ§Ã£o a gente pega de novo e faz o mesmo processo.
+14:16 Eduardo Moura da Silva: Provavelmente o lanÃ§amento vai ter nÃ©, mas
+14:16 Marcos VinÃ­cius Forecchi Accioly: NÃ©? Porque a gente vai ter que ter nÃ£o vai poder ter nada novo lÃ¡, nÃ©? Se nÃ£o entrar nenhum curso de hoje a gente nÃ£o fizer nenhuma alteraÃ§Ã£o de hoje ou do momento em que vocÃª disponibilizar atÃ© a hora que a gente for fazer a virada Certo, entendeu? NÃ£o precisa fazer de novo. Ã‰ possivelmente, mas nÃ£o sei nÃ£o tem lanÃ§amento, tÃ¡?
 14:40 Eduardo Moura da Silva: Vamos fazer depois.
-14:44 Elton Vinicius: Eu não tô me lembrado também não pelo menos o Alessandro até olhar aqui se
-14:48 Marcos Vinícius Forecchi Accioly: Eu acho que não Dudu. Eu acho que o que vai sair de damp agora possivelmente
+14:44 Elton Vinicius: Eu nÃ£o tÃ´ me lembrado tambÃ©m nÃ£o pelo menos o Alessandro atÃ© olhar aqui se
+14:48 Marcos VinÃ­cius Forecchi Accioly: Eu acho que nÃ£o Dudu. Eu acho que o que vai sair de damp agora possivelmente
 14:48 Elton Vinicius: tem.
-14:53 Marcos Vinícius Forecchi Accioly: vai ser os dados que vão estar lá, entendeu?
-14:56 Elton Vinicius: E também o Dudu a gente pode o banco é o que na verdade a única coisa que pode se atualizada é uma imagem de um curso novo, né um link a gente possa também ser o que como a gente que adiciona se for adicionar eu registro assim, né? O que foi para a gente saber só foi adicionado isso, né? E aí você pode inserir depois.
-15:20 Marcos Vinícius Forecchi Accioly: Mas acho que esse é o melhor cenário Dudu.
-15:24 Eduardo Moura da Silva: Beleza então, eu tô até voltando aqui vou fazer disponibilizar banco de dados para vocês poderem trabalhar o local vai subir a estrutura do WordPress
-15:30 Marcos Vinícius Forecchi Accioly: e isso
+14:53 Marcos VinÃ­cius Forecchi Accioly: vai ser os dados que vÃ£o estar lÃ¡, entendeu?
+14:56 Elton Vinicius: E tambÃ©m o Dudu a gente pode o banco Ã© o que na verdade a Ãºnica coisa que pode se atualizada Ã© uma imagem de um curso novo, nÃ© um link a gente possa tambÃ©m ser o que como a gente que adiciona se for adicionar eu registro assim, nÃ©? O que foi para a gente saber sÃ³ foi adicionado isso, nÃ©? E aÃ­ vocÃª pode inserir depois.
+15:20 Marcos VinÃ­cius Forecchi Accioly: Mas acho que esse Ã© o melhor cenÃ¡rio Dudu.
+15:24 Eduardo Moura da Silva: Beleza entÃ£o, eu tÃ´ atÃ© voltando aqui vou fazer disponibilizar banco de dados para vocÃªs poderem trabalhar o local vai subir a estrutura do WordPress
+15:30 Marcos VinÃ­cius Forecchi Accioly: e isso
 15:35 Eduardo Moura da Silva: atualizado em ambiente de teste e subir essa estrutura atualizada para uma Branch.
-15:42 Marcos Vinícius Forecchi Accioly: Isso e conectar esse Brand na estrutura de teste que a gente vai conseguir ver no navegador seria bom também. Se fosse possível, né? Tá na hora que a gente atualiza né na Master atualizar para a gente conseguir navegar.
-15:57 Eduardo Moura da Silva: Só que aí a gente só vai mudar um pouquinho, né? Tipo assim não vai ser quando por exemplo abrir os equest vocês não vão abrir para Master, tá? Porque a Master é o que está em produção, né?
-16:11 Elton Vinicius: O Marquito você acha que é aquela parte de organização e estruturação
-16:12 Marcos Vinícius Forecchi Accioly: Ah tá, é você vai você vai?
-16:13 Eduardo Moura da Silva: Porque esse é um sistema que já está em produção.
-16:16 Marcos Vinícius Forecchi Accioly: Tá aí a gente vai usar o mesmo Git?
-16:18 Eduardo Moura da Silva: Isso vai usar o mesmo Hit aí?
-16:19 Marcos Vinícius Forecchi Accioly: Ah beleza, então faz um Drake deve e a gente sabe que é esse que tá em produção a produção do deve, vamos dizer assim, né?
+15:42 Marcos VinÃ­cius Forecchi Accioly: Isso e conectar esse Brand na estrutura de teste que a gente vai conseguir ver no navegador seria bom tambÃ©m. Se fosse possÃ­vel, nÃ©? TÃ¡ na hora que a gente atualiza nÃ© na Master atualizar para a gente conseguir navegar.
+15:57 Eduardo Moura da Silva: SÃ³ que aÃ­ a gente sÃ³ vai mudar um pouquinho, nÃ©? Tipo assim nÃ£o vai ser quando por exemplo abrir os equest vocÃªs nÃ£o vÃ£o abrir para Master, tÃ¡? Porque a Master Ã© o que estÃ¡ em produÃ§Ã£o, nÃ©?
+16:11 Elton Vinicius: A equipe vocÃª acha que Ã© aquela parte de organizaÃ§Ã£o e estruturaÃ§Ã£o
+16:12 Marcos VinÃ­cius Forecchi Accioly: Ah tÃ¡, Ã© vocÃª vai vocÃª vai?
+16:13 Eduardo Moura da Silva: Porque esse Ã© um sistema que jÃ¡ estÃ¡ em produÃ§Ã£o.
+16:16 Marcos VinÃ­cius Forecchi Accioly: TÃ¡ aÃ­ a gente vai usar o mesmo Git?
+16:18 Eduardo Moura da Silva: Isso vai usar o mesmo Hit aÃ­?
+16:19 Marcos VinÃ­cius Forecchi Accioly: Ah beleza, entÃ£o faz um Drake deve e a gente sabe que Ã© esse que tÃ¡ em produÃ§Ã£o a produÃ§Ã£o do deve, vamos dizer assim, nÃ©?
 16:28 Eduardo Moura da Silva: isso
-16:51 Elton Vinicius: assim do projeto a gente usa no próprio no próprio Git Lab ou faz mais ou menos como fez ali no baixo conhecimento teve um repositório do planejamento e desenvolvimento. E o planejamento do sistema e o outro foi para um repositório do desenvolvimento.
-17:15 Marcos Vinícius Forecchi Accioly: em termos de iacia diz para a gente conseguir trabalhar com
-17:18 Elton Vinicius: É porque por exemplo eu já vou pegar essa essa já vou pegar essa daqui essa transcrição e baixar eu tô eu vou agora pegar as interfaces que a gente fez lá no Ice Studio para poder também baixar e começar a organizar a estruturar. Não sei se eu faço eu faço num repositório nosso assim e depois.
-17:37 Marcos Vinícius Forecchi Accioly: Acho que vamos copiar o modelo da base de conhecimento.
-17:40 Elton Vinicius: tá
-17:41 Marcos Vinícius Forecchi Accioly: beleza Porque é um modelo que funcionou funcionou bem até a gente conseguir pensar no modelo melhor. Vamos usar esse faz um rap para a gente trabalhar dentro pode ser no github para a gente trabalhar dentro enfim copiar o modelo da base.
-18:00 Marcos Vinícius Forecchi Accioly: Inclusive pode copiar aquele Rap também, entendeu? Faz um forte daquele cara, se você quiser e a gente volta algumas versões porque Mas nem que não né? Talvez é só copiar a estrutura de pastas mesmo para a
-18:10 Elton Vinicius: Não não não não não.
-18:13 Marcos Vinícius Forecchi Accioly: gente saber pedir para ele olhar para aquela estrutura.
-18:14 Elton Vinicius: É isso aí
-18:18 Marcos Vinícius Forecchi Accioly: Acho que em relação a vitrine é isso, né, Dudu?
-18:22 Eduardo Moura da Silva: É cara, eu acho que é mas é isso mesmo. Eu parei dessa olhada entendi, né? Como é que tava? E aí vai realmente ele vai requerer essa essas ações, né?
-18:33 Marcos Vinícius Forecchi Accioly: tá
-18:34 Eduardo Moura da Silva: Eu disponibilizar para vocês começarem a trabalhar de forma parecida com o que foi feito para de conhecimento.
-18:39 Marcos Vinícius Forecchi Accioly: Isso aí aí beleza alguma coisa mais desse assunto, se não queria entrar em outro rapidinho para evitar.
+16:51 Elton Vinicius: assim do projeto a gente usa no prÃ³prio no prÃ³prio Git Lab ou faz mais ou menos como fez ali no baixo conhecimento teve um repositÃ³rio do planejamento e desenvolvimento. E o planejamento do sistema e o outro foi para um repositÃ³rio do desenvolvimento.
+17:15 Marcos VinÃ­cius Forecchi Accioly: em termos de iacia diz para a gente conseguir trabalhar com
+17:18 Elton Vinicius: Ã‰ porque por exemplo eu jÃ¡ vou pegar essa essa jÃ¡ vou pegar essa daqui essa transcriÃ§Ã£o e baixar eu tÃ´ eu vou agora pegar as interfaces que a gente fez lÃ¡ no Ice Studio para poder tambÃ©m baixar e comeÃ§ar a organizar a estruturar. NÃ£o sei se eu faÃ§o eu faÃ§o num repositÃ³rio nosso assim e depois.
+17:37 Marcos VinÃ­cius Forecchi Accioly: Acho que vamos copiar o modelo da base de conhecimento.
+17:40 Elton Vinicius: tÃ¡
+17:41 Marcos VinÃ­cius Forecchi Accioly: beleza Porque Ã© um modelo que funcionou funcionou bem atÃ© a gente conseguir pensar no modelo melhor. Vamos usar esse faz um rap para a gente trabalhar dentro pode ser no github para a gente trabalhar dentro enfim copiar o modelo da base.
+18:00 Marcos VinÃ­cius Forecchi Accioly: Inclusive pode copiar aquele Rap tambÃ©m, entendeu? Faz um forte daquele cara, se vocÃª quiser e a gente volta algumas versÃµes porque Mas nem que nÃ£o nÃ©? Talvez Ã© sÃ³ copiar a estrutura de pastas mesmo para a
+18:10 Elton Vinicius: NÃ£o nÃ£o nÃ£o nÃ£o nÃ£o.
+18:13 Marcos VinÃ­cius Forecchi Accioly: gente saber pedir para ele olhar para aquela estrutura.
+18:14 Elton Vinicius: Ã‰ isso aÃ­
+18:18 Marcos VinÃ­cius Forecchi Accioly: Acho que em relaÃ§Ã£o a vitrine Ã© isso, nÃ©, Dudu?
+18:22 Eduardo Moura da Silva: Ã‰ cara, eu acho que Ã© mas Ã© isso mesmo. Eu parei dessa olhada entendi, nÃ©? Como Ã© que tava? E aÃ­ vai realmente ele vai requerer essa essas aÃ§Ãµes, nÃ©?
+18:33 Marcos VinÃ­cius Forecchi Accioly: tÃ¡
+18:34 Eduardo Moura da Silva: Eu disponibilizar para vocÃªs comeÃ§arem a trabalhar de forma parecida com o que foi feito para de conhecimento.
+18:39 Marcos VinÃ­cius Forecchi Accioly: Isso aÃ­ aÃ­ beleza alguma coisa mais desse assunto, se nÃ£o queria entrar em outro rapidinho para evitar.
 18:48 Elton Vinicius: Fechou a base. Ah, fechou o vitrine quer dizer.
-18:51 Marcos Vinícius Forecchi Accioly: Eu quero falar justamente da base que que a gente fez Dudu a gente já naquele endereço testes. Se você quiser pode entrar aqui. Eu queria Ah, não consigo entrar né? Na real não consigo ver eu tô no teletrabalho, só fizesse a VPN aqui.
+18:51 Marcos VinÃ­cius Forecchi Accioly: Eu quero falar justamente da base que que a gente fez Dudu a gente jÃ¡ naquele endereÃ§o testes. Se vocÃª quiser pode entrar aqui. Eu queria Ah, nÃ£o consigo entrar nÃ©? Na real nÃ£o consigo ver eu tÃ´ no teletrabalho, sÃ³ fizesse a VPN aqui.
 19:07 Elton Vinicius: testes
-19:08 Eduardo Moura da Silva: Lá no arquivo de rosto. Tem que adicionar.
-19:11 Marcos Vinícius Forecchi Accioly: Mas eu acho que o seu a sua máquina não tá com DNS configurado não Elton. Lembra aquela configuração que o Serginho fez? É um arquivo de rosto, não é tão específica não é mais para ele direcionar. Esse é o URL para aquele plug te passar o IP. Aí você consegue acessar se você tiver no setor.
-19:32 Elton Vinicius: Mas acho que o Dudu tá acessando aí, né?
-19:36 Eduardo Moura da Silva: Estamos visualizando sim, se vocês quiserem.
-19:37 Marcos Vinícius Forecchi Accioly: então Dudu é que a gente já Desculpa acho que o Elton falou para compartilhar.
-19:44 Eduardo Moura da Silva: Esses links internos você fala.
-19:48 Marcos Vinícius Forecchi Accioly: Que que a gente fez a gente conseguiu levar tudo já para o WordPress no WordPress, já levou todos os dados já tá tudo online, tá tudo aí a base. Tá toda pronta. Agora o que a gente precisaria fazer e queria entender com você, qual é o tamanho da dificuldade disso? É fazer a virada. Teria que virar e teria que também ver a questão dos links que pode ser que vire os links não estão funcionando.
-20:21 Marcos Vinícius Forecchi Accioly: Os links internos e os links antigos a forma antiga a gente configurou um HT Access. Para ele poder também porque antigamente era o endereço barra base barra o Slug. Do artigo, tá? Só que agora não tá assim tá só o endereço Barra ou Slug não tem barra base. Aí a gente configurou isso no htta para não quebrar para tentar ver se não quebra na hora que faz a virada. Mas a gente não tem essa clareza, entendeu? Então seria importante. Talvez a gente fazer a virada conferir ver se tá tudo certo. E aí?
-21:06 Eduardo Moura da Silva: Certo, é aí eu vou precisar eu tenho que trocar ideia com saia que esse esse apontamento de DNS que ver se ele consegue fazer.
-21:20 Marcos Vinícius Forecchi Accioly: É assim aí é mais com vocês, eu acho que a questão é a gente chegou num ponto agora que já tá pronto para virar mas tem algumas condições uma é essa coisa dos links que eu acho que a gente poderia também ou a gente fazer participar junto com vocês de alguma forma para a gente poder conferir ou vocês terem isso com bastante clareza que vai ter que conferir esses links, né para ver se o que o que tá em sala virtual, entendeu? Dudu que está linkado no link anterior da base, tem que continuar funcionando.
-21:52 Marcos Vinícius Forecchi Accioly: tá
-21:53 Eduardo Moura da Silva: E esses links anteriores está com esse barra base aí na frente.
-21:58 Marcos Vinícius Forecchi Accioly: Assim na minha cabeça, eu tô lembrando só isso agora mas nós pode ser que tem alguma outra coisa que eu não sei entendeu? Eu não me lembro. Por exemplo, qual que é os links dos percursos isso vai ter problema ou não? Pode ser que alguém conheça aí, mas eu não sei eu não tô conseguindo ver não, tá que tá bem. Eu consigo dar um zoom aqui.
-22:21 Eduardo Moura da Silva: até a cecê que o
-22:24 Marcos Vinícius Forecchi Accioly: Tá vendo? Esse aqui é em Barrabás, né?
-22:25 Eduardo Moura da Silva: de a barra base E não deu para manter essa você sabe de onde?
-22:42 Marcos Vinícius Forecchi Accioly: Isso era do isso era do jeito antigo de fazer que era o plugin que a gente usava como a gente foi parar de usar esse plugin. A gente resolveu parar de usar essa nomenclatura que não fazia sentido. Para nós.
-22:57 Elton Vinicius: E ele tá redirecionando certinho, né? O que a gente não conseguiu é testar a gente testou agora com testes e deu certo, só que
-23:09 Marcos Vinícius Forecchi Accioly: Isso por exemplo Dudu se você entrou aí agora tá vendo que tá o endereço barra Slug lá em cima. Se você escrever barra base barra lá em cima alterar URL vai funcionar. Isso a gente já fez.
+19:08 Eduardo Moura da Silva: LÃ¡ no arquivo de rosto. Tem que adicionar.
+19:11 Marcos VinÃ­cius Forecchi Accioly: Mas eu acho que o seu a sua mÃ¡quina nÃ£o tÃ¡ com DNS configurado nÃ£o Elton. Lembra aquela configuraÃ§Ã£o que o Serginho fez? Ã‰ um arquivo de rosto, nÃ£o Ã© tÃ£o especÃ­fica nÃ£o Ã© mais para ele direcionar. Esse Ã© o URL para aquele plug te passar o IP. AÃ­ vocÃª consegue acessar se vocÃª tiver no setor.
+19:32 Elton Vinicius: Mas acho que o Dudu tÃ¡ acessando aÃ­, nÃ©?
+19:36 Eduardo Moura da Silva: Estamos visualizando sim, se vocÃªs quiserem.
+19:37 Marcos VinÃ­cius Forecchi Accioly: entÃ£o Dudu Ã© que a gente jÃ¡ Desculpa acho que o Elton falou para compartilhar.
+19:44 Eduardo Moura da Silva: Esses links internos vocÃª fala.
+19:48 Marcos VinÃ­cius Forecchi Accioly: Que que a gente fez a gente conseguiu levar tudo jÃ¡ para o WordPress no WordPress, jÃ¡ levou todos os dados jÃ¡ tÃ¡ tudo online, tÃ¡ tudo aÃ­ a base. TÃ¡ toda pronta. Agora o que a gente precisaria fazer e queria entender com vocÃª, qual Ã© o tamanho da dificuldade disso? Ã‰ fazer a virada. Teria que virar e teria que tambÃ©m ver a questÃ£o dos links que pode ser que vire os links nÃ£o estÃ£o funcionando.
+20:21 Marcos VinÃ­cius Forecchi Accioly: Os links internos e os links antigos a forma antiga a gente configurou um HT Access. Para ele poder tambÃ©m porque antigamente era o endereÃ§o barra base barra o Slug. Do artigo, tÃ¡? SÃ³ que agora nÃ£o tÃ¡ assim tÃ¡ sÃ³ o endereÃ§o Barra ou Slug nÃ£o tem barra base. AÃ­ a gente configurou isso no htta para nÃ£o quebrar para tentar ver se nÃ£o quebra na hora que faz a virada. Mas a gente nÃ£o tem essa clareza, entendeu? EntÃ£o seria importante. Talvez a gente fazer a virada conferir ver se tÃ¡ tudo certo. E aÃ­?
+21:06 Eduardo Moura da Silva: Certo, Ã© aÃ­ eu vou precisar eu tenho que trocar ideia com saia que esse esse apontamento de DNS que ver se ele consegue fazer.
+21:20 Marcos VinÃ­cius Forecchi Accioly: Ã‰ assim aÃ­ Ã© mais com vocÃªs, eu acho que a questÃ£o Ã© a gente chegou num ponto agora que jÃ¡ tÃ¡ pronto para virar mas tem algumas condiÃ§Ãµes uma Ã© essa coisa dos links que eu acho que a gente poderia tambÃ©m ou a gente fazer participar junto com vocÃªs de alguma forma para a gente poder conferir ou vocÃªs terem isso com bastante clareza que vai ter que conferir esses links, nÃ© para ver se o que o que tÃ¡ em sala virtual, entendeu? Dudu que estÃ¡ linkado no link anterior da base, tem que continuar funcionando.
+21:52 Marcos VinÃ­cius Forecchi Accioly: tÃ¡
+21:53 Eduardo Moura da Silva: E esses links anteriores estÃ¡ com esse barra base aÃ­ na frente.
+21:58 Marcos VinÃ­cius Forecchi Accioly: Assim na minha cabeÃ§a, eu tÃ´ lembrando sÃ³ isso agora mas nÃ³s pode ser que tem alguma outra coisa que eu nÃ£o sei entendeu? Eu nÃ£o me lembro. Por exemplo, qual que Ã© os links dos percursos isso vai ter problema ou nÃ£o? Pode ser que alguÃ©m conheÃ§a aÃ­, mas eu nÃ£o sei eu nÃ£o tÃ´ conseguindo ver nÃ£o, tÃ¡ que tÃ¡ bem. Eu consigo dar um zoom aqui.
+22:21 Eduardo Moura da Silva: atÃ© a cecÃª que o
+22:24 Marcos VinÃ­cius Forecchi Accioly: TÃ¡ vendo? Esse aqui Ã© em BarrabÃ¡s, nÃ©?
+22:25 Eduardo Moura da Silva: de a barra base E nÃ£o deu para manter essa vocÃª sabe de onde?
+22:42 Marcos VinÃ­cius Forecchi Accioly: Isso era do isso era do jeito antigo de fazer que era o plugin que a gente usava como a gente foi parar de usar esse plugin. A gente resolveu parar de usar essa nomenclatura que nÃ£o fazia sentido. Para nÃ³s.
+22:57 Elton Vinicius: E ele tÃ¡ redirecionando certinho, nÃ©? O que a gente nÃ£o conseguiu Ã© testar a gente testou agora com testes e deu certo, sÃ³ que
+23:09 Marcos VinÃ­cius Forecchi Accioly: Isso por exemplo Dudu se vocÃª entrou aÃ­ agora tÃ¡ vendo que tÃ¡ o endereÃ§o barra Slug lÃ¡ em cima. Se vocÃª escrever barra base barra lÃ¡ em cima alterar URL vai funcionar. Isso a gente jÃ¡ fez.
 23:28 Eduardo Moura da Silva: redireciona como
-23:29 Marcos Vinícius Forecchi Accioly: E faz um Direct via HT access, entendeu?
+23:29 Marcos VinÃ­cius Forecchi Accioly: E faz um Direct via HT access, entendeu?
 23:33 Eduardo Moura da Silva: Entendi.
-23:33 Marcos Vinícius Forecchi Accioly: Porque aí a pessoa fica sempre no link certo, ela vai cair no link certo. Isso é bom por ela vai acostumar que aquilo foi copiar ou pegar o link que ela pega o certo parar de trabalhar com o link errado. Aí eles vão morrendo, né os links errados.
-23:50 Eduardo Moura da Silva: É não acho que com o teste funcionou. Acho que não vai ter problema não.
-23:54 Marcos Vinícius Forecchi Accioly: Eu também acho que não.
-23:55 Eduardo Moura da Silva: Mas me indica que esse HT Acre já vai resolver isso.
-23:59 Marcos Vinícius Forecchi Accioly: isso E aí o que eu tava querendo te liberar, é isso que a gente não tinha falado sobre isso ainda tava esperando reunião presencial para você navegar, né? Você caiu aí no pdf e ficou Encantado aí né na etiqueta.
-24:19 Eduardo Moura da Silva: Eu lembro quando eles começaram a falar de etiqueta. Vocês são tenso é mas em relação essa virada. Acho que pode ser algo programado e ser um acompanhamento junto de vocês também. E aí né? Faz faz alguns testes ali, como vocês tiveram mais envolvidos consegui chegar nos
-24:48 Marcos Vinícius Forecchi Accioly: né
-24:50 Eduardo Moura da Silva: pontos assim. Ah, eu acho que esse ponto aqui pode tem suspeita que esse ponto pode dar problema então tipo já vai nos locais mais mais correto assim mais direcionados.
-25:01 Marcos Vinícius Forecchi Accioly: aham
-25:02 Eduardo Moura da Silva: A gente pode planejar uma virada assim durante um dia né e vira testa e também deixa um plano que se alguma coisa der errado a gente possa voltar para base anterior de forma transparente também e rápida, né?
-25:19 Marcos Vinícius Forecchi Accioly: beleza
-25:20 Eduardo Moura da Silva: Mas eu vou conversar com Saimon sobre esse ponto para a gente programar essa virada então.
-25:29 Elton Vinicius: Aí beleza que aí vocês também definindo quando a gente organiza se organiza para fazer juntos.
-25:39 Eduardo Moura da Silva: Eu acho que na semana que vem acho que o Sérgio já volta também. E aí eu acho que o Simon vai preferir o esperar o Sérgio voltar ele que acabou entendendo um pouco mais né? Essa parte desse direcionamentos e configuração de load balance essas coisas.
-26:01 Elton Vinicius: Eu acho que tá tranquilo também, né em relação a prazo assim, né? Tipo?
-26:08 Marcos Vinícius Forecchi Accioly: Olha eu acho que se o horizonte a semana que vem tá Tá OK assim, eu acho que é Possível sim, a gente estava com esperança dessa virada porque assim depois que virar né, Dudu falando da base de conhecimento, né? A gente vai ter coisa para mexer, né? E aí também queria. E aí é que tá essa condição assim também, né? Que eu acho que é só interessante virar. Quando a gente tiver também com o processo Claro de como que a gente vai mexer é só a gente continuar mexendo igual tá mexendo.
-26:37 Marcos Vinícius Forecchi Accioly: Temos e a gente vai mexer nas coisas localmente ver se é isso mesmo joga para o kit lado no Brant, o que já tá consolidado queremos testar ver online. A gente joga para o Master. Aí ele vai já botou em produção é isso?
-26:52 Eduardo Moura da Silva: Isso isso aí tem isso, né? Que é depois que implantar essa nova versão, aí tem que tomar mais cuidado do que vai mandar para produção, né? Tem que estar muito bem testado local, então talvez o ideal seria a gente ir até criar esse ambiente de teste aí, né? Assim para vocês antes de fazer um Med request para Brant Master para efetivamente publicar em produção é publicar nesse outro ambiente de teste, né para ir além dos Testes que vocês fizeram o local e assim né? Então desenvolver Fizeram alguma customização, beleza? Via Local aqui na minha máquina. Tá tudo funcionando, mas quando vai para o para produção é outro ambiente é lindo, sei lá, né, então.
-27:40 Eduardo Moura da Silva: A gente tendo esse ambiente mais próximo esse medo de teste mais próximo do que é produção minimiza o risco também, né? Então talvez a gente tem que realmente dar um pensar, né? Talvez esteja ambiente de efetivamente de teste para você trabalhar. E aí criaria um fluxo, né? Antes de fazer o mexe repete para preencher Master vocês Faria sei lá um Para frente da vela e aí publicaria, né? Quando fizesse o meji nessa Branch da vela publicaria nesse ambiente de testes, aí vocês confeririam, né? Nesse mês de teste e aí Estando tudo certo, abriria um novo merge Quest para a gente Master. E aí uma vez feito o meji na brente Master publicaria a alteração de forma pública, né para introdução.
-28:31 Marcos Vinícius Forecchi Accioly: Tá bom, parece um bom fluxo me preocupa só o tempo mesmo, porque para fazer isso é mais complexo, né? E assim a base hoje a gente já não tá mexendo. Eu sei que na hora que virar. Possivelmente vai ser a hora que mais vai ter problema que a gente vai querer mexer. Pode ser que não dê nada, entendeu? Tá bem Redondo do que a gente usou mexeu tá bem redondo.
-28:51 Marcos Vinícius Forecchi Accioly: Aí é isso, eu acho que é só tentar equalizar todas essas coisas para a gente
-28:52 Eduardo Moura da Silva: Sim, mas acho que assim também que não é impedimento. Entendeu? Essa esse
-28:55 Marcos Vinícius Forecchi Accioly: conseguir colocar online que tá e tipo assim, se ficar uma semana online e a gente não conseguir mexer. Vamos ter que virar. Essa semana tá Dudu pensando assim tentando pensar junto aí no plano, imagina que vira essa semana o link sempre que a gente calma uma semana sem conseguir mexer em nada. Tá tudo bem. Entendeu? Mas se os links não tiverem funcionando. Também tá tudo bem assim por uma semana eu acho que não é tanto problema sabe, mas não é o ideal, né? A gente teria que voltar. Só isso.
-29:30 Eduardo Moura da Silva: ponto que eu falei agora é mais para a gente pensar numa melhoria de processo mesmo, mas beleza Digamos que a gente que isso não é pré-requisito para a
-29:34 Marcos Vinícius Forecchi Accioly: Isso isso.
-29:39 Eduardo Moura da Silva: gente plantar, entendeu? A gente pode implantar. E aí né? Se aparecer em correções para serem feita ou melhorias para serem feitas, vai seguir o mesmo fluxo que você já estavam seguindo, entendeu?
-29:50 Marcos Vinícius Forecchi Accioly: Isso não é impedimento para a gente plantar, vamos implantar entendeu? Fazer a
+23:33 Marcos VinÃ­cius Forecchi Accioly: Porque aÃ­ a pessoa fica sempre no link certo, ela vai cair no link certo. Isso Ã© bom por ela vai acostumar que aquilo foi copiar ou pegar o link que ela pega o certo parar de trabalhar com o link errado. AÃ­ eles vÃ£o morrendo, nÃ© os links errados.
+23:50 Eduardo Moura da Silva: Ã‰ nÃ£o acho que com o teste funcionou. Acho que nÃ£o vai ter problema nÃ£o.
+23:54 Marcos VinÃ­cius Forecchi Accioly: Eu tambÃ©m acho que nÃ£o.
+23:55 Eduardo Moura da Silva: Mas me indica que esse HT Acre jÃ¡ vai resolver isso.
+23:59 Marcos VinÃ­cius Forecchi Accioly: isso E aÃ­ o que eu tava querendo te liberar, Ã© isso que a gente nÃ£o tinha falado sobre isso ainda tava esperando reuniÃ£o presencial para vocÃª navegar, nÃ©? VocÃª caiu aÃ­ no pdf e ficou Encantado aÃ­ nÃ© na etiqueta.
+24:19 Eduardo Moura da Silva: Eu lembro quando eles comeÃ§aram a falar de etiqueta. VocÃªs sÃ£o tenso Ã© mas em relaÃ§Ã£o essa virada. Acho que pode ser algo programado e ser um acompanhamento junto de vocÃªs tambÃ©m. E aÃ­ nÃ©? Faz faz alguns testes ali, como vocÃªs tiveram mais envolvidos consegui chegar nos
+24:48 Marcos VinÃ­cius Forecchi Accioly: nÃ©
+24:50 Eduardo Moura da Silva: pontos assim. Ah, eu acho que esse ponto aqui pode tem suspeita que esse ponto pode dar problema entÃ£o tipo jÃ¡ vai nos locais mais mais correto assim mais direcionados.
+25:01 Marcos VinÃ­cius Forecchi Accioly: aham
+25:02 Eduardo Moura da Silva: A gente pode planejar uma virada assim durante um dia nÃ© e vira testa e tambÃ©m deixa um plano que se alguma coisa der errado a gente possa voltar para base anterior de forma transparente tambÃ©m e rÃ¡pida, nÃ©?
+25:19 Marcos VinÃ­cius Forecchi Accioly: beleza
+25:20 Eduardo Moura da Silva: Mas eu vou conversar com Saimon sobre esse ponto para a gente programar essa virada entÃ£o.
+25:29 Elton Vinicius: AÃ­ beleza que aÃ­ vocÃªs tambÃ©m definindo quando a gente organiza se organiza para fazer juntos.
+25:39 Eduardo Moura da Silva: Eu acho que na semana que vem acho que o SÃ©rgio jÃ¡ volta tambÃ©m. E aÃ­ eu acho que o Simon vai preferir o esperar o SÃ©rgio voltar ele que acabou entendendo um pouco mais nÃ©? Essa parte desse direcionamentos e configuraÃ§Ã£o de load balance essas coisas.
+26:01 Elton Vinicius: Eu acho que tÃ¡ tranquilo tambÃ©m, nÃ© em relaÃ§Ã£o a prazo assim, nÃ©? Tipo?
+26:08 Marcos VinÃ­cius Forecchi Accioly: Olha eu acho que se o horizonte a semana que vem tÃ¡ TÃ¡ OK assim, eu acho que Ã© PossÃ­vel sim, a gente estava com esperanÃ§a dessa virada porque assim depois que virar nÃ©, Dudu falando da base de conhecimento, nÃ©? A gente vai ter coisa para mexer, nÃ©? E aÃ­ tambÃ©m queria. E aÃ­ Ã© que tÃ¡ essa condiÃ§Ã£o assim tambÃ©m, nÃ©? Que eu acho que Ã© sÃ³ interessante virar. Quando a gente tiver tambÃ©m com o processo Claro de como que a gente vai mexer Ã© sÃ³ a gente continuar mexendo igual tÃ¡ mexendo.
+26:37 Marcos VinÃ­cius Forecchi Accioly: Temos e a gente vai mexer nas coisas localmente ver se Ã© isso mesmo joga para o kit lado no Brant, o que jÃ¡ tÃ¡ consolidado queremos testar ver online. A gente joga para o Master. AÃ­ ele vai jÃ¡ botou em produÃ§Ã£o Ã© isso?
+26:52 Eduardo Moura da Silva: Isso isso aÃ­ tem isso, nÃ©? Que Ã© depois que implantar essa nova versÃ£o, aÃ­ tem que tomar mais cuidado do que vai mandar para produÃ§Ã£o, nÃ©? Tem que estar muito bem testado local, entÃ£o talvez o ideal seria a gente ir atÃ© criar esse ambiente de teste aÃ­, nÃ©? Assim para vocÃªs antes de fazer um Med request para Brant Master para efetivamente publicar em produÃ§Ã£o Ã© publicar nesse outro ambiente de teste, nÃ© para ir alÃ©m dos Testes que vocÃªs fizeram o local e assim nÃ©? EntÃ£o desenvolver Fizeram alguma customizaÃ§Ã£o, beleza? Via Local aqui na minha mÃ¡quina. TÃ¡ tudo funcionando, mas quando vai para o para produÃ§Ã£o Ã© outro ambiente Ã© lindo, sei lÃ¡, nÃ©, entÃ£o.
+27:40 Eduardo Moura da Silva: A gente tendo esse ambiente mais prÃ³ximo esse medo de teste mais prÃ³ximo do que Ã© produÃ§Ã£o minimiza o risco tambÃ©m, nÃ©? EntÃ£o talvez a gente tem que realmente dar um pensar, nÃ©? Talvez esteja ambiente de efetivamente de teste para vocÃª trabalhar. E aÃ­ criaria um fluxo, nÃ©? Antes de fazer o mexe repete para preencher Master vocÃªs Faria sei lÃ¡ um Para frente da vela e aÃ­ publicaria, nÃ©? Quando fizesse o meji nessa Branch da vela publicaria nesse ambiente de testes, aÃ­ vocÃªs confeririam, nÃ©? Nesse mÃªs de teste e aÃ­ Estando tudo certo, abriria um novo merge Quest para a gente Master. E aÃ­ uma vez feito o meji na brente Master publicaria a alteraÃ§Ã£o de forma pÃºblica, nÃ© para introduÃ§Ã£o.
+28:31 Marcos VinÃ­cius Forecchi Accioly: TÃ¡ bom, parece um bom fluxo me preocupa sÃ³ o tempo mesmo, porque para fazer isso Ã© mais complexo, nÃ©? E assim a base hoje a gente jÃ¡ nÃ£o tÃ¡ mexendo. Eu sei que na hora que virar. Possivelmente vai ser a hora que mais vai ter problema que a gente vai querer mexer. Pode ser que nÃ£o dÃª nada, entendeu? TÃ¡ bem Redondo do que a gente usou mexeu tÃ¡ bem redondo.
+28:51 Marcos VinÃ­cius Forecchi Accioly: AÃ­ Ã© isso, eu acho que Ã© sÃ³ tentar equalizar todas essas coisas para a gente
+28:52 Eduardo Moura da Silva: Sim, mas acho que assim tambÃ©m que nÃ£o Ã© impedimento. Entendeu? Essa esse
+28:55 Marcos VinÃ­cius Forecchi Accioly: conseguir colocar online que tÃ¡ e tipo assim, se ficar uma semana online e a gente nÃ£o conseguir mexer. Vamos ter que virar. Essa semana tÃ¡ Dudu pensando assim tentando pensar junto aÃ­ no plano, imagina que vira essa semana o link sempre que a gente calma uma semana sem conseguir mexer em nada. TÃ¡ tudo bem. Entendeu? Mas se os links nÃ£o tiverem funcionando. TambÃ©m tÃ¡ tudo bem assim por uma semana eu acho que nÃ£o Ã© tanto problema sabe, mas nÃ£o Ã© o ideal, nÃ©? A gente teria que voltar. SÃ³ isso.
+29:30 Eduardo Moura da Silva: ponto que eu falei agora Ã© mais para a gente pensar numa melhoria de processo mesmo, mas beleza Digamos que a gente que isso nÃ£o Ã© prÃ©-requisito para a
+29:34 Marcos VinÃ­cius Forecchi Accioly: Isso isso.
+29:39 Eduardo Moura da Silva: gente plantar, entendeu? A gente pode implantar. E aÃ­ nÃ©? Se aparecer em correÃ§Ãµes para serem feita ou melhorias para serem feitas, vai seguir o mesmo fluxo que vocÃª jÃ¡ estavam seguindo, entendeu?
+29:50 Marcos VinÃ­cius Forecchi Accioly: Isso nÃ£o Ã© impedimento para a gente plantar, vamos implantar entendeu? Fazer a
 29:52 Eduardo Moura da Silva: nosso entendimento para implantar
-29:56 Marcos Vinícius Forecchi Accioly: virada. E aí a gente vai melhorando o processo mesmo. Eu acho que isso faz sentido.
+29:56 Marcos VinÃ­cius Forecchi Accioly: virada. E aÃ­ a gente vai melhorando o processo mesmo. Eu acho que isso faz sentido.
 30:03 Eduardo Moura da Silva: beleza
-30:04 Marcos Vinícius Forecchi Accioly: Então assim eu acho que a virada da base o quanto antes conseguir é bom porque na vitrine a gente está trabalhando no local ainda um pouco eu e o Elton e Podemos trabalhar local, entendeu? Se a gente já tem essa definição que vamos trabalhar com WordPress 7 eu instalo ou de pré 7 ali ele também na máquina dele a gente. Mexe localmente por enquanto, entendeu? Sei lá, até daqui uma semana 10 dias, eu acho que a gente conseguir se ter um ambiente da vitrine iniciando talvez na outra semana no dia 6 tá ainda tudo bem. Entendeu? Para nós o da vitrine e aí nesse meio tempo, se a gente conseguir virar a base seria ótimo porque a gente tem pelo menos um mês para ir testando a base que eu acho que é importante e fazendo melhorias e tal até quando você folga e ela seria a gente conseguir andar com os dois mesmo, porque a gente só vai ter o mês de julho agora, né? E aí depois?
-31:04 Eduardo Moura da Silva: Mas eu acho que eu consigo sim, eu vou ver se eu consigo parar um tempo para preparar esse ambiente aqui. Acho que não deve demorar muito não.
-31:13 Marcos Vinícius Forecchi Accioly: Beleza a base mesmo. Desculpa só mais uma coisa para me esquecer sobre a
-31:13 Eduardo Moura da Silva: Tá bom. E aí?
-31:19 Marcos Vinícius Forecchi Accioly: versão da WordPress da base, ainda tá na versão 6x, aí eu não sei se a gente vai também para 7 ou não se a gente faz isso depois. Eu não é?
-31:29 Eduardo Moura da Silva: Para fazer depois é deixar ele fazer depois. Aí com esse ambiente até depois que a gente tivesse um ambiente de teste. Aí fica mais fácil para a gente aplicar essa atualização ali, né? Porque pela
-31:42 Marcos Vinícius Forecchi Accioly: ok
-31:44 Eduardo Moura da Silva: própria interface ali dá para aplicar atualização do WordPress, né? Como
-31:47 Marcos Vinícius Forecchi Accioly: Isso isso a gente pode experimentar aqui.
-31:52 Eduardo Moura da Silva: repositório já tá sincronizado aí Digamos que vão fazer pela interface. A gente teve que entrar no servidor depois e fazer um Um push do próprio servidor para o repo, né? E aí atualizaria a Brenda Master lá também. Ou outro fluxo também que seria válido seria baixar a versão atual colocar na Brant e subir também publicaria.
-32:21 Marcos Vinícius Forecchi Accioly: E faz subir. Mas acho que é pior é se bem que poderia fazer isso localmente.
+30:04 Marcos VinÃ­cius Forecchi Accioly: EntÃ£o assim eu acho que a virada da base o quanto antes conseguir Ã© bom porque na vitrine a gente estÃ¡ trabalhando no local ainda um pouco eu e o Elton e Podemos trabalhar local, entendeu? Se a gente jÃ¡ tem essa definiÃ§Ã£o que vamos trabalhar com WordPress 7 eu instalo ou de prÃ© 7 ali ele tambÃ©m na mÃ¡quina dele a gente. Mexe localmente por enquanto, entendeu? Sei lÃ¡, atÃ© daqui uma semana 10 dias, eu acho que a gente conseguir se ter um ambiente da vitrine iniciando talvez na outra semana no dia 6 tÃ¡ ainda tudo bem. Entendeu? Para nÃ³s o da vitrine e aÃ­ nesse meio tempo, se a gente conseguir virar a base seria Ã³timo porque a gente tem pelo menos um mÃªs para ir testando a base que eu acho que Ã© importante e fazendo melhorias e tal atÃ© quando vocÃª folga e ela seria a gente conseguir andar com os dois mesmo, porque a gente sÃ³ vai ter o mÃªs de julho agora, nÃ©? E aÃ­ depois?
+31:04 Eduardo Moura da Silva: Mas eu acho que eu consigo sim, eu vou ver se eu consigo parar um tempo para preparar esse ambiente aqui. Acho que nÃ£o deve demorar muito nÃ£o.
+31:13 Marcos VinÃ­cius Forecchi Accioly: Beleza a base mesmo. Desculpa sÃ³ mais uma coisa para me esquecer sobre a
+31:13 Eduardo Moura da Silva: TÃ¡ bom. E aÃ­?
+31:19 Marcos VinÃ­cius Forecchi Accioly: versÃ£o da WordPress da base, ainda tÃ¡ na versÃ£o 6x, aÃ­ eu nÃ£o sei se a gente vai tambÃ©m para 7 ou nÃ£o se a gente faz isso depois. Eu nÃ£o Ã©?
+31:29 Eduardo Moura da Silva: Para fazer depois Ã© deixar ele fazer depois. AÃ­ com esse ambiente atÃ© depois que a gente tivesse um ambiente de teste. AÃ­ fica mais fÃ¡cil para a gente aplicar essa atualizaÃ§Ã£o ali, nÃ©? Porque pela
+31:42 Marcos VinÃ­cius Forecchi Accioly: ok
+31:44 Eduardo Moura da Silva: prÃ³pria interface ali dÃ¡ para aplicar atualizaÃ§Ã£o do WordPress, nÃ©? Como
+31:47 Marcos VinÃ­cius Forecchi Accioly: Isso isso a gente pode experimentar aqui.
+31:52 Eduardo Moura da Silva: repositÃ³rio jÃ¡ tÃ¡ sincronizado aÃ­ Digamos que vÃ£o fazer pela interface. A gente teve que entrar no servidor depois e fazer um Um push do prÃ³prio servidor para o repo, nÃ©? E aÃ­ atualizaria a Brenda Master lÃ¡ tambÃ©m. Ou outro fluxo tambÃ©m que seria vÃ¡lido seria baixar a versÃ£o atual colocar na Brant e subir tambÃ©m publicaria.
+32:21 Marcos VinÃ­cius Forecchi Accioly: E faz subir. Mas acho que Ã© pior Ã© se bem que poderia fazer isso localmente.
 32:28 Eduardo Moura da Silva: local
-32:29 Marcos Vinícius Forecchi Accioly: Faz um Branch local da versão 7 atualiza a versão local. Deu certo, pode ser que tenha alteração de banco, geralmente assim WordPress costuma terá muito não mas é possível, né? Eu não olhei o Xande log para saber o que que é que mudou tá? então Talvez fazer isso via Brant não funciona tanto porque aí o banco não vai atualizar o online, entendeu?
-32:57 Eduardo Moura da Silva: Nesse caso é melhor seguir esse outro caminho mesmo que estaria atualizar pela própria interface, né?
-33:04 Marcos Vinícius Forecchi Accioly: Isso O que poderia fazer para salvar guardar? Talvez não salvaguarda o banco mas né? Talvez o banco a gente consiga voltar com que vocês têm eu acho que não dá m**** nenhuma não tá? Esse processo é só né? Normalmente dá para
-33:18 Eduardo Moura da Silva: São bem tipo assim e não é um salto muito grande, né?
-33:21 Marcos Vinícius Forecchi Accioly: fazer uma tag diversão, entendeu? Faz uma tag lá ou um Branch mesmo na versão atual e deixa lá, entendeu? E aí atualiza experimenta.
+32:29 Marcos VinÃ­cius Forecchi Accioly: Faz um Branch local da versÃ£o 7 atualiza a versÃ£o local. Deu certo, pode ser que tenha alteraÃ§Ã£o de banco, geralmente assim WordPress costuma terÃ¡ muito nÃ£o mas Ã© possÃ­vel, nÃ©? Eu nÃ£o olhei o Xande log para saber o que que Ã© que mudou tÃ¡? entÃ£o Talvez fazer isso via Brant nÃ£o funciona tanto porque aÃ­ o banco nÃ£o vai atualizar o online, entendeu?
+32:57 Eduardo Moura da Silva: Nesse caso Ã© melhor seguir esse outro caminho mesmo que estaria atualizar pela prÃ³pria interface, nÃ©?
+33:04 Marcos VinÃ­cius Forecchi Accioly: Isso O que poderia fazer para salvar guardar? Talvez nÃ£o salvaguarda o banco mas nÃ©? Talvez o banco a gente consiga voltar com que vocÃªs tÃªm eu acho que nÃ£o dÃ¡ m**** nenhuma nÃ£o tÃ¡? Esse processo Ã© sÃ³ nÃ©? Normalmente dÃ¡ para
+33:18 Eduardo Moura da Silva: SÃ£o bem tipo assim e nÃ£o Ã© um salto muito grande, nÃ©?
+33:21 Marcos VinÃ­cius Forecchi Accioly: fazer uma tag diversÃ£o, entendeu? Faz uma tag lÃ¡ ou um Branch mesmo na versÃ£o atual e deixa lÃ¡, entendeu? E aÃ­ atualiza experimenta.
 33:33 Eduardo Moura da Silva: sim
-33:38 Marcos Vinícius Forecchi Accioly: Entendeu? Não deu certo a gente tem a tag lá a versão tá pegada lá tipo
+33:38 Marcos VinÃ­cius Forecchi Accioly: Entendeu? NÃ£o deu certo a gente tem a tag lÃ¡ a versÃ£o tÃ¡ pegada lÃ¡ tipo
 33:39 Eduardo Moura da Silva: sim
-33:42 Marcos Vinícius Forecchi Accioly: essa versão é que tá funcionando, né? Tipo assim.
-33:48 Eduardo Moura da Silva: É aí só seria a questão do banco mesmo, né? Se ele dependendo do nível que foi atualização, né? E ele desfaz as coisas que que foram feitas nos bancos.
-33:54 Marcos Vinícius Forecchi Accioly: isso aí Eu acho que no máximo teria que pegar o backup de vocês e restaurar. Entendeu assim? No máximo é isso, mas eu acho que não eu falo dessa criação da tag só para poder ter a versão que tá atual funcionando.
+33:42 Marcos VinÃ­cius Forecchi Accioly: essa versÃ£o Ã© que tÃ¡ funcionando, nÃ©? Tipo assim.
+33:48 Eduardo Moura da Silva: Ã‰ aÃ­ sÃ³ seria a questÃ£o do banco mesmo, nÃ©? Se ele dependendo do nÃ­vel que foi atualizaÃ§Ã£o, nÃ©? E ele desfaz as coisas que que foram feitas nos bancos.
+33:54 Marcos VinÃ­cius Forecchi Accioly: isso aÃ­ Eu acho que no mÃ¡ximo teria que pegar o backup de vocÃªs e restaurar. Entendeu assim? No mÃ¡ximo Ã© isso, mas eu acho que nÃ£o eu falo dessa criaÃ§Ã£o da tag sÃ³ para poder ter a versÃ£o que tÃ¡ atual funcionando.
 34:22 Eduardo Moura da Silva: mesmo
-34:23 Marcos Vinícius Forecchi Accioly: É aí fica lá fica salvaguardada lá, entendeu? E aí a gente segue sem medo. Não precisa ficar pensando em qual Comet tem que voltar que era a versão que tava funcionando, entendeu? Tipo assim a gente nomeia a versão, né? Eu acho que isso pode ajudar sim.
-34:42 Eduardo Moura da Silva: Beleza, senhores. Que é isso? Estamos alinhados.
-34:49 Marcos Vinícius Forecchi Accioly: Mas acho que sim, eu acho que só para eu e Elton também temos isso clareza aqui. Acho que a gente pode seguir então ela no desenvolvimento da vitrine. enquanto você vai fazer a parte de layout essa coisa que você já tá caminhando, né organizar essa parte e talvez a nossa pasta de trabalho igual a gente tem a pasta da base aquela pasta do hit Hub, se você puder fazer isso eu pego para instalar na máquina do cefor a parte de Local né de pegar uma versão do WordPress e tal.
-35:25 Marcos Vinícius Forecchi Accioly: Para depois jogar lá no kit lábia, a gente fica guardando o Dudu passar para a gente o link. Qual que vai ser o rap? Ah vai usar o mesmo né?
-35:34 Eduardo Moura da Silva: Vai ser o mesmo só é só você tentar aparente mesmo, né? Eu passar pra gente certinho que vocês vão trabalhar.
-35:41 Marcos Vinícius Forecchi Accioly: Isso se você puder fazer isso, você é ótimo. Aí você fala em qual que vai ser aqui, a gente vai acabar visualizando né o servidor de teste.
-35:50 Eduardo Moura da Silva: Aí só vai ter que ficar atento, né a abertura do México, né? Que por padrão ele tenta abrir uma requestrar, né?
-36:00 Marcos Vinícius Forecchi Accioly: Tranquilo, a gente fica atento a isso tem que abrir o BR Quest para o Brad que você vai indicar.
-36:05 Eduardo Moura da Silva: Isso é só ter na cabeça que aquilo encara é aquele essa pente que eu vou indicar como aprende Master né? E aí.
-36:15 Marcos Vinícius Forecchi Accioly: E isso na hora de trabalhar com a importante, talvez é melhor até trabalhar
-36:15 Eduardo Moura da Silva: Uma operação que vocês forem fazer vocês queriam a partir desta faz alteração.
-36:25 Marcos Vinícius Forecchi Accioly: com Git na mão do que fazer palhar tá Elton essa questão dos braits e as coisas porque pode se confundir e querer fazer de outra forma.
+34:23 Marcos VinÃ­cius Forecchi Accioly: Ã‰ aÃ­ fica lÃ¡ fica salvaguardada lÃ¡, entendeu? E aÃ­ a gente segue sem medo. NÃ£o precisa ficar pensando em qual Comet tem que voltar que era a versÃ£o que tava funcionando, entendeu? Tipo assim a gente nomeia a versÃ£o, nÃ©? Eu acho que isso pode ajudar sim.
+34:42 Eduardo Moura da Silva: Beleza, senhores. Que Ã© isso? Estamos alinhados.
+34:49 Marcos VinÃ­cius Forecchi Accioly: Mas acho que sim, eu acho que sÃ³ para eu e Elton tambÃ©m temos isso clareza aqui. Acho que a gente pode seguir entÃ£o ela no desenvolvimento da vitrine. enquanto vocÃª vai fazer a parte de layout essa coisa que vocÃª jÃ¡ tÃ¡ caminhando, nÃ© organizar essa parte e talvez a nossa pasta de trabalho igual a gente tem a pasta da base aquela pasta do hit Hub, se vocÃª puder fazer isso eu pego para instalar na mÃ¡quina do cefor a parte de Local nÃ© de pegar uma versÃ£o do WordPress e tal.
+35:25 Marcos VinÃ­cius Forecchi Accioly: Para depois jogar lÃ¡ no kit lÃ¡bia, a gente fica guardando o Dudu passar para a gente o link. Qual que vai ser o rap? Ah vai usar o mesmo nÃ©?
+35:34 Eduardo Moura da Silva: Vai ser o mesmo sÃ³ Ã© sÃ³ vocÃª tentar aparente mesmo, nÃ©? Eu passar pra gente certinho que vocÃªs vÃ£o trabalhar.
+35:41 Marcos VinÃ­cius Forecchi Accioly: Isso se vocÃª puder fazer isso, vocÃª Ã© Ã³timo. AÃ­ vocÃª fala em qual que vai ser aqui, a gente vai acabar visualizando nÃ© o servidor de teste.
+35:50 Eduardo Moura da Silva: AÃ­ sÃ³ vai ter que ficar atento, nÃ© a abertura do MÃ©xico, nÃ©? Que por padrÃ£o ele tenta abrir uma requestrar, nÃ©?
+36:00 Marcos VinÃ­cius Forecchi Accioly: Tranquilo, a gente fica atento a isso tem que abrir o BR Quest para o Brad que vocÃª vai indicar.
+36:05 Eduardo Moura da Silva: Isso Ã© sÃ³ ter na cabeÃ§a que aquilo encara Ã© aquele essa pente que eu vou indicar como aprende Master nÃ©? E aÃ­.
+36:15 Marcos VinÃ­cius Forecchi Accioly: E isso na hora de trabalhar com a importante, talvez Ã© melhor atÃ© trabalhar
+36:15 Eduardo Moura da Silva: Uma operaÃ§Ã£o que vocÃªs forem fazer vocÃªs queriam a partir desta faz alteraÃ§Ã£o.
+36:25 Marcos VinÃ­cius Forecchi Accioly: com Git na mÃ£o do que fazer palhar tÃ¡ Elton essa questÃ£o dos braits e as coisas porque pode se confundir e querer fazer de outra forma.
 36:33 Elton Vinicius: beleza
-36:35 Marcos Vinícius Forecchi Accioly: O Dudu tá navegando. Aí enquanto ele vai falando ele tá na
+36:35 Marcos VinÃ­cius Forecchi Accioly: O Dudu tÃ¡ navegando. AÃ­ enquanto ele vai falando ele tÃ¡ na
 36:38 Eduardo Moura da Silva: no
-36:40 Marcos Vinícius Forecchi Accioly: evento Mas beleza gente, acho que estão alinhado então.
-36:49 Elton Vinicius: Vamos falar uma coisa que hoje a gente vai mexer na sala híbrida.
-36:57 Marcos Vinícius Forecchi Accioly: vai
-36:58 Elton Vinicius: Eu combinei com o pessoal de a gente 10:30 ali 10:30 11 horas assim já começar a mexer aí a Mariana vai vai estar lá também então legal que vai ter alguém da CGE. E além disso ele é arquiteto, né? Então também pode dar um espetáculo. Eu só preciso saber mesmo a gente começa na sala três hoje, aí depois a
-37:19 Marcos Vinícius Forecchi Accioly: ótimo
-37:24 Elton Vinicius: gente outro dia a gente vê na sala.
-37:28 Marcos Vinícius Forecchi Accioly: Perfeito que bom, cara. É tenho sugestões assim, talvez você levar alguma coisa que dê para marcar a parede. Por exemplo que vocês vão tomar decisão, mas que não fique né que não vai ficar que não vai ficar na parede. Sei lá o giz alguma coisa que dê para marcar na parede ou desenhar em cima de uma foto, né? Acho que isso vai ajudar vocês a entender onde vai ah, essa TV vai aqui, eu tô entendendo que vocês estão nesse momento ainda, né? A gente tá nesse momento de tentar entender como vai montar.
-37:54 Elton Vinicius: A minha ideia de você já é tá lá é mais para fazer parte também institucionalmente assim, né? Aquela preocupação de tipo os professores acompanharam também, mas isso assim do que sim.
-38:08 Marcos Vinícius Forecchi Accioly: Ok mas hoje Vocês já vão furar essa que é a minha pergunta. Tá. A ideia é que sim, beleza.
-38:14 Elton Vinicius: Porque eu já tenho um projeto já já tinha pensado como fazer né, então já tem meio que tudo definido já.
-38:19 Marcos Vinícius Forecchi Accioly: Tá não só tô falando porque Nessas horas é bem fácil de se confundir tem muito equipamentos espalhado em muito lugar para furar em casa, às vezes para fazer um suporte, eu já me confundo.
+36:40 Marcos VinÃ­cius Forecchi Accioly: evento Mas beleza gente, acho que estÃ£o alinhado entÃ£o.
+36:49 Elton Vinicius: Vamos falar uma coisa que hoje a gente vai mexer na sala hÃ­brida.
+36:57 Marcos VinÃ­cius Forecchi Accioly: vai
+36:58 Elton Vinicius: Eu combinei com o pessoal de a gente 10:30 ali 10:30 11 horas assim jÃ¡ comeÃ§ar a mexer aÃ­ a Mariana vai vai estar lÃ¡ tambÃ©m entÃ£o legal que vai ter alguÃ©m da CGE. E alÃ©m disso ele Ã© arquiteto, nÃ©? EntÃ£o tambÃ©m pode dar um espetÃ¡culo. Eu sÃ³ preciso saber mesmo a gente comeÃ§a na sala trÃªs hoje, aÃ­ depois a
+37:19 Marcos VinÃ­cius Forecchi Accioly: Ã³timo
+37:24 Elton Vinicius: gente outro dia a gente vÃª na sala.
+37:28 Marcos VinÃ­cius Forecchi Accioly: Perfeito que bom, cara. Ã‰ tenho sugestÃµes assim, talvez vocÃª levar alguma coisa que dÃª para marcar a parede. Por exemplo que vocÃªs vÃ£o tomar decisÃ£o, mas que nÃ£o fique nÃ© que nÃ£o vai ficar que nÃ£o vai ficar na parede. Sei lÃ¡ o giz alguma coisa que dÃª para marcar na parede ou desenhar em cima de uma foto, nÃ©? Acho que isso vai ajudar vocÃªs a entender onde vai ah, essa TV vai aqui, eu tÃ´ entendendo que vocÃªs estÃ£o nesse momento ainda, nÃ©? A gente tÃ¡ nesse momento de tentar entender como vai montar.
+37:54 Elton Vinicius: A minha ideia de vocÃª jÃ¡ Ã© tÃ¡ lÃ¡ Ã© mais para fazer parte tambÃ©m institucionalmente assim, nÃ©? Aquela preocupaÃ§Ã£o de tipo os professores acompanharam tambÃ©m, mas isso assim do que sim.
+38:08 Marcos VinÃ­cius Forecchi Accioly: Ok mas hoje VocÃªs jÃ¡ vÃ£o furar essa que Ã© a minha pergunta. TÃ¡. A ideia Ã© que sim, beleza.
+38:14 Elton Vinicius: Porque eu jÃ¡ tenho um projeto jÃ¡ jÃ¡ tinha pensado como fazer nÃ©, entÃ£o jÃ¡ tem meio que tudo definido jÃ¡.
+38:19 Marcos VinÃ­cius Forecchi Accioly: TÃ¡ nÃ£o sÃ³ tÃ´ falando porque Nessas horas Ã© bem fÃ¡cil de se confundir tem muito equipamentos espalhado em muito lugar para furar em casa, Ã s vezes para fazer um suporte, eu jÃ¡ me confundo.
 38:31 Elton Vinicius: legal
-38:31 Marcos Vinícius Forecchi Accioly: Então, tipo assim eu acho que até clareza sobre o que vai acontecer em cada lugar e bem importante para não para não ter confusão na hora de furar e fazer o artifício não é um cara muito esse cara aí não é igual o Zé Marcos também, entendeu?
+38:31 Marcos VinÃ­cius Forecchi Accioly: EntÃ£o, tipo assim eu acho que atÃ© clareza sobre o que vai acontecer em cada lugar e bem importante para nÃ£o para nÃ£o ter confusÃ£o na hora de furar e fazer o artifÃ­cio nÃ£o Ã© um cara muito esse cara aÃ­ nÃ£o Ã© igual o ZÃ© Marcos tambÃ©m, entendeu?
 38:43 Elton Vinicius: planejamento de entender de cuidados
-38:44 Marcos Vinícius Forecchi Accioly: Não. E o Zé já se confundia cara, então tipo assim para esse cara, tem que estar bem claro assim porque tem grande chance de ficar com um buraco na parede onde a gente não queria sacou porque furou no lugar errado ou do suporte não bater. Porque então lembrar de trazer essas coisas à tona para a gente porque são
-39:02 Elton Vinicius: tá
-39:07 Marcos Vinícius Forecchi Accioly: equipamentos caros né? É uma coisa que a gente quer quer ter menos retrabalho
-39:09 Elton Vinicius: Beleza então, valeu, viu? Um abraço.
-39:12 Marcos Vinícius Forecchi Accioly: também, entendeu? Tipo, né? A gente não quer ter que ficar consertando um problema que a gente mesmo vai criar agora na hora de fazer isso então Minimizar esse problema vai ficar tenso não porque vai ter problema, né, cara. Vai ter problema um ou outro vai surgir. Mas é isso, nossa, galera. Obrigado Dudu.
+38:44 Marcos VinÃ­cius Forecchi Accioly: NÃ£o. E o ZÃ© jÃ¡ se confundia cara, entÃ£o tipo assim para esse cara, tem que estar bem claro assim porque tem grande chance de ficar com um buraco na parede onde a gente nÃ£o queria sacou porque furou no lugar errado ou do suporte nÃ£o bater. Porque entÃ£o lembrar de trazer essas coisas Ã  tona para a gente porque sÃ£o
+39:02 Elton Vinicius: tÃ¡
+39:07 Marcos VinÃ­cius Forecchi Accioly: equipamentos caros nÃ©? Ã‰ uma coisa que a gente quer quer ter menos retrabalho
+39:09 Elton Vinicius: Beleza entÃ£o, valeu, viu? Um abraÃ§o.
+39:12 Marcos VinÃ­cius Forecchi Accioly: tambÃ©m, entendeu? Tipo, nÃ©? A gente nÃ£o quer ter que ficar consertando um problema que a gente mesmo vai criar agora na hora de fazer isso entÃ£o Minimizar esse problema vai ficar tenso nÃ£o porque vai ter problema, nÃ©, cara. Vai ter problema um ou outro vai surgir. Mas Ã© isso, nossa, galera. Obrigado Dudu.
 39:33 Elton Vinicius: valeu
-39:35 Marcos Vinícius Forecchi Accioly: Valeu vamos te mandar um resumo de
+39:35 Marcos VinÃ­cius Forecchi Accioly: Valeu vamos te mandar um resumo de
 39:38 Eduardo Moura da Silva: Oi
-39:39 Marcos Vinícius Forecchi Accioly: Que aconteceu?
-39:39 Elton Vinicius: Ele tá anotando também aqui não tá pelo Google Drive. Tá aqui do lado está fazendo anotações. Acho que você tá no automático aí anotando o Google Drive.
-39:52 Eduardo Moura da Silva: Tô fazendo anotação mais local aqui no caderno.
-39:54 Marcos Vinícius Forecchi Accioly: É o próprio nicho, eu acho é limite não. Aqui aparece para gente escrito Eduardo Moura da Silva apresentando e fazendo anotações. beleza
+39:39 Marcos VinÃ­cius Forecchi Accioly: Que aconteceu?
+39:39 Elton Vinicius: Ele tÃ¡ anotando tambÃ©m aqui nÃ£o tÃ¡ pelo Google Drive. TÃ¡ aqui do lado estÃ¡ fazendo anotaÃ§Ãµes. Acho que vocÃª tÃ¡ no automÃ¡tico aÃ­ anotando o Google Drive.
+39:52 Eduardo Moura da Silva: TÃ´ fazendo anotaÃ§Ã£o mais local aqui no caderno.
+39:54 Marcos VinÃ­cius Forecchi Accioly: Ã‰ o prÃ³prio nicho, eu acho Ã© limite nÃ£o. Aqui aparece para gente escrito Eduardo Moura da Silva apresentando e fazendo anotaÃ§Ãµes. beleza
 40:16 Eduardo Moura da Silva: valeu
 40:17 Elton Vinicius: falou
-40:18 Marcos Vinícius Forecchi Accioly: Valeu gente Ah, apareceu aqui para mim que o geminai tá fazendo anotações agora ó.
-40:27 Elton Vinicius: Eu cliquei aqui para fazer mas ele vai começar só agora, né? E agora?
-40:38 Marcos Vinícius Forecchi Accioly: Cara, pensei que agora aproveitar que a gente está junto Elton, vou fazer o seu negócio no SIPAC junto aqui só para a gente não errar e também você já.
-40:48 Elton Vinicius: Caraca eu não transcrevi essa reunião não, é isso mesmo.
-40:55 Marcos Vinícius Forecchi Accioly: A gente já faz já assina e já vai para frente isso né? Coisa simples. Porque né?
-41:04 Elton Vinicius: Você escreveu? Eu tô vendo agora que o táxi que não tá aberto, cara.
-41:23 Marcos Vinícius Forecchi Accioly: Tô tentando me lembrar o que que a net tinha me falado. Acho que ela é tipo. Eu pedi para o WhatsApp para ela.
+40:18 Marcos VinÃ­cius Forecchi Accioly: Valeu gente Ah, apareceu aqui para mim que o geminai tÃ¡ fazendo anotaÃ§Ãµes agora Ã³.
+40:27 Elton Vinicius: Eu cliquei aqui para fazer mas ele vai comeÃ§ar sÃ³ agora, nÃ©? E agora?
+40:38 Marcos VinÃ­cius Forecchi Accioly: Cara, pensei que agora aproveitar que a gente estÃ¡ junto Elton, vou fazer o seu negÃ³cio no SIPAC junto aqui sÃ³ para a gente nÃ£o errar e tambÃ©m vocÃª jÃ¡.
+40:48 Elton Vinicius: Caraca eu nÃ£o transcrevi essa reuniÃ£o nÃ£o, Ã© isso mesmo.
+40:55 Marcos VinÃ­cius Forecchi Accioly: A gente jÃ¡ faz jÃ¡ assina e jÃ¡ vai para frente isso nÃ©? Coisa simples. Porque nÃ©?
+41:04 Elton Vinicius: VocÃª escreveu? Eu tÃ´ vendo agora que o tÃ¡xi que nÃ£o tÃ¡ aberto, cara.
+41:23 Marcos VinÃ­cius Forecchi Accioly: TÃ´ tentando me lembrar o que que a net tinha me falado. Acho que ela Ã© tipo. Eu pedi para o WhatsApp para ela.
 41:41 Elton Vinicius: Pode ser?
-41:48 Marcos Vinícius Forecchi Accioly: Manda só o ofício para eles. Eu geralmente anexo um e-mail para facilitar. Então é o seu texto. Quer ver como que eu fiz aqui da outra vez agora documentos criados aqui. Ó é esse Ofício aqui ó férias programação aprendizado coordenador solicitamos alteração das férias só assino. Mas você nem assina Menin. Acho que você nem precisa estar aqui só mando bota você como interessado. Eu pensei incluir no seu texto que as alterações já foram também. Eu entendi, mas mais ou menos só era um período de 10 dias.
-42:41 Elton Vinicius: Você viu que eu adicionei lá o terceiro período também porque fiquei na dúvida, né? É porque como mudou a quantidade de dias teve que mudar os dois, né? então É dois dias eu mudei para 5 e antecipei aí.
-43:08 Marcos Vinícius Forecchi Accioly: E aí outro 5 dias então?
-43:12 Elton Vinicius: Na verdade eu tirei as 10 dias. Zerei né? E botei cinco dias agora. E os outros cinco foi para o terceiro período lá de férias. Que na verdade eu joguei. só para só para
-43:35 Marcos Vinícius Forecchi Accioly: É porque eram 10 dias você trouxe 5 dias agora para julho e ficaram somados os cinco dias. Aos 8 que já tinha em dezembro. Você tinha oito dias em dezembro os cinco dias agora que sobraram você jogou para dezembro lá.
-43:51 Elton Vinicius: Já tá feito também, né, então?
-43:56 Marcos Vinícius Forecchi Accioly: Segundo período acho que tá bom o texto cara. Acho que melhor que isso aqui não tem não tem não, mas é um negócio que é enjoado de entender mesmo para eles, eles vão fazer com pedras. É fácil para eles.
-44:09 Elton Vinicius: Já tá alterado lá, né? Eles vão ver que tá errado talvez.
-44:19 Marcos Vinícius Forecchi Accioly: É sim, acho que é. Acho que eles já até a mãe já mas eu pensei em colocar isso aqui também. Você acha que isso é ruim?
-44:32 Elton Vinicius: Já foi alterado?
-44:32 Marcos Vinícius Forecchi Accioly: Que sempre me pega, cara.
-44:34 Elton Vinicius: Já tinha visto.
-44:53 Marcos Vinícius Forecchi Accioly: Não mas aqui tem quando passa o mouse em cima, ele aparece. Deixa eu te falar, cara. Quando você abre duas janelas, ele não funciona. Mas isso é um saco cara, porque por exemplo agora eu não consegui ver a janela lá não sei colocar a classificação, sabe? Que tem uma classificação aqui do canal que é de férias.
-45:35 Elton Vinicius: Mas você puxa cara.
-45:40 Marcos Vinícius Forecchi Accioly: Fala aí. Me ajuda aí porque toda vez.
-45:41 Elton Vinicius: Vai classificação e botar isso, mas o que você poderia botar tipo. Tira aí o de férias se botar. porcentagem porcentagem Aí ele não ele meio que faz então só escrever as férias, né?
-46:03 Marcos Vinícius Forecchi Accioly: Ah legal, acho que só escrever férias ele vai.
-46:06 Elton Vinicius: É porque eu por exemplo tá de porcentagem ilícita, eu acho.
-46:11 Marcos Vinícius Forecchi Accioly: Sem o acento não vai. Tá vendo? Ainda tem um assunto aqui, cara. Que a gente acaba.
+41:48 Marcos VinÃ­cius Forecchi Accioly: Manda sÃ³ o ofÃ­cio para eles. Eu geralmente anexo um e-mail para facilitar. EntÃ£o Ã© o seu texto. Quer ver como que eu fiz aqui da outra vez agora documentos criados aqui. Ã“ Ã© esse OfÃ­cio aqui Ã³ fÃ©rias programaÃ§Ã£o aprendizado coordenador solicitamos alteraÃ§Ã£o das fÃ©rias sÃ³ assino. Mas vocÃª nem assina Menin. Acho que vocÃª nem precisa estar aqui sÃ³ mando bota vocÃª como interessado. Eu pensei incluir no seu texto que as alteraÃ§Ãµes jÃ¡ foram tambÃ©m. Eu entendi, mas mais ou menos sÃ³ era um perÃ­odo de 10 dias.
+42:41 Elton Vinicius: VocÃª viu que eu adicionei lÃ¡ o terceiro perÃ­odo tambÃ©m porque fiquei na dÃºvida, nÃ©? Ã‰ porque como mudou a quantidade de dias teve que mudar os dois, nÃ©? entÃ£o Ã‰ dois dias eu mudei para 5 e antecipei aÃ­.
+43:08 Marcos VinÃ­cius Forecchi Accioly: E aÃ­ outro 5 dias entÃ£o?
+43:12 Elton Vinicius: Na verdade eu tirei as 10 dias. Zerei nÃ©? E botei cinco dias agora. E os outros cinco foi para o terceiro perÃ­odo lÃ¡ de fÃ©rias. Que na verdade eu joguei. sÃ³ para sÃ³ para
+43:35 Marcos VinÃ­cius Forecchi Accioly: Ã‰ porque eram 10 dias vocÃª trouxe 5 dias agora para julho e ficaram somados os cinco dias. Aos 8 que jÃ¡ tinha em dezembro. VocÃª tinha oito dias em dezembro os cinco dias agora que sobraram vocÃª jogou para dezembro lÃ¡.
+43:51 Elton Vinicius: JÃ¡ tÃ¡ feito tambÃ©m, nÃ©, entÃ£o?
+43:56 Marcos VinÃ­cius Forecchi Accioly: Segundo perÃ­odo acho que tÃ¡ bom o texto cara. Acho que melhor que isso aqui nÃ£o tem nÃ£o tem nÃ£o, mas Ã© um negÃ³cio que Ã© enjoado de entender mesmo para eles, eles vÃ£o fazer com pedras. Ã‰ fÃ¡cil para eles.
+44:09 Elton Vinicius: JÃ¡ tÃ¡ alterado lÃ¡, nÃ©? Eles vÃ£o ver que tÃ¡ errado talvez.
+44:19 Marcos VinÃ­cius Forecchi Accioly: Ã‰ sim, acho que Ã©. Acho que eles jÃ¡ atÃ© a mÃ£e jÃ¡ mas eu pensei em colocar isso aqui tambÃ©m. VocÃª acha que isso Ã© ruim?
+44:32 Elton Vinicius: JÃ¡ foi alterado?
+44:32 Marcos VinÃ­cius Forecchi Accioly: Que sempre me pega, cara.
+44:34 Elton Vinicius: JÃ¡ tinha visto.
+44:53 Marcos VinÃ­cius Forecchi Accioly: NÃ£o mas aqui tem quando passa o mouse em cima, ele aparece. Deixa eu te falar, cara. Quando vocÃª abre duas janelas, ele nÃ£o funciona. Mas isso Ã© um saco cara, porque por exemplo agora eu nÃ£o consegui ver a janela lÃ¡ nÃ£o sei colocar a classificaÃ§Ã£o, sabe? Que tem uma classificaÃ§Ã£o aqui do canal que Ã© de fÃ©rias.
+45:35 Elton Vinicius: Mas vocÃª puxa cara.
+45:40 Marcos VinÃ­cius Forecchi Accioly: Fala aÃ­. Me ajuda aÃ­ porque toda vez.
+45:41 Elton Vinicius: Vai classificaÃ§Ã£o e botar isso, mas o que vocÃª poderia botar tipo. Tira aÃ­ o de fÃ©rias se botar. porcentagem porcentagem AÃ­ ele nÃ£o ele meio que faz entÃ£o sÃ³ escrever as fÃ©rias, nÃ©?
+46:03 Marcos VinÃ­cius Forecchi Accioly: Ah legal, acho que sÃ³ escrever fÃ©rias ele vai.
+46:06 Elton Vinicius: Ã‰ porque eu por exemplo tÃ¡ de porcentagem ilÃ­cita, eu acho.
+46:11 Marcos VinÃ­cius Forecchi Accioly: Sem o acento nÃ£o vai. TÃ¡ vendo? Ainda tem um assunto aqui, cara. Que a gente acaba.
 46:34 Elton Vinicius: ele
-46:36 Marcos Vinícius Forecchi Accioly: Será que carrega acho que não Mas lembra que eu deletei o modelo todo. e tipo
-46:49 Elton Vinicius: A solicitação de alteração de da nova data já foi realizada no Cid RH, né?
-46:51 Marcos Vinícius Forecchi Accioly: Talvez na hora que vai imprimir o documento precisa ter o assunto aqui, entendeu?
-47:20 Marcos Vinícius Forecchi Accioly: Ele vem todo c***** também o modelo velho não aguenta esses espaçamento mal feito aí eu fico trocando. Solicitamos alteração. Referente ao segundo período do exercício 205 do Servidor tava período de férias original todas as alterações. Já foram também foram realizadas todas as alterações acima foram realizadas nos RH. É isso. Você acha que isso aqui define todas as alterações acima foram realizadas no CNH? Eu acho que é assim as alterações propostas acima.
+46:36 Marcos VinÃ­cius Forecchi Accioly: SerÃ¡ que carrega acho que nÃ£o Mas lembra que eu deletei o modelo todo. e tipo
+46:49 Elton Vinicius: A solicitaÃ§Ã£o de alteraÃ§Ã£o de da nova data jÃ¡ foi realizada no Cid RH, nÃ©?
+46:51 Marcos VinÃ­cius Forecchi Accioly: Talvez na hora que vai imprimir o documento precisa ter o assunto aqui, entendeu?
+47:20 Marcos VinÃ­cius Forecchi Accioly: Ele vem todo c***** tambÃ©m o modelo velho nÃ£o aguenta esses espaÃ§amento mal feito aÃ­ eu fico trocando. Solicitamos alteraÃ§Ã£o. Referente ao segundo perÃ­odo do exercÃ­cio 205 do Servidor tava perÃ­odo de fÃ©rias original todas as alteraÃ§Ãµes. JÃ¡ foram tambÃ©m foram realizadas todas as alteraÃ§Ãµes acima foram realizadas nos RH. Ã‰ isso. VocÃª acha que isso aqui define todas as alteraÃ§Ãµes acima foram realizadas no CNH? Eu acho que Ã© assim as alteraÃ§Ãµes propostas acima.
 48:40 Elton Vinicius: Foram realizadas em RH.
-48:42 Marcos Vinícius Forecchi Accioly: Isso solicitadas acima foram realizadas nos seguir RH. Também posso colocar aqui também foram né? Também foram realizados via ser RH do Servidor. É isso que eu quero dizer já tá lá no sigilo. Dá para entender com essa frase as alterações acima também foram realizadas vias e RH do Servidor, tá bom, né?
-49:16 Elton Vinicius: Aí ele vai olhar e falou assim. Ah tá então mas não adianta nada porque eu tenho que provar que liberar. Ele já sabe o que que tem que fazer, né?
-49:28 Marcos Vinícius Forecchi Accioly: regionalização de período de férias do Servidor Silva
-50:04 Marcos Vinícius Forecchi Accioly: Assinado continuar não tem documento continuar Elton como interessado, infelizmente não vai sozinho inserir. Continuar unidade destino era essa que eu queria olhar. secretaria da Proerd Era isso que eu queria olhar no processo sabe no outro documento, né? 110237110237
-51:02 Marcos Vinícius Forecchi Accioly: Entendi não. Não é fácil de pesquisar aqui também, né?
-51:08 Elton Vinicius: É não eu não vou mentir pela estrutura mesmo, cara. Vai Reitoria.
-51:14 Marcos Vinícius Forecchi Accioly: Engraçado que existe uma pasta Reitoria dentro de Instituto Federal do Espírito Santo e tem as outras rei não sei o quê.
-51:20 Elton Vinicius: pró-reitoria da Verdade
-51:29 Marcos Vinícius Forecchi Accioly: No modo direto para a diretoria.
-51:31 Elton Vinicius: Não gestão de pessoas ali Coordenadoria.
-51:40 Marcos Vinícius Forecchi Accioly: Agora Eu Fiquei em dúvida deixa eu ver no e-mail aqui que eu mandei esse e-mail
-51:40 Elton Vinicius: Sempre cara, sempre eu mando para aí, cara, sempre achei que era sempre mandamos para ir mas não sei você.
-51:53 Marcos Vinícius Forecchi Accioly: para CGP, ela vai ter escrito.
-52:15 Marcos Vinícius Forecchi Accioly: Eu achei que tivesse mandado. Talvez não mandei não, cara. As últimas coisas são do dia 3 e o Thiago foi agora. Teria que entrar lá mesmo é vou mandar para coordenadoria. Se não for eles vão mandar para a diretoria, né? É porque esse Ofício me parece que é o diretor, né?
-52:44 Elton Vinicius: Não sei cara.
-52:44 Marcos Vinícius Forecchi Accioly: Não é o coordenador.
-52:46 Elton Vinicius: Eu mandaria para coordenadoria. Se você não tivesse aqui, qual que eu ia decidiu?
-52:56 Marcos Vinícius Forecchi Accioly: Queria mandar por mês que eu mandei porque deu certo seria bom, entendeu?
-52:59 Elton Vinicius: Com certeza se souber qual é certinho.
-53:06 Marcos Vinícius Forecchi Accioly: Foi para essa mesmo aqui, ó. final 14
+48:42 Marcos VinÃ­cius Forecchi Accioly: Isso solicitadas acima foram realizadas nos seguir RH. TambÃ©m posso colocar aqui tambÃ©m foram nÃ©? TambÃ©m foram realizados via ser RH do Servidor. Ã‰ isso que eu quero dizer jÃ¡ tÃ¡ lÃ¡ no sigilo. DÃ¡ para entender com essa frase as alteraÃ§Ãµes acima tambÃ©m foram realizadas vias e RH do Servidor, tÃ¡ bom, nÃ©?
+49:16 Elton Vinicius: AÃ­ ele vai olhar e falou assim. Ah tÃ¡ entÃ£o mas nÃ£o adianta nada porque eu tenho que provar que liberar. Ele jÃ¡ sabe o que que tem que fazer, nÃ©?
+49:28 Marcos VinÃ­cius Forecchi Accioly: regionalizaÃ§Ã£o de perÃ­odo de fÃ©rias do Servidor Silva
+50:04 Marcos VinÃ­cius Forecchi Accioly: Assinado continuar nÃ£o tem documento continuar Elton como interessado, infelizmente nÃ£o vai sozinho inserir. Continuar unidade destino era essa que eu queria olhar. secretaria da Proerd Era isso que eu queria olhar no processo sabe no outro documento, nÃ©? 110237110237
+51:02 Marcos VinÃ­cius Forecchi Accioly: Entendi nÃ£o. NÃ£o Ã© fÃ¡cil de pesquisar aqui tambÃ©m, nÃ©?
+51:08 Elton Vinicius: Ã‰ nÃ£o eu nÃ£o vou mentir pela estrutura mesmo, cara. Vai Reitoria.
+51:14 Marcos VinÃ­cius Forecchi Accioly: EngraÃ§ado que existe uma pasta Reitoria dentro de Instituto Federal do EspÃ­rito Santo e tem as outras rei nÃ£o sei o quÃª.
+51:20 Elton Vinicius: prÃ³-reitoria da Verdade
+51:29 Marcos VinÃ­cius Forecchi Accioly: No modo direto para a diretoria.
+51:31 Elton Vinicius: NÃ£o gestÃ£o de pessoas ali Coordenadoria.
+51:40 Marcos VinÃ­cius Forecchi Accioly: Agora Eu Fiquei em dÃºvida deixa eu ver no e-mail aqui que eu mandei esse e-mail
+51:40 Elton Vinicius: Sempre cara, sempre eu mando para aÃ­, cara, sempre achei que era sempre mandamos para ir mas nÃ£o sei vocÃª.
+51:53 Marcos VinÃ­cius Forecchi Accioly: para CGP, ela vai ter escrito.
+52:15 Marcos VinÃ­cius Forecchi Accioly: Eu achei que tivesse mandado. Talvez nÃ£o mandei nÃ£o, cara. As Ãºltimas coisas sÃ£o do dia 3 e o Thiago foi agora. Teria que entrar lÃ¡ mesmo Ã© vou mandar para coordenadoria. Se nÃ£o for eles vÃ£o mandar para a diretoria, nÃ©? Ã‰ porque esse OfÃ­cio me parece que Ã© o diretor, nÃ©?
+52:44 Elton Vinicius: NÃ£o sei cara.
+52:44 Marcos VinÃ­cius Forecchi Accioly: NÃ£o Ã© o coordenador.
+52:46 Elton Vinicius: Eu mandaria para coordenadoria. Se vocÃª nÃ£o tivesse aqui, qual que eu ia decidiu?
+52:56 Marcos VinÃ­cius Forecchi Accioly: Queria mandar por mÃªs que eu mandei porque deu certo seria bom, entendeu?
+52:59 Elton Vinicius: Com certeza se souber qual Ã© certinho.
+53:06 Marcos VinÃ­cius Forecchi Accioly: Foi para essa mesmo aqui, Ã³. final 14
 53:13 Elton Vinicius: Que a coordenadora.
-53:13 Marcos Vinícius Forecchi Accioly: Então esse foi é Aqui ó 11023720114 que é a Coordenadoria mesmo. Então na verdade o Ofício está errado, né? Olha ficou o assunto orientações para construção do ofício.
-53:38 Elton Vinicius: Porque você tá mandando para a diretoria?
-54:01 Elton Vinicius: Ali em cima a Coordenadoria também, né?
-54:13 Marcos Vinícius Forecchi Accioly: Tamires deu um grito aqui. beleza programação das festas Vou mandar tá?
+53:13 Marcos VinÃ­cius Forecchi Accioly: EntÃ£o esse foi Ã© Aqui Ã³ 11023720114 que Ã© a Coordenadoria mesmo. EntÃ£o na verdade o OfÃ­cio estÃ¡ errado, nÃ©? Olha ficou o assunto orientaÃ§Ãµes para construÃ§Ã£o do ofÃ­cio.
+53:38 Elton Vinicius: Porque vocÃª tÃ¡ mandando para a diretoria?
+54:01 Elton Vinicius: Ali em cima a Coordenadoria tambÃ©m, nÃ©?
+54:13 Marcos VinÃ­cius Forecchi Accioly: Tamires deu um grito aqui. beleza programaÃ§Ã£o das festas Vou mandar tÃ¡?
 54:31 Elton Vinicius: Beleza cara, obrigado.
-54:33 Marcos Vinícius Forecchi Accioly: Aqui já fica encaminhado.
-54:36 Elton Vinicius: Sem acho que já está encaminhado, né?
-54:41 Marcos Vinícius Forecchi Accioly: É isso maninho algo mais eu acho que dá dá dessa questão aí da nossa. Essa questão nossa aí do sistemas já tá organizado, né? Beleza, é eu tô com um negócio aí do capítulo do cefor cara das imagens para fazer até amanhã outra foto é isso?
+54:33 Marcos VinÃ­cius Forecchi Accioly: Aqui jÃ¡ fica encaminhado.
+54:36 Elton Vinicius: Sem acho que jÃ¡ estÃ¡ encaminhado, nÃ©?
+54:41 Marcos VinÃ­cius Forecchi Accioly: Ã‰ isso maninho algo mais eu acho que dÃ¡ dÃ¡ dessa questÃ£o aÃ­ da nossa. Essa questÃ£o nossa aÃ­ do sistemas jÃ¡ tÃ¡ organizado, nÃ©? Beleza, Ã© eu tÃ´ com um negÃ³cio aÃ­ do capÃ­tulo do cefor cara das imagens para fazer atÃ© amanhÃ£ outra foto Ã© isso?
 55:07 Elton Vinicius: O que exatamente
-55:09 Marcos Vinícius Forecchi Accioly: Tem que botar as fontes não tem conferir as imagens. Tem que ler também o capítulo.
+55:09 Marcos VinÃ­cius Forecchi Accioly: Tem que botar as fontes nÃ£o tem conferir as imagens. Tem que ler tambÃ©m o capÃ­tulo.
 55:16 Elton Vinicius: Porque elas mexeram.
-55:18 Marcos Vinícius Forecchi Accioly: Não é porque André já já gravou e já enviou. Que dá uma lida. Na verdade era bom mais pessoas lerem né? Bom brasileira.
-55:25 Elton Vinicius: aí Pois é cara e o prazo é só amanhã. Tá f***, bicho, tem muita coisa.
-55:39 Marcos Vinícius Forecchi Accioly: Ó tem dois prazos amanhã ruins, esse e o do Rafa, cara. Ele é muito que a gente sentasse um pouco para ver a questão do Rappa.
-55:48 Elton Vinicius: O rapaz é o quê? Exatamente na verdade é o que foi feita a partir do que apareceu na avaliação institucional seria isso.
-55:55 Marcos Vinícius Forecchi Accioly: Vou te mostrar aqui é? Isso só que ali esse formulário que a Aline mandou que a gente tem que preencher é para a gente fazer o levantamento para a gente construir o mapa.
+55:18 Marcos VinÃ­cius Forecchi Accioly: NÃ£o Ã© porque AndrÃ© jÃ¡ jÃ¡ gravou e jÃ¡ enviou. Que dÃ¡ uma lida. Na verdade era bom mais pessoas lerem nÃ©? Bom brasileira.
+55:25 Elton Vinicius: aÃ­ Pois Ã© cara e o prazo Ã© sÃ³ amanhÃ£. TÃ¡ f***, bicho, tem muita coisa.
+55:39 Marcos VinÃ­cius Forecchi Accioly: Ã“ tem dois prazos amanhÃ£ ruins, esse e o do Rafa, cara. Ele Ã© muito que a gente sentasse um pouco para ver a questÃ£o do Rappa.
+55:48 Elton Vinicius: O rapaz Ã© o quÃª? Exatamente na verdade Ã© o que foi feita a partir do que apareceu na avaliaÃ§Ã£o institucional seria isso.
+55:55 Marcos VinÃ­cius Forecchi Accioly: Vou te mostrar aqui Ã©? Isso sÃ³ que ali esse formulÃ¡rio que a Aline mandou que a gente tem que preencher Ã© para a gente fazer o levantamento para a gente construir o mapa.
 56:14 Elton Vinicius: Quer fazer agora logo?
-56:16 Marcos Vinícius Forecchi Accioly: Então, tipo assim. O que que é que a gente precisa fazer tem que responder o formulário com base nessa GTR? Não é para ter resposta perfeita é o registro Fiel do que que acontece na nossa realidade mesmo que seja incompleta ou em construção. Cada indicador do formulário vem com uma breve descrição da fragilidade identificada então e que é a parada é esse aqui ó, levantamento de ações. E aí a cada coordenador, né.
-56:46 Marcos Vinícius Forecchi Accioly: então
-56:46 Elton Vinicius: O prazo era até ontem. Pelo menos no documento tá ali 22.
-56:53 Marcos Vinícius Forecchi Accioly: É mesmo, traz para a resposta. É porque no dia 24 é a consolidação eu que não tenho prazo errado para mim. uma hora
-57:03 Elton Vinicius: Cadê Vamos responder isso aí agora?
-57:24 Marcos Vinícius Forecchi Accioly: Tem alguma outra função que tem que responder aqui tem também eu tenho que responder como cgte como qvt. A comunicação não entrou aqui. Ainda bem que é comissão, né?
-57:42 Elton Vinicius: vai no cgts primeiro que a gente já
-57:43 Marcos Vinícius Forecchi Accioly: Claro não é legal, mas é bom saber eu tinha. planejamento e avaliação institucional Fragilidades relacionadas a divulgação dos resultados da Auto avaliação e a falta de rotina sistemáticas de monitoramento evolutiva comunidade. É um indicador 1.1, divulgação e acessibilidade dos relatório de avaliação é uma fragilidade identificada. Os relatórios de avaliação não são divulgados de forma acessível e compreensiva para comunidade acadêmica que já está sendo feito na sua área em relação à divulgação dos resultados da avaliação.
-58:17 Elton Vinicius: gravações existentes
-58:22 Marcos Vinícius Forecchi Accioly: Acho que na nossa área resultado da avaliação. a gente
-58:26 Elton Vinicius: Não identificado.
-58:28 Marcos Vinícius Forecchi Accioly: A gente não fez nada.
-58:31 Elton Vinicius: a gente nem não sei nem se você tem ciência do
-58:36 Marcos Vinícius Forecchi Accioly: exatamente
-58:36 Elton Vinicius: Resultado da avaliação né? Que é só você propõe.
-58:41 Marcos Vinícius Forecchi Accioly: Que a sua propõe conhecer.
-58:46 Elton Vinicius: E horário de divulgação e o acesso aos relatórios. Eu já divulguei isso em alguns anos, mas esse último ano eu não me lembro
-58:54 Marcos Vinícius Forecchi Accioly: Eu nem lembro se a gente divulgou.
-59:04 Elton Vinicius: não. O último que tem é 2023, cara. boa
-59:37 Marcos Vinícius Forecchi Accioly: Segundo semestre 2026 indiquei você botei inserir no site você fora avaliação o último a última publicado foi de 2023. Indicador no ponto 2 evolutivo dos resultados da comunidade acadêmica sua área realiza alguma ação de devolutiva ou comunicação dos resultados avaliativos reuniões Morais publicações.
-01:00:01 Elton Vinicius: Não identificado.
-01:00:06 Marcos Vinícius Forecchi Accioly: Rotina de monitoramento dos planos de ação fragilidade não existe rotina formalizada de acompanhamento dos planos de ação vinculados, avaliação institucional senhora possui algum mecanismo de acompanhamento de metas o plano de ação vinculada avaliação.
-01:00:20 Elton Vinicius: Dos planos de ação relacionados ao CPA, né? Então não.
-01:00:26 Marcos Vinícius Forecchi Accioly: é
+56:16 Marcos VinÃ­cius Forecchi Accioly: EntÃ£o, tipo assim. O que que Ã© que a gente precisa fazer tem que responder o formulÃ¡rio com base nessa GTR? NÃ£o Ã© para ter resposta perfeita Ã© o registro Fiel do que que acontece na nossa realidade mesmo que seja incompleta ou em construÃ§Ã£o. Cada indicador do formulÃ¡rio vem com uma breve descriÃ§Ã£o da fragilidade identificada entÃ£o e que Ã© a parada Ã© esse aqui Ã³, levantamento de aÃ§Ãµes. E aÃ­ a cada coordenador, nÃ©.
+56:46 Marcos VinÃ­cius Forecchi Accioly: entÃ£o
+56:46 Elton Vinicius: O prazo era atÃ© ontem. Pelo menos no documento tÃ¡ ali 22.
+56:53 Marcos VinÃ­cius Forecchi Accioly: Ã‰ mesmo, traz para a resposta. Ã‰ porque no dia 24 Ã© a consolidaÃ§Ã£o eu que nÃ£o tenho prazo errado para mim. uma hora
+57:03 Elton Vinicius: CadÃª Vamos responder isso aÃ­ agora?
+57:24 Marcos VinÃ­cius Forecchi Accioly: Tem alguma outra funÃ§Ã£o que tem que responder aqui tem tambÃ©m eu tenho que responder como cgte como qvt. A comunicaÃ§Ã£o nÃ£o entrou aqui. Ainda bem que Ã© comissÃ£o, nÃ©?
+57:42 Elton Vinicius: vai no cgts primeiro que a gente jÃ¡
+57:43 Marcos VinÃ­cius Forecchi Accioly: Claro nÃ£o Ã© legal, mas Ã© bom saber eu tinha. planejamento e avaliaÃ§Ã£o institucional Fragilidades relacionadas a divulgaÃ§Ã£o dos resultados da Auto avaliaÃ§Ã£o e a falta de rotina sistemÃ¡ticas de monitoramento evolutiva comunidade. Ã‰ um indicador 1.1, divulgaÃ§Ã£o e acessibilidade dos relatÃ³rio de avaliaÃ§Ã£o Ã© uma fragilidade identificada. Os relatÃ³rios de avaliaÃ§Ã£o nÃ£o sÃ£o divulgados de forma acessÃ­vel e compreensiva para comunidade acadÃªmica que jÃ¡ estÃ¡ sendo feito na sua Ã¡rea em relaÃ§Ã£o Ã  divulgaÃ§Ã£o dos resultados da avaliaÃ§Ã£o.
+58:17 Elton Vinicius: gravaÃ§Ãµes existentes
+58:22 Marcos VinÃ­cius Forecchi Accioly: Acho que na nossa Ã¡rea resultado da avaliaÃ§Ã£o. a gente
+58:26 Elton Vinicius: NÃ£o identificado.
+58:28 Marcos VinÃ­cius Forecchi Accioly: A gente nÃ£o fez nada.
+58:31 Elton Vinicius: a gente nem nÃ£o sei nem se vocÃª tem ciÃªncia do
+58:36 Marcos VinÃ­cius Forecchi Accioly: exatamente
+58:36 Elton Vinicius: Resultado da avaliaÃ§Ã£o nÃ©? Que Ã© sÃ³ vocÃª propÃµe.
+58:41 Marcos VinÃ­cius Forecchi Accioly: Que a sua propÃµe conhecer.
+58:46 Elton Vinicius: E horÃ¡rio de divulgaÃ§Ã£o e o acesso aos relatÃ³rios. Eu jÃ¡ divulguei isso em alguns anos, mas esse Ãºltimo ano eu nÃ£o me lembro
+58:54 Marcos VinÃ­cius Forecchi Accioly: Eu nem lembro se a gente divulgou.
+59:04 Elton Vinicius: nÃ£o. O Ãºltimo que tem Ã© 2023, cara. boa
+59:37 Marcos VinÃ­cius Forecchi Accioly: Segundo semestre 2026 indiquei vocÃª botei inserir no site vocÃª fora avaliaÃ§Ã£o o Ãºltimo a Ãºltima publicado foi de 2023. Indicador no ponto 2 evolutivo dos resultados da comunidade acadÃªmica sua Ã¡rea realiza alguma aÃ§Ã£o de devolutiva ou comunicaÃ§Ã£o dos resultados avaliativos reuniÃµes Morais publicaÃ§Ãµes.
+01:00:01 Elton Vinicius: NÃ£o identificado.
+01:00:06 Marcos VinÃ­cius Forecchi Accioly: Rotina de monitoramento dos planos de aÃ§Ã£o fragilidade nÃ£o existe rotina formalizada de acompanhamento dos planos de aÃ§Ã£o vinculados, avaliaÃ§Ã£o institucional senhora possui algum mecanismo de acompanhamento de metas o plano de aÃ§Ã£o vinculada avaliaÃ§Ã£o.
+01:00:20 Elton Vinicius: Dos planos de aÃ§Ã£o relacionados ao CPA, nÃ©? EntÃ£o nÃ£o.
+01:00:26 Marcos VinÃ­cius Forecchi Accioly: Ã©
 01:00:30 Elton Vinicius: possui
-01:00:31 Marcos Vinícius Forecchi Accioly: Não. Não. possui
-01:00:37 Elton Vinicius: Você tem alguma sugestão para criar o fortalecer essa rotina? projeto pesquisa do de estação científica
-01:00:47 Marcos Vinícius Forecchi Accioly: Não não tem. Políticas acadêmicos atendimento ao discente participação decente em pesquisa e extensão sólia possuições voltadas sim, pesquisa sim, né? Estudante participa um pouco de projeto de pesquisa e atenção oportunidade não chegam com clareza possuições voltados ao incentivo da participação de sente em pesquisa um incentivo não né? Mas a gente tem o projeto, né SIM neste projeto editais bolsas. Temos o projeto de pesquisa. Qual que é o Projeto? Iniciação científica. Mas qual que é mesmo a denunciados né?
+01:00:31 Marcos VinÃ­cius Forecchi Accioly: NÃ£o. NÃ£o. possui
+01:00:37 Elton Vinicius: VocÃª tem alguma sugestÃ£o para criar o fortalecer essa rotina? projeto pesquisa do de estaÃ§Ã£o cientÃ­fica
+01:00:47 Marcos VinÃ­cius Forecchi Accioly: NÃ£o nÃ£o tem. PolÃ­ticas acadÃªmicos atendimento ao discente participaÃ§Ã£o decente em pesquisa e extensÃ£o sÃ³lia possuiÃ§Ãµes voltadas sim, pesquisa sim, nÃ©? Estudante participa um pouco de projeto de pesquisa e atenÃ§Ã£o oportunidade nÃ£o chegam com clareza possuiÃ§Ãµes voltados ao incentivo da participaÃ§Ã£o de sente em pesquisa um incentivo nÃ£o nÃ©? Mas a gente tem o projeto, nÃ© SIM neste projeto editais bolsas. Temos o projeto de pesquisa. Qual que Ã© o Projeto? IniciaÃ§Ã£o cientÃ­fica. Mas qual que Ã© mesmo a denunciados nÃ©?
 01:01:35 Elton Vinicius: Olha o enunciado.
-01:01:37 Marcos Vinícius Forecchi Accioly: para utilização para educação É um bolsista.
-01:01:48 Elton Vinicius: É que já teve a participação de uma bolsista. Estudar é uma bolsista é discente do reforma.
-01:02:14 Marcos Vinícius Forecchi Accioly: Que ações propõe para ampliar essa participação? Discutir planejar novas ações, né?
-01:02:30 Elton Vinicius: Especialmente de extensão, né? Por exemplo aquelas oficinas de ar que a gente prometeu é um projeto de extensão, né?
-01:02:39 Marcos Vinícius Forecchi Accioly: Mas é a participação dos Estudantes.
-01:02:42 Elton Vinicius: ações que propõem para ampliar A participação nas ações que a gente tem né? Identificada a gente não tem editais que a gente publica.
-01:03:01 Marcos Vinícius Forecchi Accioly: indicador 3.2 divulgação de editais oportunidades acadêmicos para ajudar os estudantes Como sua área divulga editais oportunidades acadêmicas se não a estratégia sistemática escreva não identificado.
+01:01:37 Marcos VinÃ­cius Forecchi Accioly: para utilizaÃ§Ã£o para educaÃ§Ã£o Ã‰ um bolsista.
+01:01:48 Elton Vinicius: Ã‰ que jÃ¡ teve a participaÃ§Ã£o de uma bolsista. Estudar Ã© uma bolsista Ã© discente do reforma.
+01:02:14 Marcos VinÃ­cius Forecchi Accioly: Que aÃ§Ãµes propÃµe para ampliar essa participaÃ§Ã£o? Discutir planejar novas aÃ§Ãµes, nÃ©?
+01:02:30 Elton Vinicius: Especialmente de extensÃ£o, nÃ©? Por exemplo aquelas oficinas de ar que a gente prometeu Ã© um projeto de extensÃ£o, nÃ©?
+01:02:39 Marcos VinÃ­cius Forecchi Accioly: Mas Ã© a participaÃ§Ã£o dos Estudantes.
+01:02:42 Elton Vinicius: aÃ§Ãµes que propÃµem para ampliar A participaÃ§Ã£o nas aÃ§Ãµes que a gente tem nÃ©? Identificada a gente nÃ£o tem editais que a gente publica.
+01:03:01 Marcos VinÃ­cius Forecchi Accioly: indicador 3.2 divulgaÃ§Ã£o de editais oportunidades acadÃªmicos para ajudar os estudantes Como sua Ã¡rea divulga editais oportunidades acadÃªmicas se nÃ£o a estratÃ©gia sistemÃ¡tica escreva nÃ£o identificado.
 01:03:23 Elton Vinicius: A gente publica. que seja
-01:03:28 Marcos Vinícius Forecchi Accioly: mais utilizados frequência e responsável A gente faz parte sim da divulgação de editais e oportunidades acadêmicas, né? Não são divulgados de forma sistemática a gente faz parte porque a gente faz realiza-se algumas publicações no site dos banners, por exemplo que ajuda a divulgar. Então tem uma parte do processo que passa pela gente entendeu desse indicador.
-01:03:51 Elton Vinicius: Ele realiza a publicação. dos editais no site É mas isso quer dizer, né?
-01:04:01 Marcos Vinícius Forecchi Accioly: É pois realizamos as publicações de banners e notícias no site do cefor. Não são editais promovidos por nós. Mas passa pela gente né? O que que a gente sugere para tornar essa divulgação mais efetiva? Ter uma agenda prévia um calendário anual, né? compartilhado de previsão De publicações seria útil? Já saber com a extensão com as pessoas, né? As divulgações que vão
+01:03:28 Marcos VinÃ­cius Forecchi Accioly: mais utilizados frequÃªncia e responsÃ¡vel A gente faz parte sim da divulgaÃ§Ã£o de editais e oportunidades acadÃªmicas, nÃ©? NÃ£o sÃ£o divulgados de forma sistemÃ¡tica a gente faz parte porque a gente faz realiza-se algumas publicaÃ§Ãµes no site dos banners, por exemplo que ajuda a divulgar. EntÃ£o tem uma parte do processo que passa pela gente entendeu desse indicador.
+01:03:51 Elton Vinicius: Ele realiza a publicaÃ§Ã£o. dos editais no site Ã‰ mas isso quer dizer, nÃ©?
+01:04:01 Marcos VinÃ­cius Forecchi Accioly: Ã‰ pois realizamos as publicaÃ§Ãµes de banners e notÃ­cias no site do cefor. NÃ£o sÃ£o editais promovidos por nÃ³s. Mas passa pela gente nÃ©? O que que a gente sugere para tornar essa divulgaÃ§Ã£o mais efetiva? Ter uma agenda prÃ©via um calendÃ¡rio anual, nÃ©? compartilhado de previsÃ£o De publicaÃ§Ãµes seria Ãºtil? JÃ¡ saber com a extensÃ£o com as pessoas, nÃ©? As divulgaÃ§Ãµes que vÃ£o
 01:04:54 Elton Vinicius: legal
-01:04:55 Marcos Vinícius Forecchi Accioly: acontecer, o que que a gente precisa fazer.
-01:04:58 Elton Vinicius: interpretação e
-01:05:01 Marcos Vinícius Forecchi Accioly: A sensibilidade de apoio psicopedagógico fragilidade demanda de acessibilidade ao apoio psicopedagógico em andamento planejados depois disponíveis. nosso setor conta com a presença E coordenação do trabalho é isso? de libras de tradução e interpretação
-01:05:36 Elton Vinicius: São interpretação.
-01:05:37 Marcos Vinícius Forecchi Accioly: no trabalho das intérpretes Existem ações de acessibilidade? Eu não sei se aqui tá falando do discente, né? Conta com a presença e coordenação do trabalho das intérpretes de libras. Este ano temos agenda compartilhada. Para a organização. e também O que que a gente tem hoje? Tem agenda compartilhada para organizar e a gente tem também um trabalho que é feito de tradução de cursos cursos muque
+01:04:55 Marcos VinÃ­cius Forecchi Accioly: acontecer, o que que a gente precisa fazer.
+01:04:58 Elton Vinicius: interpretaÃ§Ã£o e
+01:05:01 Marcos VinÃ­cius Forecchi Accioly: A sensibilidade de apoio psicopedagÃ³gico fragilidade demanda de acessibilidade ao apoio psicopedagÃ³gico em andamento planejados depois disponÃ­veis. nosso setor conta com a presenÃ§a E coordenaÃ§Ã£o do trabalho Ã© isso? de libras de traduÃ§Ã£o e interpretaÃ§Ã£o
+01:05:36 Elton Vinicius: SÃ£o interpretaÃ§Ã£o.
+01:05:37 Marcos VinÃ­cius Forecchi Accioly: no trabalho das intÃ©rpretes Existem aÃ§Ãµes de acessibilidade? Eu nÃ£o sei se aqui tÃ¡ falando do discente, nÃ©? Conta com a presenÃ§a e coordenaÃ§Ã£o do trabalho das intÃ©rpretes de libras. Este ano temos agenda compartilhada. Para a organizaÃ§Ã£o. e tambÃ©m O que que a gente tem hoje? Tem agenda compartilhada para organizar e a gente tem tambÃ©m um trabalho que Ã© feito de traduÃ§Ã£o de cursos cursos muque
 01:06:28 Elton Vinicius: Legal boa
-01:06:28 Marcos Vinícius Forecchi Accioly: mediante, né? Então a gente tem também um trabalho ativo de Ir né fazendo isso.
-01:06:55 Marcos Vinícius Forecchi Accioly: Revisamos um trabalho ativo de tradução de curso que ainda não possuem. Sendo que os cursos muque. Ou com nenhuma alteração? ao longo de ofertas são São organizados e traduzidos. Eu queria dizer assim os outros cursos a gente faz sobre demanda os muque a gente faz a gente mesmo.
-01:07:43 Elton Vinicius: são
-01:07:45 Marcos Vinícius Forecchi Accioly: Sendo que os custos são organizados e traduzidos.
-01:07:52 Elton Vinicius: E coordenadas pelo nosso setor, né? Seria isso são geridos.
-01:08:01 Marcos Vinícius Forecchi Accioly: sendo que a tradução dos cursos Munck
-01:08:04 Elton Vinicius: Sendo que a gestão da tradução da tradução.
-01:08:12 Marcos Vinícius Forecchi Accioly: tradução e disponibilização
+01:06:28 Marcos VinÃ­cius Forecchi Accioly: mediante, nÃ©? EntÃ£o a gente tem tambÃ©m um trabalho ativo de Ir nÃ© fazendo isso.
+01:06:55 Marcos VinÃ­cius Forecchi Accioly: Revisamos um trabalho ativo de traduÃ§Ã£o de curso que ainda nÃ£o possuem. Sendo que os cursos muque. Ou com nenhuma alteraÃ§Ã£o? ao longo de ofertas sÃ£o SÃ£o organizados e traduzidos. Eu queria dizer assim os outros cursos a gente faz sobre demanda os muque a gente faz a gente mesmo.
+01:07:43 Elton Vinicius: sÃ£o
+01:07:45 Marcos VinÃ­cius Forecchi Accioly: Sendo que os custos sÃ£o organizados e traduzidos.
+01:07:52 Elton Vinicius: E coordenadas pelo nosso setor, nÃ©? Seria isso sÃ£o geridos.
+01:08:01 Marcos VinÃ­cius Forecchi Accioly: sendo que a traduÃ§Ã£o dos cursos Munck
+01:08:04 Elton Vinicius: Sendo que a gestÃ£o da traduÃ§Ã£o da traduÃ§Ã£o.
+01:08:12 Marcos VinÃ­cius Forecchi Accioly: traduÃ§Ã£o e disponibilizaÃ§Ã£o
 01:08:12 Elton Vinicius: ou
-01:08:17 Marcos Vinícius Forecchi Accioly: dessa tradução Para os cursos. É realizada pelo próprio setor. Já para os outros cursos do cefor. É realizada mediante, solicitação e análise. Porque é isso que está acontecendo de fato, entendeu?
+01:08:17 Marcos VinÃ­cius Forecchi Accioly: dessa traduÃ§Ã£o Para os cursos. Ã‰ realizada pelo prÃ³prio setor. JÃ¡ para os outros cursos do cefor. Ã‰ realizada mediante, solicitaÃ§Ã£o e anÃ¡lise. Porque Ã© isso que estÃ¡ acontecendo de fato, entendeu?
 01:08:48 Elton Vinicius: Entendi legal.
-01:08:50 Marcos Vinícius Forecchi Accioly: ações de acessibilidade o apoio psicopedagógico É isso, né? Acho que eu consegui identificar. Olha isso que tem um lacunas e ações que eu proponho para cobri-las não. Acho que talvez alguém identifique lacuna lá na frente fluxo de atendimento ao discente. Não o que que a gente tava escrevendo?
-01:09:21 Elton Vinicius: Não identificado.
-01:09:27 Marcos Vinícius Forecchi Accioly: A sensibilidade para estudantes EAD. Eu acho que talvez isso aqui entra mais ali, né?
+01:08:50 Marcos VinÃ­cius Forecchi Accioly: aÃ§Ãµes de acessibilidade o apoio psicopedagÃ³gico Ã‰ isso, nÃ©? Acho que eu consegui identificar. Olha isso que tem um lacunas e aÃ§Ãµes que eu proponho para cobri-las nÃ£o. Acho que talvez alguÃ©m identifique lacuna lÃ¡ na frente fluxo de atendimento ao discente. NÃ£o o que que a gente tava escrevendo?
+01:09:21 Elton Vinicius: NÃ£o identificado.
+01:09:27 Marcos VinÃ­cius Forecchi Accioly: A sensibilidade para estudantes EAD. Eu acho que talvez isso aqui entra mais ali, nÃ©?
 01:09:38 Elton Vinicius: Estou sendo permanente.
-01:09:42 Marcos Vinícius Forecchi Accioly: Eu vou botar lá no outro setor sempre apoia. Vou deixar isso aqui. Com agenda compartilhada para organização das demandas. Eu acho que isso aqui realizar um trabalho ativo de tradução dos cursos. Vou colocar aqui no estudante EAD.
-01:10:10 Elton Vinicius: Você acha que vale a pena falar do ele também que a gente também trabalha?
-01:10:14 Marcos Vinícius Forecchi Accioly: para organização das demandas Sempre sempre atendemos. solicitações de diversas solicitações diversas para apoio ações de acessibilidade no cefor No IFES que na verdade é isso também, entendeu? O que a gente faz também? Acho que é isso. Sempre atendendo solicitações diversos para apoiações de acessibilidade no
-01:11:03 Elton Vinicius: E em conjunto com Napoli, né? Não sei se é em conjunto é a melhor forma.
-01:11:06 Marcos Vinícius Forecchi Accioly: IFES. Acho que isso não trabalhamos temos a gente tem uma relação com o na apne de trabalhar nas ações promovidas.
-01:11:28 Elton Vinicius: Tipo, a gente também trabalha a partir de direcionamentos ou solicitações do napen ou não?
-01:11:37 Marcos Vinícius Forecchi Accioly: A gente faz isso, por que você tá querendo botar isso? Você quer agradar rápido.
+01:09:42 Marcos VinÃ­cius Forecchi Accioly: Eu vou botar lÃ¡ no outro setor sempre apoia. Vou deixar isso aqui. Com agenda compartilhada para organizaÃ§Ã£o das demandas. Eu acho que isso aqui realizar um trabalho ativo de traduÃ§Ã£o dos cursos. Vou colocar aqui no estudante EAD.
+01:10:10 Elton Vinicius: VocÃª acha que vale a pena falar do ele tambÃ©m que a gente tambÃ©m trabalha?
+01:10:14 Marcos VinÃ­cius Forecchi Accioly: para organizaÃ§Ã£o das demandas Sempre sempre atendemos. solicitaÃ§Ãµes de diversas solicitaÃ§Ãµes diversas para apoio aÃ§Ãµes de acessibilidade no cefor No IFES que na verdade Ã© isso tambÃ©m, entendeu? O que a gente faz tambÃ©m? Acho que Ã© isso. Sempre atendendo solicitaÃ§Ãµes diversos para apoiaÃ§Ãµes de acessibilidade no
+01:11:03 Elton Vinicius: E em conjunto com Napoli, nÃ©? NÃ£o sei se Ã© em conjunto Ã© a melhor forma.
+01:11:06 Marcos VinÃ­cius Forecchi Accioly: IFES. Acho que isso nÃ£o trabalhamos temos a gente tem uma relaÃ§Ã£o com o na apne de trabalhar nas aÃ§Ãµes promovidas.
+01:11:28 Elton Vinicius: Tipo, a gente tambÃ©m trabalha a partir de direcionamentos ou solicitaÃ§Ãµes do napen ou nÃ£o?
+01:11:37 Marcos VinÃ­cius Forecchi Accioly: A gente faz isso, por que vocÃª tÃ¡ querendo botar isso? VocÃª quer agradar rÃ¡pido.
 01:11:41 Elton Vinicius: Porque ele botou parceiros.
-01:11:47 Marcos Vinícius Forecchi Accioly: um exemplo Né? Eu acho que sempre atendemos solicitações diversos para apoiações de acessibilidade no IFES.
-01:11:54 Elton Vinicius: Tá bom tá bom, tá bom também.
-01:11:56 Marcos Vinícius Forecchi Accioly: Acho que isso é para levar para discutir na reunião, né?
-01:11:59 Elton Vinicius: Não vamos que o que tá claro invisível para a gente assim, né?
-01:12:00 Marcos Vinícius Forecchi Accioly: Eu acho que se a gente conseguir fazer uma coisa mais extensa, era melhor tem mais coisa que valeria. A gente é bom a gente ir colocando tudo que a gente faz aqui também.
-01:12:13 Elton Vinicius: Entendi, não vamos. Acho que pode passar cara.
-01:12:24 Marcos Vinícius Forecchi Accioly: 3.5. Tem assim só área possui ações específicas de acessibilidade voltadas à modalidade EAD adaptados suporte em pólos língua de sinais etc realizando trabalhar tipo de tradução de curso que ainda não possuem sendo que a gestão da tradução. E disponibilização dessa transição para os cursos muito pouco, né? Uma atração que tem pouco, né? Uma alteração é realizado pelo próprio setor já para os outros cursos.
-01:12:57 Elton Vinicius: Que ações propõe ampliar sessões
-01:13:05 Marcos Vinícius Forecchi Accioly: como tradução de vídeos virtuais recursos educacionais etc
+01:11:47 Marcos VinÃ­cius Forecchi Accioly: um exemplo NÃ©? Eu acho que sempre atendemos solicitaÃ§Ãµes diversos para apoiaÃ§Ãµes de acessibilidade no IFES.
+01:11:54 Elton Vinicius: TÃ¡ bom tÃ¡ bom, tÃ¡ bom tambÃ©m.
+01:11:56 Marcos VinÃ­cius Forecchi Accioly: Acho que isso Ã© para levar para discutir na reuniÃ£o, nÃ©?
+01:11:59 Elton Vinicius: NÃ£o vamos que o que tÃ¡ claro invisÃ­vel para a gente assim, nÃ©?
+01:12:00 Marcos VinÃ­cius Forecchi Accioly: Eu acho que se a gente conseguir fazer uma coisa mais extensa, era melhor tem mais coisa que valeria. A gente Ã© bom a gente ir colocando tudo que a gente faz aqui tambÃ©m.
+01:12:13 Elton Vinicius: Entendi, nÃ£o vamos. Acho que pode passar cara.
+01:12:24 Marcos VinÃ­cius Forecchi Accioly: 3.5. Tem assim sÃ³ Ã¡rea possui aÃ§Ãµes especÃ­ficas de acessibilidade voltadas Ã  modalidade EAD adaptados suporte em pÃ³los lÃ­ngua de sinais etc realizando trabalhar tipo de traduÃ§Ã£o de curso que ainda nÃ£o possuem sendo que a gestÃ£o da traduÃ§Ã£o. E disponibilizaÃ§Ã£o dessa transiÃ§Ã£o para os cursos muito pouco, nÃ©? Uma atraÃ§Ã£o que tem pouco, nÃ©? Uma alteraÃ§Ã£o Ã© realizado pelo prÃ³prio setor jÃ¡ para os outros cursos.
+01:12:57 Elton Vinicius: Que aÃ§Ãµes propÃµe ampliar sessÃµes
+01:13:05 Marcos VinÃ­cius Forecchi Accioly: como traduÃ§Ã£o de vÃ­deos virtuais recursos educacionais etc
 01:13:07 Elton Vinicius: que
-01:13:15 Marcos Vinícius Forecchi Accioly: O que que a gente faz também cara em relação à questão? A gente sempre dá suporte a transmissões também, né?
-01:13:34 Elton Vinicius: Tanto as transmissões das aulas.
-01:13:37 Marcos Vinícius Forecchi Accioly: Transmissões salas virtuais educacionais etc uma outra coisa que a gente faz é a questão do teste e a questão da acessibilidade no ava, né?
-01:13:53 Elton Vinicius: Trabalho que a gente fez, né? Tipo de
-01:13:56 Marcos Vinícius Forecchi Accioly: No setor também. acompanha Implementa porque é isso que a gente faz a gente é recursos de acessibilidade no ambiente virtual os ambientes virtuais.
+01:13:15 Marcos VinÃ­cius Forecchi Accioly: O que que a gente faz tambÃ©m cara em relaÃ§Ã£o Ã  questÃ£o? A gente sempre dÃ¡ suporte a transmissÃµes tambÃ©m, nÃ©?
+01:13:34 Elton Vinicius: Tanto as transmissÃµes das aulas.
+01:13:37 Marcos VinÃ­cius Forecchi Accioly: TransmissÃµes salas virtuais educacionais etc uma outra coisa que a gente faz Ã© a questÃ£o do teste e a questÃ£o da acessibilidade no ava, nÃ©?
+01:13:53 Elton Vinicius: Trabalho que a gente fez, nÃ©? Tipo de
+01:13:56 Marcos VinÃ­cius Forecchi Accioly: No setor tambÃ©m. acompanha Implementa porque Ã© isso que a gente faz a gente Ã© recursos de acessibilidade no ambiente virtual os ambientes virtuais.
 01:14:24 Elton Vinicius: lava e o muque
-01:14:26 Marcos Vinícius Forecchi Accioly: É os ambientes virtuais são lábios, mas eu ia colocar em algum lugar aqui que por exemplo a gente está fazendo para parte de conhecimento. Agora você vê.
-01:14:36 Elton Vinicius: Então nos ambientes virtuais e sistemas que desenvolvem né no sistemas. De responsabilidade do setor na nossa setor acompanha implementa recursos nos ambientes virtuais e Sistemas.
-01:14:54 Marcos Vinícius Forecchi Accioly: sistemas que o desenvolvimento passa pelo setor Vou botar assim.
+01:14:26 Marcos VinÃ­cius Forecchi Accioly: Ã‰ os ambientes virtuais sÃ£o lÃ¡bios, mas eu ia colocar em algum lugar aqui que por exemplo a gente estÃ¡ fazendo para parte de conhecimento. Agora vocÃª vÃª.
+01:14:36 Elton Vinicius: EntÃ£o nos ambientes virtuais e sistemas que desenvolvem nÃ© no sistemas. De responsabilidade do setor na nossa setor acompanha implementa recursos nos ambientes virtuais e Sistemas.
+01:14:54 Marcos VinÃ­cius Forecchi Accioly: sistemas que o desenvolvimento passa pelo setor Vou botar assim.
 01:14:59 Elton Vinicius: boa
-01:15:01 Marcos Vinícius Forecchi Accioly: Botar entre parentes aqui. É base de conhecimento. Vitrine muque etc. Então nesse caso ainda não tem que ações você propõe para sensibilidade na EAD. E vitrine muque com acessibilidade. similar aos ambientes virtuais com ferramentas de acessibilidade digital Que eu acho que para base a gente já tá fazendo na vitrine, falta a gente pensar e colocar né? Talvez um de libras. Então vou botar.
-01:15:52 Elton Vinicius: uma barrinha de de contraste, né barrinha de contraste de A barra de acessibilidade mesmo, né?
-01:16:03 Marcos Vinícius Forecchi Accioly: Eu acho que seria interessante ter você e a Eliana aqui, ó.
-01:16:06 Elton Vinicius: tá
-01:16:07 Marcos Vinícius Forecchi Accioly: Acho que isso já é segundo semestre de 2026 algumas ações assim, né? Por isso que a digestão de pessoas alguém de trabalho é o mais crítico condições físicas relacionais organizacionais para melhoria das condições de trabalho na sua área estrutura física as relações interpessoais clima organizacional.
+01:15:01 Marcos VinÃ­cius Forecchi Accioly: Botar entre parentes aqui. Ã‰ base de conhecimento. Vitrine muque etc. EntÃ£o nesse caso ainda nÃ£o tem que aÃ§Ãµes vocÃª propÃµe para sensibilidade na EAD. E vitrine muque com acessibilidade. similar aos ambientes virtuais com ferramentas de acessibilidade digital Que eu acho que para base a gente jÃ¡ tÃ¡ fazendo na vitrine, falta a gente pensar e colocar nÃ©? Talvez um de libras. EntÃ£o vou botar.
+01:15:52 Elton Vinicius: uma barrinha de de contraste, nÃ© barrinha de contraste de A barra de acessibilidade mesmo, nÃ©?
+01:16:03 Marcos VinÃ­cius Forecchi Accioly: Eu acho que seria interessante ter vocÃª e a Eliana aqui, Ã³.
+01:16:06 Elton Vinicius: tÃ¡
+01:16:07 Marcos VinÃ­cius Forecchi Accioly: Acho que isso jÃ¡ Ã© segundo semestre de 2026 algumas aÃ§Ãµes assim, nÃ©? Por isso que a digestÃ£o de pessoas alguÃ©m de trabalho Ã© o mais crÃ­tico condiÃ§Ãµes fÃ­sicas relacionais organizacionais para melhoria das condiÃ§Ãµes de trabalho na sua Ã¡rea estrutura fÃ­sica as relaÃ§Ãµes interpessoais clima organizacional.
 01:16:31 Elton Vinicius: que tem
-01:16:34 Marcos Vinícius Forecchi Accioly: temos abertura e realizamos escuta ativa entre os
-01:16:37 Elton Vinicius: Eu não sei se fala porque aí entra no qvt, né? Tipo? s
-01:17:01 Marcos Vinícius Forecchi Accioly: colaboradores do setor Acho que a gente sempre tem conversas que tem a ver com os cuscutativa. Falar de que tá acontecendo de sentimentos, você faz com Andreia, Andreia faz com a Eliana. Eu faço com você eu faço com Eliana faz com a Raquel, entendeu? Então tipo, eu acho que a gente faz sim alguma coisa, né? Eu acho que também tem todos que realizam capacitações compartilham. Seus aprendizados são convidados a compartilhar seus aprendizados. Com os colegas. Também é legal, né? Acho que é uma coisa que a gente faz.
-01:17:58 Marcos Vinícius Forecchi Accioly: Mais do que? Acho que é isso cara, demanda de melhoria de ambiente de trabalho que a gente identifica. Ter reuniões periódicas para conversar e tratar do clima organizacional a respeito do clima organizacional.
-01:18:28 Elton Vinicius: Legal legal é legal isso.
-01:18:29 Marcos Vinícius Forecchi Accioly: Como que tá para você?
+01:16:34 Marcos VinÃ­cius Forecchi Accioly: temos abertura e realizamos escuta ativa entre os
+01:16:37 Elton Vinicius: Eu nÃ£o sei se fala porque aÃ­ entra no qvt, nÃ©? Tipo? s
+01:17:01 Marcos VinÃ­cius Forecchi Accioly: colaboradores do setor Acho que a gente sempre tem conversas que tem a ver com os cuscutativa. Falar de que tÃ¡ acontecendo de sentimentos, vocÃª faz com Andreia, Andreia faz com a Eliana. Eu faÃ§o com vocÃª eu faÃ§o com Eliana faz com a Raquel, entendeu? EntÃ£o tipo, eu acho que a gente faz sim alguma coisa, nÃ©? Eu acho que tambÃ©m tem todos que realizam capacitaÃ§Ãµes compartilham. Seus aprendizados sÃ£o convidados a compartilhar seus aprendizados. Com os colegas. TambÃ©m Ã© legal, nÃ©? Acho que Ã© uma coisa que a gente faz.
+01:17:58 Marcos VinÃ­cius Forecchi Accioly: Mais do que? Acho que Ã© isso cara, demanda de melhoria de ambiente de trabalho que a gente identifica. Ter reuniÃµes periÃ³dicas para conversar e tratar do clima organizacional a respeito do clima organizacional.
+01:18:28 Elton Vinicius: Legal legal Ã© legal isso.
+01:18:29 Marcos VinÃ­cius Forecchi Accioly: Como que tÃ¡ para vocÃª?
 01:18:42 Elton Vinicius: Vai sozinho.
-01:18:42 Marcos Vinícius Forecchi Accioly: Acho que é isso. Acho que também eu acho que outra coisa do clima organizacional que eu percebo do ambiente de trabalho é organizacional que a gente sempre traz à tona é a questão da liderança no teu planejamento Claro por ser forte. Então, tipo, que melhoraria para nós conseguir ter uma ponte com a gestão do cefor que desce clareza sobre as ações a serem realizadas.
-01:19:14 Elton Vinicius: Cara, isso é bem legal. E acho que é legal marcar isso aí, né? tem mais clareza sobre
-01:19:25 Marcos Vinícius Forecchi Accioly: As ações estratégicas serem realizadas pelo cefor? Então botar assim, planejamento da gestão superior. Bota assim, né? É mais clareza sobre as ações estratégicas eram realizadas pelo ceforo o que a gente vai fazer nesse ano, né? Beleza acho que Qual são concreta põe para melhorar o ambiente de trabalho?
-01:20:04 Elton Vinicius: Na verdade o de cima, né acaba parecido
-01:20:07 Marcos Vinícius Forecchi Accioly: O que? Aqui é demandas de melhoria, né? E aqui ele tá perguntando ação concreta que a gente já colocou as demandas de melhoria aqui.
-01:20:17 Elton Vinicius: Como uma ação concreta?
-01:20:18 Marcos Vinícius Forecchi Accioly: Ela botou um campo para tipo conversar sobre isso, né? Talvez eu possa trazer isso aqui. Essa aqui ó.
+01:18:42 Marcos VinÃ­cius Forecchi Accioly: Acho que Ã© isso. Acho que tambÃ©m eu acho que outra coisa do clima organizacional que eu percebo do ambiente de trabalho Ã© organizacional que a gente sempre traz Ã  tona Ã© a questÃ£o da lideranÃ§a no teu planejamento Claro por ser forte. EntÃ£o, tipo, que melhoraria para nÃ³s conseguir ter uma ponte com a gestÃ£o do cefor que desce clareza sobre as aÃ§Ãµes a serem realizadas.
+01:19:14 Elton Vinicius: Cara, isso Ã© bem legal. E acho que Ã© legal marcar isso aÃ­, nÃ©? tem mais clareza sobre
+01:19:25 Marcos VinÃ­cius Forecchi Accioly: As aÃ§Ãµes estratÃ©gicas serem realizadas pelo cefor? EntÃ£o botar assim, planejamento da gestÃ£o superior. Bota assim, nÃ©? Ã‰ mais clareza sobre as aÃ§Ãµes estratÃ©gicas eram realizadas pelo ceforo o que a gente vai fazer nesse ano, nÃ©? Beleza acho que Qual sÃ£o concreta pÃµe para melhorar o ambiente de trabalho?
+01:20:04 Elton Vinicius: Na verdade o de cima, nÃ© acaba parecido
+01:20:07 Marcos VinÃ­cius Forecchi Accioly: O que? Aqui Ã© demandas de melhoria, nÃ©? E aqui ele tÃ¡ perguntando aÃ§Ã£o concreta que a gente jÃ¡ colocou as demandas de melhoria aqui.
+01:20:17 Elton Vinicius: Como uma aÃ§Ã£o concreta?
+01:20:18 Marcos VinÃ­cius Forecchi Accioly: Ela botou um campo para tipo conversar sobre isso, nÃ©? Talvez eu possa trazer isso aqui. Essa aqui Ã³.
 01:20:28 Elton Vinicius: uma
-01:20:29 Marcos Vinícius Forecchi Accioly: Eu acho eu acho que a gente consegue conversar no segundo semestre também. Tchau conversa sobre o setor, né? Transparência como sua área acessa as informações do cefor. Não acessa. Não identificado né? Hoje não acessamos.
-01:20:56 Elton Vinicius: Não não.
-01:21:00 Marcos Vinícius Forecchi Accioly: Exceto quando é o recurso. excepcional Todo aquele de viagens todo mundo preenche. E transparência orçamentária coletiva.
-01:21:19 Elton Vinicius: Eu acho que esse daí ação que a gente pode sugerir talvez apresentação em reuniões. Cara, eu vou precisar combinei com o pessoal 11 horas.
-01:21:46 Marcos Vinícius Forecchi Accioly: Eu tenho que sair até 11:30 também, rapaz gigante isso aqui, mano. Vou levar aqui fazendo desse jeito que nós estamos fazendo. Acho que sua
+01:20:29 Marcos VinÃ­cius Forecchi Accioly: Eu acho eu acho que a gente consegue conversar no segundo semestre tambÃ©m. Tchau conversa sobre o setor, nÃ©? TransparÃªncia como sua Ã¡rea acessa as informaÃ§Ãµes do cefor. NÃ£o acessa. NÃ£o identificado nÃ©? Hoje nÃ£o acessamos.
+01:20:56 Elton Vinicius: NÃ£o nÃ£o.
+01:21:00 Marcos VinÃ­cius Forecchi Accioly: Exceto quando Ã© o recurso. excepcional Todo aquele de viagens todo mundo preenche. E transparÃªncia orÃ§amentÃ¡ria coletiva.
+01:21:19 Elton Vinicius: Eu acho que esse daÃ­ aÃ§Ã£o que a gente pode sugerir talvez apresentaÃ§Ã£o em reuniÃµes. Cara, eu vou precisar combinei com o pessoal 11 horas.
+01:21:46 Marcos VinÃ­cius Forecchi Accioly: Eu tenho que sair atÃ© 11:30 tambÃ©m, rapaz gigante isso aqui, mano. Vou levar aqui fazendo desse jeito que nÃ³s estamos fazendo. Acho que sua
 01:21:51 Elton Vinicius: cara
-01:21:54 Marcos Vinícius Forecchi Accioly: presença estava ajudando para você poder também lembrar coisas, né?
-01:21:58 Elton Vinicius: Vamos aí, tem mais Três minutinhos, vamos? transparência orçamentária para a comunidade
-01:22:06 Marcos Vinícius Forecchi Accioly: levar orçamentos Para as reuniões do setor. Essa é uma coisa que eu posso fazer. 2027 certa felicidade financeira média percepção de fragilidade da capacidade financeira de ser fora na sua área ações voltadas à captação de recursos parcerias alternativas de financiamento. Não me lembro de nada que a gente captou recurso.
-01:22:38 Elton Vinicius: é de captação de recursos
-01:22:58 Marcos Vinícius Forecchi Accioly: Elaboração do orçamento formal informal existe um espaço onde servidores da sua área participam da discussão? Não identificado. Que mecanismo se propõe para ampliar a participação de servidores no planejamento orçamentário?
-01:23:21 Elton Vinicius: Também você botou lá?
-01:23:28 Marcos Vinícius Forecchi Accioly: Talvez é isso. Conhecer com a gestão né? O que poderíamos fazer para isso é isso não.
-01:23:35 Elton Vinicius: Não o outro.
-01:23:36 Marcos Vinícius Forecchi Accioly: É isso que tem reunióticas.
-01:23:42 Elton Vinicius: Uai você tinha botado. sustentabilidade
-01:23:52 Marcos Vinícius Forecchi Accioly: Para as reuniões do setor.
-01:23:55 Elton Vinicius: Acho que era foi esse aí, você botou.
-01:24:02 Marcos Vinícius Forecchi Accioly: química ampliar a participação de servidores no planejamento orçamentário Acho que é ter clareza sobre.
-01:24:23 Elton Vinicius: a participação planejamento
-01:24:37 Marcos Vinícius Forecchi Accioly: Participação dos processos decisórios amigo vai lá eu tenho uma consulta
-01:24:39 Elton Vinicius: Olá, olá!
-01:24:42 Marcos Vinícius Forecchi Accioly: 11:30 também. Vou comer aqui também agora um pouco e vou voltar para terminar isso aqui.
-01:24:46 Elton Vinicius: Tá bom então, valeu, um abraço.
-01:24:48 Marcos Vinícius Forecchi Accioly: Beleza então, valeu querido. Você tá escrevendo ou não você quer a transcrição?
-01:24:52 Elton Vinicius: Cara, tava transcrevendo aqui eu vi aqui tava aqui já obrigado.
-01:24:55 Marcos Vinícius Forecchi Accioly: Tá com você aí?
+01:21:54 Marcos VinÃ­cius Forecchi Accioly: presenÃ§a estava ajudando para vocÃª poder tambÃ©m lembrar coisas, nÃ©?
+01:21:58 Elton Vinicius: Vamos aÃ­, tem mais TrÃªs minutinhos, vamos? transparÃªncia orÃ§amentÃ¡ria para a comunidade
+01:22:06 Marcos VinÃ­cius Forecchi Accioly: levar orÃ§amentos Para as reuniÃµes do setor. Essa Ã© uma coisa que eu posso fazer. 2027 certa felicidade financeira mÃ©dia percepÃ§Ã£o de fragilidade da capacidade financeira de ser fora na sua Ã¡rea aÃ§Ãµes voltadas Ã  captaÃ§Ã£o de recursos parcerias alternativas de financiamento. NÃ£o me lembro de nada que a gente captou recurso.
+01:22:38 Elton Vinicius: Ã© de captaÃ§Ã£o de recursos
+01:22:58 Marcos VinÃ­cius Forecchi Accioly: ElaboraÃ§Ã£o do orÃ§amento formal informal existe um espaÃ§o onde servidores da sua Ã¡rea participam da discussÃ£o? NÃ£o identificado. Que mecanismo se propÃµe para ampliar a participaÃ§Ã£o de servidores no planejamento orÃ§amentÃ¡rio?
+01:23:21 Elton Vinicius: TambÃ©m vocÃª botou lÃ¡?
+01:23:28 Marcos VinÃ­cius Forecchi Accioly: Talvez Ã© isso. Conhecer com a gestÃ£o nÃ©? O que poderÃ­amos fazer para isso Ã© isso nÃ£o.
+01:23:35 Elton Vinicius: NÃ£o o outro.
+01:23:36 Marcos VinÃ­cius Forecchi Accioly: Ã‰ isso que tem reuniÃ³ticas.
+01:23:42 Elton Vinicius: Uai vocÃª tinha botado. sustentabilidade
+01:23:52 Marcos VinÃ­cius Forecchi Accioly: Para as reuniÃµes do setor.
+01:23:55 Elton Vinicius: Acho que era foi esse aÃ­, vocÃª botou.
+01:24:02 Marcos VinÃ­cius Forecchi Accioly: quÃ­mica ampliar a participaÃ§Ã£o de servidores no planejamento orÃ§amentÃ¡rio Acho que Ã© ter clareza sobre.
+01:24:23 Elton Vinicius: a participaÃ§Ã£o planejamento
+01:24:37 Marcos VinÃ­cius Forecchi Accioly: ParticipaÃ§Ã£o dos processos decisÃ³rios amigo vai lÃ¡ eu tenho uma consulta
+01:24:39 Elton Vinicius: OlÃ¡, olÃ¡!
+01:24:42 Marcos VinÃ­cius Forecchi Accioly: 11:30 tambÃ©m. Vou comer aqui tambÃ©m agora um pouco e vou voltar para terminar isso aqui.
+01:24:46 Elton Vinicius: TÃ¡ bom entÃ£o, valeu, um abraÃ§o.
+01:24:48 Marcos VinÃ­cius Forecchi Accioly: Beleza entÃ£o, valeu querido. VocÃª tÃ¡ escrevendo ou nÃ£o vocÃª quer a transcriÃ§Ã£o?
+01:24:52 Elton Vinicius: Cara, tava transcrevendo aqui eu vi aqui tava aqui jÃ¡ obrigado.
+01:24:55 Marcos VinÃ­cius Forecchi Accioly: TÃ¡ com vocÃª aÃ­?
   
+

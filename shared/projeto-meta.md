@@ -1,4 +1,4 @@
-# Meta do Projeto - Vitrine MOOC Ifes
+﻿# Meta do Projeto - Vitrine MOOC Ifes
 
 Fatos estaveis do projeto. Fonte canonica para os estagios. Atualize aqui quando algo mudar, nunca duplique em outros arquivos.
 
@@ -10,7 +10,7 @@ Fatos estaveis do projeto. Fonte canonica para os estagios. Atualize aqui quando
 | Organizacao | Ifes - CEFOR (Centro de Referencia em Formacao e em Educacao a Distancia) |
 | URL atual | https://mooc.cefor.ifes.edu.br/ |
 | Setores envolvidos | CGTI (infraestrutura) e CGTE (desenvolvimento) |
-| Equipe de desenvolvimento | Elton Vinicius e Marcos "Marquito" Forecchi Accioly (CGTE) |
+| Equipe de desenvolvimento | Elton Vinicius e Marcos Forecchi Accioly (CGTE) |
 | Infraestrutura | Eduardo "Dudu" Moura da Silva (CGTI) |
 
 ## Tecnologia
@@ -21,7 +21,7 @@ Fatos estaveis do projeto. Fonte canonica para os estagios. Atualize aqui quando
 | Versao alvo | 7.0 (a Vitrine atual roda 5.9) |
 | Tema atual | `vitrinemooctheme` (Bootstrap 4.2.1, Font Awesome 4.7) |
 | Ambiente de trabalho | Local (WP7) e depois ambiente de teste dedicado (VM da CGTI) |
-| Banco de dados | Dump da CGTI de 03/07/2026 em `stages/04-setup-ambiente/references/backup_vitrine_mooc.sql` (não versionado — LGPD, ver `.gitignore`); análise em `stages/01-descoberta/output/modelo-dados-vitrine-atual.md` |
+| Banco de dados | Dump da CGTI de 03/07/2026 em `stages/04-setup-ambiente/references/backup_vitrine_mooc.sql` (nÃ£o versionado â€” LGPD, ver `.gitignore`); anÃ¡lise em `stages/01-descoberta/output/modelo-dados-vitrine-atual.md` |
 | Modelo de referencia | Estrutura de pastas do repositorio da Base de Conhecimento |
 
 ## Escopo do Catalogo
@@ -59,3 +59,5 @@ Os valores abaixo dependem da CGTI e do design final. Sao preenchidos no onboard
 
 - Ambiente de teste da Vitrine: inicio previsto por volta de 06/07.
 - Ate la, a equipe trabalha localmente.
+
+

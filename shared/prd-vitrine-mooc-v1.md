@@ -1,160 +1,162 @@
-# PRD — Vitrine MOOC CEFOR (v1.0)
+﻿# PRD â€” Vitrine MOOC CEFOR (v1.0)
 
-> **Documento canônico de requisitos do produto.** Versão limpa das seções narrativas.
+> **Documento canÃ´nico de requisitos do produto.** VersÃ£o limpa das seÃ§Ãµes narrativas.
 > **Fonte integral (com Anexos A e B):** `shared/prd-vitrine-mooc-v1-fonte.txt`
-> **Produto:** mooc.cefor.ifes.edu.br · **Versão:** 1.0 · **Data:** 02/04/2026
-> **Autores:** Elton Vinicius (Design) + Marquito (Desenvolvimento) — CEFOR/CGTE, Ifes
+> **Produto:** mooc.cefor.ifes.edu.br Â· **VersÃ£o:** 1.0 Â· **Data:** 02/04/2026
+> **Autores:** Elton Vinicius (Design) + equipe de desenvolvimento â€” CEFOR/CGTE, Ifes
 > **Deadline:** Agosto 2026 (CONCEFOR)
 
-## 1. Visão geral
+## 1. VisÃ£o geral
 
-Plataforma de cursos abertos do Ifes: **284.595 matrículas**, **100+ cursos** em **20 categorias**, gratuitos e certificados (conceito **MEC 5 estrelas**, avaliação máxima INEP/MEC em EaD).
+Plataforma de cursos abertos do Ifes: **284.595 matrÃ­culas**, **100+ cursos** em **20 categorias**, gratuitos e certificados (conceito **MEC 5 estrelas**, avaliaÃ§Ã£o mÃ¡xima INEP/MEC em EaD).
 
-Evolução em **três camadas** entregues de forma faseada até agosto/2026 (CONCEFOR):
-1. **Vitrine Evolutiva** — redesign visual e funcional sobre a estrutura WordPress existente, mantendo o que já há.
-2. **Hub de Qualificação Profissional** — página interna com Planejador de Licença Capacitação, navegação por objetivo e trilhas.
-3. **Ferramenta Inteligente** — Wizard de Descoberta que recomenda cursos por perfil (único entre IFs).
+EvoluÃ§Ã£o em **trÃªs camadas** entregues de forma faseada atÃ© agosto/2026 (CONCEFOR):
+1. **Vitrine Evolutiva** â€” redesign visual e funcional sobre a estrutura WordPress existente, mantendo o que jÃ¡ hÃ¡.
+2. **Hub de QualificaÃ§Ã£o Profissional** â€” pÃ¡gina interna com Planejador de LicenÃ§a CapacitaÃ§Ã£o, navegaÃ§Ã£o por objetivo e trilhas.
+3. **Ferramenta Inteligente** â€” Wizard de Descoberta que recomenda cursos por perfil (Ãºnico entre IFs).
 
-**Versão futura:** Área do Aluno com dashboard, integração Moodle via API, histórico e progresso.
+**VersÃ£o futura:** Ãrea do Aluno com dashboard, integraÃ§Ã£o Moodle via API, histÃ³rico e progresso.
 
 ## 2. Contexto e estado atual
 
-### 2.1 O que Marquito já construiu (reunião 17/03/2026)
-No tema WordPress customizado já estão implementados:
-- Seções tipo **Netflix**: "Em destaque" (manual), "Adicionados recentemente" (por data), "Mais cursados" (por matrículas).
+### 2.1 O que a equipe de desenvolvimento ja construiu (reuniÃ£o 17/03/2026)
+No tema WordPress customizado jÃ¡ estÃ£o implementados:
+- SeÃ§Ãµes tipo **Netflix**: "Em destaque" (manual), "Adicionados recentemente" (por data), "Mais cursados" (por matrÃ­culas).
 - **Busca por texto + filtro por categoria** combinados, com indicador de categoria ativa.
 - **Lazy loading** ("carregar mais cursos").
-- **Menu reorganizado**: Dúvidas frequentes, Validação de certificado, Painel de indicadores, Suporte.
-- **Campo de carga horária** criado no cadastro WordPress (pendente: popular dados).
-- **Título do curso fora da imagem** (aparece no hover).
-- **FAQ reduzido a 5 perguntas** com botão "ver todas".
+- **Menu reorganizado**: DÃºvidas frequentes, ValidaÃ§Ã£o de certificado, Painel de indicadores, Suporte.
+- **Campo de carga horÃ¡ria** criado no cadastro WordPress (pendente: popular dados).
+- **TÃ­tulo do curso fora da imagem** (aparece no hover).
+- **FAQ reduzido a 5 perguntas** com botÃ£o "ver todas".
 
-### 2.2 Conteúdo existente a manter
-- **"O que é":** MOOCs 100% on-line, gratuitos, sem tutoria, abertos (sem seleção), certificados (≥60% de aproveitamento), CH máx. 60h.
-- **"Como Funciona":** 4 etapas — Cadastre-se → Escolha o Curso → Faça o Curso → Emita seu Certificado (reconhecido MEC).
-- **Selo de Qualidade:** 5 Estrelas INEP/MEC — deve ter destaque visual.
+### 2.2 ConteÃºdo existente a manter
+- **"O que Ã©":** MOOCs 100% on-line, gratuitos, sem tutoria, abertos (sem seleÃ§Ã£o), certificados (â‰¥60% de aproveitamento), CH mÃ¡x. 60h.
+- **"Como Funciona":** 4 etapas â€” Cadastre-se â†’ Escolha o Curso â†’ FaÃ§a o Curso â†’ Emita seu Certificado (reconhecido MEC).
+- **Selo de Qualidade:** 5 Estrelas INEP/MEC â€” deve ter destaque visual.
 - **FAQ completo:** 34 perguntas (com lazy load: mostra 5, expande sob demanda).
-- **Catálogo:** manter os 100+ cursos com imagens atuais; cards enriquecidos (§4.2). Lista completa no Anexo A.
+- **CatÃ¡logo:** manter os 100+ cursos com imagens atuais; cards enriquecidos (Â§4.2). Lista completa no Anexo A.
 
 ### 2.3 Problemas a resolver
-| Problema | Descrição | Impacto |
+| Problema | DescriÃ§Ã£o | Impacto |
 |----------|-----------|---------|
-| Hero vago | "Reconexões com o saber" não comunica proposta de valor | Conversão baixa |
-| Cards sem info | Sem carga horária, badges, descrição | Cliques desperdiçados |
-| Alt texts genéricos | "Como criar Mooc" em todas as imagens | Acessibilidade + SEO |
-| Licença Capacitação enterrada | Info vital na pergunta 16 do FAQ, não na navegação | Perde servidores públicos |
-| Email Hotmail/Outlook | Restrição não comunicada antes do cadastro | Abandono silencioso |
+| Hero vago | "ReconexÃµes com o saber" nÃ£o comunica proposta de valor | ConversÃ£o baixa |
+| Cards sem info | Sem carga horÃ¡ria, badges, descriÃ§Ã£o | Cliques desperdiÃ§ados |
+| Alt texts genÃ©ricos | "Como criar Mooc" em todas as imagens | Acessibilidade + SEO |
+| LicenÃ§a CapacitaÃ§Ã£o enterrada | Info vital na pergunta 16 do FAQ, nÃ£o na navegaÃ§Ã£o | Perde servidores pÃºblicos |
+| Email Hotmail/Outlook | RestriÃ§Ã£o nÃ£o comunicada antes do cadastro | Abandono silencioso |
 
-### 2.4 Papéis
+### 2.4 PapÃ©is
 - **Elton:** design, identidade visual, UX, wireframes, prioridades de design.
-- **Marquito:** desenvolvimento WordPress, implementação, backend, integração Moodle.
-- **Fluxo:** Elton desenha → Marquito implementa → **Comissão MOOC** aprova.
+- **Equipe de desenvolvimento:** desenvolvimento WordPress, implementaÃ§Ã£o, backend, integraÃ§Ã£o Moodle.
+- **Fluxo:** Elton desenha â†’ equipe de desenvolvimento implementa â†’ **ComissÃ£o MOOC** aprova.
 
-## 3. Arquitetura da solução
+## 3. Arquitetura da soluÃ§Ã£o
 
-| Camada | O que é | Onde vive |
+| Camada | O que Ã© | Onde vive |
 |--------|---------|-----------|
 | Vitrine Evolutiva | Redesign da home sobre WordPress existente | mooc.cefor.ifes.edu.br (home) |
-| Hub Profissional | Planejador de Licença, navegação por objetivo, trilhas | `/qualificacao` (página interna) |
-| Ferramenta Inteligente | Wizard 3-4 perguntas que recomenda cursos | Modal ou página interna via CTA do hero |
+| Hub Profissional | Planejador de LicenÃ§a, navegaÃ§Ã£o por objetivo, trilhas | `/qualificacao` (pÃ¡gina interna) |
+| Ferramenta Inteligente | Wizard 3-4 perguntas que recomenda cursos | Modal ou pÃ¡gina interna via CTA do hero |
 
-**Fluxo do usuário:** home com hero (proposta de valor + duplo CTA busca/wizard) → seções curadas → navegação por objetivo → se servidor, banner Licença → Planejador → plano imprimível → matrícula; ou Wizard → recomendações; FAQ/O que é/Como funciona/criar conta a qualquer momento.
+**Fluxo do usuÃ¡rio:** home com hero (proposta de valor + duplo CTA busca/wizard) â†’ seÃ§Ãµes curadas â†’ navegaÃ§Ã£o por objetivo â†’ se servidor, banner LicenÃ§a â†’ Planejador â†’ plano imprimÃ­vel â†’ matrÃ­cula; ou Wizard â†’ recomendaÃ§Ãµes; FAQ/O que Ã©/Como funciona/criar conta a qualquer momento.
 
-## 4. Camada 1 — Vitrine Evolutiva
+## 4. Camada 1 â€” Vitrine Evolutiva
 
 ### 4.1 Prioridades de design
-1. **Hero com proposta de valor direta** — ~~"Qualificação profissional gratuita e certificada pelo Ifes"~~ **[REMOVIDO em 02/07 — contraria o objetivo oficial "aberto à comunidade" da Resolução CS 72/2020. Usar proposta de valor de educação aberta, gratuita e certificada.]** Duplo CTA (busca + Wizard). Selo 5 estrelas MEC visível.
-2. **Cards enriquecidos** — CH visível (ex.: 20h), badge "Novo", selo Libras, nº de inscritos; ao clicar, detalhes expandidos (descrição, objetivos, estrutura).
-3. **Barra de estatísticas** — 284.595 matrículas | 100+ cursos | 5 estrelas MEC | 100% gratuito (prova social acima da dobra).
-4. **Seções curadas** — "Em destaque" / "Recentes" / "Mais cursados" (evolui o que Marquito fez).
-5. **Navegação por objetivo** — 4 cards: Inovar na sala de aula / Licença Capacitação / Aprender tecnologia / Crescer na carreira.
-6. **Banner Licença Capacitação** — CTA proeminente na home → página interna do Hub.
-7. **O que é + Como funciona** — mantidas, visual renovado.
-8. **FAQ com lazy load** — 5 primeiras + "Ver todas" (34 mantidas).
-9. **Paleta e tipografia** — design system: **Serif** para títulos, **Sans** para corpo, **Mono** para dados numéricos.
-10. **Projetos parceiros** — **Rio Doce Escolar** e **UnAC** com descrição, imagem e link, visíveis na home.
-11. **Filtros avançados** — Categoria + carga horária + Libras; sinalização visual de busca ativa.
-12. **Correções técnicas** — alt texts, cookie consent, warning de email pré-cadastro, proporção de imagens.
+1. **Hero com proposta de valor direta** â€” ~~"QualificaÃ§Ã£o profissional gratuita e certificada pelo Ifes"~~ **[REMOVIDO em 02/07 â€” contraria o objetivo oficial "aberto Ã  comunidade" da ResoluÃ§Ã£o CS 72/2020. Usar proposta de valor de educaÃ§Ã£o aberta, gratuita e certificada.]** Duplo CTA (busca + Wizard). Selo 5 estrelas MEC visÃ­vel.
+2. **Cards enriquecidos** â€” CH visÃ­vel (ex.: 20h), badge "Novo", selo Libras, nÂº de inscritos; ao clicar, detalhes expandidos (descriÃ§Ã£o, objetivos, estrutura).
+3. **Barra de estatÃ­sticas** â€” 284.595 matrÃ­culas | 100+ cursos | 5 estrelas MEC | 100% gratuito (prova social acima da dobra).
+4. **SeÃ§Ãµes curadas** â€” "Em destaque" / "Recentes" / "Mais cursados" (evolui o que a equipe fez).
+5. **NavegaÃ§Ã£o por objetivo** â€” 4 cards: Inovar na sala de aula / LicenÃ§a CapacitaÃ§Ã£o / Aprender tecnologia / Crescer na carreira.
+6. **Banner LicenÃ§a CapacitaÃ§Ã£o** â€” CTA proeminente na home â†’ pÃ¡gina interna do Hub.
+7. **O que Ã© + Como funciona** â€” mantidas, visual renovado.
+8. **FAQ com lazy load** â€” 5 primeiras + "Ver todas" (34 mantidas).
+9. **Paleta e tipografia** â€” design system: **Serif** para tÃ­tulos, **Sans** para corpo, **Mono** para dados numÃ©ricos.
+10. **Projetos parceiros** â€” **Rio Doce Escolar** e **UnAC** com descriÃ§Ã£o, imagem e link, visÃ­veis na home.
+11. **Filtros avanÃ§ados** â€” Categoria + carga horÃ¡ria + Libras; sinalizaÃ§Ã£o visual de busca ativa.
+12. **CorreÃ§Ãµes tÃ©cnicas** â€” alt texts, cookie consent, warning de email prÃ©-cadastro, proporÃ§Ã£o de imagens.
 
 ### 4.2 Card do curso
-- **Fechado (grid):** imagem (existente), selo Libras, badge "Novo" (últimos 3 meses), carga horária, título, nº de inscritos.
-- **Expandido (ao clicar):** descrição, objetivos de aprendizagem, categoria e tags, botão "Acessar curso" (→ Moodle), botão "Compartilhar" (WhatsApp/link).
+- **Fechado (grid):** imagem (existente), selo Libras, badge "Novo" (Ãºltimos 3 meses), carga horÃ¡ria, tÃ­tulo, nÂº de inscritos.
+- **Expandido (ao clicar):** descriÃ§Ã£o, objetivos de aprendizagem, categoria e tags, botÃ£o "Acessar curso" (â†’ Moodle), botÃ£o "Compartilhar" (WhatsApp/link).
 
-### 4.3 O que NÃO muda
-Estrutura WordPress + tema do Marquito; Moodle como backend; fluxo de cadastro/inscrição; catálogo e imagens atuais; seções Netflix (evoluem visualmente).
+### 4.3 O que NÃƒO muda
+Estrutura WordPress + tema customizado existente; Moodle como backend; fluxo de cadastro/inscriÃ§Ã£o; catÃ¡logo e imagens atuais; seÃ§Ãµes Netflix (evoluem visualmente).
 
-## 5. Camada 2 — Hub de Qualificação Profissional
+## 5. Camada 2 â€” Hub de QualificaÃ§Ã£o Profissional
 
-Página interna (`/qualificacao`) que reposiciona os MOOCs como ferramenta de qualificação profissional.
+PÃ¡gina interna (`/qualificacao`) que reposiciona os MOOCs como ferramenta de qualificaÃ§Ã£o profissional.
 
-### 5.1 Planejador de Licença para Capacitação (ferramenta principal — única no Brasil entre IFs)
-**Fluxo:** servidor acessa → lê orientações (o que é, quem tem direito, legislação, como funciona no Moodle) → preenche formulário (dias de licença + data início + área) → sistema calcula CH mínima (30h/semana) → sugere combinação de cursos → gera resultado (cursos + links de matrícula + datas + CH) → imprime/exporta PDF → orientações de matrícula no Moodle.
+### 5.1 Planejador de LicenÃ§a para CapacitaÃ§Ã£o (ferramenta principal â€” Ãºnica no Brasil entre IFs)
+**Fluxo:** servidor acessa â†’ lÃª orientaÃ§Ãµes (o que Ã©, quem tem direito, legislaÃ§Ã£o, como funciona no Moodle) â†’ preenche formulÃ¡rio (dias de licenÃ§a + data inÃ­cio + Ã¡rea) â†’ sistema calcula CH mÃ­nima (30h/semana) â†’ sugere combinaÃ§Ã£o de cursos â†’ gera resultado (cursos + links de matrÃ­cula + datas + CH) â†’ imprime/exporta PDF â†’ orientaÃ§Ãµes de matrÃ­cula no Moodle.
 
 | ID | Requisito | Prioridade |
 |----|-----------|------------|
-| PLC-01 | Formulário: dias de licença, data início, área de interesse | Essencial |
-| PLC-02 | Cálculo automático de CH mínima (30h/semana) | Essencial |
-| PLC-03 | Algoritmo de sugestão de cursos por CH + categoria | Essencial |
-| PLC-04 | Resultado com curso + link de matrícula + CH + período estimado | Essencial |
+| PLC-01 | FormulÃ¡rio: dias de licenÃ§a, data inÃ­cio, Ã¡rea de interesse | Essencial |
+| PLC-02 | CÃ¡lculo automÃ¡tico de CH mÃ­nima (30h/semana) | Essencial |
+| PLC-03 | Algoritmo de sugestÃ£o de cursos por CH + categoria | Essencial |
+| PLC-04 | Resultado com curso + link de matrÃ­cula + CH + perÃ­odo estimado | Essencial |
 | PLC-05 | Exportar/imprimir plano em PDF para processo administrativo | Essencial |
-| PLC-06 | Orientações de matrícula no Moodle | Essencial |
-| PLC-07 | Página de contexto: o que é licença, quem tem direito, legislação | Essencial |
-| PLC-08 | Funcionar sem autenticação | Importante |
-| PLC-09 | Destacar quantidade de matrículas como prova social | Importante |
+| PLC-06 | OrientaÃ§Ãµes de matrÃ­cula no Moodle | Essencial |
+| PLC-07 | PÃ¡gina de contexto: o que Ã© licenÃ§a, quem tem direito, legislaÃ§Ã£o | Essencial |
+| PLC-08 | Funcionar sem autenticaÃ§Ã£o | Importante |
+| PLC-09 | Destacar quantidade de matrÃ­culas como prova social | Importante |
 
-**Por que é o maior gerador de matrículas:** matrículas múltiplas (3-4 por uso), SEO sem concorrente ("licença capacitação cursos gratuitos"), viralidade (WhatsApp), independente (pode ir ao ar antes do redesign).
+**Por que Ã© o maior gerador de matrÃ­culas:** matrÃ­culas mÃºltiplas (3-4 por uso), SEO sem concorrente ("licenÃ§a capacitaÃ§Ã£o cursos gratuitos"), viralidade (WhatsApp), independente (pode ir ao ar antes do redesign).
 
-### 5.2 Navegação por objetivo profissional
-4 cards por intenção real: Inovar na sala de aula / Licença Capacitação / Aprender tecnologia / Crescer na carreira.
+### 5.2 NavegaÃ§Ã£o por objetivo profissional
+4 cards por intenÃ§Ã£o real: Inovar na sala de aula / LicenÃ§a CapacitaÃ§Ã£o / Aprender tecnologia / Crescer na carreira.
 
 ### 5.3 Trilhas de aprendizagem
-| Trilha | Descrição | CH |
+| Trilha | DescriÃ§Ã£o | CH |
 |--------|-----------|----|
-| Professor Inovador | Metodologias ativas + gamificação + ferramentas digitais | 3 cursos / 90h |
-| Maker na Educação | Pensamento computacional + robótica educacional | 4 cursos / 120h |
-| Educação Ambiental | Cursos do Projeto Rio Doce Escolar | 5 cursos / 100h |
-| Atendimento e Vendas | Fundamentos + Intermediário + Avançado | 3 cursos |
+| Professor Inovador | Metodologias ativas + gamificaÃ§Ã£o + ferramentas digitais | 3 cursos / 90h |
+| Maker na EducaÃ§Ã£o | Pensamento computacional + robÃ³tica educacional | 4 cursos / 120h |
+| EducaÃ§Ã£o Ambiental | Cursos do Projeto Rio Doce Escolar | 5 cursos / 100h |
+| Atendimento e Vendas | Fundamentos + IntermediÃ¡rio + AvanÃ§ado | 3 cursos |
 
-## 6. Camada 3 — Ferramenta Inteligente (Wizard)
+## 6. Camada 3 â€” Ferramenta Inteligente (Wizard)
 
 Wizard de Descoberta: 3-4 perguntas que recomendam cursos personalizados (nenhum IF possui similar).
 
-**Fluxo:** P1 Quem é você? (Professor/Servidor/Estudante/Profissional/Outro) → P2 O que busca? (área) → P3 Tempo disponível? (até 20h / 20-40h / 40-60h) → Resultado (cursos ordenados por relevância).
+**Fluxo:** P1 Quem Ã© vocÃª? (Professor/Servidor/Estudante/Profissional/Outro) â†’ P2 O que busca? (Ã¡rea) â†’ P3 Tempo disponÃ­vel? (atÃ© 20h / 20-40h / 40-60h) â†’ Resultado (cursos ordenados por relevÃ¢ncia).
 
 | ID | Requisito | Prioridade |
 |----|-----------|------------|
-| WIZ-01 | Interface passo-a-passo 3-4 etapas, navegável por clique | Essencial |
-| WIZ-02 | Filtragem combinada perfil + área + CH (sem IA, lógica de filtro) | Essencial |
+| WIZ-01 | Interface passo-a-passo 3-4 etapas, navegÃ¡vel por clique | Essencial |
+| WIZ-02 | Filtragem combinada perfil + Ã¡rea + CH (sem IA, lÃ³gica de filtro) | Essencial |
 | WIZ-03 | Resultado com cards enriquecidos | Essencial |
-| WIZ-04 | Acessível via CTA no hero + link no menu | Essencial |
-| WIZ-05 | Captura anônima de perfil para analytics (sem login) | Importante |
-| WIZ-06 | Refazer/ajustar respostas sem reiniciar | Desejável |
+| WIZ-04 | AcessÃ­vel via CTA no hero + link no menu | Essencial |
+| WIZ-05 | Captura anÃ´nima de perfil para analytics (sem login) | Importante |
+| WIZ-06 | Refazer/ajustar respostas sem reiniciar | DesejÃ¡vel |
 
-**Valor estratégico:** diferenciação (único entre IFs), dados de perfil, conversão (reduz barreira de descoberta), narrativa CONCEFOR.
+**Valor estratÃ©gico:** diferenciaÃ§Ã£o (Ãºnico entre IFs), dados de perfil, conversÃ£o (reduz barreira de descoberta), narrativa CONCEFOR.
 
 ## 7. Faseamento e cronograma
 
-| Fase | Entregas | Período | Dependência |
+| Fase | Entregas | PerÃ­odo | DependÃªncia |
 |------|----------|---------|-------------|
-| 1 | Página Licença Capacitação + Planejador (independente) | Abr–Mai 2026 | Dados de CH |
-| 2 | Design System + redesign visual da home | Mai–Jun 2026 | Fase 1 |
-| 3 | Navegação por objetivo + Trilhas + Projetos parceiros | Jun–Jul 2026 | Fase 2 |
-| 4 | Wizard de Descoberta + lançamento CONCEFOR | Jul–Ago 2026 | Fase 3 |
-| Futuro | Área do Aluno (dashboard, Moodle API, progresso) | Pós-CONCEFOR | Decisão institucional |
+| 1 | PÃ¡gina LicenÃ§a CapacitaÃ§Ã£o + Planejador (independente) | Abrâ€“Mai 2026 | Dados de CH |
+| 2 | Design System + redesign visual da home | Maiâ€“Jun 2026 | Fase 1 |
+| 3 | NavegaÃ§Ã£o por objetivo + Trilhas + Projetos parceiros | Junâ€“Jul 2026 | Fase 2 |
+| 4 | Wizard de Descoberta + lanÃ§amento CONCEFOR | Julâ€“Ago 2026 | Fase 3 |
+| Futuro | Ãrea do Aluno (dashboard, Moodle API, progresso) | PÃ³s-CONCEFOR | DecisÃ£o institucional |
 
-**Dependências críticas:** dados de carga horária (campo existe, precisa popular ~100+ cursos — **Raquel**); aprovação da **Comissão MOOC**; banda do Marquito (em paralelo com Knowledge Base); heatmap (ferramenta JS própria, qualquer fase).
+**DependÃªncias crÃ­ticas:** dados de carga horÃ¡ria (campo existe, precisa popular ~100+ cursos â€” **Raquel**); aprovaÃ§Ã£o da **ComissÃ£o MOOC**; Banda de desenvolvimento (em paralelo com Knowledge Base); heatmap (ferramenta JS prÃ³pria, qualquer fase).
 
-## 8. Métricas de sucesso
+## 8. MÃ©tricas de sucesso
 
-| Métrica | Como medir | Meta |
+| MÃ©trica | Como medir | Meta |
 |---------|------------|------|
-| Matrículas via Planejador | Parâmetro URL | +15% matrículas novas |
-| Uso do Wizard | Analytics (início/conclusão/abandono) | >500 usos/mês |
-| Tempo na página | Google Analytics | +40% |
-| Taxa de conclusão | Moodle analytics | Aumento via trilhas |
-| SEO "licença capacitação" | Search Console | Top 3 |
+| MatrÃ­culas via Planejador | ParÃ¢metro URL | +15% matrÃ­culas novas |
+| Uso do Wizard | Analytics (inÃ­cio/conclusÃ£o/abandono) | >500 usos/mÃªs |
+| Tempo na pÃ¡gina | Google Analytics | +40% |
+| Taxa de conclusÃ£o | Moodle analytics | Aumento via trilhas |
+| SEO "licenÃ§a capacitaÃ§Ã£o" | Search Console | Top 3 |
 
 ## Anexos (no arquivo-fonte)
 
-- **Anexo A — Catálogo completo (152 cursos):** nome, categoria, Libras, imagem. Ver `prd-vitrine-mooc-v1-fonte.txt`. Reconciliar com `stages/02-catalogo/output/catalogo-cursos.md` (extração ao vivo = 165 cursos em jul/2026).
-- **Anexo B — URLs de imagens e cursos (152):** URL da imagem + link do curso no Moodle + Libras. Alguns links resolvidos por `?id=` (ex.: `?id=642`). Fonte útil para implementação.
+- **Anexo A â€” CatÃ¡logo completo (152 cursos):** nome, categoria, Libras, imagem. Ver `prd-vitrine-mooc-v1-fonte.txt`. Reconciliar com `stages/02-catalogo/output/catalogo-cursos.md` (extraÃ§Ã£o ao vivo = 165 cursos em jul/2026).
+- **Anexo B â€” URLs de imagens e cursos (152):** URL da imagem + link do curso no Moodle + Libras. Alguns links resolvidos por `?id=` (ex.: `?id=642`). Fonte Ãºtil para implementaÃ§Ã£o.
+
+

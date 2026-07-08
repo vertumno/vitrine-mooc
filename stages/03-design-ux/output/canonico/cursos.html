@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de Cursos | Cursos Abertos do Ifes</title>
+  <meta name="description" content="Catálogo dos Cursos Abertos do Ifes com busca, filtros por área, carga horária, nível, acessibilidade, projetos e séries.">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Instituto Federal do Espírito Santo - Cefor</span>
+      <span>Catálogo público de cursos abertos</span>
+    </div>
+  </div>
+
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Cursos Abertos do Ifes">
+        <span class="brand-mark">IF</span>
+        <span>Cursos Abertos</span>
+      </a>
+      <nav class="main-nav" id="menu" aria-label="Navegação principal">
+        <a href="cursos.html" aria-current="page">Todos os cursos</a>
+        <a href="index.html#areas">Áreas</a>
+        <a href="index.html#licenca">Licença capacitação</a>
+        <a href="index.html#faq">Dúvidas</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">Menu</button>
+      <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/">Acessar Moodle</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="catalog-hero">
+      <div class="wrap">
+        <div>
+          <span class="kicker">Busca e filtros</span>
+          <h1>Catálogo de cursos</h1>
+          <p>Encontre cursos por área, carga horária, nível, acessibilidade, série ou projeto. As categorias abaixo já aparecem na taxonomia de 15 áreas, corrigindo a mistura de categorias legadas do site atual.</p>
+        </div>
+        <div class="catalog-summary" aria-label="Resumo do catálogo">
+          <div class="summary-box">
+            <strong id="total-cursos">165</strong>
+            <span>cursos publicados</span>
+          </div>
+          <div class="summary-box">
+            <strong>15</strong>
+            <span>áreas canônicas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lista">
+      <div class="wrap catalog-layout">
+        <aside class="filters" aria-label="Filtros do catálogo">
+          <div>
+            <label class="sr-only" for="q">Buscar curso</label>
+            <input id="q" type="search" placeholder="Buscar por nome, tema ou palavra-chave">
+          </div>
+
+          <div class="filter-group" data-group="categoria">
+            <h3>Área</h3>
+            <ul id="f-categoria"></ul>
+          </div>
+
+          <div class="filter-group" data-group="carga">
+            <h3>Carga horária</h3>
+            <ul id="f-carga"></ul>
+          </div>
+
+          <div class="filter-group" data-group="nivel">
+            <h3>Nível</h3>
+            <ul id="f-nivel"></ul>
+          </div>
+
+          <div class="filter-group" data-group="acessibilidade">
+            <h3>Acessibilidade</h3>
+            <ul>
+              <li class="filter-option">
+                <label><input type="checkbox" value="libras"> Com Libras</label>
+                <span class="filter-count" id="count-libras">0</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-group" data-group="projeto">
+            <h3>Projetos</h3>
+            <ul id="f-projeto"></ul>
+          </div>
+
+          <div class="filter-group" data-group="serie">
+            <h3>Séries</h3>
+            <ul id="f-serie"></ul>
+          </div>
+
+          <button class="btn btn-outline" type="button" id="limpar">Limpar filtros</button>
+        </aside>
+
+        <div>
+          <div class="results-head">
+            <p class="results-count" id="resultado-num" aria-live="polite">Carregando cursos</p>
+            <div class="toolbar">
+              <h2>Todos os cursos</h2>
+              <label class="sorter">Ordenar
+                <select id="ordenar">
+                  <option value="relevancia">Relevância</option>
+                  <option value="mais-cursados">Mais cursados</option>
+                  <option value="recentes">Recentes</option>
+                  <option value="az">A-Z</option>
+                </select>
+              </label>
+            </div>
+            <div class="active-chips" id="chips" aria-label="Filtros ativos"></div>
+          </div>
+
+          <div class="course-grid" id="cards" aria-live="polite"></div>
+
+          <p class="empty" id="vazio" hidden>Nenhum curso encontrado com esses filtros. Tente remover uma seleção ou buscar por outro termo.</p>
+
+          <div class="load-row">
+            <button class="btn btn-primary" type="button" id="carregar">Carregar mais cursos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <h3>Cursos Abertos do Ifes</h3>
+        <p>Vitrine pública dos cursos abertos do Cefor/Ifes, organizada para busca, descoberta e acesso ao Moodle.</p>
+      </div>
+      <div>
+        <h4>Cursos</h4>
+        <ul>
+          <li><a href="cursos.html">Todos os cursos</a></li>
+          <li><a href="index.html#areas">Áreas</a></li>
+          <li><a href="index.html#publicos">Perfis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="index.html#licenca">Licença capacitação</a></li>
+          <li><a href="index.html#faq">Dúvidas frequentes</a></li>
+          <li><a href="https://mooc.cefor.ifes.edu.br/moodle/">Acessar Moodle</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="index.html#como-funciona">Como funciona</a></li>
+          <li><a href="https://www.ifes.edu.br/">Ifes</a></li>
+          <li><a href="https://cefor.ifes.edu.br/">Cefor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div class="wrap">
+        <span>Ifes - Cefor</span>
+        <span>Catálogo com carregamento progressivo</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cursos-dados.js"></script>
+  <script>
+    function toggleMenu(button) {
+      const menu = document.getElementById("menu");
+      const open = menu.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(open));
+    }
+
+    const norm = value => String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    const esc = value => String(value || "").replace(/[&<>"']/g, char => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[char]));
+
+    const CANONICAL_CATEGORIES = [
+      { slug: "ambiente-e-saude", nome: "Ambiente e Saúde" },
+      { slug: "artes-e-humanidades", nome: "Artes e Humanidades" },
+      { slug: "ciencias-da-natureza", nome: "Ciências da Natureza" },
+      { slug: "design", nome: "Design" },
+      { slug: "desenvolvimento-pessoal", nome: "Desenvolvimento Pessoal" },
+      { slug: "educacao", nome: "Educação" },
+      { slug: "educacao-a-distancia", nome: "Educação a Distância" },
+      { slug: "engenharia", nome: "Engenharia" },
+      { slug: "financas-e-contabilidade", nome: "Finanças e Contabilidade" },
+      { slug: "gestao", nome: "Gestão" },
+      { slug: "inclusao-e-acessibilidade", nome: "Inclusão e Acessibilidade" },
+      { slug: "linguas", nome: "Línguas" },
+      { slug: "matematica", nome: "Matemática" },
+      { slug: "tecnologias-e-informatica", nome: "Tecnologias e Informática" },
+      { slug: "tecnologias-educacionais", nome: "Tecnologias Educacionais" }
+    ];
+
+    const CATEGORY_ALIASES = {
+      "ciencias-humanas": "artes-e-humanidades",
+      "ciencias-sociais-aplicadas": "gestao",
+      "ciencias-exatas-e-da-terra": "ciencias-da-natureza",
+      "desenvolvimento-educacional-e-social": "educacao",
+      "producao-cultural-e-design": "design"
+    };
+
+    const CATEGORY_NAMES = Object.fromEntries(CANONICAL_CATEGORIES.map(item => [item.slug, item.nome]));
+
+    const DEMAND_RANK = {
+      "ingles-comunicativo": 1,
+      "moodle-para-educadores": 2,
+      "moodle-4-para-educadores": 2,
+      "uso-educacional-canva": 3,
+      "google-drive-colaboracao-pratica": 4
+    };
+
+    const sourceCourses = window.CURSOS_MOOC || [];
+
+    function canonicalizeCourse(course) {
+      const search = norm(course.search + " " + course.titulo);
+      let cats = (course.categoria || []).map(slug => CATEGORY_ALIASES[slug] || slug);
+
+      if (/(financ|contabil|orcamento|orçament|tesour|custos)/.test(search)) {
+        cats.push("financas-e-contabilidade");
+      }
+
+      cats = [...new Set(cats.filter(slug => CATEGORY_NAMES[slug]))];
+
+      if (!cats.length) {
+        cats = ["educacao"];
+      }
+
+      const slugFromLink = String(course.link || "").split("?").pop() || "";
+
+      return {
+        ...course,
+        categoriaCanonica: cats,
+        categoriaCanonicaNomes: cats.map(slug => CATEGORY_NAMES[slug]),
+        demanda: DEMAND_RANK[slugFromLink] || DEMAND_RANK[norm(course.titulo).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")] || 999,
+        recente: Number(course.n || 999)
+      };
+    }
+
+    const courses = sourceCourses.map(canonicalizeCourse);
+    const byId = {
+      q: document.getElementById("q"),
+      cards: document.getElementById("cards"),
+      result: document.getElementById("resultado-num"),
+      empty: document.getElementById("vazio"),
+      load: document.getElementById("carregar"),
+      sort: document.getElementById("ordenar"),
+      chips: document.getElementById("chips")
+    };
+
+    const filterGroups = [
+      ["categoria", "f-categoria", CANONICAL_CATEGORIES],
+      ["carga", "f-carga", window.CURSOS_FILTROS?.carga || []],
+      ["nivel", "f-nivel", window.CURSOS_FILTROS?.nivel || []],
+      ["projeto", "f-projeto", window.CURSOS_FILTROS?.projeto || []],
+      ["serie", "f-serie", window.CURSOS_FILTROS?.serie || []]
+    ];
+
+    let filtered = [];
+    let visibleLimit = 24;
+    const pageSize = 24;
+
+    function valuesFor(course, group) {
+      if (group === "categoria") return course.categoriaCanonica;
+      if (group === "acessibilidade") return course.libras ? ["libras"] : [];
+      const value = course[group];
+      return Array.isArray(value) ? value : [value].filter(Boolean);
+    }
+
+    function labelFor(group, slug) {
+      if (group === "categoria") return CATEGORY_NAMES[slug] || slug;
+      if (group === "acessibilidade") return "Com Libras";
+      const list = window.CURSOS_FILTROS?.[group] || [];
+      return list.find(item => item.slug === slug)?.nome || slug;
+    }
+
+    function countFor(group, slug) {
+      return courses.filter(course => valuesFor(course, group).includes(slug)).length;
+    }
+
+    function renderFilters() {
+      filterGroups.forEach(([group, targetId, items]) => {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        const sorted = [...items].sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+        target.innerHTML = sorted.map(item => {
+          const total = countFor(group, item.slug);
+          return `<li class="filter-option">
+            <label><input type="checkbox" value="${esc(item.slug)}"> ${esc(item.nome)}</label>
+            <span class="filter-count">${total}</span>
+          </li>`;
+        }).join("");
+      });
+
+      document.getElementById("count-libras").textContent = countFor("acessibilidade", "libras");
+    }
+
+    function activeGroups() {
+      return Array.from(document.querySelectorAll(".filter-group[data-group]")).map(group => ({
+        name: group.dataset.group,
+        values: Array.from(group.querySelectorAll("input:checked")).map(input => input.value)
+      })).filter(group => group.values.length);
+    }
+
+    function courseMatchesProfile(course, profile) {
+      if (!profile) return true;
+      const text = norm(`${course.titulo} ${course.search} ${course.categoriaCanonicaNomes.join(" ")}`);
+      const profiles = {
+        professores: /(professor|educador|docente|moodle|sala de aula|formacao|formação)/,
+        comunidade: /(basico|básico|comunidade|iniciante|sem prerequisito|sem pré-requisito)/,
+        carreira: /(gestao|gestão|carreira|trabalho|atendimento|vendas|tecnologia|informatica|informática)/,
+      };
+      return profiles[profile]?.test(text) ?? true;
+    }
+
+    function sortCourses(list) {
+      const mode = byId.sort.value;
+      return [...list].sort((a, b) => {
+        if (mode === "az") return a.titulo.localeCompare(b.titulo, "pt-BR");
+        if (mode === "mais-cursados") return a.demanda - b.demanda || a.titulo.localeCompare(b.titulo, "pt-BR");
+        if (mode === "recentes") return a.recente - b.recente;
+        return a.n - b.n;
+      });
+    }
+
+    function ribbonHtml(course) {
+      const ribbons = [];
+      if (course.libras) ribbons.push(`<span class="ribbon" title="Curso com Libras" aria-label="Curso com Libras">LIB</span>`);
+      if (course.projetoNomes?.length) ribbons.push(`<span class="ribbon alt" title="Projeto ${esc(course.projetoNomes[0])}" aria-label="Projeto ${esc(course.projetoNomes[0])}">${esc(course.projetoNomes[0])}</span>`);
+      if (course.serieNomes?.length) ribbons.push(`<span class="ribbon gold" title="Série ${esc(course.serieNomes[0])}" aria-label="Série ${esc(course.serieNomes[0])}">S</span>`);
+      return ribbons.length ? `<span class="course-ribbons">${ribbons.join("")}</span>` : "";
+    }
+
+    function cardHtml(course) {
+      const meta = [course.cargaLabel, course.nivelLabel].filter(Boolean);
+      return `<a class="course-card" href="${esc(course.link)}">
+        <div class="course-media">
+          <img src="${esc(course.thumb)}" alt="Imagem do curso ${esc(course.titulo)}" loading="lazy">
+          ${ribbonHtml(course)}
+        </div>
+        <div class="course-body">
+          <span class="course-cat">${esc(course.categoriaCanonicaNomes.join(" · "))}</span>
+          <h3>${esc(course.titulo)}</h3>
+          <p class="course-meta">${meta.map(item => `<span>${esc(item)}</span>`).join("")}</p>
+          <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+        </div>
+      </a>`;
+    }
+
+    function renderChips(groups) {
+      const query = byId.q.value.trim();
+      const chips = [];
+      if (query) chips.push(`<button class="chip" type="button" data-clear="q">Busca: ${esc(query)}</button>`);
+      groups.forEach(group => {
+        group.values.forEach(value => {
+          chips.push(`<button class="chip" type="button" data-group="${esc(group.name)}" data-value="${esc(value)}">${esc(labelFor(group.name, value))}</button>`);
+        });
+      });
+      byId.chips.innerHTML = chips.join("");
+    }
+
+    function applyFilters(resetLimit = true) {
+      if (resetLimit) visibleLimit = pageSize;
+      const query = norm(byId.q.value.trim());
+      const groups = activeGroups();
+      const params = new URLSearchParams(location.search);
+      const profile = params.get("perfil");
+
+      filtered = courses.filter(course => {
+        const text = norm(`${course.titulo} ${course.search} ${course.categoriaCanonicaNomes.join(" ")}`);
+        const okQuery = !query || text.includes(query);
+        const okGroups = groups.every(group => group.values.some(value => valuesFor(course, group.name).includes(value)));
+        return okQuery && okGroups && courseMatchesProfile(course, profile);
+      });
+
+      filtered = sortCourses(filtered);
+      renderChips(groups);
+      renderCards();
+    }
+
+    function renderCards() {
+      const visible = filtered.slice(0, visibleLimit);
+      byId.cards.innerHTML = visible.map(cardHtml).join("");
+      byId.result.textContent = filtered.length === 1
+        ? "Mostrando 1 curso"
+        : `Mostrando ${Math.min(visibleLimit, filtered.length)} de ${filtered.length} cursos`;
+      byId.empty.hidden = filtered.length > 0;
+      byId.load.hidden = visibleLimit >= filtered.length;
+    }
+
+    function applyInitialParams() {
+      const params = new URLSearchParams(location.search);
+      const category = params.get("categoria");
+      const ordem = params.get("ordem");
+      const q = params.get("q");
+
+      if (q) byId.q.value = q;
+      if (ordem && [...byId.sort.options].some(option => option.value === ordem)) {
+        byId.sort.value = ordem;
+      }
+      if (category) {
+        const input = document.querySelector(`.filter-group[data-group="categoria"] input[value="${CSS.escape(category)}"]`);
+        if (input) input.checked = true;
+      }
+    }
+
+    renderFilters();
+    document.getElementById("total-cursos").textContent = String(courses.length);
+    applyInitialParams();
+
+    byId.q.addEventListener("input", () => applyFilters(true));
+    byId.sort.addEventListener("change", () => applyFilters(true));
+    byId.load.addEventListener("click", () => {
+      visibleLimit += pageSize;
+      renderCards();
+    });
+
+    document.querySelector(".filters").addEventListener("change", event => {
+      if (event.target.matches("input[type='checkbox']")) applyFilters(true);
+    });
+
+    document.getElementById("limpar").addEventListener("click", () => {
+      byId.q.value = "";
+      document.querySelectorAll(".filters input[type='checkbox']").forEach(input => input.checked = false);
+      applyFilters(true);
+      byId.q.focus();
+    });
+
+    byId.chips.addEventListener("click", event => {
+      const chip = event.target.closest(".chip");
+      if (!chip) return;
+      if (chip.dataset.clear === "q") byId.q.value = "";
+      if (chip.dataset.group && chip.dataset.value) {
+        const input = document.querySelector(`.filter-group[data-group="${CSS.escape(chip.dataset.group)}"] input[value="${CSS.escape(chip.dataset.value)}"]`);
+        if (input) input.checked = false;
+      }
+      applyFilters(true);
+    });
+
+    applyFilters(true);
+  </script>
+</body>
+</html>

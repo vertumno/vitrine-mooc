@@ -5,7 +5,7 @@ Redesign Evolutivo + Hub Profissional + Ferramenta Inteligente
 Produto: mooc.cefor.ifes.edu.br
 Versao: 1.0
 Data: 02 de abril de 2026
-Autor: Elton Vinicius (Design) + Marquito (Desenvolvimento)
+Autor: Elton Vinicius (Design) + equipe de desenvolvimento
 Equipe: CEFOR / CGTE - Instituto Federal do Espirito Santo
 Deadline: Agosto 2026 (CONCEFOR)
 ________________
@@ -21,7 +21,7 @@ Este PRD define a estrategia de evolucao da Vitrine em tres camadas complementar
 
 Versao futura prevista: Area do Aluno com dashboard pessoal, integracao Moodle via API, historico de cursos e progresso.
 2. Contexto e Estado Atual
-2.1 O que Marquito ja construiu (reuniao 17/03/2026)
+2.1 O que a equipe ja construiu (reuniao 17/03/2026)
 Funcionalidades implementadas no tema WordPress customizado:
 * Secoes tipo Netflix: "Em destaque" (manual), "Adicionados recentemente" (por data), "Mais cursados" (por matriculas)
 * Busca por texto + filtro por categoria combinados, com indicador de categoria ativa
@@ -68,8 +68,8 @@ Problema
 
 2.4 Papeis definidos
 Elton: Design, identidade visual, UX, wireframes, prioridades de design
-Marquito: Desenvolvimento WordPress, implementacao, backend, integracao Moodle
-Fluxo: Elton desenha → Marquito implementa → Comissao MOOC aprova
+Equipe de desenvolvimento: Desenvolvimento WordPress, implementacao, backend, integracao Moodle
+Fluxo: Elton desenha → equipe de desenvolvimento implementa → Comissao MOOC aprova
 ________________
 
 
@@ -99,7 +99,7 @@ ________________
 4. Hero com proposta de valor direta — "Qualificacao profissional gratuita e certificada pelo Ifes". Duplo CTA: campo de busca + botao Wizard. Selo 5 estrelas MEC visivel.
 5. Cards enriquecidos — Alem da imagem existente: carga horaria visivel (ex: 20h), badge "Novo", selo Libras, numero de inscritos. Ao clicar, abre detalhes expandidos com descricao, objetivos, estrutura modular.
 6. Barra de estatisticas — 284.595 matriculas | 100+ cursos | 5 estrelas MEC | 100% gratuito. Prova social acima da dobra.
-7. Secoes curadas — "Em destaque" (manual) / "Recentes" (por data) / "Mais cursados" (por matriculas). Estrutura do Marquito evolui, nao e refeita.
+7. Secoes curadas — "Em destaque" (manual) / "Recentes" (por data) / "Mais cursados" (por matriculas). Estrutura existente evolui, nao e refeita.
 8. Navegacao por objetivo — 4 cards: Inovar na sala de aula / Licenca Capacitacao / Aprender tecnologia / Crescer na carreira.
 9. Banner Licenca Capacitacao — CTA proeminente na home levando para pagina interna do Hub. Tira o tema do FAQ e coloca em destaque.
 10. Secao O que e + Como funciona — Mantidas com conteudo atual, visual renovado.
@@ -127,7 +127,7 @@ Visao expandida (ao clicar)
 
 
 4.3 O que NAO muda
-* Estrutura WordPress + tema customizado do Marquito
+* Estrutura WordPress + tema customizado existente
 * Moodle como backend de cursos
 * Fluxo de cadastro/inscricao existente
 * Catalogo completo de cursos e imagens atuais
@@ -289,8 +289,8 @@ Fase
 7.1 Dependencias criticas
 * Dados de carga horaria: Campo ja existe no WordPress, mas precisa ser populado para todos os 100+ cursos (Raquel)
 * Comissao MOOC: Aprovacao do conceito antes de implementacao
-* Banda do Marquito: Desenvolvimento em paralelo com Knowledge Base
-* Heatmap: Marquito sugeriu ferramenta JS propria para mapear navegacao (pode ser implementada em qualquer fase)
+* Banda de desenvolvimento: Desenvolvimento em paralelo com Knowledge Base
+* Heatmap: a equipe sugeriu ferramenta JS propria para mapear navegacao (pode ser implementada em qualquer fase)
 ________________
 
 
@@ -1830,3 +1830,4 @@ Libras: Nao
 Imagem: https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Lesson_Study_2_Por_que_Vitrine.png
 Curso: https://mooc.cefor.ifes.edu.br/moodle/course/view.php?id=390
 Libras: Nao
+

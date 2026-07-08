@@ -1,0 +1,222 @@
+﻿# VITRINE MOOC - apresentacao para validacao
+
+  Meeting started: 07/07/2026, 15:41:48
+  Duration: 38 minutes
+  Participants: Elton Vinicius, Marcos VinÃ­cius Forecchi Accioly
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/npPPJjirs9vYSnz1OEiH?o=txt)
+
+    
+
+  
+
+  
+    ## Highlights
+
+    > 00:21 Marcos VinÃ­cius Forecchi Accioly: Deixa eu te dar por enquanto que eu nÃ£o tÃ´ fazendo nada. VocÃª vai ficar aÃ­ eu jÃ¡ fiz no meu github. Eu fiz que que eu fiz cara, fiz um forte do deles.
+
+  ## Transcript
+
+  00:00 Marcos VinÃ­cius Forecchi Accioly: Um segundinho velho passar um cafezinho ali que eu tÃ´ desde querendo tomar eu nÃ£o consegui levantar do computador ainda. Eu vou para eu vou para eu vou para nÃ£o conseguir ferver jÃ¡ fervi Ã¡gua trÃªs vezes, nÃ£o peguei rapidÃ£o aqui. Deixa eu vocÃª jÃ¡ quer o negÃ³cio da oficina, eu jÃ¡ fiz aqui.
+00:20 Elton Vinicius: Ah legal
+00:21 Marcos VinÃ­cius Forecchi Accioly: Deixa eu te dar por enquanto que eu nÃ£o tÃ´ fazendo nada. VocÃª vai ficar aÃ­ eu jÃ¡ fiz no meu github. Eu fiz que que eu fiz cara, fiz um forte do deles.
+00:36 Marcos VinÃ­cius Forecchi Accioly: do ICM E tÃ´ trabalhando dentro desse forte, ele jÃ¡ fez uma pasta oficina lÃ¡ dentro. PeraÃ­, que eu tenho que atualizar vocÃª aqui.
+00:52 Elton Vinicius: uma ideia
+00:54 Marcos VinÃ­cius Forecchi Accioly: E aÃ­
+00:54 Elton Vinicius: Pelo que ele atualizar, nÃ©?
+00:56 Marcos VinÃ­cius Forecchi Accioly: Depois cara, a gente pode criar um repositÃ³rio sÃ³ para oficina, entendeu? Mas vamos trabalhar nesse por enquanto que jÃ¡ Ã© dentro jÃ¡ tem mais contexto que tudo jÃ¡ tem o prÃ³prio mÃ©todo lÃ¡ dentro, nÃ©? sabe adicionei vocÃª aÃ­ deve aparecer na sua caixa do enfim
+01:25 Elton Vinicius: aparecer aqui
+01:51 Marcos VinÃ­cius Forecchi Accioly: E Ã© bom que jÃ¡ tÃ¡ com mais eu jÃ¡ joguei o print tambÃ©m, entendeu? E joguei a nossa transcriÃ§Ã£o. EntÃ£o, ele jÃ¡ entendeu o que fazer e vai atualizar jÃ¡ o formulÃ¡rio com esses jÃ¡ tÃ¡ com esses dados prontos para a gente copiar e colar, entendeu? Das nossas coisas tambÃ©m eu vou sÃ³ mandar as coisas para o servidor que eu nÃ£o mandei nÃ£o. pera aÃ­
+02:21 Elton Vinicius: Acho que Ã© legal traduzir tudo tambÃ©m, nÃ©?
+02:25 Marcos VinÃ­cius Forecchi Accioly: isso EntÃ£o assim tem algumas coisas que estÃ£o faltando. AÃ­ eu vou te eu fiz aqui o convite vocÃª pega aÃ­. E dÃ¡ uma olhada no que eu fiz. Pede a ele, o que que tÃ¡ faltando? Ele tÃ¡ falando que tÃ¡ faltando o nome do evento no telefone e a imagem. Mas o resto das informaÃ§Ãµes Ã© bom vocÃª dar uma olhadinha, nÃ©?
+02:55 Elton Vinicius: ou nÃ£o
+02:57 Marcos VinÃ­cius Forecchi Accioly: Traduzir o que?
+02:59 Elton Vinicius: o repositÃ³rio
+03:00 Marcos VinÃ­cius Forecchi Accioly: Tudo nÃ£o, mas ele vai traduzir o questionÃ¡rio a gente pode traduzir tudo sim tambÃ©m, mas nÃ£o faz a menor diferenÃ§a traduzir antes ou em tempo real, nÃ©? SÃ³ para ele nÃ£o se embolar na hora. Sei lÃ¡, jÃ¡ volto. Ele jÃ¡ tÃ¡ olhando para fazer o curso.
+06:17 Marcos VinÃ­cius Forecchi Accioly: Acabei fazendo tanto cafÃ© que nem. Vou conseguir tomar nÃ£o tenho certeza. Ele falou aqui pronto continuado o ponto certo mapa oficina barra conta que a porta de entrada e roteia para os demais.
+06:43 Elton Vinicius: EntÃ£o Ã© sÃ³ fazer o clone, agora, Ã© isso?
+06:47 Marcos VinÃ­cius Forecchi Accioly: Na sua mÃ¡quina assim. VocÃª vai dar? um Bitcoin desse meu aÃ­ Eu poderia ter feito com ele tÃ¡ fazendo sÃ³ um pouco agora, nÃ©?
+07:38 Elton Vinicius: puxei aqui jÃ¡
+09:01 Marcos VinÃ­cius Forecchi Accioly: Mas a gente nÃ£o precisa fazer isso agora nÃ£o, cara. SÃ³ se vocÃª quiser. Ã‰ mais que eu jÃ¡ tava como eu jÃ¡ tinha feito quando estava na reuniÃ£o que fui fazendo porque Ah era uma reuniÃ£o sÃ³ para dizer que precisava mandar umas informaÃ§Ãµes pelo WhatsApp. aÃ­
+09:18 Elton Vinicius: Mostrar aqui entÃ£o.
+09:20 Marcos VinÃ­cius Forecchi Accioly: NÃ£o nÃ£o era da FGV. O cara vai sair de fÃ©rias aÃ­ vai ficar uma pessoa no lugar dele e tal. Cara muito maneiro na o negÃ³cio com Life. US bicho Ã© sÃ³ vocÃª ligar o computador, vocÃª nÃ£o precisa nem abrir o wsl, vocÃª nÃ£o precisa abrir o terno, vocÃª nÃ£o precisa abrir nada e o outro eu falo pelo celular aqui com ele
+09:49 Elton Vinicius: E mexe pelo Ã¡udio, nÃ©?
+09:52 Marcos VinÃ­cius Forecchi Accioly: eu converso com ele aqui a voz sai no meu computador aqui mesmo sem abrir programa nenhum sai a voz no meu computador.
+10:00 Elton Vinicius: quando vocÃª fala no
+10:01 Marcos VinÃ­cius Forecchi Accioly: Quando eu converso aqui que tem que toda vez que ele termina de processar alguma
+10:03 Elton Vinicius: ClÃ¡udio
+10:06 Marcos VinÃ­cius Forecchi Accioly: coisa esse meu Life S ele dÃ¡ um resumo por voz e sai no meu computador aqui, mano. Eu tÃ´ lÃ¡ na cozinha falando com ele no celular isso aqui entendi. NÃ£o sei o
+10:12 Elton Vinicius: c******
+10:15 Marcos VinÃ­cius Forecchi Accioly: que lÃ¡ entÃ£o vou fazer tal coisa. Muito doido, cara que eu configurei a voz aqui, nÃ© com o Eleven Labs.
+10:27 Elton Vinicius: Ah tÃ¡, vocÃª jÃ¡ configurou tambÃ©m, nÃ©? Eu vi que tinha uma configuraÃ§Ã£o ali que Ele falava entÃ£o. cara seguinte eu mexi com Calma aÃ­ mexendo nÃ©? Daquele Jeito. Com a vitrine correndo.
+10:51 Marcos VinÃ­cius Forecchi Accioly: NÃ£o corre nÃ£o, cara, vamos conversar aÃ­ direito p**** com informaÃ§Ã£o melhor assim a gente bota aÃ­ para correr para vocÃª.
+11:00 Elton Vinicius: Tava legal para te mostrar mas agora cagou aqui, espera sÃ³ um pouquinho porque
+11:03 Marcos VinÃ­cius Forecchi Accioly: tÃ¡
+11:04 Elton Vinicius: que que eu fiz eu comecei eu fui organizar na pasta, nÃ©? Para a gente fazer do jeito parecido com o que a gente fez na baixa conhecimentos, aÃ­ eu tinha. JÃ¡ pegou todo o conteÃºdo extraÃ­do todo o conteÃºdo todas as urls todas as pedi para ele extrair todas tipo assim pegar entrar em todas as urls, entÃ£o ele clicava e entrava lÃ¡ no mudo e extraia todas as informaÃ§Ãµes e fez.
+11:35 Elton Vinicius: Uma planilha nÃ© com a informaÃ§Ã£o pÃºblico alvo carga horÃ¡ria coisas que nÃ£o tinha nÃ©? E aÃ­ AlÃ©m disso Todas as imagens para a gente poder aproveitar as prÃ³prias imagens. EntÃ£o organizei essas informaÃ§Ãµes jÃ¡ depois ontem, eu peguei com vocÃª o dump, nÃ© para poder acertar algumas coisas da migraÃ§Ã£o, mas isso tinha feito uma semana passada. E aÃ­ cara, nÃ£o tem vocÃª montar assim tambÃ©m, eu fiz uma pedia para ele tambÃ©m entender um pouco organizaÃ§Ã£o do conteÃºdo afinal nÃ£o mudou muita coisa do que a gente tinha pensado nÃ£o. Tinha resolvido essa parada.
+12:55 Elton Vinicius: AÃ­ uma coisa que foi Precisei fazer foi a OrganizaÃ§Ã£o das categorias a reorganizaÃ§Ã£o das categorias, tÃ¡? EstÃ¡ aÃ­, deixa eu ver. Ah, tÃ¡? NÃ£o sÃ³ porque entÃ£o eu peguei tÃ¡ sem som Ã© por isso que acho que eu nÃ£o sabia que vocÃª tava.
+13:18 Marcos VinÃ­cius Forecchi Accioly: Que eu tava suando o nariz nÃ£o queria ficar te incomodando.
+13:21 Elton Vinicius: Porque assim a gente tinha muitas categorias lÃ¡ e elas estavam muito Ã s vezes algumas parecidas, nÃ©? EntÃ£o eu tentei pensar algumas formas de categoria de categorizaÃ§Ã£o entender como tava as categorizaÃ§Ãµes que as categorizaÃ§Ãµes estavam por Ã¡rea de conhecimento tava por eixo tecnolÃ³gico tava tentando entender no final eu fechei pelas categorias que estÃ£o no formulÃ¡rio que nÃ£o Ã© uma coisa que tava entendeu? Eu pensei pÃ´, jÃ¡ que a categoria dos funcionÃ¡rio jÃ¡ tava pensado alguÃ©m penso.
+13:57 Elton Vinicius: AÃ­ nÃ© a gente usar as categorias de lÃ¡ como as categorias principais para organizar os cursos tambÃ©m porque a gente jÃ¡ tem tanto formulÃ¡rio ele reproduz no prÃ³prio site a prÃ³pria.
+14:11 Marcos VinÃ­cius Forecchi Accioly: curso
+14:13 Elton Vinicius: Do projeto do curso isso.
+14:14 Marcos VinÃ­cius Forecchi Accioly: beleza
+14:17 Elton Vinicius: AÃ­ ficaram 15 categorias. compartilhando
+14:45 Elton Vinicius: EntÃ£o falta ainda dÃ¡ uma vez fazer colocar algum elemento aqui, nÃ© na Hero? Para ficar mais encorpado. Para ficar assim visualmente mais interessante, nÃ©? E aqui em cima tambÃ©m me deve botar alguma coisa aqui, tipo mexendo com isso,
+15:05 Marcos VinÃ­cius Forecchi Accioly: Ficar mais energÃ©tico, nÃ©?
+15:09 Elton Vinicius: ele tava me c****** isso tÃ¡? EntÃ£o acabei fazendo da mesma forma que a gente tinha pensado o cursos em destaque nÃ© adicionado recentemente. Acho que a minha ideia Ã© melhor vai ser de fazer. Quatro em quatro um Grid com quatro do que com trÃªs aqui.
+15:32 Marcos VinÃ­cius Forecchi Accioly: Eu acho que os destaques sÃ£o diferentes, mas ok.
+15:35 Elton Vinicius: de repente fazer
+15:37 Marcos VinÃ­cius Forecchi Accioly: Tipo assim, quando vocÃª bota trÃªs destaca de uma forma para o olho, nÃ©? Quando vocÃª bota quatro destaca de outra forma. Mas tÃ¡ legal assim.
+15:45 Elton Vinicius: Sair ele sugeriu aqui de puxar essas matrÃ­culas, mas eu acho que eu vou tirar porque nÃ£o vai ter a gente nÃ£o vai ter isso dinamicamente. Possivelmente, nÃ©? NÃ£o sei se por que que aconteceu tambÃ©m que que eu fiz? Eu eu peguei o painel de indicadores e tentei extrair percepÃ§Ãµes e coisas interessantes, nÃ©? EntÃ£o eles traia todos os
+16:06 Marcos VinÃ­cius Forecchi Accioly: tÃ¡
+16:08 Elton Vinicius: Da quer isso? AÃ­ ele jÃ¡ extraiu os dados entÃ£o ele tem essas informaÃ§Ãµes porque eu peguei do painel, mas eu nÃ£o vai ter isso dinÃ¢mico, nÃ© uma coisa que ele sugeriu.
+16:21 Marcos VinÃ­cius Forecchi Accioly: Ficou faltando todos os cursos aÃ­, nÃ©?
+16:23 Elton Vinicius: EntÃ£o aÃ­ qualquer ideia que eu pensei.
+16:25 Marcos VinÃ­cius Forecchi Accioly: NÃ£o sei se Ã© um botÃ£o mais claro, porque isso aÃ­ tÃ¡ legal. Eu vi que tem aÃ­ mas assim tÃ¡ muito a pessoa entra ela fica presa os cursos em destaque.
+16:31 Elton Vinicius: sÃ³ que
+16:35 Marcos VinÃ­cius Forecchi Accioly: Ela tem que rolar essas quatro trÃªs sessÃµes de curso antes de ver todos os cursos. Ã€s vezes ela quer fazer uma busca, nÃ©?
+16:41 Elton Vinicius: Na verdade, a ideia Ã© do botÃ£o vir para cÃ¡ assim, tipo assim ver todos os cursos. Que seria aqui porque que eu pensei que a quantidade aÃ­ foi o vendo outras outras plataformas a quantidade de cursos que a gente tem cara, a gente precisa ter uma pÃ¡gina sÃ³ de cursos onde a gente tenha uma parte de filtragem tambÃ©m.
+17:00 Marcos VinÃ­cius Forecchi Accioly: Total total um filtro total Ã“timo Ã‰ isso mesmo, beleza super legal esse Ã­conezinho do IFES aÃ­ em
+17:07 Elton Vinicius: tÃ¡
+17:11 Marcos VinÃ­cius Forecchi Accioly: quadradinho com a bolinha.
+17:13 Elton Vinicius: Ã‰ ficou maneira mesmo alguns ficam bem ruins.
+17:13 Marcos VinÃ­cius Forecchi Accioly: Ficou lindo. O que que Ã© esse 15 Ã¡reas um catÃ¡logo inteiro Todo o curso?
+17:19 Elton Vinicius: EntÃ£o essa Ã© esse aqui tambÃ©m nÃ£o ficou visualmente interessante, mas Ã© as categorias vocÃª olhar por categorias, nÃ©? Tipo assim aqui vocÃª tem algumas categorias que vocÃª pode vocÃª vai encontrar cursos aqui. Eu tinha pensado fazer algo parecido com esse aqui Ã³, talvez aqui Ã³.
+17:40 Marcos VinÃ­cius Forecchi Accioly: NÃ£o tÃ´ vendo nada.
+17:44 Elton Vinicius: A gente pode tirar tambÃ©m, isso Ã© tranquilo, nÃ©? VocÃª sabe.
+17:50 Marcos VinÃ­cius Forecchi Accioly: Quem Ã© que vai clicar nisso, nÃ©? Mas ok assim. Ah, deixa eu ver uma Ã¡rea do conhecimento para eu clicar porque tem um Ã­cone legal. Tipo assim, nÃ£o sei se entrega muito valor, mas eu entendo que pode ser algo na falta de coisa para colocar aÃ­ tÃ¡ legal isso aÃ­ funciona, entendeu? Mas tÃ¡ legal. Eu acho que se for umas bolas por exemplo, se for um desenho interessante, imagina que sÃ£o cÃ­rculos e quanto maior ele Ã© um tamanho da Ã¡rea como se fosse uma nuvem de palavras aÃ­ sabe talvez criar um desenho bonito e traria um conceito antigo para uma coisa nova, jÃ¡ cai na pÃ¡gina de todos os cursos filtrado por categoria legal, entendeu? Acho que
+18:40 Elton Vinicius: Mas talvez nÃ£o precise mesmo, nÃ©?
+18:42 Marcos VinÃ­cius Forecchi Accioly: Ã‰ mas sim, mas acho que pode adicionar uma beleza, mas nÃ£o adiciona muita nÃ£o tem muita funÃ§Ã£o, nÃ© assim, mas eu acho que Ã© legal sim, tÃ¡ Ã‰ legal ter EntÃ£o acho que uma nuvem de palavras ou bolas, mas assim a gente consegue comeÃ§ar com isso aÃ­ na versÃ£o tranquilo, depois melhorar, tÃ¡? NÃ£o precisa agarrar com isso nÃ£o dÃ¡ para ele do jeito que tÃ¡ aÃ­ que tÃ¡ legal. Eu tÃ´ sendo hiper crÃ­tico, entendeu? Porque agora AÃ­ a gente consegue tambÃ©m fazer coisas.
+19:09 Elton Vinicius: JÃ¡ guardar e guardar as nossas informaÃ§Ãµes aÃ­ tambÃ©m para a gente.
+19:13 Marcos VinÃ­cius Forecchi Accioly: Mas isso aÃ­ pode ser versÃ£o 2 3, entendeu? Igual tem agora, por exemplo, nÃ³s estamos com a base de conhecimento no ar e aquela interface administrativa tÃ¡ uma m**** de trabalhar lÃ¡ dentro, mas a gente vai melhorar elas agora vamos fazer plugin para as coisas pra gente arrastar e soltar, entendeu?
+19:29 Elton Vinicius: A categorizar para gente tambÃ©m, nÃ©?
+19:31 Marcos VinÃ­cius Forecchi Accioly: Ã‰ para facilitar o nosso trabalho de administrativo, entendeu?
+19:36 Elton Vinicius: A ideia Ã© ter esse planejador de licenÃ§a para capacitaÃ§Ã£o, eu nÃ£o mexi nele
+19:38 Marcos VinÃ­cius Forecchi Accioly: Legal, acho que tÃ¡ bom.
+19:40 Elton Vinicius: entÃ£o assim sozinho, depois a gente a ideia acho que Ã© pensar uma pÃ¡gina que Organize isso na na organizaÃ§Ã£o das informaÃ§Ãµes das categorias, eu percebi essa sÃ©ries, nÃ© que Ã© uma coisa que eu jÃ¡ vi a
+19:58 Marcos VinÃ­cius Forecchi Accioly: sim Sacanagem tem uma sÃ©rie de mas tudo bem.
+20:06 Elton Vinicius: Eu acho que quando tem dois ou mais nÃ©? AÃ­ vira uma sÃ©rie, nÃ©? AtÃ© faltando mais uma que tinha uma outra lÃ¡ que eu tinha.
+20:13 Marcos VinÃ­cius Forecchi Accioly: Cara acho que tÃ¡ muito fofinha homem, tÃ¡ boa projeto parceiros.
+20:17 Elton Vinicius: Aqui Ã© como fazer nÃ©? O que Ã© que eu acho que tem atÃ© que acertar essa aqui,
+20:22 Marcos VinÃ­cius Forecchi Accioly: Eu acho que esse tÃ­tulo nÃ£o tÃ¡ isso exatamente.
+20:22 Elton Vinicius: o que Ã©? Que Ã© um curso muque nÃ©? Isso aÃ­?
+20:32 Marcos VinÃ­cius Forecchi Accioly: Legal, tÃ¡ legal assim. Acho que ele colocou umas coisas de cadastro Ã© mesmo Hotmail Outlook Ã© um lugar meio longe do lugar do cadastro aÃ­ para poder dizer isso nÃ©? Mas
+20:46 Elton Vinicius: VocÃª fala o que?
+20:46 Marcos VinÃ­cius Forecchi Accioly: Foi aÃ­ hÃ¡ tentando ser super Ãºtil colocar essa nota amarela aÃ­. SÃ³ que tipo assim a pessoa nÃ£o tÃ¡ se cadastrando aÃ­ ela tÃ¡ sÃ³ lendo sobre se cadastrar Ã© legal. Ah, meu irmÃ£o, entÃ£o nÃ£o vai funcionar. Talvez o pensamento que ela vai ter aÃ­, mas serÃ¡ que ela vai lembrar na hora que ela vai fazer o cadastro. Tipo assim.
+21:04 Elton Vinicius: A gente tem aonde lÃ¡ na hora.
+21:07 Marcos VinÃ­cius Forecchi Accioly: Deve ter perguntas frequentes. Estou tendo nÃ£o recebi o e-mail ele Talvez ele leu isso na pÃ¡gina. E aÃ­ ele
+21:11 Elton Vinicius: Que tambÃ©m.
+21:16 Marcos VinÃ­cius Forecchi Accioly: transformou em um outro negÃ³cio?
+21:18 Elton Vinicius: TÃ´ vendo aqui. Aqui que deveria estar essa informaÃ§Ã£o, nÃ©?
+21:22 Marcos VinÃ­cius Forecchi Accioly: Ã‰ mas nÃ£o vai estar nunca aÃ­, nÃ©? NÃ£o tem nem como entrar aÃ­ os meninos nÃ£o querem fazer isso, nunca talvez estaria aÃ­ Ã³. embaixo do embaixo da onde coloca o e-mail talvez Mas maneiro tÃ¡ lindo. Desce mais. Desce mais um pouquinho.
+21:41 Elton Vinicius: E aÃ­ vem perguntas e respostas.
+21:44 Marcos VinÃ­cius Forecchi Accioly: Mas tudo single page, nÃ©? Que pÃ¡gina nÃ£o tambÃ©m nÃ©?
+21:47 Elton Vinicius: rapaz, mas isso aÃ­ Ã© EntÃ£o eu acho que esse aqui eu atÃ© gostei da ideia de tirar esse aqui vai ser um link bom, aÃ­ a gente viria para catÃ¡logo de cursos, nÃ©? Que aÃ­ aqui teria
+21:57 Marcos VinÃ­cius Forecchi Accioly: Ã“timo tem as Ã¡reas.
+21:59 Elton Vinicius: a ordenaÃ§Ã£o, nÃ©? AÃ­ jÃ¡ tirou era para Agora que eu vou pedir para ele botar todas as Ã¡reas.
+22:09 Marcos VinÃ­cius Forecchi Accioly: Eu acho que as Ã¡reas Ã© ruim ficar por ordem de quantidade botar em ordem alfabÃ©tica. E as quantidades podem atÃ© vir, mas acaba privilegiando tipo assim, entendeu?
+22:19 Elton Vinicius: projetos
+22:20 Marcos VinÃ­cius Forecchi Accioly: NÃ£o precisa nÃ£o faz sentido acho que nÃ­vel bÃ¡sico intermediÃ¡rio avanÃ§ado sim, pode continuar assim que bate nÃ©? Mas Esses nÃºmeros Ã© a quantidade de cursos, nÃ©? Ã‰ porque nenhum lugar tÃ¡ dito
+22:34 Elton Vinicius: eu nÃ£o sei se a gente deixa tambÃ©m para
+22:36 Marcos VinÃ­cius Forecchi Accioly: entÃ£o a pessoa adivinha tipo assim, nÃ©? Eu acho que deixa mas nÃ£o precisa nÃ£o sei se faz muito sentido deixar nÃ£o tÃ¡? Mas mas Ã© legal para a gente atÃ© para as pessoas pegarem quando elas querem saber Ã© legal vir aÃ­ dar uma olhada.
+22:53 Elton Vinicius: Agora tÃ¡ estranho esse negÃ³cio aqui, cara, que eu tÃ´ vendo aqui design produÃ§Ã£o cultural e design ele nÃ£o tÃ¡ fazendo. do jeito novo
+23:02 Marcos VinÃ­cius Forecchi Accioly: Tem que melhorar suas categorias, mas acho que nÃ£o era isso que a gente olhar agora, nÃ©? VocÃª vai olhar melhor ainda arquitetura do site.
+23:05 Elton Vinicius: e jÃ¡ tava meio definida, mas
+23:10 Marcos VinÃ­cius Forecchi Accioly: AÃ­ ele nÃ£o imagina tambÃ©m, ele tÃ¡ carregando tudo de uma vez, nÃ©?
+23:14 Elton Vinicius: aqui tÃ¡
+23:15 Marcos VinÃ­cius Forecchi Accioly: Eu acho que Ã© bom botar um botÃ£o daquele para fazer um lazy loading, nÃ©? Tipo assim carregar mais cursos ou Ã  medida que a pessoa rola vai carregando mais curso, entendeu? Fazer um lazy loading com a rolagem porque nÃ£o faz sentido, nÃ©? Carregar todos os centros de tantos cursos na memÃ³ria do celular ou do computador.
+23:35 Elton Vinicius: legal, mas mesmo assim a gente deixa nÃ£o faz paginaÃ§Ã£o faz load porque
+23:41 Marcos VinÃ­cius Forecchi Accioly: Eu acho que imaginaÃ§Ã£o jÃ¡ morreu, nÃ©? Quem Ã© que imagina coisas hoje em dia?
+23:45 Elton Vinicius: NÃ£o ia pÃ©ssimo. Acho que atÃ© para.
+23:46 Marcos VinÃ­cius Forecchi Accioly: No celular Ã© ruim para filtrar Ã© ruim.
+23:51 Elton Vinicius: Usar aÃ­ cara, tÃ¡ puxando a categoria, nÃ©? TÃ­tulo aÃ­ vem a carga horÃ¡ria o nÃ­vel. E aÃ­ tem alguns selos, nÃ©?
+24:07 Marcos VinÃ­cius Forecchi Accioly: Que aÃ­ seria legal das lÃ­nguas, talvez ter bandeirinha ou alguma coisa assim? E libras eu acho legal aquele jeito que a gente usa que fica a mÃ£ozinha no topo, mas nÃ£o precisa poderiam ser poderiam ser poderiam ser Bandeiras aqui embaixo talvez entendeu? Sabe onde tÃ¡ se esse curso que sempre vai ficar em branco a esse espaÃ§o na direita poderia ter um Ã­cone para libras um Ã­cone para das lÃ­nguas. Tipo assim multinÃ­vel.
+24:37 Elton Vinicius: Legal, eu tambÃ©m da ideia.
+24:38 Marcos VinÃ­cius Forecchi Accioly: sei Porque eu nÃ£o tÃ´ por na parte de baixo, nÃ©?
+24:47 Elton Vinicius: EntÃ£o Ã© os selos dos cards dos cursos vÃ£o ser bandeirinhas que vÃ£o ficar ao lado de acessar curso mini bandeirinhas bem.
+24:57 Marcos VinÃ­cius Forecchi Accioly: Ã‰ como se fosse ribons assim bandeirinhas ribos, nÃ©? Vamos ver o que que a gente consegue fazer que nÃ£o fica ruim. Se nÃ£o se nÃ£o der a gente pode botar no topo tambÃ©m, entendeu? PÃµe um pÃµe uma Tarja ou na lateral direita, por exemplo. da imagem do curso ali Pode vir na lateral direita do box tambÃ©m, nÃ£o precisa ser exatamente ao lado do botÃ£o acessar curso poderia estar em todo esse espaÃ§o que geralmente vai ficar aÃ­ Ã³, quer ver dÃ¡ uma olhada em curso com uma linha duas linhas. Desce mais um pouquinho para a gente ver aÃ­ trÃªs linhas, tÃ¡ vendo que tem um tem um espaÃ§o que vai mais ou menos entre a terceira linha dÃ¡ uma olhada no prÃ³ximo aqui no caminho da educaÃ§Ã£o crÃ­tica, vocÃª vÃª que depois da palavra
+25:37 Elton Vinicius: quatro linhas
+25:42 Marcos VinÃ­cius Forecchi Accioly: educaÃ§Ã£o ali dali para baixo na direita atÃ© a parte inferior do card depois da palavra educaÃ§Ã£o, como se ficasse colado na barra direita do Card. Vai descendo seu Mouse apÃ³s a educaÃ§Ã£o Ã© um espaÃ§o em branco. TÃ¡ vendo atÃ© lÃ¡ embaixo, Ã³ em todos os outros tem esses mesmo espaÃ§o em branco. Na lateral isso essa Ã¡rea aÃ­, eu acho que essa Ã¡rea aÃ­ com uma linha com duas linhas com trÃªs linhas com quatro linhas, ela praticamente sempre vai existir. TÃ¡ vendo. AÃ­ talvez vai bater um pouquinho, mas assim.
+26:27 Elton Vinicius: EntÃ£o dessa altura
+26:28 Marcos VinÃ­cius Forecchi Accioly: Porque eles podem ser bem pequenininhos, nÃ©? Eles podem ser bem estou pensando eles na vertical. Entendeu? Como se eles fossem menos Zinho vertical na lateral direita do Card? Com Ã­cones diferentes que vocÃª pode passar o mouse?
+26:43 Elton Vinicius: e tem um
+26:43 Marcos VinÃ­cius Forecchi Accioly: Talvez tem um Tutti.
+26:46 Elton Vinicius: Legal agora uma coisa que eu achei bom, cara, eu consegui aproveitar as imagens, eu achei que ficou legal, nÃ©? Tipo, apesar de repetir isso.
+26:52 Marcos VinÃ­cius Forecchi Accioly: Ficou legal o que eu tinha feito tambÃ©m ficou legal no final das contas.
+26:57 Elton Vinicius: DÃ¡ para aproveitar bem? Aqui ele aparece. a sÃ©rie
+27:07 Marcos VinÃ­cius Forecchi Accioly: Eu acho que eu acho que a sÃ©rie Ã© legal ficar aÃ­.
+27:11 Elton Vinicius: deixa eu ver como Ã© que Ã© o TambÃ©m do mesmo jeito.
+27:32 Marcos VinÃ­cius Forecchi Accioly: Eu acho que Ã© legal que aÃ­ fica meio que a sÃ©rie ou projetos nÃ£o vai fazer tanta diferenÃ§a para navegaÃ§Ã£o a pessoa sÃ³ dela se encontrar jÃ¡ tÃ¡ bom? Cara eu acho que Ã© esse caminho aÃ­ bicho dÃ¡ essa acertada das imagens, sÃ³ talvez implementar o laser loading e vamos partir para a primeira versÃ£o para botar para a gente comeÃ§ar a usar.
+27:55 Elton Vinicius: TÃ¡ eu tava fazendo um teste paralelo, cara com a cor mais que a gente usa. E algo mais visual ver se vocÃª curte tambÃ©m que aÃ­ iria por esse caminho que tÃ¡ meio bugado. Mas seria Tipo isso aqui assim. Poucos abertos do IF aprendizado algo parecido com isso sim, mas Centralizado nÃ©? Aqui teria nÃ£o ter esse espaÃ§o aqui, mas aÃ­ depois Seria a mesma coisa. Mas essa cor mais que a gente aqui talvez deixar mais branco, nÃ©? EntÃ£o esse azul.
+28:31 Marcos VinÃ­cius Forecchi Accioly: Cara, eu gosto dos dois. Eu gosto mais desse aÃ­ para ser bem honesto para vocÃª, porque porque fica mais bonito tÃ¡ mais interessante.
+28:42 Elton Vinicius: E esse estilo aqui tambÃ©m que vocÃª achou que ficou bom.
+28:47 Marcos VinÃ­cius Forecchi Accioly: Ã‰ uma mudanÃ§a muito grande, nÃ©? Mas eu acho que tÃ¡ legal. Eu acho que fica mais interessante visualmente isso daÃ­, nÃ©?
+28:56 Elton Vinicius: Total outro nÃ£o tem nem tÃ¡ eu vou fazer o seguinte eu vou seguir por esse aqui entÃ£o, talvez dÃ¡ uma Que tÃ¡ a mesma coisa aqui, nÃ©? Tipo todo o resto.
+29:08 Marcos VinÃ­cius Forecchi Accioly: Eu acho que estÃ¡ mais interessante visualmente o Elton.
+29:12 Elton Vinicius: tÃ¡
+29:13 Marcos VinÃ­cius Forecchi Accioly: Apesar do verde do outro conectar mais com a gente.
+29:17 Elton Vinicius: mas Ã©
+29:18 Marcos VinÃ­cius Forecchi Accioly: Atualmente esse aÃ­ conecta mais com o portal que jÃ¡ existe.
+29:23 Elton Vinicius: Que vocÃª sabe que eu pensei que a gente Ã© porque eu tava fazendo outro aÃ­ depois eu falei cara, a gente tem. Justamente uma cor especÃ­fica dentro do Mudo, nÃ©? VocÃª pega quando o cara for entrar no mudo, ele vai entrar nesse aqui.
+29:38 Marcos VinÃ­cius Forecchi Accioly: Sim sim, eu acho que Ã© melhor seguir esse padrÃ£o. sim
+29:43 Elton Vinicius: EntÃ£o tÃ¡. EntÃ£o, vou fazer desse aqui entÃ£o e aÃ­ fazer esses ajustes pequenos assim, nÃ©? Beleza, aÃ­ ficam a primeira versÃ£o a minha dÃºvida cara tambÃ©m Ã© o seguinte. Fico pensando esse para quem ele Ã© legal. mas ele Porque assim Ã© uma forma de vocÃª tambÃ©m direcionar assim. Ã“, vocÃª Ã© professor educador. Tem um monte de coisa legal aqui para vocÃª, mas eu tava vendo.
+30:26 Marcos VinÃ­cius Forecchi Accioly: Mas aÃ­ quando clica no perfil acontece o quÃª? Ele botou essa bolinha amarela tambÃ©m, nÃ©? Eu acho que tem que acertar e botar tudo vermelho, onde ficou
+30:30 Elton Vinicius: aqui tem que
+30:33 Marcos VinÃ­cius Forecchi Accioly: amarela lÃ¡ no topo tambÃ©m. Que lÃ¡ na imagem do guri sentado no computador tem uma bola amarela no canto direito inferior direito, nÃ£o tinha entendido o que que era tambÃ©m nÃ£o a bola
+30:44 Elton Vinicius: Essa aqui nÃ©?
+30:45 Marcos VinÃ­cius Forecchi Accioly: mesmo. Ã‰ eu acho que esse botÃ£o aÃ­ tambÃ©m Ã© legal ele ficar vermelho, talvez eu nÃ£o sei que paleta Ã© essa, nÃ©? Ficaria uma paleta meio til meio mas tipo assim, nÃ£o dÃ¡ para usar esse Verde lÃ¡ do cursos abertos, nÃ©? Vai ter que mexer.
+31:02 Elton Vinicius: NÃ£o aqui nÃ£o seria pai mais parecido com esse aqui.
+31:05 Marcos VinÃ­cius Forecchi Accioly: Tem que ser um tio ou esse azul, eu nÃ£o sei se a gente usa vermelho vai ser
+31:08 Elton Vinicius: Eu vou fazer um teste aqui que se a gente conseguir um vermelho legal a mesma
+31:10 Marcos VinÃ­cius Forecchi Accioly: Amarelo aÃ­ mesmo, nÃ©? nÃ£o acho que fica tÃ£o ruim nÃ£o cara, mas
+31:22 Elton Vinicius: matiza assim prÃ³ximo assim vibraÃ§Ã£o desse Verde. Beleza amanhÃ£ a gente estamos conversa mais sobre essas mudanÃ§as assim. Tiverem porque na quinta tem que mostrar de alguma coisa.
+31:41 Marcos VinÃ­cius Forecchi Accioly: Aonde?
+31:43 Elton Vinicius: vai ter reuniÃ£o amanhÃ£ Ã© depois de amanhÃ£ para mostrar para comissÃ£o muque
+31:48 Marcos VinÃ­cius Forecchi Accioly: Boa mas isso aÃ­ jÃ¡ tÃ¡ suficiente para mostrar mano, sÃ³ que eu acho que se
+31:51 Elton Vinicius: Ou entÃ£o a gente tira Cara, eu acho que Ã© melhor tirar.
+31:52 Marcos VinÃ­cius Forecchi Accioly: vocÃª fizer os acertos perfeito, que o que que Ã© que a gente tem que falar agora, jÃ¡ estamos com banco isso aqui jÃ¡ tÃ¡ com o banco de dados nÃ³s jÃ¡ estamos montando o plano para migrar entÃ£o agora Ã© fechar o visual. A gente quer mostrar para vocÃªs que a gente conseguiu fazer muito mais aÃ­ eu acho que tudo que nÃ£o funciona, nÃ©, cara, talvez por exemplo esses dados ali Ã³ que tem nÃºmeros sÃ£o coisas que a gente tem que preencher por exemplo na Que a gente tem que preencher.
+32:21 Marcos VinÃ­cius Forecchi Accioly: Entendeu? E a gente consegue botar para tirar do print fazer aviÃ£o cÃ©rebro uma pastinha que preenche um Jason e a gente importa em algum lugar. Beleza a gente atÃ© consegue automatizar uma parte, mas talvez nÃ£o vai conseguir linkar para pegar esses nÃºmeros, mas a gente consegue tipo assim ao invÃ©s de estar 22.390. Esse em inglÃªs comunicativo Ã© assim mais de Como matrÃ­culas a gente deixa um mais de tanto e a gente atualiza cada seis meses, entendeu? tipo assim
+32:57 Elton Vinicius: NÃ£o.
+32:57 Marcos VinÃ­cius Forecchi Accioly: Cara eu acho que isso Ã© um dado bem interessante, mas mas tipo assim podemos tirar Claro, entendeu?
+33:09 Elton Vinicius: Beleza, velhinho.
+33:10 Marcos VinÃ­cius Forecchi Accioly: TÃ¡ bom, imagina, eu acho que tÃ¡ massa, cara.
+33:14 Elton Vinicius: Correria total
+33:18 Marcos VinÃ­cius Forecchi Accioly: VocÃª tÃ¡ achando nÃ£o tÃ¡ achando nÃ£o? Acho que
+33:21 Elton Vinicius: HÃ­brida combinando com os meninos aqui lÃ¡ eu tenho que voltar para casa.
+33:26 Marcos VinÃ­cius Forecchi Accioly: Ã‰ nÃ£o nÃ³s estamos fazendo muita coisa. Cuidado com seu revanche velho. Ele vai te nÃ£o fica com overdose de dopamina tambÃ©m nÃ£o.
+33:35 Elton Vinicius: Tem dia que eu penso eu vou tomar dois como Ã© que dÃ¡ aqui que vai acontecer.
+33:38 Marcos VinÃ­cius Forecchi Accioly: Vai dar ruim cara, faz isso nÃ£o vai dar ataque cardÃ­aco.
+33:42 Elton Vinicius: JÃ¡ tive algumas vezes jÃ¡.
+33:44 Marcos VinÃ­cius Forecchi Accioly: Mas o tempo que eu nÃ£o tomo. Eu tÃ´ bem produtivo, cara. TÃ´ me sentindo bem produtivo, tipo assim, Ã© que vocÃª vocÃª faz uso regular, nÃ©? Mas tipo assim Ã© isso, cara. Eu acho que Ã© aceitar tambÃ©m que tipo assim Elton, imagina cara o tempo que nÃ³s ficamos redesenhando essa essa vitrine mole que eu tinha feito isso daÃ­ Ã© muito melhor. Entendeu? EntÃ£o, tipo jÃ¡ Ã© rÃ¡pido o suficiente Ã© sÃ³ a gente nÃ£o deixar o prazo apertar igual agora, por exemplo. A vitrine Ã© para reuniÃ£o de quinta.
+34:15 Marcos VinÃ­cius Forecchi Accioly: AÃ­ estamos fazendo hoje. Quando tiver uma coisa assim igual essa coisa da oficina a gente conversou hoje. Eu jÃ¡ te mandei hoje. Se vocÃª quiser a gente manda o formulÃ¡rio hoje, entendeu?
+34:25 Elton Vinicius: Mas acho que vocÃª quer que eu fale alguma coisa, vou mandar logo.
+34:29 Marcos VinÃ­cius Forecchi Accioly: Eu acho que sim, cara, eu acho que Ã© bom vocÃª dar uma olhada na mensagem que
+34:31 Elton Vinicius: TÃ¡ vou ver isso amanhÃ£ entÃ£o que
+34:32 Marcos VinÃ­cius Forecchi Accioly: ele que ele falou, entendeu? Isso mas a gente precisa mandar logo. A MÃ¡rcia tÃ¡ cobrando, entendeu? EntÃ£o tipo assim o seu a sua funÃ§Ã£o Ã© entrar nesse cÃ©rebro e falar assim, eu quero revisar o que tem aÃ­ jÃ¡ de informaÃ§Ã£o para a gente preencher um formulÃ¡rio para poder dar o OK para validacao. Pronto revisa Ã© isso.
+34:52 Elton Vinicius: TÃ¡ entÃ£o vou fazer isso aqui logo para eu nÃ£o.
+34:55 Marcos VinÃ­cius Forecchi Accioly: Deixa eu mandar jÃ¡ o que tem aqui que eu acabei de corrigir ele com uma coisinha aqui.
+34:59 Elton Vinicius: Nossa isso Ã© muito maneiro.
+35:00 Marcos VinÃ­cius Forecchi Accioly: AÃ­ vocÃª jÃ¡ faz o pulo aÃ­? Porque eu acabei de ler a descriÃ§Ã£o e achei que podia dar uma melhorada, entendeu?
+36:01 Marcos VinÃ­cius Forecchi Accioly: Bicho alÃ©m dessa coisa do meu cÃ©rebro o negÃ³cio da solunar cara. Nossa ela Nossa nÃ£o sÃ³ esse de votaÃ§Ã£o agora votaÃ§Ã£o jÃ¡ tÃ¡ funcionando, mas assim Caraca trabalhar com os botes assim, cara e fazer as coisas e usar o cÃ©rebro da sua lunar bicho. Agora eu consegui conectar no notion agora ele puxou tudo do nojo eu vou fazer todo o sistema financeiro nosso robusto no banco de dados, entendeu? Que a gente manda o comprovante e as coisas pelo Bote ele jÃ¡ joga no cÃ©rebro jÃ¡ nota nas FinanÃ§as, jÃ¡ fica para a gente revisar na reuniÃ£o bicho.
+36:37 Marcos VinÃ­cius Forecchi Accioly: Cara muito f***. O maneiro tambÃ©m ele funcionar jÃ¡ baseado no sistema de gestÃ£o, entÃ£o a gente tÃ¡ construindo um sistema que funciona do jeito que a gente gera, entendeu? Isso Ã© muito maneiro, cara.
+36:55 Elton Vinicius: VocÃª jÃ¡ fez o pulso aÃ­ nÃ£o?
+36:57 Marcos VinÃ­cius Forecchi Accioly: NÃ£o fez ainda ele ainda tÃ¡ fazendo o acerto aqui, cara, tÃ¡ meio lento, nÃ©,
+37:00 Elton Vinicius: tÃ¡
+37:01 Marcos VinÃ­cius Forecchi Accioly: mas gastou 10 mil tokens para fazer um acerto velho.
+37:06 Elton Vinicius: NÃ£o vou fazer entÃ£o amanhÃ£ que nÃ£o vai ficar muito legal o trÃ¢nsito aqui.
+37:08 Marcos VinÃ­cius Forecchi Accioly: tÃ¡ NÃ£o faz isso eu tenho que ir para fisioterapia tambÃ©m.
+37:13 Elton Vinicius: tÃ¡
+37:14 Marcos VinÃ­cius Forecchi Accioly: Olha, ele mandou aÃ­ agora. TÃ¡ ajeitando a descriÃ§Ã£o do formulÃ¡rio dizer.
+37:20 Elton Vinicius: NÃ£o sem contar que amanhÃ£ tem um negÃ³cio do nte, nÃ©, velho, aquela parada agarrada bicho assim uma coisa realmente vai.
+37:25 Marcos VinÃ­cius Forecchi Accioly: TendÃªncia velho aquilo lÃ¡ tÃ¡ pendente velho. TÃ¡ vamos fazer o seguinte, eu vou para Fisio hoje volto para casa e vou tentar fazer esse negÃ³cio da internet entÃ£o que eu peÃ§o para ele tentar simplificar o que foi feito falar. Olha, a gente tÃ¡ achando que tÃ¡ muito complexo.
+37:46 Elton Vinicius: E vocÃª Ã© bom nisso assim, nÃ© de oficina, nÃ©? O cara de
+37:50 Marcos VinÃ­cius Forecchi Accioly: Eu nÃ£o sei se a galera nÃ£o tem muita noÃ§Ã£o Socorro.
+37:53 Elton Vinicius: Porque o que eu achei aquilo que eu te falei, nÃ©? Tipo, acho que ela criou uma forma de ela ela quis fazer por EstaÃ§Ãµes e buscou uma forma fez o caminho inverso assim sabe que embasamento que tem para poder fazer isso. AÃ­ a gente
+38:04 Marcos VinÃ­cius Forecchi Accioly: isso aÃ­
+38:09 Elton Vinicius: vai fazer um micro-Ã´nibus. que a gente nunca fez que nÃ£o era nenhum problema isso, mas para fazer sÃ³ para poder fazer as estruturas de EstaÃ§Ã£o e quando a gente fez ali na prÃ¡tica nem ela tava
+38:32 Marcos VinÃ­cius Forecchi Accioly: Pois Ã© cara
+38:33 Elton Vinicius: beleza entÃ£o
+38:38 Marcos VinÃ­cius Forecchi Accioly: beleza
+38:39 Elton Vinicius: Mas a gente fala entÃ£o um abraÃ§o.
+  
