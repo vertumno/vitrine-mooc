@@ -12,6 +12,7 @@ Esta pasta reúne os artefatos produzidos no estágio de catálogo da Vitrine MO
 | **Navegação primária** | As **15 Categorias** do formulário de cadastro. |
 | **Trilhas** | **Removidas** — só Séries + Projetos parceiros. |
 | **Carga horária** | **Populada** em `catalogo-cursos-completo.csv` (coluna `carga_horaria`). |
+| **Idioma** | **Populado** em `catalogo-cursos-completo.csv` (coluna `idioma`). Para UI, português é padrão implícito; inglês vira bandeira da Gra-Bretanha e espanhol vira bandeira da Espanha. Os 3 cursos Embrace têm origem "Português, Inglês e Espanhol". |
 | **UnAC** | **Definido** — Universidade Aberta Capixaba (programa do Governo do ES; parceria Ifes/CEFOR). Ver `projetos-especiais.md`. |
 | **Tree test / card sorting** | **Não será feito** — rótulos por decisão editorial do CEFOR. |
 | **Objetivo da plataforma** | Ancorado na Resolução CS 72/2020 ("abertos à comunidade"). |

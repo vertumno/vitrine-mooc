@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -10,27 +10,36 @@
 <body>
   <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
-  <div class="topbar">
-    <div class="wrap">
-      <span>Instituto Federal do Espírito Santo - Cefor</span>
-      <span>Plataforma pública de cursos abertos</span>
-    </div>
-  </div>
-
   <header class="site">
-    <div class="wrap">
+    <div class="site-wrap">
       <a class="brand" href="index.html" aria-label="Cursos Abertos do Ifes">
-        <span class="brand-mark">IF</span>
-        <span>Cursos Abertos</span>
+        <img class="brand-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-name">Cursos Abertos</span>
       </a>
       <nav class="main-nav" id="menu" aria-label="Navegação principal">
-        <a href="cursos.html">Todos os cursos</a>
-        <a href="#areas">Áreas</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="cursos.html">Cursos</a>
         <a href="#licenca">Licença capacitação</a>
         <a href="#faq">Dúvidas</a>
       </nav>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">Menu</button>
-      <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/">Acessar Moodle</a>
+      <div class="site-actions">
+        <div class="lang-switch" data-lang-switch>
+          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Selecionar idioma / Select language">
+            <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>
+            <span class="lang-current" data-lang-current>PT</span>
+            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="menu">
+            <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" href="index-en.html" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Acessar ambiente</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">Menu</button>
+      </div>
     </div>
   </header>
 
@@ -47,140 +56,146 @@
           Cursos Abertos do Ifes
           <span>aprendizado no seu ritmo</span>
         </h1>
-        <p class="lead">Encontre cursos livres do Ifes por tema, tempo disponível, nível e recursos de acessibilidade. A vitrine leva você ao curso certo sem precisar conhecer a estrutura interna da plataforma.</p>
+        <p class="lead">Encontre cursos livres do Ifes, amplie suas competências e habilidades, conquiste seu certificado e avance na carreira - tudo gratuito, no seu tempo e de onde você estiver.</p>
+        <form class="hero-search" action="cursos.html" method="get" role="search" aria-label="Buscar cursos no catálogo">
+          <span class="hero-search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          </span>
+          <label class="sr-only" for="hero-q">Buscar cursos</label>
+          <input id="hero-q" name="q" type="search" placeholder="Busque por nome, tema ou palavra-chave" autocomplete="off">
+          <button class="btn btn-primary" type="submit">Buscar cursos</button>
+        </form>
         <div class="hero-actions">
           <a class="btn btn-accent" href="cursos.html">Explorar cursos</a>
           <a class="btn btn-outline" href="#como-funciona">Como funciona</a>
         </div>
       </div>
+    </section>
 
-      <aside class="hero-note" aria-label="Destaque">
-        <strong>Certificado gratuito</strong>
-        <span>Emitido no Moodle após aproveitamento mínimo no curso.</span>
-      </aside>
-
-      <div class="stats" aria-label="Indicadores editoriais dos cursos abertos">
-        <div class="wrap">
-          <p class="stats-title">Indicadores de referência para orientar a descoberta. Atualização editorial a partir dos painéis do projeto.</p>
-          <div class="stat">
-            <strong>164+</strong>
-            <span>cursos válidos</span>
-          </div>
-          <div class="stat">
-            <strong>68 mil+</strong>
-            <span>matrículas em 2025</span>
-          </div>
-          <div class="stat">
-            <strong>65%</strong>
-            <span>fora do ES</span>
-          </div>
-          <div class="stat">
-            <strong>33%</strong>
-            <span>certificação média</span>
-          </div>
+    <div class="stats" aria-label="Indicadores dos cursos abertos">
+      <div class="wrap">
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <span class="stat-body">
+            <strong>300.363</strong>
+            <span>Matrículas realizadas</span>
+          </span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-5"/><path d="M22 10v5.5"/></svg>
+          </span>
+          <span class="stat-body">
+            <strong>+160</strong>
+            <span>Cursos disponíveis</span>
+          </span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg>
+          </span>
+          <span class="stat-body">
+            <strong>15</strong>
+            <span>Áreas de conhecimento</span>
+          </span>
         </div>
       </div>
-    </section>
+    </div>
 
     <section id="destaques">
       <div class="wrap">
         <div class="section-head">
           <div>
             <h2>Cursos em destaque</h2>
-            <p>Uma curadoria inicial para apresentar bem a plataforma e levar rapidamente ao Moodle.</p>
+            <p>Explore cursos selecionados para começar seus estudos com temas úteis, gratuitos e certificados pelo Ifes.</p>
           </div>
           <a class="text-link" href="cursos.html">Ver todos os cursos</a>
         </div>
 
-        <div class="course-grid">
-          <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?como-criar-mooc">
-            <div class="course-media">
-              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg" alt="Imagem do curso Como criar um MOOC" loading="lazy">
-              <span class="course-ribbons"><span class="ribbon" title="Curso com Libras">LIB</span></span>
-            </div>
-            <div class="course-body">
-              <span class="course-cat">Educação a Distância</span>
-              <h3>Como criar um MOOC</h3>
-              <p class="course-meta"><span>60h</span><span>Básico</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
+        <div class="course-carousel" data-carousel>
+          <div class="course-track" tabindex="0" role="group" aria-label="Cursos em destaque">
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?como-criar-mooc">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_ComoCriarMOOC.jpg" alt="Imagem do curso Como criar um MOOC" loading="lazy">
+                <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Educação a Distância</span>
+                <h3>Como criar um MOOC</h3>
+                <p class="course-meta"><span>60h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
 
-          <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-4-para-educadores">
-            <div class="course-media">
-              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores" loading="lazy">
-            </div>
-            <div class="course-body">
-              <span class="course-cat">Educação a Distância</span>
-              <h3>Moodle 4 para Educadores</h3>
-              <p class="course-meta"><span>60h</span><span>Intermediário</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-4-para-educadores">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2025/08/vitrine_Moodle4_Educadores.png" alt="Imagem do curso Moodle 4 para Educadores" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Educação a Distância</span>
+                <h3>Moodle 4 para Educadores</h3>
+                <p class="course-meta"><span>60h</span><span>Intermediário</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
 
-          <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?acessibilidade-e-tecnologia">
-            <div class="course-media">
-              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Acessibilidade_Tecnologia_Vitrine.jpg" alt="Imagem do curso Acessibilidade e Tecnologia" loading="lazy">
-              <span class="course-ribbons"><span class="ribbon" title="Acessibilidade">ACE</span></span>
-            </div>
-            <div class="course-body">
-              <span class="course-cat">Inclusão e Acessibilidade</span>
-              <h3>Acessibilidade e Tecnologia</h3>
-              <p class="course-meta"><span>60h</span><span>Intermediário</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?acessibilidade-e-tecnologia">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Acessibilidade_Tecnologia_Vitrine.jpg" alt="Imagem do curso Acessibilidade e Tecnologia" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Inclusão e Acessibilidade</span>
+                <h3>Acessibilidade e Tecnologia</h3>
+                <p class="course-meta"><span>60h</span><span>Intermediário</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
 
-    <section id="mais-cursados">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Mais cursados</h2>
-            <p>Dados editoriais destacados por demanda real. Se não houver atualização automática, estes números devem ser revisados periodicamente.</p>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-libras">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Vitrine_MOOC_Introducao_Libras.png" alt="Imagem do curso Introdução à Libras" loading="lazy">
+                <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Inclusão e Acessibilidade</span>
+                <h3>Introdução à Libras</h3>
+                <p class="course-meta"><span>30h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educacao-para-relacoes-etnico-raciais">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/12/xvitrine_EducEtnicoRacial.png.pagespeed.ic_.Br3WgHAF_x.webp" alt="Imagem do curso Educação para as relações étnico-raciais" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Educação</span>
+                <h3>Educação para as relações étnico-raciais</h3>
+                <p class="course-meta"><span>60h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mooc-lovelace-programacao-python-c">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_MoocLovelace_ProgramacaoPython.png" alt="Imagem do curso MOOC de Lovelace: Programação Python e C" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Tecnologias e Informática</span>
+                <h3>MOOC de Lovelace: Programação Python e C</h3>
+                <p class="course-meta"><span>60h</span><span>Intermediário</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-series">Lovelace</span></span></span>
+              </div>
+            </a>
           </div>
-          <a class="text-link" href="cursos.html?ordem=mais-cursados">Abrir ranking</a>
-        </div>
-
-        <div class="course-grid four">
-          <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ingles-comunicativo">
-            <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/ingles-comunicativo.png" alt="Imagem do curso Inglês Comunicativo" loading="lazy"></div>
-            <div class="course-body" data-rank="01">
-              <span class="course-cat">Línguas</span>
-              <h3>Inglês Comunicativo - Aprenda o Básico Essencial</h3>
-              <p class="course-meta"><span>60h</span><span>22.390 matrículas</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
-          <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-para-educadores">
-            <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mooc_Moodle-01.jpg" alt="Imagem do curso Moodle para Educadores" loading="lazy"></div>
-            <div class="course-body" data-rank="02">
-              <span class="course-cat">Educação a Distância</span>
-              <h3>Moodle para Educadores</h3>
-              <p class="course-meta"><span>60h</span><span>11.392 matrículas</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
-          <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?uso-educacional-canva">
-            <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Uso_Educacional_Canva_Vitrine.png" alt="Imagem do curso Uso Educacional do Canva" loading="lazy"></div>
-            <div class="course-body" data-rank="03">
-              <span class="course-cat">Design</span>
-              <h3>Uso Educacional do Canva</h3>
-              <p class="course-meta"><span>6h</span><span>8.589 matrículas</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
-          <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?google-drive-colaboracao-pratica">
-            <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/mooc_drive_colab.png" alt="Imagem do curso Google Drive: Colaboração na prática" loading="lazy"></div>
-            <div class="course-body" data-rank="04">
-              <span class="course-cat">Tecnologias Educacionais</span>
-              <h3>Google Drive: Colaboração na prática</h3>
-              <p class="course-meta"><span>Básico</span><span>8.007 matrículas</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Ver cursos anteriores">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn carousel-next" type="button" aria-label="Ver mais cursos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -190,197 +205,644 @@
         <div class="section-head">
           <div>
             <h2>Adicionados recentemente</h2>
-            <p>Novas publicações aparecem como porta de entrada, sem esconder o catálogo completo.</p>
+            <p>Conheça os novos cursos lançados em nossa plataforma.</p>
           </div>
-          <a class="text-link" href="cursos.html?ordem=recentes">Ver recentes</a>
+          <a class="text-link" href="cursos.html?ordem=recentes">Ver todos os cursos</a>
         </div>
 
-        <div class="course-grid">
-          <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?quimica-produtos-limpeza">
-            <div class="course-media">
-              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_A-Quimica-dos-produtos-de-limpeza.png" alt="Imagem do curso A Química dos produtos de limpeza" loading="lazy">
-              <span class="course-ribbons"><span class="ribbon gold">NOVO</span></span>
-            </div>
-            <div class="course-body">
-              <span class="course-cat">Ambiente e Saúde</span>
-              <h3>A Química dos produtos de limpeza</h3>
-              <p class="course-meta"><span>45h</span><span>Básico</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
-          <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?espanhol-comunicativo">
-            <div class="course-media">
-              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_espanhol-comunicativo-1.png" alt="Imagem do curso Espanhol Comunicativo para Brasileiros" loading="lazy">
-              <span class="course-ribbons"><span class="ribbon gold">NOVO</span><span class="ribbon">UnAC</span></span>
-            </div>
-            <div class="course-body">
-              <span class="course-cat">Línguas</span>
-              <h3>Espanhol Comunicativo para Brasileiros</h3>
-              <p class="course-meta"><span>60h</span><span>Básico</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
-          <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?realidade-aumentada-ciencias">
-            <div class="course-media">
-              <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_uso-de-realidade-aumentada-1.png" alt="Imagem do curso Uso de Realidade Aumentada no Ensino de Ciências" loading="lazy">
-              <span class="course-ribbons"><span class="ribbon gold">NOVO</span><span class="ribbon">UnAC</span></span>
-            </div>
-            <div class="course-body">
-              <span class="course-cat">Tecnologias e Informática</span>
-              <h3>Uso de Realidade Aumentada no Ensino de Ciências</h3>
-              <p class="course-meta"><span>30h</span><span>Básico</span></p>
-              <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-            </div>
-          </a>
+        <div class="course-carousel" data-carousel>
+          <div class="course-track" tabindex="0" role="group" aria-label="Cursos adicionados recentemente">
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?quimica-produtos-limpeza">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_A-Quimica-dos-produtos-de-limpeza.png" alt="Imagem do curso A Química dos produtos de limpeza" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Ambiente e Saúde</span>
+                <h3>A Química dos produtos de limpeza</h3>
+                <p class="course-meta"><span>45h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span></span></span>
+              </div>
+            </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?espanhol-comunicativo">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_espanhol-comunicativo-1.png" alt="Imagem do curso Espanhol Comunicativo para Brasileiros" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Línguas</span>
+                <h3>Espanhol Comunicativo para Brasileiros</h3>
+                <p class="course-meta"><span>60h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span><span class="course-badge badge-project">UnAC</span><span class="course-badge badge-language" title="Curso também disponível em espanhol" aria-label="Curso também disponível em espanhol"><span class="flag flag-spain" aria-hidden="true"></span></span></span></span>
+              </div>
+            </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?realidade-aumentada-ciencias">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_uso-de-realidade-aumentada-1.png" alt="Imagem do curso Uso de Realidade Aumentada no Ensino de Ciências" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Tecnologias e Informática</span>
+                <h3>Uso de Realidade Aumentada no Ensino de Ciências</h3>
+                <p class="course-meta"><span>30h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span><span class="course-badge badge-project">UnAC</span></span></span>
+              </div>
+            </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?fundamentos-eficiencia-energetica">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_fundamentos-da-eficiencia-energetica-1.png" alt="Imagem do curso Fundamentos da Eficiência Energética" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Engenharia</span>
+                <h3>Fundamentos da Eficiência Energética</h3>
+                <p class="course-meta"><span>45h</span><span>Intermediário</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span><span class="course-badge badge-project">UnAC</span></span></span>
+              </div>
+            </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?caminhos-educacao-critica-integracao-pedagogia-educacao-ambiental">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_CaminhosEudcaco.png" alt="Imagem do curso Caminhos da Educação Crítica" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Ambiente e Saúde</span>
+                <h3>Caminhos da Educação Crítica: Integração entre Pedagogia e Educação Ambiental</h3>
+                <p class="course-meta"><span>60h</span><span>Intermediário</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span></span></span>
+              </div>
+            </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?desafios-caminhos-avaliacao-matematica-inclusiva">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/06/vitrine_Desafios-e-Caminhos-da-Avaliacao-Matematica-Critica.png" alt="Imagem do curso Desafios e Caminhos da Avaliação Matemática Inclusiva" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Matemática</span>
+                <h3>Desafios e Caminhos da Avaliação Matemática Inclusiva</h3>
+                <p class="course-meta"><span>60h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span></span></span>
+              </div>
+            </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?php-essencial">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_php-essencial-1.png" alt="Imagem do curso PHP Essencial: Primeiros Passos na Programação Web" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Tecnologias e Informática</span>
+                <h3>PHP Essencial: Primeiros Passos na Programação Web</h3>
+                <p class="course-meta"><span>60h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span><span class="course-badge badge-project">UnAC</span></span></span>
+              </div>
+            </a>
+            <a class="course-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?superdotacao-escola-identificando-indicios">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2026/05/unac_superdotacao-na-escola-1.png" alt="Imagem do curso Superdotação na Escola" loading="lazy">
+              </div>
+              <div class="course-body">
+                <span class="course-cat">Desenvolvimento Educacional e Social</span>
+                <h3>Superdotação na Escola: identificando indícios em adolescentes e adultos</h3>
+                <p class="course-meta"><span>60h</span><span>Básico</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-new">NOVO</span><span class="course-badge badge-project">UnAC</span></span></span>
+              </div>
+            </a>
+          </div>
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Ver cursos anteriores">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn carousel-next" type="button" aria-label="Ver mais cursos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </section>
 
-    <section id="publicos">
+    <section id="mais-cursados">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>Comece pelo seu perfil</h2>
-            <p>Atalhos simples para o catálogo filtrado. A escolha não exclui outros cursos.</p>
+            <h2>Mais cursados</h2>
+            <p>Conheça os cursos mais cursados em nossa plataforma</p>
           </div>
+          <a class="text-link" href="cursos.html?ordem=mais-cursados">Ver todos os cursos</a>
         </div>
-        <div class="audience-grid">
-          <a class="audience" href="cursos.html?perfil=professores">
-            <h3>Professores e educadores</h3>
-            <p>Moodle, ferramentas digitais, metodologias e formação docente.</p>
-          </a>
-          <a class="audience" href="cursos.html?perfil=comunidade">
-            <h3>Comunidade</h3>
-            <p>Cursos para começar do zero, sem seleção e sem mensalidade.</p>
-          </a>
-          <a class="audience" href="cursos.html?perfil=carreira">
-            <h3>Trabalho e carreira</h3>
-            <p>Habilidades práticas para estudo, atendimento, tecnologia e gestão.</p>
-          </a>
-          <a class="audience" href="#licenca">
-            <h3>Servidores públicos</h3>
-            <p>Combine cursos com certificado para planejar capacitação.</p>
-          </a>
+
+        <div class="course-carousel" data-carousel>
+          <div class="course-track" tabindex="0" role="group" aria-label="Cursos mais cursados">
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ingles-comunicativo">
+              <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/ingles-comunicativo.png" alt="Imagem do curso Inglês Comunicativo" loading="lazy"></div>
+              <div class="course-body" data-rank="01">
+                <span class="course-cat">Línguas</span>
+                <h3>Inglês Comunicativo - Aprenda o Básico Essencial</h3>
+                <p class="course-meta"><span>60h</span><span>22.390 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-language" title="Curso também disponível em inglês" aria-label="Curso também disponível em inglês"><span class="flag flag-great-britain" aria-hidden="true"></span></span></span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-para-educadores">
+              <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mooc_Moodle-01.jpg" alt="Imagem do curso Moodle para Educadores" loading="lazy"></div>
+              <div class="course-body" data-rank="02">
+                <span class="course-cat">Educação a Distância</span>
+                <h3>Moodle para Educadores</h3>
+                <p class="course-meta"><span>60h</span><span>11.392 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?uso-educacional-canva">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Uso_Educacional_Canva_Vitrine.png" alt="Imagem do curso Uso Educacional do Canva" loading="lazy">
+                <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
+              </div>
+              <div class="course-body" data-rank="03">
+                <span class="course-cat">Design</span>
+                <h3>Uso Educacional do Canva</h3>
+                <p class="course-meta"><span>6h</span><span>8.589 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?google-drive-colaboracao-pratica">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/mooc_drive_colab.png" alt="Imagem do curso Google Drive: Colaboração na prática" loading="lazy">
+                <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
+              </div>
+              <div class="course-body" data-rank="04">
+                <span class="course-cat">Tecnologias Educacionais</span>
+                <h3>Google Drive: Colaboração na prática</h3>
+                <p class="course-meta"><span>8h</span><span>8.007 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?acessibilidade-e-tecnologia">
+              <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Acessibilidade_Tecnologia_Vitrine.jpg" alt="Imagem do curso Acessibilidade e Tecnologia" loading="lazy"></div>
+              <div class="course-body" data-rank="05">
+                <span class="course-cat">Inclusão e Acessibilidade</span>
+                <h3>Acessibilidade e Tecnologia</h3>
+                <p class="course-meta"><span>60h</span><span>7.800 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mediacao-pedagogica-no-moodle">
+              <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mediacao_pedagogica.png" alt="Imagem do curso Mediação Pedagógica no Moodle" loading="lazy"></div>
+              <div class="course-body" data-rank="06">
+                <span class="course-cat">Educação a Distância</span>
+                <h3>Mediação Pedagógica no Moodle</h3>
+                <p class="course-meta"><span>60h</span><span>7.187 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educador-maker-primeiros-passos">
+              <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/1_Vitrine_Educador_Maker_PP_primeiro_curso.png" alt="Imagem do curso Educador Maker: Primeiros Passos" loading="lazy"></div>
+              <div class="course-body" data-rank="07">
+                <span class="course-cat">Educação</span>
+                <h3>Educador Maker: Primeiros Passos</h3>
+                <p class="course-meta"><span>30h</span><span>6.861 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-series">Educador Maker</span></span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?ferramenta-para-gravacao-videoaulas">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_FerramentaGravacaoVideo.jpg" alt="Imagem do curso Ferramenta para gravação de videoaulas" loading="lazy">
+                <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
+              </div>
+              <div class="course-body" data-rank="08">
+                <span class="course-cat">Tecnologias Educacionais</span>
+                <h3>Ferramenta para gravação de videoaulas</h3>
+                <p class="course-meta"><span>5h</span><span>6.838 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+          </div>
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Ver cursos anteriores">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn carousel-next" type="button" aria-label="Ver mais cursos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="areas-band" id="areas">
+    <!-- O que é + Como funciona -->
+    <section class="oquee reveal" id="como-funciona">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Navegue por área</h2>
-            <p>As áreas aparecem em ordem alfabética. O número indica quantos cursos existem em cada filtro na vitrine atual.</p>
-          </div>
-          <a class="text-link" href="cursos.html">Abrir catálogo</a>
-        </div>
-        <div class="area-cloud">
-          <a class="area-pill" href="cursos.html?categoria=ambiente-e-saude">Ambiente e Saúde <small>44</small></a>
-          <a class="area-pill" href="cursos.html?categoria=artes-e-humanidades">Artes e Humanidades <small>4</small></a>
-          <a class="area-pill" href="cursos.html?categoria=ciencias-da-natureza">Ciências da Natureza <small>6</small></a>
-          <a class="area-pill" href="cursos.html?categoria=design">Design <small>2</small></a>
-          <a class="area-pill" href="cursos.html?categoria=desenvolvimento-pessoal">Desenvolvimento Pessoal <small>4</small></a>
-          <a class="area-pill" href="cursos.html?categoria=educacao">Educação <small>39</small></a>
-          <a class="area-pill" href="cursos.html?categoria=educacao-a-distancia">Educação a Distância <small>16</small></a>
-          <a class="area-pill" href="cursos.html?categoria=engenharia">Engenharia <small>2</small></a>
-          <a class="area-pill" href="cursos.html?categoria=financas-e-contabilidade">Finanças e Contabilidade <small>3</small></a>
-          <a class="area-pill" href="cursos.html?categoria=gestao">Gestão <small>10</small></a>
-          <a class="area-pill" href="cursos.html?categoria=inclusao-e-acessibilidade">Inclusão e Acessibilidade <small>7</small></a>
-          <a class="area-pill" href="cursos.html?categoria=linguas">Línguas <small>6</small></a>
-          <a class="area-pill" href="cursos.html?categoria=matematica">Matemática <small>5</small></a>
-          <a class="area-pill" href="cursos.html?categoria=tecnologias-e-informatica">Tecnologias e Informática <small>18</small></a>
-          <a class="area-pill" href="cursos.html?categoria=tecnologias-educacionais">Tecnologias Educacionais <small>15</small></a>
-        </div>
-      </div>
-    </section>
+        <div class="mooc-intro">
+          <span class="mooc-label">Curso aberto, on-line e gratuito</span>
+          <h2>O que é curso MOOC?</h2>
+          <p class="mooc-lead">Os Cursos Abertos do Ifes seguem a tendência mundial de cursos 100% on-line no formato MOOC, do inglês Massive Open Online Courses.</p>
+          <p class="mooc-copy">São formações livres, abertas à comunidade e organizadas para que você estude com autonomia. Basta criar uma conta, escolher um curso e avançar no seu tempo.</p>
 
-    <section class="service-band" id="licenca">
-      <div class="wrap">
-        <div>
-          <h2>Planeje uma trilha para licença capacitação</h2>
-          <p>Esta chamada fica na primeira versão como serviço futuro, sem bloquear a entrega da vitrine. A lógica usa a carga horária dos cursos para montar combinações possíveis.</p>
-          <ul>
-            <li>Informe dias de licença e tema de interesse.</li>
-            <li>Combine cursos com certificado até atingir a carga necessária.</li>
-            <li>Leve o plano para o processo administrativo quando a funcionalidade estiver pronta.</li>
-          </ul>
-          <a class="btn btn-gold" href="cursos.html">Escolher cursos para um plano</a>
-        </div>
-        <aside class="service-panel">
-          <h3>Prévia do planejador</h3>
-          <p>30 dias de licença exigem cerca de 129 horas de capacitação. Exemplo: Moodle 60h + Acessibilidade 60h + Canva 6h.</p>
-          <div class="calc">
-            <strong>Funcionalidade planejada</strong>
-            <p>Não é necessário finalizar este módulo para a apresentação inicial.</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="como-funciona">
-      <div class="wrap info-grid">
-        <div>
-          <div class="section-head">
-            <div>
-              <h2>Como funciona</h2>
-              <p>Curso MOOC é aberto, on-line, autoinstrucional e gratuito. Você escolhe, entra no Moodle e estuda no próprio ritmo.</p>
+          <div class="mooc-proof" aria-label="Principais características dos MOOCs do Ifes">
+            <div class="mooc-proof-main">
+              <strong>60%</strong>
+              <span>aproveitamento mínimo para emitir certificado pelo Ifes</span>
             </div>
           </div>
-          <div class="fact-list">
-            <div class="fact"><strong>On-line</strong>Estude de onde estiver.</div>
-            <div class="fact"><strong>Gratuito</strong>Sem taxa de inscrição ou certificado.</div>
-            <div class="fact"><strong>Aberto</strong>Sem seleção para começar.</div>
-            <div class="fact"><strong>Certificado</strong>Emitido após aproveitamento mínimo.</div>
+
+          <div class="fatos">
+            <div class="fato"><b>Gratuitos</b>Sem mensalidade, taxa de inscrição ou custo de certificação.</div>
+            <div class="fato"><b>Sem tutoria</b>Você conduz seus estudos com os materiais e atividades do curso.</div>
+            <div class="fato"><b>Abertos</b>Para começar, você só precisa se inscrever e cursar.</div>
+            <div class="fato"><b>No seu ritmo</b>Escolha a melhor hora e lugar para estudar.</div>
           </div>
         </div>
-        <div>
-          <ol class="steps">
+
+        <div class="mooc-flow" aria-label="Como funciona um curso aberto do Ifes">
+          <div class="mooc-flow-head">
+            <span>Como funciona</span>
+            <h2>Do cadastro ao certificado</h2>
+          </div>
+          <ol class="passos">
             <li>
+              <span class="passo-icon" aria-hidden="true">01</span>
+              <h3>Cadastre-se</h3>
+              <p>Crie sua conta gratuita e acesse os cursos pela plataforma do Ifes no smartphone, tablet ou computador.</p>
+            </li>
+            <li>
+              <span class="passo-icon" aria-hidden="true">02</span>
               <h3>Escolha um curso</h3>
-              <p>Use busca, filtros, áreas ou atalhos por perfil.</p>
+              <p>Use o catálogo para encontrar uma formação aberta do Ifes e ampliar seus conhecimentos.</p>
             </li>
             <li>
-              <h3>Acesse o Moodle</h3>
-              <p>O botão do curso leva para a plataforma de aprendizagem.</p>
+              <span class="passo-icon" aria-hidden="true">03</span>
+              <h3>Faça o curso</h3>
+              <p>Organize sua rotina de estudos, realize as atividades e acompanhe seu próprio avanço.</p>
             </li>
             <li>
-              <h3>Estude no seu ritmo</h3>
-              <p>Os cursos são autoinstrucionais, com materiais e atividades no ambiente.</p>
-            </li>
-            <li>
-              <h3>Emita o certificado</h3>
-              <p>Ao cumprir os critérios do curso, o certificado fica disponível na plataforma.</p>
+              <span class="passo-icon" aria-hidden="true">04</span>
+              <h3>Emita seu certificado</h3>
+              <p>Ao final, após aprovação, emita seu certificado na própria plataforma de Cursos Abertos do Ifes.</p>
             </li>
           </ol>
         </div>
       </div>
     </section>
 
-    <section id="faq">
+    <!-- Projetos e séries -->
+    <section class="colecoes-sec reveal">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>Projetos parceiros</h2>
+            <p>Hubs institucionais com identidade própria e grupos de cursos relacionados.</p>
+          </div>
+        </div>
+        <div class="projetos">
+          <a class="projeto riodoce" href="#">
+            <span class="projeto-logo"><img src="../../../../design-system/logo_riodoceescolar.png" alt="Marca Rio Doce Escolar"></span>
+            <span class="n">Projeto parceiro · 31 cursos</span>
+            <h3>Rio Doce Escolar</h3>
+            <p>Educação ambiental a partir da bacia do Rio Doce: água, território, escola e comunidade.</p>
+            <span class="link">Conhecer o projeto →</span>
+          </a>
+          <a class="projeto unac" href="#">
+            <span class="projeto-logo"><img src="../../../../design-system/Logo_UnAC_WhatsApp.png" alt="Marca UnAC"></span>
+            <span class="n">Projeto parceiro · 33 cursos</span>
+            <h3>UnAC</h3>
+            <p>Coleção de cursos em parceria institucional, com identidade e hub próprios na plataforma.</p>
+            <span class="link">Conhecer o projeto →</span>
+          </a>
+        </div>
+
+        <div class="colecoes-subhead">
+          <div>
+            <h3>Séries para continuar aprendendo</h3>
+            <p>Coleções curadas por tema, público ou progressão. Escolha uma série e avance pelos cursos relacionados.</p>
+          </div>
+          <a class="sec-link" href="cursos.html">Ver todas as séries →</a>
+        </div>
+        <div class="series series-destaque">
+          <a class="serie serie-lovelace" href="cursos.html">
+            <span class="serie-topo"><span class="rotulo">Série</span><span class="n">6 cursos</span></span>
+            <h3>Lovelace</h3>
+            <p>Programação, pensamento computacional e tecnologia com foco em meninas e mulheres.</p>
+            <span class="link">Explorar série →</span>
+          </a>
+          <a class="serie" href="cursos.html">
+            <span class="serie-topo"><span class="rotulo">Série</span><span class="n">4 cursos</span></span>
+            <h3>Educador Maker</h3>
+            <p>Práticas mão na massa para professores que querem criar, prototipar e inovar em sala.</p>
+            <span class="link">Explorar série →</span>
+          </a>
+          <a class="serie" href="cursos.html">
+            <span class="serie-topo"><span class="rotulo">Série</span><span class="n">3 cursos</span></span>
+            <h3>Atendente e Vendedor</h3>
+            <p>Formação prática para atendimento, vendas e relacionamento com clientes.</p>
+            <span class="link">Explorar série →</span>
+          </a>
+          <a class="serie" href="cursos.html">
+            <span class="serie-topo"><span class="rotulo">Série</span><span class="n">3 cursos</span></span>
+            <h3>Embrace</h3>
+            <p>Conteúdos em rede, com abordagem internacional e temas de formação cidadã.</p>
+            <span class="link">Explorar série →</span>
+          </a>
+          <a class="serie" href="cursos.html">
+            <span class="serie-topo"><span class="rotulo">Série</span><span class="n">PT · EN</span></span>
+            <h3>Lesson Study</h3>
+            <p>Estudo de aula para formação docente, em versões em português e inglês.</p>
+            <span class="link">Explorar série →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-band" id="licenca">
+      <div class="wrap">
+        <div class="service-copy">
+          <span class="service-kicker">Licença para Capacitação</span>
+          <h2>Servidor público, organize sua trilha com os MOOCs do Ifes</h2>
+          <p>Combine cursos gratuitos, on-line e certificados para planejar seu período de capacitação com mais clareza antes de abrir o processo no seu órgão.</p>
+          <div class="service-actions">
+            <a class="btn btn-gold" href="cursos.html">Planejar Licença para Capacitação</a>
+          </div>
+        </div>
+
+        <aside class="service-panel" aria-label="Prévia de planejamento para licença capacitação">
+          <div class="service-panel-head">
+            <span>Prévia do planejador</span>
+            <strong>30 dias</strong>
+          </div>
+          <p class="service-panel-lead">Veja a carga estimada, componha cursos e leve uma trilha mais organizada para validação administrativa.</p>
+
+          <div class="license-meter" aria-label="Carga horária estimada para exemplo de licença">
+            <div class="meter-row">
+              <span>Referência estimada</span>
+              <strong>129h</strong>
+            </div>
+            <div class="meter-track" aria-hidden="true">
+              <span></span>
+            </div>
+          </div>
+
+          <div class="license-stack" aria-label="Exemplo de composição de cursos">
+            <span>Moodle <b>60h</b></span>
+            <span>Acessibilidade <b>60h</b></span>
+            <span>Canva <b>6h</b></span>
+          </div>
+
+          <div class="license-note">
+            <strong>Planejador em estudo</strong>
+            <p>O simulador poderá ajudar a somar cargas horárias, organizar datas e conferir requisitos antes da solicitação formal.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
       <div class="wrap">
         <div class="section-head">
           <div>
             <h2>Perguntas frequentes</h2>
-            <p>O aviso sobre e-mail fica aqui, no momento em que a pessoa procura ajuda sobre cadastro.</p>
+            <p>As perguntas mais comuns aparecem primeiro. A lista completa mantém as 34 dúvidas do site atual para consulta rápida.</p>
           </div>
         </div>
-        <div class="faq-list">
+        <div class="faq-list" data-faq-list>
           <details>
-            <summary>Os cursos são gratuitos?</summary>
-            <p>Sim. Não há cobrança para se inscrever, estudar ou emitir certificado.</p>
+            <summary>1. O que é um curso do tipo MOOC?</summary>
+            <div class="resp">
+              <p>MOOCs são Cursos On-line, Abertos e Massivos (do inglês: Massive Open On-line Courses). São uma grande forma de inclusão, uma vez que podem ser cursados por qualquer pessoa, de qualquer lugar e no seu tempo!</p>
+              <p>Na plataforma do Ifes, os MOOCs têm como características: serem totalmente on-line, de curta duração (máx. 60h), ofertados continuamente (turmas anuais), não necessitarem de processo seletivo (abertos ao grande público), serem gratuitos (inclusive a certificação), realizados por meio de autoestudo (sem tutoria) e terem certificação automática, após o aluno realizar o curso e cumprir os requisitos mínimos exigidos para a certificação.</p>
+            </div>
           </details>
           <details>
-            <summary>Quem pode fazer os cursos?</summary>
-            <p>Qualquer pessoa pode acessar os cursos abertos. Quando houver público recomendado, essa informação aparece na página do curso.</p>
+            <summary>2. Quais as vantagens deste tipo de curso?</summary>
+            <div class="resp">
+              <p>A principal vantagem é a flexibilidade, uma vez que os MOOCs podem ser cursados por qualquer pessoa, de qualquer lugar e em qualquer momento. Além disso, eles podem ser utilizados para diversos fins, como obter certificação para progressões de carreira ou para concurso, para fins de licença capacitação, para formação continuada ao longo da vida, como créditos complementares em cursos que o permitam, como preparatório para provas, para nivelamento, para aprender uma nova língua ou software, professores podem usar como parte de suas disciplinas e tantas outras possibilidades.</p>
+            </div>
           </details>
           <details>
-            <summary>Não recebi o e-mail de confirmação. O que faço?</summary>
-            <p>Hotmail e Outlook podem bloquear mensagens automáticas. Verifique o spam ou use outro provedor de e-mail, como Gmail ou e-mail institucional.</p>
+            <summary>3. Qual a carga horária de um curso MOOC?</summary>
+            <div class="resp">
+              <p>No Ifes um MOOC não tem carga horária mínima, mas tem no máximo 60h. Para saber a carga horária de um curso específico, basta acessar a página de informações sobre o curso.</p>
+            </div>
           </details>
           <details>
-            <summary>Os cursos contam para licença capacitação?</summary>
-            <p>Os cursos com certificado podem compor uma trilha de capacitação. A validação do plano depende das regras administrativas do órgão.</p>
+            <summary>4. Qual o prazo de um curso MOOC?</summary>
+            <div class="resp">
+              <p>Apesar dos MOOCs estarem sempre disponíveis na plataforma, eles são abertos em turmas anuais, que iniciam em 01 de janeiro e finalizam em 31 de dezembro de cada ano. Assim, a partir do momento em que se inicia um curso, você tem até 31 de dezembro daquele ano para o concluir.</p>
+            </div>
           </details>
+          <details>
+            <summary>5. Posso iniciar um curso em um ano e finalizar no ano seguinte?</summary>
+            <div class="resp">
+              <p>As ofertas dos nossos cursos são anuais, portanto, não é possível iniciar um curso em um ano e finalizá-lo no ano seguinte. O curso deve ser finalizado no mesmo ano que inicia.</p>
+            </div>
+          </details>
+          <details>
+            <summary>6. Quero me inscrever no curso, como faço?</summary>
+            <div class="resp">
+              <ul>
+                <li>Caso seja novo por aqui, primeiramente, você deverá CRIAR SUA CONTA, que é única na plataforma.</li>
+              </ul>
+              <ul>
+                <li>Após confirmar a criação de sua conta, você conseguirá se inscrever em um ou mais cursos que estejam disponíveis na página inicial da <a href="https://mooc.cefor.ifes.edu.br/v/">plataforma de Cursos Abertos do Ifes</a>.</li>
+              </ul>
+              <ul>
+                <li>Ao clicar no curso desejado, você será direcionado para um resumo das informações do curso e no final terá um botão “Inscreva-me”. Basta clicar nele e você estará automaticamente inscrito no curso.</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>7. Quero criar minha conta, como faço?</summary>
+            <div class="resp">
+              <ul>
+                <li>Na plataforma de Cursos Abertos do Ifes, clique no botão <strong>CRIAR CONTA</strong>, localizado no topo da página, no lado direito.</li>
+              </ul>
+              <ul>
+                <li>No campo <strong>“Esta é a sua primeira vez aqui?"</strong>, clique no botão <strong>CRIAR UMA CONTA</strong>. Ao clicar, um Formulário de Nova Conta será aberto.</li>
+              </ul>
+              <ul>
+                <li>Em seguida, preencha seus dados nesse Formulário e confirme a criação de seu usuário na plataforma.</li>
+              </ul>
+              <ul>
+                <li>Você receberá um e-mail e deverá ATIVAR o seu usuário.</li>
+              </ul>
+              <p>OBS.: Orientamos que <strong>NÃO</strong> utilize emails que sejam <strong>@hotmail.com</strong> ou <strong>@outlook.com</strong>. Nosso serviço de e-mail está temporariamente com restrição de envio para estes provedores, inviabilizando a ATIVAÇÃO do seu cadastro na nossa plataforma.</p>
+            </div>
+          </details>
+          <details>
+            <summary>8. Quero criar minha senha, tem algum segredo?</summary>
+            <div class="resp">
+              <ul>
+                <li>A senha deve ter ao menos 8 caracteres, sendo ao menos 1 dígito, ao menos 1 letra minúscula, ao menos 1 letra maiúscula, no mínimo 1 caractere não alfa-numéricos, como *, -, ou #</li>
+              </ul>
+              <ul>
+                <li>Exemplo de senha válida: Cursos@123</li>
+              </ul>
+              <ul>
+                <li>Veja que nesse exemplo tem 8 caracteres, que é a quantidade mínima, tem letra maiúscula, letra minúscula, números e caracter especial, no caso o "@".</li>
+              </ul>
+              <ul>
+                <li>Em caso de novas dúvidas entre em contato pelo <a href="https://mooc.cefor.ifes.edu.br/suporte/">Suporte</a>.</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>9. Não recebi e-mail de ativação do meu usuário, como proceder?</summary>
+            <div class="resp">
+              <p>Primeiramente, verifique sua caixa de Spam e se o e-mail de ativação foi automaticamente direcionado para ela. Em caso afirmativo, orientamos que você informe que este e-mail não é do tipo Spam. Com esta ação, os novos e-mails da nossa plataforma chegarão na sua caixa de entrada.</p>
+              <p>Entretanto, caso realmente não encontre o email de ativação do usuário, favor entrar em contato com o suporte (<a href="https://mooc.cefor.ifes.edu.br/suporte/">https://mooc.cefor.ifes.edu.br/suporte</a>), informando nome completo, CPF e um e-mail alternativo.</p>
+              <p>OBS.: Orientamos que <strong>NÃO</strong> utilize emails que sejam <strong>@hotmail.com</strong> ou <strong>@outlook.com</strong>. Nosso serviço de e-mail está temporariamente com restrição de envio para estes provedores, inviabilizando a ATIVAÇÃO do seu cadastro na nossa plataforma.</p>
+            </div>
+          </details>
+          <details>
+            <summary>10. Esqueci minha senha ou usuário, como proceder?</summary>
+            <div class="resp">
+              <p>Na tela de Login, clique no link <a href="https://mooc.cefor.ifes.edu.br/moodle/login/forgot_password.php">"Esqueceu seu usuário ou senha?"</a>. Faça a busca pelo seu nome de usuário ou e-mail. Se sua conta for encontrada no banco de dados, um email será enviado para seu endereço de email, com as instruções sobre como restabelecer seu acesso.</p>
+              <p>OBS.: Caso o seu e-mail, cadastrado na nossa plataforma, seja do provedor <strong>@hotmail.com</strong> ou <strong>@outlook.com</strong>, favor entrar em contato com o suporte (<a href="https://mooc.cefor.ifes.edu.br/moodle/login/forgot_password.php">https://mooc.cefor.ifes.edu.br/suporte</a>), informando nome completo, CPF e um e-mail alternativo. Nosso serviço de e-mail está temporariamente com restrição de envio para estes provedores, inviabilizando a recuperação do seu cadastro na nossa plataforma.</p>
+            </div>
+          </details>
+          <details>
+            <summary>11. Posso fazer quantos cursos do tipo MOOC simultaneamente?</summary>
+            <div class="resp">
+              <p>Você pode realizar simultaneamente quantos cursos desejar na plataforma MOOC do Ifes. Organize seus estudos e aproveite as muitas oportunidades disponíveis!</p>
+            </div>
+          </details>
+          <details>
+            <summary>12. Quem pode propor MOOC?</summary>
+            <div class="resp">
+              <p>O proponente de MOOC deve ser obrigatoriamente um servidor do Ifes. É ele quem abre o processo de criação do curso na instituição, tornando-se o responsável por aquele MOOC. Porém, é possível que profissionais externos ao Ifes, alunos ou bolsistas façam parte de uma equipe de elaboração de um MOOC desde que um dos membros da equipe seja servidor.</p>
+            </div>
+          </details>
+          <details>
+            <summary>13. Quero propor um MOOC, como proceder?</summary>
+            <div class="resp">
+              <p>Para propor um curso MOOC, é obrigatório que você seja certificado no curso <strong>“Como Criar um MOOC?”</strong>. Nele, você conhecerá as orientações metodológicas e os procedimentos detalhados. Para uma visão geral do processo e dos documentos necessários, sugerimos que explore a pasta <a href="https://drive.google.com/drive/folders/1qcXQPIP3WMB3ezEs9cwBf-_G7J-_dUmB">“Modelos MOOC”</a>, em especial os arquivos sobre o processo para criação de cursos MOOC.</p>
+            </div>
+          </details>
+          <details>
+            <summary>14. Para que posso utilizar o certificado de um MOOC?</summary>
+            <div class="resp">
+              <p>Você pode usar o certificado de um MOOC como atividade complementar de um curso, para progressão no trabalho, em provas de títulos em concursos, em licença para capacitação, dentre outras tantas possibilidades. Atente-se sempre às regras da sua organização, do projeto político-pedagógico da formação que está realizando (técnico, graduação, pós-graduação, etc) e do concurso para o qual estiver concorrendo.</p>
+            </div>
+          </details>
+          <details>
+            <summary>15. Posso usar o certificado do MOOC para pagamento de horas no Ifes?</summary>
+            <div class="resp">
+              <p>Sim, desde que seja feito dentro do período determinado pela Instituição.</p>
+            </div>
+          </details>
+          <details>
+            <summary>16. Posso usar o MOOC para licença capacitação?</summary>
+            <div class="resp">
+              <p>Pode sim. Os MOOCs do Ifes são uma ótima oportunidade para você se atualizar no seu período de capacitação.</p>
+            </div>
+          </details>
+          <details>
+            <summary>17. Qual a equivalência de horas do curso com a quantidade de dias de licença capacitação?</summary>
+            <div class="resp">
+              <p>A carga horária semanal mínima é de 30 horas de curso.</p>
+            </div>
+          </details>
+          <details>
+            <summary>18. Posso me inscrever em mais de um curso para completar a carga horária da licença capacitação?</summary>
+            <div class="resp">
+              <p>Sim. A carga horária necessária em cursos durante o seu período de licença irá variar de acordo com a quantidade de dias que você irá usufruir. É importante que você se inscreva em um quantitativo de cursos em que a soma das cargas horárias sejam suficientes.</p>
+              <p>Planeje quando iniciará e quando finalizará cada curso. Uma opção é colocar a data de início e fim da licença capacitação em todos e realizá-los concomitantemente. Outra opção é realizar sequencialmente, um após o outro. Esteja atento para que em todos os dias da licença você esteja realizando um curso e que a carga horária semanal seja de, no mínimo, 30h</p>
+            </div>
+          </details>
+          <details>
+            <summary>19. Minha licença de capacitação começa em certa data, posso adiantar a realização do curso?</summary>
+            <div class="resp">
+              <p>Não. Ao se inscrever no curso e informar que ele será usado para licença capacitação, você informará a data de início e término do curso. O sistema então, só habilita o seu acesso ao curso na data informada. Então, você irá iniciar e precisa finalizar, dentro do prazo que você informou no cadastro.</p>
+            </div>
+          </details>
+          <details>
+            <summary>20. Como gerar a declaração de confirmação de inscrição no curso, para anexar ao meu processo de solicitação de licença para capacitação?</summary>
+            <div class="resp">
+              <p>Você deverá gerar e salvar a sua declaração no mesmo dia em que se inscrever no curso e informar as datas de sua licença, pois, no dia seguinte o seu acesso será suspenso até a data de início da sua licença para capacitação (data de início que você informou anteriormente).</p>
+              <p>Então, na tela de confirmação do período de realização do curso, você irá clicar primeiramente no botão <strong>Continuar</strong> e, em seguida, no botão <strong>Gerar</strong>. A declaração será aberta na sua tela.</p>
+            </div>
+          </details>
+          <details>
+            <summary>21. Posso ter carteirinha de estudante?</summary>
+            <div class="resp">
+              <p>Não. Somente alunos de cursos regulares (técnico, graduação e pós-graduação) têm direito à Carteirinha de Estudante, o que não é o caso de alunos dos Curso Abertos do Ifes.</p>
+            </div>
+          </details>
+          <details>
+            <summary>22. Quero falar com o tutor do curso, como faço?</summary>
+            <div class="resp">
+              <p>O modelo de cursos abertos (MOOC) oferece total autonomia ao aluno e não possui tutor. É você quem faz seu próprio itinerário para estudar, sem necessidade de tutoria on-line ou off-line.</p>
+            </div>
+          </details>
+          <details>
+            <summary>23. Quero falar com o professor do curso, como faço?</summary>
+            <div class="resp">
+              <p>Você pode enviar sugestões para melhoria de conteúdos ou de atividades através do <a href="https://mooc.cefor.ifes.edu.br/suporte/">Suporte</a>. Suas sugestões serão repassadas ao Professor que desenvolveu o curso.</p>
+            </div>
+          </details>
+          <details>
+            <summary>24. Sou visitante e quero ter acesso ao curso, como faço?</summary>
+            <div class="resp">
+              <p>Não há acesso como visitante. Para ter acesso ao conteúdo dos cursos você precisará CRIAR SUA CONTA gratuitamente na plataforma.</p>
+            </div>
+          </details>
+          <details>
+            <summary>25. Não finalizei meu curso e ele foi encerrado, posso retomar de onde parei?</summary>
+            <div class="resp">
+              <p>Não. Todos os cursos são reiniciados dia 1º de janeiro e caso você não o tenha concluído, precisará realizá-lo novamente desde o ínicio.</p>
+            </div>
+          </details>
+          <details>
+            <summary>26. O certificado é emitido pelo Ifes?</summary>
+            <div class="resp">
+              <p>Sim. Tendo aproveitamento mínimo de 60%, você mesmo poderá emitir seu Certificado. E com a facilidade de ser on-line.</p>
+            </div>
+          </details>
+          <details>
+            <summary>27. Até quanto tempo após concluir o curso meu certificado pode ser emitido?</summary>
+            <div class="resp">
+              <p>Você terá até um ano, após a data de término do curso, para emitir seu Certificado. Lembrando que os Certificados estão disponíveis apenas em formato virtual validável.</p>
+            </div>
+          </details>
+          <details>
+            <summary>28. O que é validação de certificado?</summary>
+            <div class="resp">
+              <p>Validação de certificado é você verificar a autenticidade do documento.</p>
+            </div>
+          </details>
+          <details>
+            <summary>29. Como validar um certificado?</summary>
+            <div class="resp">
+              <p>Se você recebeu um certificado de nossa plataforma e deseja verificar a autenticidade do mesmo, basta clicar em <a href="https://mooc.cefor.ifes.edu.br/moodle/mod/simplecertificate/verify.php">Validar Certificado</a> que está no final da página inicial da plataforma.</p>
+            </div>
+          </details>
+          <details>
+            <summary>30. Quero emitir meu certificado, mas minha turma foi encerrada, como faço?</summary>
+            <div class="resp">
+              <ul>
+                <li>Você poderá emitir seu Certificado até um ano depois da data de encerramento do seu curso.</li>
+              </ul>
+              <ul>
+                <li>Caso você tenha realizado todas as atividades avaliativas propostas pelo curso e alcançado aproveitamento mínimo de 60% ou maior, basta acessar seu curso em <a href="https://mooc.cefor.ifes.edu.br/moodle/course/index.php?categoryid=7">TURMAS ANTERIORES</a> e emitir o Certificado.</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>31. Sou aluno de um curso MOOC, tenho direito a emissão de declaração?</summary>
+            <div class="resp">
+              <p>Os MOOCs permitem a emissão de certificado, após o aluno realizar o curso e cumprir os requisitos mínimos exigidos. A emissão de declaração é possível apenas para o caso particular para licença para capacitação.</p>
+            </div>
+          </details>
+          <details>
+            <summary>32. Finalizei meu curso, mas o progresso de conclusão não consta como 100% concluído.</summary>
+            <div class="resp">
+              <p>Possivelmente algum material não foi estudado ou alguma atividade não foi realizada. Entretanto, se você tiver cumprido os requisitos do curso e obtido no mínimo 60%, isso não o impedirá de emitir o certificado.</p>
+            </div>
+          </details>
+          <details>
+            <summary>33. Quero acessar materiais da minha turma encerrada, como faço?</summary>
+            <div class="resp">
+              <p>Na <strong>"Página inicial do site"</strong> você terá acesso a todos os seus cursos, inclusive os cursos com TURMAS já ENCERRADAS.</p>
+              <p>Ao final da grade de cursos, clique no botão <a href="https://mooc.cefor.ifes.edu.br/moodle/course/index.php?categoryid=7">Clique para acessar TURMAS ANTERIORES</a>. Você será direcionado para <strong>“Área do estudante”</strong>.</p>
+              <p>No campo <strong>"Você ainda não se identificou. (Acessar)"</strong>, insira seu login e senha para acessar a plataforma de Cursos Abertos do Ifes. Se você é servidor do Ifes, use seu SIAPE.</p>
+              <p>Pronto, procure o curso desejado pelo ano de oferta.</p>
+            </div>
+          </details>
+          <details>
+            <summary>34. Sou pesquisador ou gestor e gostaria de ter acesso a dados da plataforma de Cursos Abertos do Ifes, como solicitar?</summary>
+            <div class="resp">
+              <p>A plataforma de Cursos Abertos do Ifes tem disponível no seu rodapé um <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMyN2UxZTktY2FiMi00ZDI1LWE5NTctOGZiZjUzOTdhMjUyIiwidCI6IjQ0ZTllMTcyLWZmYTUtNDNmMy1iMjJjLTM3MWNmY2QyNzJlZCJ9&amp;pageName=ReportSection">Painel de Indicadores</a> da Plataforma. Neste painel você encontrará informações como: os cursos com mais procura, quantidade de matrículas, matrículas ano a ano e também realizar filtragem dos dados por um curso, unidade de ensino e tipo de curso. Tudo muito simples e ilustrado graficamente para facilitar a compreensão dos dados.</p>
+              <p>Não encontrou o que procura?</p>
+              <p><a href="https://mooc.cefor.ifes.edu.br/suporte/">PERGUNTE AQUI</a></p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-actions" hidden>
+          <button class="btn btn-outline" type="button" data-faq-toggle>Ver todas as 34 perguntas</button>
         </div>
       </div>
     </section>
@@ -390,37 +852,35 @@
     <div class="wrap">
       <div>
         <h3>Cursos Abertos do Ifes</h3>
-        <p>Vitrine pública dos cursos abertos do Cefor/Ifes, organizada para busca, descoberta e acesso ao Moodle.</p>
+        <p>Catálogo público dos cursos abertos do Cefor/Ifes, organizado para busca, descoberta e acesso ao Moodle.</p>
       </div>
       <div>
-        <h4>Cursos</h4>
+        <h4>Cursos Abertos</h4>
         <ul>
-          <li><a href="cursos.html">Todos os cursos</a></li>
-          <li><a href="#areas">Áreas</a></li>
-          <li><a href="#publicos">Perfis</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Serviços</h4>
-        <ul>
-          <li><a href="#licenca">Licença capacitação</a></li>
-          <li><a href="#faq">Dúvidas frequentes</a></li>
-          <li><a href="https://mooc.cefor.ifes.edu.br/moodle/">Acessar Moodle</a></li>
+          <li><a href="#validar-certificado">Validar Certificado</a></li>
+          <li><a href="#licenca">Licença para Capacitação</a></li>
+          <li><a href="#painel-indicadores">Painel de Indicadores</a></li>
+          <li><a href="#termos-de-uso">Termos de Uso</a></li>
+          <li><a href="#suporte">Suporte</a></li>
         </ul>
       </div>
       <div>
         <h4>Institucional</h4>
         <ul>
-          <li><a href="#como-funciona">Como funciona</a></li>
-          <li><a href="https://www.ifes.edu.br/">Ifes</a></li>
-          <li><a href="https://cefor.ifes.edu.br/">Cefor</a></li>
+          <li><a href="https://www.ifes.edu.br/">O Ifes</a></li>
+          <li><a href="https://cefor.ifes.edu.br/">O Cefor</a></li>
+          <li><a href="#base-de-conhecimento">Base de Conhecimento</a></li>
         </ul>
+      </div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Instituto Federal do Espírito Santo">
+        <span class="footer-tagline">Centro de Referência em Formação e em Educação a Distância</span>
       </div>
     </div>
     <div class="foot-base">
       <div class="wrap">
         <span>Ifes - Cefor</span>
-        <span>Protótipo canônico validado após conversa com a equipe</span>
+        <span>Catálogo público de cursos abertos</span>
       </div>
     </div>
   </footer>
@@ -431,7 +891,124 @@
       const open = menu.classList.toggle("open");
       button.setAttribute("aria-expanded", String(open));
     }
+
+    function initLangSwitch() {
+      const root = document.querySelector("[data-lang-switch]");
+      if (!root) return;
+      const btn = root.querySelector(".lang-btn");
+      const current = root.querySelector("[data-lang-current]");
+      const items = Array.from(root.querySelectorAll(".lang-menu a"));
+
+      const open = () => {
+        root.setAttribute("data-open", "");
+        btn.setAttribute("aria-expanded", "true");
+      };
+      const close = () => {
+        root.removeAttribute("data-open");
+        btn.setAttribute("aria-expanded", "false");
+      };
+      const toggle = () => (root.hasAttribute("data-open") ? close() : open());
+
+      btn.addEventListener("click", toggle);
+
+      items.forEach(item => {
+        item.addEventListener("click", event => {
+          const href = item.getAttribute("href");
+          // Idiomas com pagina propria (PT/EN) navegam de verdade.
+          if (href && href !== "#") return;
+          // FR/ES ainda sem pagina: apenas atualiza o estado visual (prototipo).
+          event.preventDefault();
+          items.forEach(other => other.setAttribute("aria-checked", String(other === item)));
+          current.textContent = item.dataset.lang;
+          document.documentElement.lang = item.getAttribute("hreflang");
+          close();
+          btn.focus();
+        });
+      });
+
+      document.addEventListener("click", event => {
+        if (!root.contains(event.target)) close();
+      });
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && root.hasAttribute("data-open")) {
+          close();
+          btn.focus();
+        }
+      });
+    }
+
+    initLangSwitch();
+
+    // Carrossel dos blocos de cursos (destaques, recentes, mais cursados)
+    document.addEventListener("DOMContentLoaded", () => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+        const track = carousel.querySelector(".course-track");
+        const prev = carousel.querySelector(".carousel-prev");
+        const next = carousel.querySelector(".carousel-next");
+        if (!track || !prev || !next) return;
+
+        const stepSize = () => {
+          const card = track.querySelector(".course-card");
+          if (!card) return track.clientWidth;
+          const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+          const cardWidth = card.getBoundingClientRect().width + gap;
+          const perView = Math.max(1, Math.round(track.clientWidth / cardWidth));
+          return cardWidth * perView;
+        };
+
+        const update = () => {
+          const maxScroll = track.scrollWidth - track.clientWidth;
+          carousel.toggleAttribute("data-static", maxScroll <= 2);
+          prev.disabled = track.scrollLeft <= 2;
+          next.disabled = track.scrollLeft >= maxScroll - 2;
+        };
+
+        const go = (dir) => {
+          track.scrollBy({ left: dir * stepSize(), behavior: reduceMotion ? "auto" : "smooth" });
+        };
+
+        prev.addEventListener("click", () => go(-1));
+        next.addEventListener("click", () => go(1));
+        track.addEventListener("scroll", update, { passive: true });
+        window.addEventListener("resize", update);
+        update();
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const visibleCount = 5;
+      const list = document.querySelector("[data-faq-list]");
+      const toggle = document.querySelector("[data-faq-toggle]");
+      const actions = toggle?.closest(".faq-actions");
+
+      if (!list || !toggle || !actions) return;
+
+      const items = Array.from(list.querySelectorAll("details"));
+      if (items.length <= visibleCount) return;
+
+      items.slice(visibleCount).forEach((item) => {
+        item.hidden = true;
+      });
+
+      actions.hidden = false;
+      toggle.textContent = `Ver todas as ${items.length} perguntas`;
+
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+
+        items.slice(visibleCount).forEach((item) => {
+          item.hidden = expanded;
+          if (expanded) item.open = false;
+        });
+
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        toggle.textContent = expanded
+          ? `Ver todas as ${items.length} perguntas`
+          : "Mostrar menos perguntas";
+      });
+    });
   </script>
 </body>
 </html>
-

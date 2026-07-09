@@ -57,24 +57,24 @@ O verde Ifes continua como vinculo institucional, mas deixa de dominar a primeir
 
 ### P1 - Importante para fechar a versao 1
 
-7. **Redesenhar cards de curso com selos laterais**
+7. **Redesenhar cards de curso com selos no rodapé**
    - Manter imagem, titulo, categoria, carga horaria, nivel e CTA.
    - Usar as imagens extraidas dos cursos, pois foram validadas como bom caminho.
-   - Adicionar selos pequenos para Libras, idioma, serie/projeto e outros atributos.
-   - Testar a composicao dos selos na lateral direita do card, aproveitando o espaco em branco citado na conversa.
+   - Consolidado: Libras fica como ribbon no canto superior direito da imagem.
+   - Adicionar selos pequenos para idioma, serie/projeto e outros atributos ao lado do botao "Acessar curso".
+   - Idiomas: bandeira da Gra-Bretanha para ingles e bandeira da Espanha para espanhol; portugues nao recebe selo.
    - Incluir tooltip ou `aria-label` para selos iconicos.
 
 8. **Revisar secoes da Home**
    - Manter "Cursos em destaque", "Mais cursados" e "Adicionados recentemente".
    - Avaliar grid de 3 versus 4 cards sem travar a entrega.
    - Garantir que as secoes nao empurrem demais o catalogo completo.
-   - Reposicionar ou simplificar "Para quem e" se os cards nao levarem a filtros reais.
+   - **DECIDIDO (v1.3):** a secao "Para quem e" / "Comece pelo seu perfil" (`#publicos`) foi **removida** da Home. A escolha por publico permanece como faceta no catalogo.
 
 9. **Reavaliar navegacao por areas**
-   - Para a primeira versao, pode permanecer como lista/grade simples.
-   - Cada area deve levar ao catalogo filtrado.
-   - Evitar dar peso visual excessivo a uma secao que a equipe percebeu como menos funcional.
-   - Registrar como evolucao futura a ideia de nuvem/bolhas proporcionais ao volume da area.
+   - **DECIDIDO (v1.3):** a secao "Navegue por area" (`#areas`) foi **removida** da Home. As areas seguem acessiveis pelo catalogo filtrado (`/cursos/`).
+   - Ordem da Home apos "O que e curso MOOC?": **Projetos → Series → Servidor publico (Licenca) → Duvidas**.
+   - Registrar como evolucao futura a ideia de nuvem/bolhas proporcionais ao volume da area, caso a navegacao por areas retorne a Home.
 
 10. **Mover avisos de cadastro/e-mail para FAQ**
     - Retirar notas de Hotmail/Outlook ou e-mail nao recebido de secoes explicativas gerais.
@@ -141,13 +141,15 @@ Levar para `prototipo-cursos-abertos/index.html` a estrutura da hero aprovada:
 Reordenar e revisar as secoes:
 
 1. Cursos em destaque.
-2. Mais cursados.
-3. Adicionados recentemente.
-4. Para quem e, somente se apontar para filtros reais.
-5. Navegar por areas.
-6. Projetos parceiros.
-7. Licenca capacitacao.
-8. O que e / Como funciona / FAQ.
+2. Adicionados recentemente.
+3. Mais cursados.
+4. O que e / Como funciona.
+5. Projetos parceiros.
+6. Series.
+7. Licenca capacitacao (Servidor publico).
+8. Duvidas (FAQ).
+
+> Ordem aplicada na v1.3. Removidos "Para quem e" (`#publicos`) e "Navegar por areas" (`#areas`).
 
 **Pronto quando:** cada secao tem uma funcao clara e todas as chamadas de curso levam ao catalogo ou a um curso.
 
@@ -172,8 +174,9 @@ Atualizar componente `.curso`:
 - imagem com proporcao estavel;
 - titulo legivel com limite de linhas;
 - categoria e metadados sem poluicao;
-- selos compactos de acessibilidade/idioma/serie;
-- CTA consistente;
+- ribbon de Libras no canto da imagem;
+- selos compactos de idioma/serie/projeto ao lado do CTA;
+- CTA consistente com aparencia de botao;
 - hover/focus acessivel.
 
 **Pronto quando:** cards continuam escaneaveis em desktop e mobile, sem selos quebrando layout.
@@ -213,9 +216,10 @@ Testar:
 - [ ] Categorias estao na taxonomia nova e em ordem alfabetica.
 - [ ] Catalogo nao carrega todos os cursos de uma vez.
 - [ ] Cards usam imagens reais dos cursos.
-- [ ] Selos de Libras/idioma/serie/projeto nao quebram o card.
+- [ ] Ribbon de Libras e selos de idioma/serie/projeto nao quebram o card.
 - [ ] Numeros de matricula/indicadores estao sustentados ou foram removidos.
-- [ ] Secao "Para quem e" leva a filtros reais ou foi simplificada.
+- [x] Secao "Para quem e" (`#publicos`) removida da Home (v1.3); publico vira faceta no catalogo.
+- [x] Secao "Navegue por area" (`#areas`) removida da Home (v1.3); areas ficam no catalogo.
 - [ ] Avisos de cadastro/e-mail foram movidos para FAQ.
 - [ ] Mobile foi conferido.
 - [ ] Acessibilidade basica foi conferida: contraste, foco, alt e aria-labels.
@@ -232,9 +236,13 @@ Testar:
 | Categorias | Usar 15 categorias do formulario/taxonomia aprovada |
 | Ordem das categorias | Alfabetica, nao por quantidade |
 | Indicadores | Usar como dado editorial se nao houver integracao dinamica |
-| Selos | Explorar selos pequenos/laterais nos cards |
-| Areas na Home | Pode ficar simples na v1; nuvem/bolhas fica para evolucao |
+| Selos | Padrao canonico: Libras no canto da imagem; demais selos ao lado do botao "Acessar curso" |
+| Areas na Home | Secao "Navegue por area" removida da Home (v1.3); areas ficam no catalogo |
+| Publico na Home | Secao "Comece pelo seu perfil"/"Para quem e" removida da Home (v1.3); publico vira faceta no catalogo |
+| Ordem da Home | Apos "O que e curso MOOC?": Projetos → Series → Servidor publico (Licenca) → Duvidas (v1.3) |
 | Planejador | Importante, mas nao bloqueia a primeira apresentacao |
+| Busca na Home | Barra no hero envia direto para o catalogo pre-filtrado (`/cursos/?q=`) |
+| Multilingue | Traduzir a **interface** (PT/EN prontos); titulos de curso ficam em pt-BR; FR/ES depois |
 
 ## 6. Riscos e cuidados
 
@@ -251,10 +259,24 @@ Testar:
   **Cuidado:** revisar fonte de dados e normalizacao antes da apresentacao.
 
 - **Risco:** selos visuais poluirem os cards.  
-  **Cuidado:** testar primeiro com 2 ou 3 tipos de selo e usar tooltip para detalhe.
+  **Cuidado:** manter apenas Libras sobre a imagem; demais selos ficam no rodape, ao lado do botao, com tooltip para detalhe.
 
 ## 7. Proxima acao recomendada
 
 Comecar pela Home: migrar a hero aprovada para `prototipo-cursos-abertos/index.html`, ajustar tokens do `estilos.css` e garantir que o botao principal leve para `cursos.html`. Em seguida, atacar catalogo/filtros/lazy loading, que e o bloco funcional mais importante validado na conversa.
+
+## 8. Registro de execucao (posterior a reuniao)
+
+> Protótipo canonico: `stages/03-design-ux/output/canonico/`. Componentes documentados em `design-spec.md`; paginas/idiomas em `mapa-paginas.md`; visao geral em `canonico/README.md`.
+
+### 09/07/2026 — Seletor de idioma, versoes EN e busca na Home
+
+1. **Seletor de idioma no header** (`.lang-switch`) — dropdown acessivel (PT · EN · FR · ES) no canto superior direito, com bandeiras, `role="menu"`/`menuitemradio`, fechar por clique-fora e Esc. Aplicado em `index.html` e `cursos.html`. Spec: `design-spec.md §2.11`.
+2. **Versoes em ingles** — `index-en.html` e `cursos-en.html` com a **interface** traduzida (inclui as 34 perguntas do FAQ e a microcopy dinamica do catalogo). **Titulos de curso mantidos em pt-BR** (decisao do cliente). Seletor navega PT ⇄ EN de verdade; FR/ES placeholder. Regra i18n: `design-spec.md §3.6`.
+3. **Busca no hero da Home** (`.hero-search`) — `<form method="get">` que leva ao catalogo pre-filtrado (`cursos.html?q=` / `cursos-en.html?q=`). Sem dependencia de JS. Spec: `design-spec.md §2.3`.
+
+**Arquivos tocados:** `index.html`, `cursos.html`, `index-en.html` (novo), `cursos-en.html` (novo), `estilos.css`, `README.md` (novo).
+
+**Pendencias herdadas:** FR/ES sem pagina; troca de idioma por sufixo `-en` deve virar rota/locale no tema WordPress (estagio 05).
 
 

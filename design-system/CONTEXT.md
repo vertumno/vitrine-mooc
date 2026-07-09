@@ -6,6 +6,7 @@ Cores e tipografia da nova Vitrine. Carregado pelos estagios 03 (design) e 05 (d
 
 | Arquivo | Contem |
 |---------|--------|
+| `design.md` | **Referencia canonica atual** — formato DESIGN.md, tokens, componentes e regras para `index.html` e `cursos.html`, consolidando `paleta_site_008080_institucional_sobria.html` + prototipo canonico |
 | `design-system-oficial.md` | **Referencia canonica** â€” tokens, componentes, marca e regras de conteudo (extraido da proposta aprovada em 07/07/2026) |
 | `design-system-canonico.md` | Direcao visual derivada do prototipo `stages/03-design-ux/output/canonico/` validado para apresentacao |
 | `palette.md` | Paleta de cores institucional do Ifes e cores de apoio |

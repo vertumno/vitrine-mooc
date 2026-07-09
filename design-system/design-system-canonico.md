@@ -16,7 +16,7 @@ Assinatura visual:
 
 - hero centralizado com imagem de fundo e camada aqua translucida;
 - grid sutil no fundo da pagina, lembrando organizacao/catalogo;
-- cards brancos com sombra macia, imagem original do curso no topo e CTA textual;
+- cards brancos com sombra macia, imagem original do curso no topo e botao compacto no rodape;
 - cobre profundo usado no CTA principal e em acoes de alta prioridade; dourado reservado para selo de novidade e apoios pontuais;
 - linguagem direta, publica e sem jargao interno.
 
@@ -273,12 +273,12 @@ Estrutura:
 
 1. `.course-media`
 2. imagem original do curso
-3. ribbons opcionais
+3. ribbon de Libras opcional
 4. `.course-body`
 5. categoria
 6. titulo
 7. metadados
-8. CTA textual
+8. rodape com botao "Acessar curso" e selos compactos opcionais
 
 Regras visuais:
 
@@ -286,24 +286,27 @@ Regras visuais:
 - Radius `8px`.
 - Sombra `--shadow-soft`; hover usa `--shadow`.
 - Imagem em `aspect-ratio: 274 / 188` e `object-fit: cover`.
-- CTA textual: "Acessar curso", cor `--teal-deep`, peso 800.
+- CTA: "Acessar curso" com aparencia de botao compacto em teal.
 - Categoria: `--teal-deep`, `0.76rem`, peso 800.
 - Metadados: `--ink-soft`, `0.78rem`.
 
-Ribbons:
+Ribbon de Libras:
 
-- Posicao: canto superior direito da imagem.
-- Tamanho minimo: 28px.
-- Fundo padrao: `--teal-dark`, texto branco.
-- `.alt`: `--red`.
-- `.gold`: `--gold`, texto escuro.
+- Posicao: canto superior direito da imagem do curso.
+- Asset canonico temporario: `stages/03-design-ux/output/canonico/assets/ribbon_mooc_libras.png`.
+- Classe: `.img-libras.course-libras-ribbon`.
+- Alt: "Curso disponivel em Libras".
+- E o unico selo que pode ficar sobre a imagem.
 
-Rotulos usados:
+Selos no rodape do card:
 
-- `LIB` para curso com Libras;
-- `NOVO` para recentes;
-- `UnAC` para projeto;
-- `S` para serie no catalogo.
+- Ficam ao lado do botao "Acessar curso", dentro de `.course-footer`.
+- Classe base: `.course-badge`, agrupada em `.course-badges`.
+- `NOVO` usa ambar claro discreto (`#fbefdc`), texto marrom suave (`#7a5416`) e borda baixa (`#ecd3a8`).
+- Projeto usa fundo neutro esverdeado (`#edf6f4`), texto `--teal-deep` e borda teal suave.
+- Serie usa o texto `Série` no mesmo estilo sutil do selo de projeto.
+- Idioma usa bandeira da Gra-Bretanha para ingles e bandeira da Espanha para espanhol, desenhadas por CSS em `.flag-great-britain` e `.flag-spain`.
+- Portugues e o idioma padrao implicito e nao recebe selo.
 
 ### Card ranqueado
 
@@ -524,7 +527,7 @@ Quando esta direcao for levada ao tema WordPress:
 - self-hostar Nunito Sans e Open Sans sempre que possivel;
 - transformar card de curso em bloco/componente reutilizavel;
 - manter `aspect-ratio: 274 / 188` para thumbnails herdadas;
-- usar campos do curso para categoria canonica, carga horaria, nivel, Libras, projeto e serie;
+- usar campos do curso para categoria canonica, carga horaria, nivel, Libras, idioma, projeto e serie;
 - manter filtros com inputs nativos e estados acessiveis;
 - separar hero da home, hero do catalogo e faixa de servico como componentes distintos.
 

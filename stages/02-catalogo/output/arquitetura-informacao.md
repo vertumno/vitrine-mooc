@@ -88,11 +88,11 @@ Rótulos definidos por decisão editorial do CEFOR (rótulo concreto > esperto).
 | **Audiodescrição** | Recurso para cegos/baixa visão | `accessibilityFeature: "audioDescription"` |
 | **Idioma** | Idioma em que o curso é ministrado | `inLanguage` |
 
-Idioma resolve duplicatas: "Lesson Study" PT e EN = **mesmo curso, dois selos de idioma**.
+Idioma resolve duplicatas: "Lesson Study" PT e EN = **mesma série com versão em inglês sinalizada pela bandeira da Gra-Bretanha**. Português é padrão implícito e não recebe selo.
 
 ## 7. Séries e Projetos (proveniência)
 
-- **Séries** (marca/produção; selo + página de coleção): Atendente e Vendedor (3, com níveis), Educador Maker (4), Lovelace (6, paralelos), Embrace (3), Lesson Study (PT/EN = mesmo curso).
+- **Séries** (marca/produção; selo + página de coleção): Atendente e Vendedor (3, com níveis), Educador Maker (4), Lovelace (6, paralelos), Embrace (3, todos com inglês e espanhol), Lesson Study (PT/EN = mesmo curso).
 - **Projetos parceiros** (parceria + hub próprio): **Rio Doce Escolar** (31, `/v/riodoce/`), **UnAC** (33, `/v/unac/`) — **Universidade Aberta Capixaba**, programa do Governo do Estado do Espírito Santo para expandir e democratizar o Ensino Superior gratuito; parceria Ifes (via CEFOR) × Governo do ES na oferta de cursos abertos, massivos e online de alta qualidade para toda a sociedade.
 - Um Projeto é uma Série grande com identidade institucional.
 

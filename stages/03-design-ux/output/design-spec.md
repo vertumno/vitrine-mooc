@@ -1,11 +1,11 @@
 # Especificação de Design — Vitrine MOOC Ifes
 
-> **Estágio:** 03 — Design/UX · **Versão:** 1.1 · **Data:** 07/07/2026
+> **Estágio:** 03 — Design/UX · **Versão:** 1.3 · **Data:** 09/07/2026
 > **Base:** `design-system/palette.md` + `design-system/typography.md` (destilados via skill `design-md`)
 > · `stages/02-catalogo/output/arquitetura-informacao.md` v4.1 (taxonomia/navegação)
 > · `stages/02-catalogo/output/powerbi-mooc-ifes/analise-insights-powerbi-mooc-ifes.md` (demanda)
 > **Companheiro:** `mapa-paginas.md` (páginas, seções e dados exibidos).
-> **Protótipos de referência:** `stages/03-design-ux/output/prototipo-vitrine-mooc/` (HTML navegável).
+> **Protótipo canônico (vivo):** `stages/03-design-ux/output/canonico/` (HTML navegável — ver `canonico/README.md`).
 
 Este documento especifica os **tokens**, **componentes**, **estados** e **regras** da nova Vitrine.
 Objetivo (Resolução CS 72/2020): plataforma de **cursos abertos à comunidade** — público **leigo,
@@ -58,12 +58,12 @@ O card é a unidade de descoberta. Exibe o metadado mínimo do curso (ver `mapa-
 
 **Anatomia (topo → base):**
 1. **Imagem** (16:9) com `object-fit: cover`; fallback = bloco `--cor-fundo-alt` com ícone.
-2. **Faixa de selos** (canto superior): `Libras`, `Audiodescrição`, `Idioma` quando aplicável.
-3. **Badge "Novo"** (dourado) quando publicado < 3 meses.
+2. **Ribbon de Libras** no canto superior direito da imagem, quando aplicável.
+3. **Badge "Novo"** (ambar claro e discreto) no rodapé do card, quando publicado < 3 meses.
 4. **Categoria(s)** — chip(s) teal pequenos.
 5. **Título** (Poppins 20px/600, máx. 2 linhas, `ellipsis`).
 6. **Meta**: carga horária (`⏱ 20h`) · série/projeto quando houver.
-7. **CTA**: "Acessar curso" (botão primário) — o card inteiro é clicável para `/cursos/{slug}/`.
+7. **Rodapé**: botão "Acessar curso" + selos compactos de projeto, série e idioma.
 
 **Tokens:** bg `#ffffff` · borda `#dee2e6` · raio 8px · sombra `--sombra-card` · padding 16px.
 
@@ -89,6 +89,7 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 
 ### 2.3 Busca + Facetas
 
+- **Busca no hero da Home** (`.hero-search`): barra em pílula (ícone de lupa + input + `btn-primario` "Buscar cursos"). É um `<form method="get" action="cursos.html">` com `name="q"` — ao enviar leva para `/cursos/?q=<termo>`, e o catálogo pré-preenche o campo e aplica o filtro no carregamento (`applyInitialParams`). Funciona sem JS (submit nativo), `role="search"` + label acessível. No mobile o botão desce para linha própria em largura total.
 - **Campo de busca** (topo de `/cursos/`): input 16px, ícone de lupa, `btn-primario` "Buscar" acoplado à direita (raio `0 8px 8px 0`). Busca sobre título + tags (tolerante a acento — herdar `diacritic` do legado).
 - **Facetas** (sidebar em desktop, bottom-sheet em mobile) — combináveis, refletidas na URL como querystring (`noindex`):
   - **Categoria** (15, checkbox múltiplo)
@@ -110,18 +111,27 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 ### 2.5 Chips e selos
 
 - **Chip de categoria:** teal `#008080` sobre `#e6f2f2`, texto 12px, raio pill, clicável → `/areas/{slug}/`.
-- **Selo de acessibilidade:** ícone + label curto; `Libras` (mãos), `Audiodescrição` (AD), `Idioma` (bandeira/BR/EN). `aria-label` descritivo.
-- **Badge "Novo":** dourado `#ffbc00` + texto `#212529`.
+- **Selo de acessibilidade:** Libras usa o ribbon visual no canto da imagem, com `alt="Curso disponível em Libras"`. Outros selos ficam no rodapé como chips compactos.
+- **Selo de idioma:** português é implícito e não aparece. Usar bandeira da Gra-Bretanha para inglês e bandeira da Espanha para espanhol, com `aria-label` textual. Nos três cursos da série Embrace, a origem é o campo `idioma` do catálogo completo: "Português, Inglês e Espanhol".
+- **Badge "Novo":** ambar claro `#fbefdc`, texto `#7a5416` e borda `#ecd3a8`.
 
 ### 2.6 Header
 
 - bg `#ffffff`, borda inferior `#dee2e6`, altura 64px, sticky.
 - Logo Ifes/Vitrine à esquerda → home. Navegação: **Cursos · Áreas · Licença Capacitação · Sobre**. Item ativo em `--cor-primaria`.
 - Busca acessível (ícone que expande). Barra de acessibilidade governamental no topo (contraste, A- A+), padrão gov.
+- **Seletor de idioma** (`.lang-switch`) no canto superior direito, antes do CTA — ver §2.11.
 
 ### 2.7 Footer
 
-- bg `--cor-primaria-profunda` `#195128`, texto branco. Colunas: institucional (Ifes/CEFOR), navegação, acessibilidade/Libras, contato. Créditos + logos de parceiros (Rio Doce, UnAC).
+- bg `--teal-dark` `#003f3f`, texto `#c4ddda`. Grid de 4 colunas (`2fr repeat(3, 1fr)`):
+  1. **Marca + descrição:** título "Cursos Abertos do Ifes" + texto curto sobre o catálogo.
+  2. **Cursos Abertos:** Validar Certificado, Licença para Capacitação, Painel de Indicadores, Termos de Uso, Suporte.
+  3. **Institucional:** O Ifes, O Cefor, Base de Conhecimento.
+  4. **Bloco de marca (`.footer-brand`):** logo horizontal branco do Ifes (`design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png`) + tagline "Centro de Referência em Formação e em Educação a Distância".
+- **Faixa base (`.foot-base`):** separada por borda superior sutil — "Ifes - Cefor" + descrição do catálogo.
+- **Links institucionais reais:** O Ifes → `ifes.edu.br`, O Cefor → `cefor.ifes.edu.br`, Licença para Capacitação → `#licenca`. Os demais (Validar Certificado, Painel de Indicadores, Termos de Uso, Suporte, Base de Conhecimento) são **âncoras placeholder** (`#validar-certificado`, `#painel-indicadores`, `#termos-de-uso`, `#suporte`, `#base-de-conhecimento`) — aguardam páginas/destinos definitivos.
+- **Bilíngue:** versões `*-en.html` replicam a mesma estrutura com rótulos em inglês (Open Courses / Institutional / Validate Certificate etc.).
 
 ### 2.8 Página de curso (bloco principal)
 
@@ -137,6 +147,28 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 ### 2.10 Planejador de Licença Capacitação
 
 - Página `/qualificacao/`: explicação (o que é, quem tem direito, legislação) + montador que soma carga horária de cursos escolhidos até a meta de horas. Usa `carga_horaria` (já populada em `catalogo-cursos-completo.csv`).
+
+### 2.11 Seletor de idioma (i18n)
+
+- **Posição:** canto superior direito do header (`.lang-switch`), agrupado com o CTA "Acessar ambiente" (`.site-actions`). Zona de utilidades globais — fica sticky junto ao header.
+- **Anatomia:** botão compacto com ícone de globo + código do idioma atual (`PT`/`EN`…) + chevron → dropdown com 1 item por idioma (bandeira + nome nativo).
+- **Idiomas:** **Português (padrão)** · English · Français · Español. Bandeiras desenhadas em CSS/SVG inline (`.flag-brazil`, `.flag-great-britain`, `.flag-france`, `.flag-spain`).
+- **Comportamento:** PT ⇄ EN navegam para a página irmã traduzida (`index.html` ⇄ `index-en.html`, `cursos.html` ⇄ `cursos-en.html`). FR/ES são placeholder até o estágio 05 (apenas atualizam o estado visual).
+- **Acessibilidade:** `aria-haspopup`/`aria-expanded`/`aria-controls`, `role="menu"` + `menuitemradio` com `aria-checked`; fecha ao clicar fora e com **Esc** (devolve foco ao botão); `:focus-visible`; atualiza `document.documentElement.lang`.
+
+### 2.12 Hero do catálogo (`/cursos/`)
+
+Faixa de abertura da página de catálogo (`.catalog-hero`), acima da busca/facetas. Implementação canônica em `canonico/estilos.css` (tokens teal do `design-system/design.md`).
+
+**Anatomia (2 colunas, colapsa para 1 no mobile):**
+1. **Intro:** kicker em pill ("Catálogo completo", ponto dourado `--gold` com glow) · **h1** "Catálogo de cursos" (Inter 800, trecho "de cursos" em `--teal-soft`) · parágrafo de proposta de valor (≤640px).
+2. **Resumo:** dois **stat cards em glass** (`.summary-box`) — ícone em chip (`.summary-icon`), número grande Inter 800 (`id="total-cursos"` preenchido via JS), label em caixa alta (`.summary-label`). Dados: total de cursos publicados + nº de áreas temáticas.
+
+**Fundo (profundidade em camadas):** gradiente diagonal `--teal → --teal-deep → --teal-dark` + halos radiais (`.catalog-hero-decor` + `radial-gradient` no background) + textura de pontos com `mask` que esmaece na base. `overflow: hidden` + `isolation: isolate`.
+
+**Tokens/medidas:** texto `#fff` sobre teal · cards `rgba(255,255,255,.10)` + borda `rgba(255,255,255,.20)` + `backdrop-filter: blur(12px)` + raio 16px + filete `--gold` no topo · `padding` vertical `clamp(32px,4.5vw,50px)` (compacto).
+
+**Estados:** `.summary-box:hover` → `translateY(-3px)` + fundo/borda mais opacos (respeita `prefers-reduced-motion`, §3.1). Espelhado em PT (`canonico/cursos.html`) e EN (`canonico/cursos-en.html`), mesma estrutura/CSS.
 
 ---
 
@@ -170,6 +202,11 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 - **Descompasso oferta × demanda:** catálogo dominado por educação/ambiental, mas a demanda real concentra-se em **prático** — Inglês (22.390), Moodle p/ Educadores (11.392), Canva (8.589), Google Drive (8.007). → "Mais cursados" e "Em destaque" devem **expor a demanda real**, não só o volume de oferta.
 - **65% das matrículas vêm de fora do ES** → SEO/páginas de tema bem nomeadas são canal de aquisição primário; o design prioriza páginas de categoria indexáveis.
 
+### 3.6 Internacionalização (multilíngue)
+- **Escopo do protótipo:** a **interface** é traduzida (header, hero, seções, FAQ, rodapé, filtros e microcopy dinâmica). **Títulos oficiais dos cursos permanecem em pt-BR** (nomes reais do Ifes; sem versão oficial em outro idioma) — decisão validada com o cliente como teste de visualização.
+- **Onde traduzir:** taxonomia/categorias, rótulos de filtro (`Up to 10h`, `Basic`…) e números localizados (`22,390 enrollments`) são traduzidos por **mapas no próprio script** da página traduzida, sem duplicar `cursos-dados.js` (fonte única em pt-BR).
+- **Implementação atual (protótipo):** páginas irmãs por sufixo `-en` (`index-en.html`, `cursos-en.html`), `<html lang>` correto e `hreflang` nos links do seletor. **No tema WordPress (estágio 05)** isso deve migrar para rota/locale real; FR/ES ganham conteúdo então.
+
 ---
 
 ## 4. Estados globais e microcopy
@@ -194,3 +231,4 @@ Microcopy: direta, acolhedora, sem jargão acadêmico ("cursos gratuitos com cer
 | Acessibilidade | §3.1 — AA, foco visível, acentuação, `prefers-reduced-motion` |
 | Responsividade | §3.2 — comportamento mobile→desktop por breakpoint |
 | Dados reais | §3.5 — destaque/ordenação ancorados no Power BI |
+| Multilíngue | §2.11 (seletor) + §3.6 (regra i18n) — protótipo PT/EN em `canonico/` |

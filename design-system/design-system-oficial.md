@@ -34,13 +34,13 @@
   --green-deep:#195128;   /* hero, blocos imersivos, footer, topbar gov */
   --green-mist:#dcefd3;   /* badges, chips, hover suave */
 
-  /* Marca CEFOR/IF (somente logo e badge NOVO) */
+  /* Marca CEFOR/IF */
   --cefor-green:#3da63d;  /* quadrados do pixel-mark */
   --cefor-red:#e2211c;    /* círculo do pixel-mark */
 
   /* Apoio e acento */
   --teal:#008080;         /* apoio/categoria (herança) */
-  --red:#dc3545;          /* badge NOVO, erro */
+  --red:#dc3545;          /* erro, estados criticos */
   --amber:#ffbc00;        /* dourado — acento pontual (SEMPRE texto escuro por cima) */
 
   /* Estrutura */
@@ -81,8 +81,8 @@ Lockup do header da plataforma: pixel-mark + texto **"Cursos Abertos"** / **"Ife
 | **Hero** | Fundo `--green-deep`, eyebrow Oswald, h1 com `em` verde-claro `#9FD8A6`, busca com botão `btn-light`. **REGRA: hero COMPACTA** — nas páginas internas, apenas título + lead + busca (padding vertical ≤ 40px); na home, sem mosaico gigante nem stats de 4 colunas |
 | **Botões** | `--radius` 10px (não pill), padding 12px 22px, peso 700; variantes: `primary` (verde), `outline` (borda), `light` (branco sobre verde) |
 | **Eyebrow** | Oswald 0.9rem, uppercase, tracking .1em, `--green-mid` (ou `#8FC996` sobre verde) |
-| **Card de curso** | Fundo branco, borda `--line`, radius 10px, hover eleva (`translateY(-2px)` + sombra). **Capa = imagem original do curso** preenchendo o card **inteiro, sem faixa branca, sem espaço lateral e sem corte perceptível**. As thumbs têm todas a **mesma proporção** (~274×188 ≈ 1.456), então a moldura usa `aspect-ratio:274/188` + `object-fit:cover` — ratio da moldura = ratio da imagem, logo cobre 100% sem cortar. Cards com a mesma altura. **Sem nada sobreposto.** (Se o formato das thumbs mudar no futuro, ajustar o `aspect-ratio` da `.capa` para o novo ratio.) Corpo branco na ordem: **categoria (topo)** → **nome** → **meta** → **selos** → botão compacto **"Acessar curso"** (reordenado via flex `order`; botão em verde-profundo `--green-deep`, mais escuro). Categoria como kicker `--green-mid` semibold |
-| **Selos** | Chips **sutis na área branca** (nunca sobre a imagem): fundo `--paper-2`, texto `--ink-soft`, borda `--line`, radius 4px, .66rem. Rótulos legíveis (`Libras`, `Novo`, `Mais cursado`, `UnAC`, `Inglês`). **Idioma: português é o padrão implícito — NÃO exibir selo "Português"**; só mostrar selo de idioma quando o curso for em inglês (`Inglês`/`EN`). `Novo` = tom dourado suave (bg `#fff6e0`, texto `#8a5a00`); `Mais cursado` (`.pop`) = verde suave (`--green-mist`/`--green-mid`). `.selos:empty` colapsa para não deixar espaço vazio |
+| **Card de curso** | Fundo branco, borda `--line`, radius 10px, hover eleva (`translateY(-2px)` + sombra). **Capa = imagem original do curso** preenchendo o card **inteiro, sem faixa branca, sem espaço lateral e sem corte perceptível**. As thumbs têm todas a **mesma proporção** (~274×188 ≈ 1.456), então a moldura usa `aspect-ratio:274/188` + `object-fit:cover`. Corpo branco na ordem: **categoria (topo)** → **nome** → **meta** → rodapé com botão compacto **"Acessar curso"** e selos ao lado. Categoria como kicker `--green-mid` semibold |
+| **Selos** | **Libras é exceção visual:** usa o ribbon no canto superior direito da imagem (`assets/ribbon_mooc_libras.png`, alt "Curso disponível em Libras"). Os demais selos são chips sutis no rodapé do card, ao lado do botão: fundo `--paper-2`, texto `--ink-soft`, borda `--line`, radius 4px, .66rem. Rótulos legíveis (`Novo`, `Mais cursado`, `UnAC`, `Série`). **Idioma: português é o padrão implícito, não exibir selo "Português"**; mostrar bandeira da Gra-Bretanha quando houver inglês e bandeira da Espanha quando houver espanhol, com `aria-label` textual. Projeto e série usam fundo neutro esverdeado, texto teal e borda sutil; não usar vermelho nesses selos. `Novo` = ambar claro discreto (bg `#fbefdc`, texto `#7a5416`, borda `#ecd3a8`); `Mais cursado` (`.pop`) = verde suave (`--green-mist`/`--green-mid`). `.selos:empty` colapsa para não deixar espaço vazio |
 | **Meta do curso** | 0.72rem `--green-mid` (fonte de corpo): carga horária · inscritos/nível |
 | **Filtros/chips** | 0.75rem, pill, borda `--line`; ativo = fundo `--green-deep` texto branco |
 | **Página Cursos** | Hero compacta (sem busca) → catálogo direto (filtros + grade). **Sem seção "Em destaque"** — os destaques vivem só na home |

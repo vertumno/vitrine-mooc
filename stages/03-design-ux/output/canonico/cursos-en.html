@@ -1,43 +1,43 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catálogo de Cursos | Cursos Abertos do Ifes</title>
-  <meta name="description" content="Catálogo dos Cursos Abertos do Ifes com busca, filtros por área, carga horária, nível, acessibilidade, projetos e séries.">
+  <title>Course Catalog | Ifes Open Courses</title>
+  <meta name="description" content="Catalog of Ifes Open Courses with search and filters by area, workload, level, accessibility, projects and series.">
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <a class="skip" href="#conteudo">Skip to content</a>
 
   <header class="site">
     <div class="site-wrap">
-      <a class="brand" href="index.html" aria-label="Cursos Abertos do Ifes">
+      <a class="brand" href="index-en.html" aria-label="Ifes Open Courses">
         <img class="brand-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
         <span class="brand-divider" aria-hidden="true"></span>
-        <span class="brand-name">Cursos Abertos</span>
+        <span class="brand-name">Open Courses</span>
       </a>
-      <nav class="main-nav" id="menu" aria-label="Navegação principal">
-        <a href="#como-funciona">Como funciona</a>
-        <a href="cursos.html">Cursos</a>
-        <a href="#licenca">Licença capacitação</a>
-        <a href="#faq">Dúvidas</a>
+      <nav class="main-nav" id="menu" aria-label="Main navigation">
+        <a href="index-en.html#como-funciona">How it works</a>
+        <a href="cursos-en.html">Courses</a>
+        <a href="index-en.html#licenca">Training leave</a>
+        <a href="index-en.html#faq">Help</a>
       </nav>
       <div class="site-actions">
         <div class="lang-switch" data-lang-switch>
           <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Selecionar idioma / Select language">
             <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>
-            <span class="lang-current" data-lang-current>PT</span>
+            <span class="lang-current" data-lang-current>EN</span>
             <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <ul class="lang-menu" id="lang-menu" role="menu">
-            <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="cursos-en.html" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" href="cursos.html" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français</a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español</a></li>
           </ul>
         </div>
-        <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Acessar ambiente</a>
+        <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Access platform</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">Menu</button>
       </div>
     </div>
@@ -48,24 +48,24 @@
       <span class="catalog-hero-decor" aria-hidden="true"></span>
       <div class="wrap">
         <div class="catalog-hero-intro">
-          <span class="kicker">Catálogo completo</span>
-          <h1>Catálogo <span>de cursos</span></h1>
-          <p>Explore os cursos abertos e gratuitos do Ifes. Filtre por área, carga horária, nível, idioma, série ou projeto e comece a estudar hoje mesmo.</p>
+          <span class="kicker">Full catalog</span>
+          <h1>Course <span>catalog</span></h1>
+          <p>Explore the free and open courses at Ifes. Filter by area, workload, level, language, series or project and start studying today.</p>
         </div>
-        <div class="catalog-summary" aria-label="Resumo do catálogo">
+        <div class="catalog-summary" aria-label="Catalog summary">
           <div class="summary-box">
             <span class="summary-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5Z"/></svg>
             </span>
             <strong id="total-cursos">165</strong>
-            <span class="summary-label">cursos publicados</span>
+            <span class="summary-label">published courses</span>
           </div>
           <div class="summary-box">
             <span class="summary-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/></svg>
             </span>
             <strong>15</strong>
-            <span class="summary-label">áreas temáticas</span>
+            <span class="summary-label">thematic areas</span>
           </div>
         </div>
       </div>
@@ -73,73 +73,73 @@
 
     <section id="lista">
       <div class="wrap catalog-layout">
-        <aside class="filters" aria-label="Filtros do catálogo">
+        <aside class="filters" aria-label="Catalog filters">
           <div>
-            <label class="sr-only" for="q">Buscar curso</label>
-            <input id="q" type="search" placeholder="Buscar por nome, tema ou palavra-chave">
+            <label class="sr-only" for="q">Search course</label>
+            <input id="q" type="search" placeholder="Search by name, topic or keyword">
           </div>
 
           <div class="filter-group" data-group="categoria">
-            <h3>Área</h3>
+            <h3>Area</h3>
             <ul id="f-categoria"></ul>
           </div>
 
           <div class="filter-group" data-group="carga">
-            <h3>Carga horária</h3>
+            <h3>Workload</h3>
             <ul id="f-carga"></ul>
           </div>
 
           <div class="filter-group" data-group="nivel">
-            <h3>Nível</h3>
+            <h3>Level</h3>
             <ul id="f-nivel"></ul>
           </div>
 
           <div class="filter-group" data-group="acessibilidade">
-            <h3>Acessibilidade</h3>
+            <h3>Accessibility</h3>
             <ul>
               <li class="filter-option">
-                <label><input type="checkbox" value="libras"> Com Libras</label>
+                <label><input type="checkbox" value="libras"> With Libras</label>
                 <span class="filter-count" id="count-libras">0</span>
               </li>
             </ul>
           </div>
 
           <div class="filter-group" data-group="projeto">
-            <h3>Projetos</h3>
+            <h3>Projects</h3>
             <ul id="f-projeto"></ul>
           </div>
 
           <div class="filter-group" data-group="serie">
-            <h3>Séries</h3>
+            <h3>Series</h3>
             <ul id="f-serie"></ul>
           </div>
 
-          <button class="btn btn-outline" type="button" id="limpar">Limpar filtros</button>
+          <button class="btn btn-outline" type="button" id="limpar">Clear filters</button>
         </aside>
 
         <div>
           <div class="results-head">
-            <p class="results-count" id="resultado-num" aria-live="polite">Carregando cursos</p>
+            <p class="results-count" id="resultado-num" aria-live="polite">Loading courses</p>
             <div class="toolbar">
-              <h2>Todos os cursos</h2>
-              <label class="sorter">Ordenar
+              <h2>All courses</h2>
+              <label class="sorter">Sort
                 <select id="ordenar">
-                  <option value="relevancia">Relevância</option>
-                  <option value="mais-cursados">Mais cursados</option>
-                  <option value="recentes">Recentes</option>
+                  <option value="relevancia">Relevance</option>
+                  <option value="mais-cursados">Most enrolled</option>
+                  <option value="recentes">Recent</option>
                   <option value="az">A-Z</option>
                 </select>
               </label>
             </div>
-            <div class="active-chips" id="chips" aria-label="Filtros ativos"></div>
+            <div class="active-chips" id="chips" aria-label="Active filters"></div>
           </div>
 
           <div class="course-grid" id="cards" aria-live="polite"></div>
 
-          <p class="empty" id="vazio" hidden>Nenhum curso encontrado com esses filtros. Tente remover uma seleção ou buscar por outro termo.</p>
+          <p class="empty" id="vazio" hidden>No courses found with these filters. Try removing a selection or searching for another term.</p>
 
           <div class="load-row">
-            <button class="btn btn-primary" type="button" id="carregar">Carregar mais cursos</button>
+            <button class="btn btn-primary" type="button" id="carregar">Load more courses</button>
           </div>
         </div>
       </div>
@@ -149,36 +149,36 @@
   <footer>
     <div class="wrap">
       <div>
-        <h3>Cursos Abertos do Ifes</h3>
-        <p>Catálogo público dos cursos abertos do Cefor/Ifes, organizado para busca, descoberta e acesso ao Moodle.</p>
+        <h3>Ifes Open Courses</h3>
+        <p>Public catalog of Cefor/Ifes open courses, organized for search, discovery and access to Moodle.</p>
       </div>
       <div>
-        <h4>Cursos Abertos</h4>
+        <h4>Open Courses</h4>
         <ul>
-          <li><a href="index.html#validar-certificado">Validar Certificado</a></li>
-          <li><a href="index.html#licenca">Licença para Capacitação</a></li>
-          <li><a href="index.html#painel-indicadores">Painel de Indicadores</a></li>
-          <li><a href="index.html#termos-de-uso">Termos de Uso</a></li>
-          <li><a href="index.html#suporte">Suporte</a></li>
+          <li><a href="index-en.html#validar-certificado">Validate Certificate</a></li>
+          <li><a href="index-en.html#licenca">Training Leave</a></li>
+          <li><a href="index-en.html#painel-indicadores">Indicators Dashboard</a></li>
+          <li><a href="index-en.html#termos-de-uso">Terms of Use</a></li>
+          <li><a href="index-en.html#suporte">Support</a></li>
         </ul>
       </div>
       <div>
-        <h4>Institucional</h4>
+        <h4>Institutional</h4>
         <ul>
-          <li><a href="https://www.ifes.edu.br/">O Ifes</a></li>
-          <li><a href="https://cefor.ifes.edu.br/">O Cefor</a></li>
-          <li><a href="index.html#base-de-conhecimento">Base de Conhecimento</a></li>
+          <li><a href="https://www.ifes.edu.br/">About Ifes</a></li>
+          <li><a href="https://cefor.ifes.edu.br/">About Cefor</a></li>
+          <li><a href="index-en.html#base-de-conhecimento">Knowledge Base</a></li>
         </ul>
       </div>
       <div class="footer-brand">
-        <img class="footer-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Instituto Federal do Espírito Santo">
-        <span class="footer-tagline">Centro de Referência em Formação e em Educação a Distância</span>
+        <img class="footer-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Federal Institute of Espírito Santo">
+        <span class="footer-tagline">Center of Reference in Training and Distance Education</span>
       </div>
     </div>
     <div class="foot-base">
       <div class="wrap">
         <span>Ifes - Cefor</span>
-        <span>Catálogo com carregamento progressivo</span>
+        <span>Catalog with progressive loading</span>
       </div>
     </div>
   </footer>
@@ -241,7 +241,7 @@
     const norm = value => String(value || "")
       .toLowerCase()
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
+      .replace(/[̀-ͯ]/g, "");
 
     const esc = value => String(value || "").replace(/[&<>"']/g, char => ({
       "&": "&amp;",
@@ -251,22 +251,23 @@
       "'": "&#39;"
     }[char]));
 
+    // Taxonomia canonica traduzida para o ingles (interface).
     const CANONICAL_CATEGORIES = [
-      { slug: "ambiente-e-saude", nome: "Ambiente e Saúde" },
-      { slug: "artes-e-humanidades", nome: "Artes e Humanidades" },
-      { slug: "ciencias-da-natureza", nome: "Ciências da Natureza" },
+      { slug: "ambiente-e-saude", nome: "Environment & Health" },
+      { slug: "artes-e-humanidades", nome: "Arts & Humanities" },
+      { slug: "ciencias-da-natureza", nome: "Natural Sciences" },
       { slug: "design", nome: "Design" },
-      { slug: "desenvolvimento-pessoal", nome: "Desenvolvimento Pessoal" },
-      { slug: "educacao", nome: "Educação" },
-      { slug: "educacao-a-distancia", nome: "Educação a Distância" },
-      { slug: "engenharia", nome: "Engenharia" },
-      { slug: "financas-e-contabilidade", nome: "Finanças e Contabilidade" },
-      { slug: "gestao", nome: "Gestão" },
-      { slug: "inclusao-e-acessibilidade", nome: "Inclusão e Acessibilidade" },
-      { slug: "linguas", nome: "Línguas" },
-      { slug: "matematica", nome: "Matemática" },
-      { slug: "tecnologias-e-informatica", nome: "Tecnologias e Informática" },
-      { slug: "tecnologias-educacionais", nome: "Tecnologias Educacionais" }
+      { slug: "desenvolvimento-pessoal", nome: "Personal Development" },
+      { slug: "educacao", nome: "Education" },
+      { slug: "educacao-a-distancia", nome: "Distance Education" },
+      { slug: "engenharia", nome: "Engineering" },
+      { slug: "financas-e-contabilidade", nome: "Finance & Accounting" },
+      { slug: "gestao", nome: "Management" },
+      { slug: "inclusao-e-acessibilidade", nome: "Inclusion & Accessibility" },
+      { slug: "linguas", nome: "Languages" },
+      { slug: "matematica", nome: "Mathematics" },
+      { slug: "tecnologias-e-informatica", nome: "Technology & IT" },
+      { slug: "tecnologias-educacionais", nome: "Educational Technologies" }
     ];
 
     const CATEGORY_ALIASES = {
@@ -278,6 +279,35 @@
     };
 
     const CATEGORY_NAMES = Object.fromEntries(CANONICAL_CATEGORIES.map(item => [item.slug, item.nome]));
+
+    // Rotulos de filtro traduzidos (os dados-fonte permanecem em portugues).
+    const CARGA_LABELS = {
+      "ate-10": "Up to 10h",
+      "10-20": "10 to 20h",
+      "20-40": "20 to 40h",
+      "40-60": "40 to 60h",
+      "mais-60": "Over 60h",
+      "nao-informada": "Not specified"
+    };
+
+    const NIVEL_LABELS = {
+      "basico": "Basic",
+      "intermediario": "Intermediate",
+      "avancado": "Advanced",
+      "nao-informado": "Not specified"
+    };
+
+    function translateLabel(group, slug, nome) {
+      if (group === "categoria") return CATEGORY_NAMES[slug] || nome;
+      if (group === "carga") return CARGA_LABELS[slug] || nome;
+      if (group === "nivel") return NIVEL_LABELS[slug] || nome;
+      if (group === "acessibilidade") return "With Libras";
+      return nome; // projeto/serie: nomes proprios mantidos
+    }
+
+    function normalizeWorkload(label) {
+      return String(label || "").replace(/\s*horas?/i, "h");
+    }
 
     const DEMAND_RANK = {
       "ingles-comunicativo": 1,
@@ -347,9 +377,10 @@
 
     function labelFor(group, slug) {
       if (group === "categoria") return CATEGORY_NAMES[slug] || slug;
-      if (group === "acessibilidade") return "Com Libras";
+      if (group === "acessibilidade") return "With Libras";
       const list = window.CURSOS_FILTROS?.[group] || [];
-      return list.find(item => item.slug === slug)?.nome || slug;
+      const nome = list.find(item => item.slug === slug)?.nome || slug;
+      return translateLabel(group, slug, nome);
     }
 
     function countFor(group, slug) {
@@ -363,14 +394,14 @@
 
     function sortFilterItems(group, items) {
       const order = FILTER_ORDER[group];
-      if (!order) return [...items].sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+      if (!order) return [...items].sort((a, b) => translateLabel(group, a.slug, a.nome).localeCompare(translateLabel(group, b.slug, b.nome), "en"));
 
       return [...items].sort((a, b) => {
         const rankA = order.indexOf(a.slug);
         const rankB = order.indexOf(b.slug);
         const safeRankA = rankA === -1 ? order.length : rankA;
         const safeRankB = rankB === -1 ? order.length : rankB;
-        return safeRankA - safeRankB || a.nome.localeCompare(b.nome, "pt-BR");
+        return safeRankA - safeRankB || a.nome.localeCompare(b.nome, "en");
       });
     }
 
@@ -383,7 +414,7 @@
         target.innerHTML = sorted.map(item => {
           const total = countFor(group, item.slug);
           return `<li class="filter-option">
-            <label><input type="checkbox" value="${esc(item.slug)}"> ${esc(item.nome)}</label>
+            <label><input type="checkbox" value="${esc(item.slug)}"> ${esc(translateLabel(group, item.slug, item.nome))}</label>
             <span class="filter-count">${total}</span>
           </li>`;
         }).join("");
@@ -421,17 +452,17 @@
     }
 
     const LANGUAGE_BADGES = {
-      en: { flagClass: "flag-great-britain", title: "Curso também disponível em inglês" },
-      es: { flagClass: "flag-spain", title: "Curso também disponível em espanhol" }
+      en: { flagClass: "flag-great-britain", title: "Course also available in English" },
+      es: { flagClass: "flag-spain", title: "Course also available in Spanish" }
     };
 
     function footerBadgesHtml(course) {
       const badges = [];
       if (course.projetoNomes?.length) {
-        badges.push(`<span class="course-badge badge-project" title="Projeto ${esc(course.projetoNomes[0])}" aria-label="Projeto ${esc(course.projetoNomes[0])}">${esc(course.projetoNomes[0])}</span>`);
+        badges.push(`<span class="course-badge badge-project" title="Project ${esc(course.projetoNomes[0])}" aria-label="Project ${esc(course.projetoNomes[0])}">${esc(course.projetoNomes[0])}</span>`);
       }
       if (course.serieNomes?.length) {
-        badges.push(`<span class="course-badge badge-series" title="Série ${esc(course.serieNomes[0])}" aria-label="Série ${esc(course.serieNomes[0])}">Série</span>`);
+        badges.push(`<span class="course-badge badge-series" title="Series ${esc(course.serieNomes[0])}" aria-label="Series ${esc(course.serieNomes[0])}">Series</span>`);
       }
       (course.idiomas || []).forEach(language => {
         const badge = LANGUAGE_BADGES[language];
@@ -444,22 +475,22 @@
 
     function librasRibbonHtml(course) {
       return course.libras
-        ? `<img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">`
+        ? `<img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Course available in Libras (Brazilian Sign Language)" loading="lazy">`
         : "";
     }
 
     function cardHtml(course) {
-      const meta = [course.cargaLabel, course.nivelLabel].filter(Boolean);
+      const meta = [normalizeWorkload(course.cargaLabel), translateLabel("nivel", course.nivel, course.nivelLabel)].filter(Boolean);
       return `<article class="course-card">
         <div class="course-media">
-          <img src="${esc(course.thumb)}" alt="Imagem do curso ${esc(course.titulo)}" loading="lazy">
+          <img src="${esc(course.thumb)}" alt="Course thumbnail: ${esc(course.titulo)}" loading="lazy">
           ${librasRibbonHtml(course)}
         </div>
         <div class="course-body">
           <span class="course-cat">${esc(course.categoriaCanonicaNomes.join(" · "))}</span>
           <h3>${esc(course.titulo)}</h3>
           <p class="course-meta">${meta.map(item => `<span>${esc(item)}</span>`).join("")}</p>
-          <span class="course-footer"><a class="mini-cta" href="${esc(course.link)}">Acessar curso</a>${footerBadgesHtml(course)}</span>
+          <span class="course-footer"><a class="mini-cta" href="${esc(course.link)}">Access course</a>${footerBadgesHtml(course)}</span>
         </div>
       </article>`;
     }
@@ -467,7 +498,7 @@
     function renderChips(groups) {
       const query = byId.q.value.trim();
       const chips = [];
-      if (query) chips.push(`<button class="chip" type="button" data-clear="q">Busca: ${esc(query)}</button>`);
+      if (query) chips.push(`<button class="chip" type="button" data-clear="q">Search: ${esc(query)}</button>`);
       groups.forEach(group => {
         group.values.forEach(value => {
           chips.push(`<button class="chip" type="button" data-group="${esc(group.name)}" data-value="${esc(value)}">${esc(labelFor(group.name, value))}</button>`);
@@ -499,8 +530,8 @@
       const visible = filtered.slice(0, visibleLimit);
       byId.cards.innerHTML = visible.map(cardHtml).join("");
       byId.result.textContent = filtered.length === 1
-        ? "Mostrando 1 curso"
-        : `Mostrando ${Math.min(visibleLimit, filtered.length)} de ${filtered.length} cursos`;
+        ? "Showing 1 course"
+        : `Showing ${Math.min(visibleLimit, filtered.length)} of ${filtered.length} courses`;
       byId.empty.hidden = filtered.length > 0;
       const hasMore = visibleLimit < filtered.length;
       byId.load.hidden = !hasMore;

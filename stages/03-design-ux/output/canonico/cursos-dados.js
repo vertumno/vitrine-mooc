@@ -1194,6 +1194,10 @@ window.CURSOS_MOOC = [
     "nivel": "basico",
     "nivelLabel": "Básico",
     "libras": false,
+    "idiomas": [
+      "en",
+      "es"
+    ],
     "projeto": [],
     "projetoNomes": [],
     "serie": [
@@ -1220,6 +1224,10 @@ window.CURSOS_MOOC = [
     "nivel": "basico",
     "nivelLabel": "Básico",
     "libras": false,
+    "idiomas": [
+      "en",
+      "es"
+    ],
     "projeto": [],
     "projetoNomes": [],
     "serie": [
@@ -1246,6 +1254,10 @@ window.CURSOS_MOOC = [
     "nivel": "basico",
     "nivelLabel": "Básico",
     "libras": false,
+    "idiomas": [
+      "en",
+      "es"
+    ],
     "projeto": [],
     "projetoNomes": [],
     "serie": [

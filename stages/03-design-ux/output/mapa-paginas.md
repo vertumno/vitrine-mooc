@@ -1,9 +1,9 @@
 # Mapa de Páginas — Vitrine MOOC Ifes
 
-> **Estágio:** 03 — Design/UX · **Versão:** 1.2 · **Data:** 07/07/2026
+> **Estágio:** 03 — Design/UX · **Versão:** 1.4 · **Data:** 09/07/2026
 > **Base:** `stages/02-catalogo/output/arquitetura-informacao.md` v4.1 (navegação/URLs) ·
 > `design-system/design-system-oficial.md` (tokens, componentes e regras — canônico).
-> **Protótipos oficiais:** `stages/03-design-ux/output/prototipo-cursos-abertos/` (Home + Catálogo).
+> **Protótipo canônico (vivo):** `stages/03-design-ux/output/canonico/` (Home + Catálogo, PT e EN — ver `canonico/README.md`).
 > Protótipos anteriores arquivados em `_arquivo/` (ver README de lá).
 > **Nome público da plataforma: "Cursos Abertos do Ifes"** — "Vitrine" é só codinome interno.
 
@@ -15,10 +15,10 @@ e **indexável?** (SEO). Metadados do curso seguem o **Art. 14 da Resolução CS
 
 ## Inventário de páginas
 
-| # | Página | URL | Indexável | Protótipo oficial (`prototipo-cursos-abertos/`) |
+| # | Página | URL | Indexável | Protótipo canônico (`canonico/`) |
 |---|--------|-----|:---------:|---------------------|
-| 1 | Home | `/` | ✅ | `index.html` |
-| 2 | Catálogo / Busca | `/cursos/` | ✅ | `cursos.html` |
+| 1 | Home | `/` | ✅ | `index.html` · `index-en.html` (EN) |
+| 2 | Catálogo / Busca | `/cursos/` | ✅ | `cursos.html` · `cursos-en.html` (EN) |
 | 3 | Página do curso | `/cursos/{slug}/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/curso-como-criar-mooc.html`) |
 | 4 | Área (categoria) | `/areas/{slug}/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/area-educacao.html`) |
 | 5 | Série | `/series/{slug}/` | ✅ | — |
@@ -39,17 +39,21 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…&publico=…`) = **nã
 **Propósito:** apresentar a Vitrine, orientar a descoberta e expor a demanda real. Público leigo, nacional, de descoberta.
 
 **Seções (ordem):**
-1. **Hero** — título/proposta de valor ("Cursos gratuitos e abertos do Ifes, com certificado"), busca proeminente, CTA.
-2. **Atalhos "Para quem"** — 3–4 cards de público (professores/educadores · comunidade/começar do zero · trabalho e carreira · servidores/setor público). *Atalhos na Home que linkam para `/cursos/?publico=…` (catálogo pré-filtrado). Sem página própria.*
-3. **Em destaque** — curadoria manual (CEFOR).
+1. **Hero** — título/proposta de valor ("Cursos gratuitos e abertos do Ifes, com certificado"), **busca proeminente que envia para o catálogo** (`/cursos/?q=<termo>`, já pré-filtrado), CTA.
+2. **Em destaque** — curadoria manual (CEFOR).
+3. **Recentes** — últimos publicados (absorve levas trimestrais automaticamente).
 4. **Mais cursados** — ordenado por matrículas (Power BI). Expõe demanda: Inglês, Moodle p/ Educadores, Canva, Google Drive.
-5. **Recentes** — últimos publicados (absorve levas trimestrais automaticamente).
-6. **Navegar por área** — grade das 15 Categorias com contagem.
-7. **Projetos parceiros** — Rio Doce Escolar, UnAC (hubs).
-8. **Licença Capacitação** — chamada para servidores + Planejador.
-9. **Faixa institucional / rodapé.**
+5. **O que é curso MOOC? / Como funciona** — explicação do formato + passo a passo do cadastro ao certificado.
+6. **Projetos e séries** — Projetos parceiros (Rio Doce Escolar, UnAC) e depois Séries (Lovelace, Educador Maker, etc.).
+7. **Licença Capacitação** — chamada para servidores públicos + Planejador.
+8. **Dúvidas (FAQ).**
+9. **Faixa institucional / rodapé** — 4 colunas: marca + descrição · **Cursos Abertos** (Validar Certificado, Licença para Capacitação, Painel de Indicadores, Termos de Uso, Suporte) · **Institucional** (O Ifes, O Cefor, Base de Conhecimento) · **logo Ifes + tagline** ("Centro de Referência em Formação e em Educação a Distância"). Faixa base com "Ifes - Cefor". Detalhes em `design-spec.md` §2.7.
 
-**Dados exibidos:** cards de curso (§dados abaixo) · nomes+contagem de categorias · nº de matrículas (Power BI, "Mais cursados").
+> **Alteração (v1.3):** removidos da Home os blocos **"Atalhos Para quem"** (`#publicos`) e **"Navegar por área"** (`#areas`). Após "O que é curso MOOC?", a ordem passou a ser **Projetos → Séries → Servidor público (Licença) → Dúvidas**. A navegação por público continua disponível como faceta no catálogo; as áreas seguem acessíveis pelo catálogo (`/cursos/`).
+
+> **Alteração (v1.4):** rodapé reestruturado para as colunas **Cursos Abertos** e **Institucional** + bloco de marca Ifes/Cefor (conforme referência da comissão). Links institucionais (O Ifes, O Cefor, Licença) já resolvem; Validar Certificado, Painel de Indicadores, Termos de Uso, Suporte e Base de Conhecimento seguem como âncoras placeholder até definição dos destinos.
+
+**Dados exibidos:** cards de curso (§dados abaixo) · nº de matrículas (Power BI, "Mais cursados").
 
 ---
 
@@ -58,13 +62,16 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…&publico=…`) = **nã
 **Propósito:** encontrar cursos por busca + facetas combináveis. Estrutura de referência: página de catálogo da DeepLearning.AI (destaques em carrossel no topo + grade com filtros laterais).
 
 **Seções:**
-1. **Cursos em destaque** — carrossel com card grande (imagem + título + descrição + chips + carga/nível + CTAs "Saber mais"/"Começar agora"), curadoria CEFOR, indicadores de navegação (dots).
-2. Facetas em **sidebar** com checkboxes e contagem por faceta (desktop; bottom-sheet mobile): Categoria (15) · Para quem · Carga horária (≤10/10–20/20–40/40–60h) · Nível · Acessibilidade (Libras/AD) · Idioma. Busca (título + tags, tolerante a acento) no topo da sidebar + "Limpar filtros".
-3. **"Mostrando N cursos"** + título "Todos os cursos" + Ordenação: Relevância · Mais cursados · Recentes · A–Z.
-4. Grade de cards com CTA por card (paginação/scroll com fallback rastreável).
-5. Estado vazio (microcopy + sugestões).
+1. **Hero do catálogo** (faixa teal, `.catalog-hero`) — kicker "Catálogo completo", título "Catálogo de cursos", texto de proposta de valor e dois **stat cards em glass** (total de cursos publicados + nº de áreas temáticas). Fundo com profundidade em camadas (gradiente diagonal teal→teal-deep→teal-dark + halos radiais + textura de pontos que esmaece na base). Altura compacta (`padding` vertical ~32–50px).
+2. **Cursos em destaque** _(planejado, ausente no canônico v1)_ — carrossel com card grande (imagem + título + descrição + chips + carga/nível + CTAs "Saber mais"/"Começar agora"), curadoria CEFOR, indicadores de navegação (dots).
+3. Facetas em **sidebar** com checkboxes e contagem por faceta (desktop; bottom-sheet mobile): Categoria (15) · Para quem · Carga horária (≤10/10–20/20–40/40–60h) · Nível · Acessibilidade (Libras/AD) · Idioma. Busca (título + tags, tolerante a acento) no topo da sidebar + "Limpar filtros".
+4. **"Mostrando N cursos"** + título "Todos os cursos" + Ordenação: Relevância · Mais cursados · Recentes · A–Z.
+5. Grade de cards com CTA por card (paginação/scroll com fallback rastreável).
+6. Estado vazio (microcopy + sugestões).
 
-**Dados:** cards de curso; contagem por faceta; total de resultados.
+**Dados:** total de cursos publicados e nº de áreas (hero); cards de curso; contagem por faceta; total de resultados.
+
+> **Alteração (v1.4):** hero do catálogo redesenhada para o nível de acabamento do restante do canônico. Substituiu a faixa teal "chapada" (título + duas caixas brancas) por: eyebrow em pill com ponto dourado, título com trecho destacado em `teal-soft`, fundo em camadas (halos + textura de pontos com máscara) e **stat cards em glass** (`backdrop-filter`, ícone em chip, filete dourado no topo, elevação no hover) — coerentes com os `.stat` da Home. Altura reduzida a pedido. Aplicada em `canonico/cursos.html` e `canonico/cursos-en.html` (mesma estrutura, cópia PT/EN); CSS em `canonico/estilos.css` (`.catalog-hero`, `.catalog-hero-decor`, `.catalog-hero .kicker`, `.summary-box`, `.summary-icon`, `.summary-label`).
 
 ---
 
@@ -116,7 +123,7 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…&publico=…`) = **nã
 
 **Propósito:** contar a história de uma coleção de marca/produção.
 
-**Séries:** Atendente e Vendedor (3, com níveis) · Educador Maker (4) · Lovelace (6) · Embrace (3) · Lesson Study (PT/EN = mesmo curso, dois selos de idioma).
+**Séries:** Atendente e Vendedor (3, com níveis) · Educador Maker (4) · Lovelace (6) · Embrace (3, todos com bandeira da Gra-Bretanha e bandeira da Espanha) · Lesson Study (PT/EN = mesmo curso, versão em inglês sinalizada pela bandeira da Gra-Bretanha).
 
 **Seções:** identidade da série · sequência sugerida de cursos · grade.
 
@@ -164,10 +171,25 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…&publico=…`) = **nã
 
 Usado em toda grade (home, catálogo, área, público, série, projeto):
 
-`imagem` · `selos[]` (Libras/AD/Idioma) · `badge_novo?` · `categorias[]` (chips) · `titulo` ·
-`carga_horaria` · `serie/projeto?` · `link → /cursos/{slug}/`.
+`imagem` · `ribbon_libras?` · `badge_novo?` · `categorias[]` (chips) · `titulo` ·
+`carga_horaria` · `serie/projeto?` · `idiomas[]` (`en`/`es`, sem `pt`; visual = bandeiras) · `link → /cursos/{slug}/`.
 
-Fonte: `stages/02-catalogo/output/catalogo-cursos-completo.csv`.
+Fonte: `stages/02-catalogo/output/catalogo-cursos-completo.csv`. Para a série Embrace, a coluna `idioma` registra "Português, Inglês e Espanhol"; na UI, português é implícito e os selos exibidos são as bandeiras da Gra-Bretanha e da Espanha.
+
+---
+
+## Versões de idioma (multilíngue)
+
+O protótipo canônico tem **seletor de idioma** no topo (PT · EN · FR · ES). No protótipo estão prontas as versões **PT (padrão)** e **EN**:
+
+| Página | pt-BR | English |
+|--------|-------|---------|
+| Home | `index.html` | `index-en.html` |
+| Catálogo / Busca | `cursos.html` | `cursos-en.html` |
+
+- **Interface traduzida**; **títulos oficiais dos cursos permanecem em pt-BR** (decisão do cliente — teste de visualização). Detalhes de i18n em `design-spec.md §3.6`.
+- **FR/ES** ainda são placeholder no seletor (sem página) — conteúdo entra no estágio 05.
+- No tema WordPress, a troca por sufixo `-en` deve virar **rota/locale** real.
 
 ---
 
