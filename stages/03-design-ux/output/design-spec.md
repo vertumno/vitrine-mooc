@@ -96,9 +96,29 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
   - **Para quem** (público)
   - **Carga horária** (faixas: ≤10h, 10–20h, 20–40h, 40–60h)
   - **Acessibilidade** (Libras, Audiodescrição)
-  - **Idioma**
+  - **Idioma** — implementado em 20/07/2026 (`data-group="idioma"`, entre Nível e Acessibilidade), a pedido da comissão. Lê o campo `idiomas` do curso, que guarda **códigos** (`pt`/`en`/`es`/`pom`), não rótulos — o mesmo campo alimenta os selos de bandeira do card. Rótulos traduzidos por mapa na página EN (`IDIOMA_LABELS`), como carga e nível.
 - Chips ativos removíveis acima da grade; botão "Limpar filtros".
 - Regra: faceta com **0 resultados** aparece desabilitada (nunca some), com contagem `(0)`.
+- **Libras não é faceta de idioma.** Fica em Acessibilidade, junto com audiodescrição (decisão da comissão em 09/07/2026). Audiodescrição ainda não é faceta: não há curso com o recurso.
+- **Idioma = língua de instrução**, não língua ensinada. Um curso ministrado em português que ensina inglês conta como português; do contrário, filtrar por "Inglês" traria cursos em português.
+
+#### Normalização dos dados que alimentam as facetas
+
+Facetas só funcionam com valor controlado, e a extração da vitrine atual traz texto livre. A normalização vive em `canonico/gerar-dados.mjs` (não nas páginas):
+
+| Campo | Origem | Regra |
+|-------|--------|-------|
+| `cargaLabel` | 25+ grafias (`60h`, `60 horas`, `60 Horas`, `20 h`, `20H`, `30h.`, `10 h`…) | primeiro inteiro do texto → `NNh`; sem número → `Não informada` |
+| `idiomas` | 13 grafias de "Português" + registros multilíngues | lista de códigos; trechos marcados como "língua alvo" são descartados |
+| `nivel` | grafias com ponto final, caixa variada e bloco de professores colado | corta na primeira quebra de linha, compara sem acento |
+
+> Padronizar na origem, não na exibição: o remendo `normalizeWorkload()` que existia em `cursos-en.html` foi removido quando o dado passou a chegar limpo.
+
+#### Aviso de curso obsoleto (`.course-notice`)
+
+Curso substituído por versão mais recente exibe nota entre a meta e o rodapé do card, com filete
+âmbar e marcador `!`. Ligado por `obsoleto`/`obsoletoNota` vindos de `canonico/curadoria.json`.
+Evita que a pessoa se matricule na versão antiga sem saber que há uma atual.
 
 ### 2.4 Seções curadas (home e categorias)
 
@@ -118,7 +138,9 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 ### 2.6 Header
 
 - bg `#ffffff`, borda inferior `#dee2e6`, altura 64px, sticky.
-- Logo Ifes/Vitrine à esquerda → home. Navegação: **Cursos · Áreas · Licença Capacitação · Sobre**. Item ativo em `--cor-primaria`.
+- Logo Ifes/Vitrine à esquerda → home. Item ativo em `--cor-primaria`.
+- **Navegação (atualizada em 20/07/2026):** **Cursos · Projetos · Licença capacitação · Como funciona · Painel de Indicadores · Dúvidas**. Painel de Indicadores e Projetos subiram do rodapé a pedido da comissão (Vanessa, reforçado por Alessandro) — estavam "enterrados" no rodapé. O Painel aponta para a URL real do Power BI; Projetos leva a `#projetos` na Home.
+- **Botão de menu mobile (`.menu-toggle`):** os "três tracinhos" (`.menu-bars`, três barras de 18×2px em `currentColor`), pedido explícito do Alessandro. Substituiu o rótulo textual "Menu", que permanece como `aria-label`. Estado por `aria-expanded`.
 - Busca acessível (ícone que expande). Barra de acessibilidade governamental no topo (contraste, A- A+), padrão gov.
 - **Seletor de idioma** (`.lang-switch`) no canto superior direito, antes do CTA — ver §2.11.
 
@@ -153,7 +175,8 @@ Padding padrão `12px 20px`; **altura mínima 44px** (toque). Estado `:disabled`
 - **Posição:** canto superior direito do header (`.lang-switch`), agrupado com o CTA "Acessar ambiente" (`.site-actions`). Zona de utilidades globais — fica sticky junto ao header.
 - **Anatomia:** botão compacto com ícone de globo + código do idioma atual (`PT`/`EN`…) + chevron → dropdown com 1 item por idioma (bandeira + nome nativo).
 - **Idiomas:** **Português (padrão)** · English · Français · Español. Bandeiras desenhadas em CSS/SVG inline (`.flag-brazil`, `.flag-great-britain`, `.flag-france`, `.flag-spain`).
-- **Comportamento:** PT ⇄ EN navegam para a página irmã traduzida (`index.html` ⇄ `index-en.html`, `cursos.html` ⇄ `cursos-en.html`). FR/ES são placeholder até o estágio 05 (apenas atualizam o estado visual).
+- **Comportamento:** PT ⇄ EN navegam para a página irmã traduzida (`index.html` ⇄ `index-en.html`, `cursos.html` ⇄ `cursos-en.html`).
+- **FR/ES (revisto em 20/07/2026):** ficam **desabilitados**, com selo "em breve" (`aria-disabled="true"` + `data-soon`, opacidade .55). Antes trocavam apenas o rótulo do botão sem navegar — numa demonstração ao vivo isso lê como bug, e não como funcionalidade futura. Continuam visíveis para sinalizar o roadmap. Reativar quando as páginas existirem (estágio 05).
 - **Acessibilidade:** `aria-haspopup`/`aria-expanded`/`aria-controls`, `role="menu"` + `menuitemradio` com `aria-checked`; fecha ao clicar fora e com **Esc** (devolve foco ao botão); `:focus-visible`; atualiza `document.documentElement.lang`.
 
 ### 2.12 Hero do catálogo (`/cursos/`)

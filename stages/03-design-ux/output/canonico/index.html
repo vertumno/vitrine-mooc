@@ -18,9 +18,11 @@
         <span class="brand-name">Cursos Abertos</span>
       </a>
       <nav class="main-nav" id="menu" aria-label="Navegação principal">
-        <a href="#como-funciona">Como funciona</a>
         <a href="cursos.html">Cursos</a>
+        <a href="#projetos">Projetos</a>
         <a href="#licenca">Licença capacitação</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMyN2UxZTktY2FiMi00ZDI1LWE5NTctOGZiZjUzOTdhMjUyIiwidCI6IjQ0ZTllMTcyLWZmYTUtNDNmMy1iMjJjLTM3MWNmY2QyNzJlZCJ9&amp;pageName=ReportSection">Painel de Indicadores</a>
         <a href="#faq">Dúvidas</a>
       </nav>
       <div class="site-actions">
@@ -33,12 +35,12 @@
           <ul class="lang-menu" id="lang-menu" role="menu">
             <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" href="index-en.html" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français</a></li>
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français<span class="lang-soon">em breve</span></a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español<span class="lang-soon">em breve</span></a></li>
           </ul>
         </div>
         <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Acessar ambiente</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">Menu</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" onclick="toggleMenu(this)"><span class="menu-bars" aria-hidden="true"></span></button>
       </div>
     </div>
   </header>
@@ -332,21 +334,17 @@
                 <span class="course-footer"><span class="mini-cta">Acessar curso</span><span class="course-badges"><span class="course-badge badge-language" title="Curso também disponível em inglês" aria-label="Curso também disponível em inglês"><span class="flag flag-great-britain" aria-hidden="true"></span></span></span></span>
               </div>
             </a>
-            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?moodle-para-educadores">
-              <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mooc_Moodle-01.jpg" alt="Imagem do curso Moodle para Educadores" loading="lazy"></div>
-              <div class="course-body" data-rank="02">
-                <span class="course-cat">Educação a Distância</span>
-                <h3>Moodle para Educadores</h3>
-                <p class="course-meta"><span>60h</span><span>11.392 matrículas</span></p>
-                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
-              </div>
-            </a>
+            <!-- "Moodle para Educadores" era o 2o mais cursado (11.392 matriculas), mas e a
+                 versao anterior e sera extinta (reuniao de 09/07/2026). Foi retirado da
+                 vitrine e a lista seguiu para o 9o colocado real, "Introducao a Libras".
+                 As matriculas nao foram transferidas para o "Moodle 4": aquele curso tem
+                 1.272 matriculas proprias. Fonte: powerbi-mooc-ifes/indicadores-por-curso.csv. -->
             <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?uso-educacional-canva">
               <div class="course-media">
                 <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Uso_Educacional_Canva_Vitrine.png" alt="Imagem do curso Uso Educacional do Canva" loading="lazy">
                 <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
               </div>
-              <div class="course-body" data-rank="03">
+              <div class="course-body" data-rank="02">
                 <span class="course-cat">Design</span>
                 <h3>Uso Educacional do Canva</h3>
                 <p class="course-meta"><span>6h</span><span>8.589 matrículas</span></p>
@@ -358,7 +356,7 @@
                 <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/mooc_drive_colab.png" alt="Imagem do curso Google Drive: Colaboração na prática" loading="lazy">
                 <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
               </div>
-              <div class="course-body" data-rank="04">
+              <div class="course-body" data-rank="03">
                 <span class="course-cat">Tecnologias Educacionais</span>
                 <h3>Google Drive: Colaboração na prática</h3>
                 <p class="course-meta"><span>8h</span><span>8.007 matrículas</span></p>
@@ -367,7 +365,7 @@
             </a>
             <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?acessibilidade-e-tecnologia">
               <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Acessibilidade_Tecnologia_Vitrine.jpg" alt="Imagem do curso Acessibilidade e Tecnologia" loading="lazy"></div>
-              <div class="course-body" data-rank="05">
+              <div class="course-body" data-rank="04">
                 <span class="course-cat">Inclusão e Acessibilidade</span>
                 <h3>Acessibilidade e Tecnologia</h3>
                 <p class="course-meta"><span>60h</span><span>7.800 matrículas</span></p>
@@ -376,7 +374,7 @@
             </a>
             <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?mediacao-pedagogica-no-moodle">
               <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_mediacao_pedagogica.png" alt="Imagem do curso Mediação Pedagógica no Moodle" loading="lazy"></div>
-              <div class="course-body" data-rank="06">
+              <div class="course-body" data-rank="05">
                 <span class="course-cat">Educação a Distância</span>
                 <h3>Mediação Pedagógica no Moodle</h3>
                 <p class="course-meta"><span>60h</span><span>7.187 matrículas</span></p>
@@ -385,7 +383,7 @@
             </a>
             <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?educador-maker-primeiros-passos">
               <div class="course-media"><img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/1_Vitrine_Educador_Maker_PP_primeiro_curso.png" alt="Imagem do curso Educador Maker: Primeiros Passos" loading="lazy"></div>
-              <div class="course-body" data-rank="07">
+              <div class="course-body" data-rank="06">
                 <span class="course-cat">Educação</span>
                 <h3>Educador Maker: Primeiros Passos</h3>
                 <p class="course-meta"><span>30h</span><span>6.861 matrículas</span></p>
@@ -397,10 +395,22 @@
                 <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_FerramentaGravacaoVideo.jpg" alt="Imagem do curso Ferramenta para gravação de videoaulas" loading="lazy">
                 <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
               </div>
-              <div class="course-body" data-rank="08">
+              <div class="course-body" data-rank="07">
                 <span class="course-cat">Tecnologias Educacionais</span>
                 <h3>Ferramenta para gravação de videoaulas</h3>
                 <p class="course-meta"><span>5h</span><span>6.838 matrículas</span></p>
+                <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
+              </div>
+            </a>
+            <a class="course-card rank-card" href="https://mooc.cefor.ifes.edu.br/moodle/course/view.php?introducao-libras">
+              <div class="course-media">
+                <img src="https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/Vitrine_MOOC_Introducao_Libras.png" alt="Imagem do curso Introdução à Libras" loading="lazy">
+                <img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">
+              </div>
+              <div class="course-body" data-rank="08">
+                <span class="course-cat">Inclusão e Acessibilidade · Línguas</span>
+                <h3>Introdução à Libras</h3>
+                <p class="course-meta"><span>30h</span><span>6.476 matrículas</span></p>
                 <span class="course-footer"><span class="mini-cta">Acessar curso</span></span>
               </div>
             </a>
@@ -471,7 +481,7 @@
     </section>
 
     <!-- Projetos e séries -->
-    <section class="colecoes-sec reveal">
+    <section class="colecoes-sec reveal" id="projetos">
       <div class="wrap">
         <div class="sec-head">
           <div>
@@ -554,7 +564,7 @@
             <span>Prévia do planejador</span>
             <strong>30 dias</strong>
           </div>
-          <p class="service-panel-lead">Veja a carga estimada, componha cursos e leve uma trilha mais organizada para validação administrativa.</p>
+          <p class="service-panel-lead">Some a carga horária dos cursos escolhidos e monte um plano para levar ao seu órgão.</p>
 
           <div class="license-meter" aria-label="Carga horária estimada para exemplo de licença">
             <div class="meter-row">
@@ -573,8 +583,8 @@
           </div>
 
           <div class="license-note">
-            <strong>Planejador em estudo</strong>
-            <p>O simulador poderá ajudar a somar cargas horárias, organizar datas e conferir requisitos antes da solicitação formal.</p>
+            <strong>O planejador é um guia, não faz a solicitação</strong>
+            <p>Ele soma a carga horária dos cursos escolhidos, reúne os links e mostra o passo a passo. A matrícula em cada curso e a abertura do processo de licença continuam sendo feitas por você, no ambiente do curso e no seu órgão.</p>
           </div>
         </aside>
       </div>
@@ -913,10 +923,16 @@
 
       items.forEach(item => {
         item.addEventListener("click", event => {
+          // FR/ES ainda nao tem pagina. O item segue visivel para sinalizar o
+          // roadmap, mas nao troca nada: trocar so o rotulo, como antes, dava a
+          // impressao de que a traducao estava quebrada.
+          if (item.hasAttribute("data-soon")) {
+            event.preventDefault();
+            return;
+          }
           const href = item.getAttribute("href");
           // Idiomas com pagina propria (PT/EN) navegam de verdade.
           if (href && href !== "#") return;
-          // FR/ES ainda sem pagina: apenas atualiza o estado visual (prototipo).
           event.preventDefault();
           items.forEach(other => other.setAttribute("aria-checked", String(other === item)));
           current.textContent = item.dataset.lang;

@@ -279,4 +279,64 @@ Comecar pela Home: migrar a hero aprovada para `prototipo-cursos-abertos/index.h
 
 **Pendencias herdadas:** FR/ES sem pagina; troca de idioma por sufixo `-en` deve virar rota/locale no tema WordPress (estagio 05).
 
+### 20/07/2026 — Ajustes pedidos pela comissao em 09/07
+
+> Origem: `shared/resumo-reuniao-2026-07-09.md`. Escopo desta rodada: **apenas o prototipo canonico
+> (Home + Catalogo)**. Nao foram criadas paginas novas nem tocado o tema WordPress.
+
+**Dados — nova base reproduzivel**
+
+1. **`canonico/gerar-dados.mjs`** (novo) — gera `cursos-dados.js` a partir de
+   `stages/02-catalogo/output/catalogo-cursos-completo.json` + `canonico/curadoria.json`. Antes o
+   arquivo era gerado ad-hoc, sem script; as correcoes abaixo teriam de ser refeitas a mao quando o
+   dump do WordPress chegar. Saida deterministica (`node gerar-dados.mjs`).
+2. **`canonico/curadoria.json`** (novo) — series, projetos parceiros, idiomas adicionais e cursos
+   obsoletos. Esses dados **nao existem na fonte**: sao decisao do CEFOR e agora vivem versionados.
+3. **Carga horaria padronizada** (pedido do Marquito) — a fonte tinha 25+ grafias (`60h`, `60 horas`,
+   `60 Horas`, `20 h`, `20H`, `30h.`, `10 h`...). Regra: primeiro inteiro do texto -> `NNh`; sem
+   numero -> `Nao informada`. As faixas do filtro nao mudaram: a distribuicao por bucket e identica
+   a anterior. Efeito colateral: o remendo `normalizeWorkload()` de `cursos-en.html` foi removido.
+4. **Idioma normalizado** (habilita o filtro) — 13 grafias de "Portugues" consolidadas; registros
+   multilingues viram lista. A faceta e sobre a **lingua de instrucao**: "Portugues (lingua de
+   instrucao) e ingles (lingua alvo)" conta como portugues, nao como ingles.
+5. **Serie Lesson Study removida** — PT/EN sao o mesmo curso, restando 2 distintos, abaixo do
+   criterio de 3 reafirmado na reuniao.
+6. **Curso obsoleto sinalizado** — "Moodle para Educadores" (n=95) ganhou `obsoleto` + `obsoletoNota`.
+
+**Catalogo (`cursos.html`, `cursos-en.html`)**
+
+7. **Filtro de idioma** (`data-group="idioma"`), entre Nivel e Acessibilidade — pedido da Vanessa,
+   aceito pelo Elton. Cumpre a promessa que a lead da pagina ja fazia. Libras **nao** entra aqui:
+   segue em Acessibilidade, conforme definicao do Marquito. Contagens: Portugues 165 · Ingles 4 ·
+   Espanhol 4 · Pomerano 1.
+8. **Aviso de versao no card** do curso obsoleto (`.course-notice`), atendendo a Aline.
+
+**Home (`index.html`)**
+
+9. **Menu ampliado** — Cursos · Projetos · Licenca capacitacao · Como funciona · Painel de
+   Indicadores · Duvidas. Painel e Projetos sobem do rodape para a navegacao (pedido da Vanessa,
+   reforcado pelo Alessandro). Secao de projetos ganhou `id="projetos"`.
+10. **Icone hamburguer** — os "tres tracinhos" pedidos pelo Alessandro substituem o rotulo "Menu".
+11. **Planejador de licenca descrito como instrucional** — Vanessa foi enfatica: o operacional
+    envolve bloqueio de curso e a DGP. O painel agora diz o que o planejador faz e o que **nao** faz.
+12. **Curso obsoleto fora dos mais cursados** — o card foi removido, os ranks 03..08 subiram e
+    entrou o 9o colocado real, "Introducao a Libras" (6.476). As 11.392 matriculas **nao** foram
+    transferidas para o "Moodle 4 para Educadores", que tem 1.272 proprias.
+
+**Seletor de idioma**
+
+13. **FR/ES desabilitados** com selo "em breve" (`aria-disabled`, `data-soon`). Antes trocavam so o
+    rotulo visual sem navegar, o que numa demonstracao ao vivo parecia bug.
+
+**Arquivos tocados:** `canonico/gerar-dados.mjs` (novo), `canonico/curadoria.json` (novo),
+`cursos-dados.js` (regerado), `index.html`, `cursos.html`, `cursos-en.html`, `index-en.html` (parcial),
+`estilos.css`.
+
+**Pendencias desta rodada:**
+- **Home em ingles incompleta** — faltam o item 12 e o item 11 em `index-en.html`. Trabalho em
+  ingles pausado a pedido do cliente em 20/07/2026.
+- **Imagens de pessoas na Home** (item D10 da reuniao) — nao executado nesta rodada.
+- **Destaques por consulta dinamica** — registrado como requisito do estagio 05
+  (`shared/backlog-pos-lancamento.md` §1).
+
 

@@ -14,8 +14,33 @@
 | `index-en.html` | Home (English) |
 | `cursos-en.html` | Catálogo/busca (English) |
 | `estilos.css` | Folha de estilo única, compartilhada por todas as páginas |
-| `cursos-dados.js` | Dados dos 165 cursos + facetas (fonte única, em pt-BR) |
+| `cursos-dados.js` | Dados dos 165 cursos + facetas (fonte única, em pt-BR) — **gerado, não editar à mão** |
+| `gerar-dados.mjs` | Gera `cursos-dados.js` (ver abaixo) |
+| `curadoria.json` | Séries, projetos, idiomas adicionais e cursos obsoletos — curadoria do CEFOR |
 | `assets/` | Imagens do hero, ribbon de Libras e ícones |
+
+## Como regerar os dados
+
+```bash
+node gerar-dados.mjs
+```
+
+Lê duas entradas e escreve `cursos-dados.js`:
+
+1. `stages/02-catalogo/output/catalogo-cursos-completo.json` — a extração da vitrine atual.
+2. `curadoria.json` — o que **não existe** na fonte e é decisão do CEFOR: quais cursos formam cada
+   série, quais pertencem a cada projeto parceiro, idiomas adicionais e cursos substituídos por
+   versão mais recente.
+
+O gerador também normaliza o texto livre da extração, que vinha bagunçado: carga horária (25+
+grafias → `NNh`), idioma (13 grafias de "Português" → códigos `pt`/`en`/`es`/`pom`) e nível. A saída
+é determinística — rodar duas vezes produz o mesmo arquivo.
+
+> **Para alterar séries, projetos ou marcar um curso como obsoleto:** edite `curadoria.json` e rode
+> o gerador. Não edite `cursos-dados.js`.
+
+Quando o dump do WordPress chegar (estágio 04), a fonte muda mas a curadoria e as regras de
+normalização continuam valendo.
 
 ## Funcionalidades implementadas
 
@@ -40,6 +65,10 @@
 - Altura **compacta** (`padding` vertical `clamp(32px,4.5vw,50px)`); colapsa para 1 coluna no mobile. Espelhada em `cursos.html` (PT) e `cursos-en.html` (EN). CSS: `.catalog-hero`, `.catalog-hero-decor`, `.summary-box`, `.summary-icon`, `.summary-label`.
 
 ## Limitações conhecidas / próximos passos
-- **FR/ES** sem página própria — o seletor apenas troca o rótulo. Integrar i18n de verdade no estágio 05 (WordPress/tema).
+- **FR/ES** sem página própria — desde 20/07/2026 aparecem **desabilitados**, com selo "em breve", em vez de trocar só o rótulo (o que parecia bug). Integrar i18n de verdade no estágio 05 (WordPress/tema).
 - Catálogo em EN mantém títulos de curso em pt-BR (decisão acima).
 - Troca de idioma é por **página irmã** (sufixo `-en`), não por parâmetro/rota. No tema WordPress isso deve virar rota/locale.
+- **Versão em inglês desatualizada** — trabalho em inglês pausado a pedido do cliente em 20/07/2026. Falta, em relação ao PT:
+  - `index-en.html`: retirar o curso "Moodle para Educadores" dos mais cursados (renumerando os ranks e incluindo "Introdução à Libras") e aplicar o novo texto do planejador de licença.
+  - `cursos-en.html`: desabilitar FR/ES no seletor de idioma (`data-soon` + `aria-disabled`), como já está nas outras três páginas.
+- **Carrosséis da Home são estáticos** — "Em destaque", "Mais cursados" e "Recentes" estão fixos no HTML. A comissão pediu (09/07) que venham de consulta ao banco com janela temporal configurável; é requisito do estágio 05. As ordenações "Mais cursados"/"Recentes" do catálogo também não funcionam de fato: dependem de campos (`demanda`, `recente`) que não existem em `cursos-dados.js`.

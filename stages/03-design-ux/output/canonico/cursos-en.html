@@ -94,6 +94,11 @@
             <ul id="f-nivel"></ul>
           </div>
 
+          <div class="filter-group" data-group="idioma">
+            <h3>Language</h3>
+            <ul id="f-idioma"></ul>
+          </div>
+
           <div class="filter-group" data-group="acessibilidade">
             <h3>Accessibility</h3>
             <ul>
@@ -297,16 +302,20 @@
       "nao-informado": "Not specified"
     };
 
+    const IDIOMA_LABELS = {
+      "pt": "Portuguese",
+      "en": "English",
+      "es": "Spanish",
+      "pom": "Pomeranian"
+    };
+
     function translateLabel(group, slug, nome) {
       if (group === "categoria") return CATEGORY_NAMES[slug] || nome;
       if (group === "carga") return CARGA_LABELS[slug] || nome;
       if (group === "nivel") return NIVEL_LABELS[slug] || nome;
+      if (group === "idioma") return IDIOMA_LABELS[slug] || nome;
       if (group === "acessibilidade") return "With Libras";
       return nome; // projeto/serie: nomes proprios mantidos
-    }
-
-    function normalizeWorkload(label) {
-      return String(label || "").replace(/\s*horas?/i, "h");
     }
 
     const DEMAND_RANK = {
@@ -360,6 +369,7 @@
       ["categoria", "f-categoria", CANONICAL_CATEGORIES],
       ["carga", "f-carga", window.CURSOS_FILTROS?.carga || []],
       ["nivel", "f-nivel", window.CURSOS_FILTROS?.nivel || []],
+      ["idioma", "f-idioma", window.CURSOS_FILTROS?.idioma || []],
       ["projeto", "f-projeto", window.CURSOS_FILTROS?.projeto || []],
       ["serie", "f-serie", window.CURSOS_FILTROS?.serie || []]
     ];
@@ -371,6 +381,8 @@
     function valuesFor(course, group) {
       if (group === "categoria") return course.categoriaCanonica;
       if (group === "acessibilidade") return course.libras ? ["libras"] : [];
+      // O grupo "idioma" (singular, na faceta) le o campo "idiomas" do curso.
+      if (group === "idioma") return course.idiomas || [];
       const value = course[group];
       return Array.isArray(value) ? value : [value].filter(Boolean);
     }
@@ -389,7 +401,8 @@
 
     const FILTER_ORDER = {
       carga: ["ate-10", "10-20", "20-40", "40-60", "mais-60", "nao-informada"],
-      nivel: ["basico", "intermediario", "avancado", "nao-informado"]
+      nivel: ["basico", "intermediario", "avancado", "nao-informado"],
+      idioma: ["pt", "en", "es", "pom"]
     };
 
     function sortFilterItems(group, items) {
@@ -479,9 +492,17 @@
         : "";
     }
 
+    // Curso substituido por versao mais recente: avisa antes da matricula
+    // (pedido da Aline na reuniao de 09/07/2026).
+    function obsoleteNoticeHtml(course) {
+      return course.obsoleto
+        ? `<p class="course-notice">${esc(course.obsoletoNotaEn || course.obsoletoNota)}</p>`
+        : "";
+    }
+
     function cardHtml(course) {
-      const meta = [normalizeWorkload(course.cargaLabel), translateLabel("nivel", course.nivel, course.nivelLabel)].filter(Boolean);
-      return `<article class="course-card">
+      const meta = [course.cargaLabel, translateLabel("nivel", course.nivel, course.nivelLabel)].filter(Boolean);
+      return `<article class="course-card${course.obsoleto ? " is-obsolete" : ""}">
         <div class="course-media">
           <img src="${esc(course.thumb)}" alt="Course thumbnail: ${esc(course.titulo)}" loading="lazy">
           ${librasRibbonHtml(course)}
@@ -490,6 +511,7 @@
           <span class="course-cat">${esc(course.categoriaCanonicaNomes.join(" · "))}</span>
           <h3>${esc(course.titulo)}</h3>
           <p class="course-meta">${meta.map(item => `<span>${esc(item)}</span>`).join("")}</p>
+          ${obsoleteNoticeHtml(course)}
           <span class="course-footer"><a class="mini-cta" href="${esc(course.link)}">Access course</a>${footerBadgesHtml(course)}</span>
         </div>
       </article>`;

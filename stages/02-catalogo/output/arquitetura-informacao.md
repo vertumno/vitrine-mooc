@@ -92,7 +92,10 @@ Idioma resolve duplicatas: "Lesson Study" PT e EN = **mesma série com versão e
 
 ## 7. Séries e Projetos (proveniência)
 
-- **Séries** (marca/produção; selo + página de coleção): Atendente e Vendedor (3, com níveis), Educador Maker (4), Lovelace (6, paralelos), Embrace (3, todos com inglês e espanhol), Lesson Study (PT/EN = mesmo curso).
+- **Séries** (marca/produção; selo + página de coleção): Atendente e Vendedor (3, com níveis), Educador Maker (4), Lovelace (6, paralelos), Embrace (3, todos com inglês e espanhol).
+- **Critério de série (confirmado em 09/07/2026):** 3 ou mais cursos distintos da mesma temática.
+- **Lesson Study foi removida** (20/07/2026). As versões PT e EN são o mesmo curso, restando 2 distintos — abaixo do critério. Elton apontou isso na própria reunião: *"o Lesson Study nem vai entrar porque ele só tem dois cursos."* Os cursos continuam no catálogo; o que deixou de existir foi o agrupamento.
+- **Nomenclatura "Série" — provisória.** Aline questionou o termo na reunião de 09/07, sugerindo "trilha". Elton escolheu "série" porque "trilha" sugere sequência e nem todo agrupamento é sequencial (Lovelace não é). Vanessa pesquisou na hora e apontou que trilha **também** pode ser agrupamento livre, não linear. A comissão decidiu **não travar o nome agora**: lança como "Série" e revisita depois, junto com os critérios e com a hipótese de incluir o campo no formulário de cadastro. Marquito: mudar o nome é barato. Ver `shared/resumo-reuniao-2026-07-09.md` §3.
 - **Projetos parceiros** (parceria + hub próprio): **Rio Doce Escolar** (31, `/v/riodoce/`), **UnAC** (33, `/v/unac/`) — **Universidade Aberta Capixaba**, programa do Governo do Estado do Espírito Santo para expandir e democratizar o Ensino Superior gratuito; parceria Ifes (via CEFOR) × Governo do ES na oferta de cursos abertos, massivos e online de alta qualidade para toda a sociedade.
 - Um Projeto é uma Série grande com identidade institucional.
 

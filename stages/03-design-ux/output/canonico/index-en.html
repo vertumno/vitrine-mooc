@@ -18,9 +18,11 @@
         <span class="brand-name">Open Courses</span>
       </a>
       <nav class="main-nav" id="menu" aria-label="Main navigation">
-        <a href="#como-funciona">How it works</a>
         <a href="cursos-en.html">Courses</a>
+        <a href="#projetos">Projects</a>
         <a href="#licenca">Training leave</a>
+        <a href="#como-funciona">How it works</a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMyN2UxZTktY2FiMi00ZDI1LWE5NTctOGZiZjUzOTdhMjUyIiwidCI6IjQ0ZTllMTcyLWZmYTUtNDNmMy1iMjJjLTM3MWNmY2QyNzJlZCJ9&amp;pageName=ReportSection">Dashboard</a>
         <a href="#faq">Help</a>
       </nav>
       <div class="site-actions">
@@ -33,12 +35,12 @@
           <ul class="lang-menu" id="lang-menu" role="menu">
             <li role="none"><a role="menuitemradio" aria-checked="false" href="index.html" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
             <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français</a></li>
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français<span class="lang-soon">soon</span></a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español<span class="lang-soon">soon</span></a></li>
           </ul>
         </div>
         <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Access platform</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">Menu</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" onclick="toggleMenu(this)"><span class="menu-bars" aria-hidden="true"></span></button>
       </div>
     </div>
   </header>
@@ -471,7 +473,7 @@
     </section>
 
     <!-- Projects and series -->
-    <section class="colecoes-sec reveal">
+    <section class="colecoes-sec reveal" id="projetos">
       <div class="wrap">
         <div class="sec-head">
           <div>
@@ -913,10 +915,16 @@
 
       items.forEach(item => {
         item.addEventListener("click", event => {
+          // FR/ES ainda nao tem pagina. O item segue visivel para sinalizar o
+          // roadmap, mas nao troca nada: trocar so o rotulo, como antes, dava a
+          // impressao de que a traducao estava quebrada.
+          if (item.hasAttribute("data-soon")) {
+            event.preventDefault();
+            return;
+          }
           const href = item.getAttribute("href");
           // Idiomas com pagina propria (PT/EN) navegam de verdade.
           if (href && href !== "#") return;
-          // FR/ES ainda sem pagina: apenas atualiza o estado visual (prototipo).
           event.preventDefault();
           items.forEach(other => other.setAttribute("aria-checked", String(other === item)));
           current.textContent = item.dataset.lang;

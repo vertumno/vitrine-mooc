@@ -1,0 +1,171 @@
+{
+  "_doc": "Curadoria manual da Vitrine. Séries, projetos parceiros, idiomas adicionais e sinalização de curso obsoleto NÃO existem na fonte (catalogo-cursos-completo.json) — são decisões do CEFOR, definidas aqui e aplicadas por gerar-dados.mjs. Cursos são referenciados pelo campo n.",
+  "series": [
+    {
+      "slug": "lovelace",
+      "nome": "Lovelace",
+      "cursos": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123
+      ]
+    },
+    {
+      "slug": "educador-maker",
+      "nome": "Educador Maker",
+      "cursos": [
+        124,
+        125,
+        126,
+        127
+      ]
+    },
+    {
+      "slug": "atendente-e-vendedor",
+      "nome": "Atendente e Vendedor",
+      "cursos": [
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "slug": "embrace",
+      "nome": "Embrace",
+      "cursos": [
+        42,
+        43,
+        44
+      ]
+    }
+  ],
+  "series_removidas": [
+    {
+      "slug": "lesson-study",
+      "nome": "Lesson Study",
+      "cursos": [
+        163,
+        164,
+        165
+      ],
+      "motivo": "Reunião da comissão em 09/07/2026: o critério de série é ter 3 ou mais cursos distintos. As versões PT e EN são o mesmo curso, restando 2 distintos."
+    }
+  ],
+  "projetos": [
+    {
+      "slug": "rio-doce-escolar",
+      "nome": "Rio Doce Escolar",
+      "cursos": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ]
+    },
+    {
+      "slug": "unac",
+      "nome": "UnAC",
+      "cursos": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        51,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ]
+    }
+  ],
+  "idiomas_curados": [
+    {
+      "n": 42,
+      "titulo": "Digipeda – Competências Digitais e Pedagógicas",
+      "idiomas": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "n": 43,
+      "titulo": "Pedagogias ativas com uso de ferramentas digitais",
+      "idiomas": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "n": 44,
+      "titulo": "Competências digitais para o desenvolvimento profissional",
+      "idiomas": [
+        "en",
+        "es"
+      ]
+    }
+  ],
+  "obsoletos": [
+    {
+      "n": 95,
+      "titulo": "Moodle para Educadores",
+      "nota": "Versão anterior. Prefira o Moodle 4 para Educadores, atualizado.",
+      "substituto_n": 2,
+      "motivo": "Reunião de 09/07/2026: Aline abrirá o processo de extinção (conclui no fim do ano). Simoni relatou inscrições todo mês. Até lá, o curso não aparece nas vitrines da Home e exibe aviso no catálogo.",
+      "nota_en": "Earlier version. Prefer Moodle 4 para Educadores, which is up to date."
+    }
+  ]
+}
