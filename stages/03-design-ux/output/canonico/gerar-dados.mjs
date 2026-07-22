@@ -27,8 +27,19 @@ const SAIDA = join(AQUI, "cursos-dados.js");
 const chave = (s) =>
   String(s ?? "")
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
+    .trim();
+
+/**
+ * Título: a extração arrasta caracteres invisíveis do HTML da vitrine atual —
+ * object replacement (U+FFFC), zero-width e BOM. Eles não aparecem no editor,
+ * mas viram três quadradinhos na tela do usuário.
+ */
+const limparTitulo = (s) =>
+  String(s ?? "")
+    .replace(/[\uFFFC\u200B-\u200D\uFEFF]/g, "")
+    .replace(/\s+/g, " ")
     .trim();
 
 /**
@@ -144,7 +155,7 @@ const cursos = fonte.cursos.map((bruto) => {
 
   const curso = {
     n: bruto.n,
-    titulo: bruto.titulo_catalogo,
+    titulo: limparTitulo(bruto.titulo_catalogo),
     categoria,
     categoriaNomes,
     ...normalizarCarga(campos.carga_horaria),
@@ -158,7 +169,7 @@ const cursos = fonte.cursos.map((bruto) => {
     link: bruto.link_curso,
     thumb: bruto.link_thumb,
     search: [
-      bruto.titulo_catalogo,
+      limparTitulo(bruto.titulo_catalogo),
       ...categoriaNomes,
       ...tags,
       campos.descricao_curso ?? "",

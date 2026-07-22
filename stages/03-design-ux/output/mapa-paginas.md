@@ -23,7 +23,7 @@ e **indexável?** (SEO). Metadados do curso seguem o **Art. 14 da Resolução CS
 | 4 | Área (categoria) | `/areas/{slug}/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/area-educacao.html`) |
 | 5 | Série | `/series/{slug}/` | ✅ | — |
 | 6 | Projeto parceiro | `/v/{slug}/` (Rio Doce, UnAC) | ✅ | — |
-| 7 | Licença Capacitação + Planejador | `/qualificacao/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/qualificacao.html`) |
+| 7 | Licença Capacitação + Planejador | `/qualificacao/` | ✅ | `licenca-v3.html` (v3) |
 | 8 | Certificação | `/certificacao/` | ✅ | — |
 | 9 | Sobre | `/sobre/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/sobre.html`) |
 | 10 | Perguntas frequentes | `/faq/` | ✅ | — (arquivado: `_arquivo/prototipo-vitrine-mooc/perguntas-frequentes.html`) |
@@ -145,9 +145,25 @@ Combinações de faceta (`/cursos/?categoria=…&carga=…&publico=…`) = **nã
 
 **Propósito:** serviço para servidores públicos (não é filtro de conteúdo).
 
-**Seções:** o que é a Licença · quem tem direito · legislação · **Planejador** (monta combinação de cursos somando `carga_horaria` até a meta de horas) · CTA.
+**Seções (protótipo `canonico/licenca-v3.html`):** faixa de título · **barra de controles** (dias em
+chips, data de início, carga mínima) · **medidor** (somado × mínimo) · **cursos do plano** +
+**linha do tempo** lado a lado · botão de imprimir · **"Como se inscrever em cada curso"**, com os
+seis prints reais do ambiente. Escolher curso abre um `<dialog>` com busca e filtro por área.
 
-**Dados:** `carga_horaria` (já populada) por curso; meta de horas informada pelo usuário.
+**Fonte do procedimento:** `references/licenca-capacitacao-pagina-oficial.md` (página oficial do
+Cefor, capturada em 22/07/2026). A inscrição para licença é feita **dentro de cada curso**, na
+atividade *Licença para capacitação* — por isso o plano impresso leva o endereço da sala de cada
+curso, as datas a informar em cada um e o passo a passo. Regras que viraram comportamento: oferta
+anual (o planejador avisa se o período atravessa o ano) e declaração emitida no mesmo dia.
+
+**Regra de cálculo:** carga horária mínima = `ceil(dias ÷ 7 × 30h)` — a referência de 30h de curso por
+semana é a do Cefor (FAQ 17). 30 dias → 129h, o mesmo número exibido na chamada da Home.
+
+**Dados:** `cursos-dados.js` — entram os 155 cursos com carga horária conhecida e não obsoletos.
+Período e dias são informados pelo usuário. Funciona sem autenticação e sem back-end (PLC-08).
+
+**Escopo:** instrucional, conforme decisão da comissão em 09/07/2026 — soma carga horária, monta
+cronograma, reúne links e imprime o plano. Não inscreve, não emite declaração, não abre processo.
 
 ---
 

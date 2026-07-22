@@ -1,0 +1,1435 @@
+@charset "UTF-8";
+
+/* ============================================================================
+   estilos-v3.css — camada de refino tipográfico da home
+   Carregada DEPOIS de estilos.css. Mesmo layout, mesma paleta, mesma estrutura.
+   Só mexe em: tamanho de fonte, peso, tracking, entrelinha, espaçamento e margem.
+
+   Princípio: hierarquia por PESO, COR e ESPAÇO — não por tamanho.
+   O canônico só tinha uma alavanca (aumentar a fonte) e usou ela em toda seção.
+
+   Escala (base 16px):
+     11px  eyebrow / rótulo em caixa alta     .6875rem
+     12px  micro-rótulo                        .75rem
+     13px  dado, metadado, link secundário     .8125rem
+     14px  apoio denso                         .875rem
+     15px  apoio, descrição de seção           .9375rem
+     16px  corpo                               1rem
+     17px  h3 de bloco                         1.0625rem
+     18px  lead
+     24-30px  h2 de seção
+     32-44px  h1
+   ========================================================================= */
+
+:root {
+  /* Ritmo vertical único. Antes: section fixo em 64px em qualquer viewport —
+     apertado no desktop grande, exagerado no celular. */
+  --section-y: clamp(3.25rem, 5vw, 5rem);      /* 52 → 80px */
+  --section-head-gap: clamp(1.5rem, 2.2vw, 2rem);
+
+  --card-gap: 20px;                             /* era 22px */
+  --stat-card-h: 138px;                         /* era 152px */
+
+  /* Tracking óptico: texto grande precisa fechar, texto pequeno precisa abrir. */
+  --track-display: -.022em;
+  --track-h2: -.018em;
+  --track-h3: -.008em;
+  --track-eyebrow: .09em;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+
+body {
+  font: 1rem/1.6 var(--body);
+  font-synthesis-weight: none;                  /* impede peso falso do 500 */
+}
+
+h1, h2, h3 {
+  text-wrap: balance;                           /* evita órfã na última linha */
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Toda medida da página (carga horária, matrículas, rank, %) com dígito de
+   largura fixa. Números param de "dançar" entre cards. */
+.stat strong,
+.course-meta,
+.rank-card .course-body::before,
+.mooc-proof-main strong,
+.service-panel-head strong,
+.meter-row strong,
+.license-stack,
+.serie .n,
+.projeto .n {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.brand {
+  gap: 12px;
+  font-size: 1rem;                              /* era 1.12rem / 800 */
+  font-weight: 700;
+  letter-spacing: -.005em;
+}
+
+.main-nav {
+  gap: 22px;
+}
+
+.main-nav a {
+  font-size: .875rem;                           /* era .86rem / 600 */
+  font-weight: 500;
+  letter-spacing: .005em;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  font-weight: 600;                             /* estado ativo por peso, não por cor só */
+}
+
+.lang-btn {
+  min-height: 38px;
+  font-size: .8125rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.lang-menu a {
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+.lang-soon {
+  font-size: .625rem;
+  letter-spacing: .06em;
+}
+
+/* ── Botões ───────────────────────────────────────────────────────────────── */
+
+.btn {
+  padding: 0 20px;
+  font-size: .9375rem;                          /* era 16px herdado */
+  font-weight: 600;
+  letter-spacing: .005em;
+}
+
+.site .btn-primary {
+  min-height: 40px;
+  font-size: .875rem;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+
+.hero {
+  padding-bottom: calc(var(--stat-card-h) / 2 + 46px);
+}
+
+.hero-content {
+  margin-top: clamp(52px, 8vh, 88px);
+}
+
+/* Eyebrow de verdade: pequeno, em caixa alta, com tracking aberto.
+   Antes era 13,4px/700 em caixa normal, competindo com o lead. */
+.kicker {
+  margin-bottom: 18px;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+}
+
+.kicker::before {
+  width: 6px;
+  height: 6px;
+}
+
+/* 56,8px → 44px. O tamanho que sobrou virou tracking negativo e entrelinha
+   fechada, que é o que faz um display parecer desenhado e não esticado. */
+.hero h1 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);       /* 32 → 44px */
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: var(--track-display);
+}
+
+/* Segunda linha desce de peso em vez de mudar de tamanho. Contraste sem escala. */
+.hero h1 span {
+  font-weight: 500;
+  letter-spacing: -.014em;
+}
+
+.lead {
+  max-width: 640px;
+  margin-top: 18px;
+  font-size: clamp(1rem, .35vw + .92rem, 1.125rem);  /* 16 → 18px (era 19,5) */
+  line-height: 1.62;
+}
+
+.hero-search {
+  margin-top: 30px;
+  padding: 6px 6px 6px 18px;
+}
+
+.hero-search input {
+  padding: 11px 4px;
+  font-size: .9375rem;
+}
+
+.hero-search input::placeholder {
+  color: #83999b;
+}
+
+.hero-actions {
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* ── Faixa de indicadores ─────────────────────────────────────────────────── */
+
+.stat {
+  gap: 14px;
+  padding: 22px 24px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+}
+
+.stat-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.stat strong {
+  font-size: clamp(1.65rem, 2vw, 2.05rem);      /* 26,4 → 32,8px (era até 40) */
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+
+.stat-body span {
+  margin-top: 6px;
+  font-size: .8125rem;
+  font-weight: 500;                             /* era 700 — rótulo não precisa gritar */
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+/* ── Ritmo de seção ───────────────────────────────────────────────────────── */
+
+section {
+  padding: var(--section-y) 0;
+}
+
+#destaques {
+  padding-top: clamp(2rem, 3vw, 2.75rem);
+}
+
+.section-head,
+.sec-head {
+  margin-bottom: var(--section-head-gap);
+  gap: 28px;
+}
+
+/* Os dois cabeçalhos de seção tinham tamanhos diferentes (37,6px e 40px) para o
+   mesmo papel. Agora é um valor só. */
+.section-head h2,
+.sec-head h2 {
+  font-size: clamp(1.5rem, 2.4vw, 1.875rem);    /* 24 → 30px */
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: var(--track-h2);
+}
+
+.section-head p,
+.sec-head p {
+  max-width: 56ch;                              /* medida de linha, não px */
+  margin-top: 10px;
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
+.text-link,
+.sec-link {
+  font-size: .875rem;
+  font-weight: 600;                             /* era 700/800 */
+  letter-spacing: .005em;
+}
+
+/* ── Cards de curso ───────────────────────────────────────────────────────── */
+
+.course-track {
+  gap: var(--card-gap);
+}
+
+.course-track > .course-card {
+  flex: 0 0 calc((100% - (var(--vis) - 1) * var(--card-gap)) / var(--vis));
+}
+
+/* Destaques mostrava 3 por vez enquanto "Recentes" e "Mais cursados" mostravam
+   4 — três trilhos iguais com cadência diferente. Agora os três batem em 4. */
+#destaques .course-carousel {
+  --vis: 4;
+}
+
+/* O catálogo monta os mesmos cards por JS, então tudo abaixo vale nas duas
+   páginas. Só o gap muda de componente: trilho usa flex, catálogo usa grid. */
+.course-grid {
+  gap: var(--card-gap);
+}
+
+.course-body {
+  gap: 7px;
+  padding: 16px 18px 18px;
+}
+
+/* Cinza em vez de teal: a categoria é etiqueta, não link. Devolve o teal para o
+   título do card, que é o que a pessoa procura ao varrer o carrossel. */
+.course-cat {
+  color: var(--ink-soft);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+}
+
+.course-card h3 {
+  font-size: 1rem;                              /* era 1,02rem */
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: var(--track-h3);
+}
+
+.course-meta {
+  gap: 7px;
+  font-size: .8125rem;
+}
+
+/* Separador em vez de espaço em branco: "60h · Básico" lê melhor que "60h Básico". */
+.course-meta span + span::before {
+  content: "·";
+  margin-right: 7px;
+  color: #a9bcbc;
+}
+
+.course-footer {
+  padding-top: 12px;
+}
+
+.mini-cta {
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: .8125rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.course-badge {
+  min-height: 22px;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .015em;
+}
+
+/* Rank é dado, não ornamento: 41,6px → 32px, com dígito tabular. */
+.rank-card .course-body::before {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: -.03em;
+  color: rgba(0, 128, 128, .17);
+}
+
+/* ── "O que é MOOC" + Como funciona ───────────────────────────────────────── */
+
+/* 272px de marca d'água era a maior massa tipográfica da página inteira. */
+.oquee::after {
+  right: clamp(-32px, -2vw, -12px);
+  bottom: -30px;
+  font-size: clamp(4.5rem, 11vw, 9.5rem);       /* 72 → 152px */
+  color: rgba(255, 255, 255, .05);
+}
+
+.mooc-label,
+.mooc-flow-head span,
+.service-kicker {
+  min-height: 30px;
+  padding: 0 11px;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* 61,6px → 37,6px. Continua sendo o maior h2 da página, mas agora abaixo do h1. */
+.mooc-intro h2 {
+  max-width: 24ch;
+  margin-top: 20px;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);      /* 28 → 37,6px */
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: var(--track-h2);
+}
+
+.mooc-lead {
+  max-width: 54ch;
+  margin-top: 18px;
+  font-size: clamp(1.0625rem, .5vw + .92rem, 1.1875rem);  /* 17 → 19px */
+  font-weight: 500;                             /* era 600 */
+  line-height: 1.55;
+}
+
+.mooc-copy {
+  max-width: 58ch;
+  margin-top: 12px;
+  font-size: .9375rem;
+  line-height: 1.7;
+}
+
+.mooc-proof {
+  margin-top: 26px;
+}
+
+.mooc-proof-main {
+  padding: 18px;
+}
+
+.mooc-proof-main strong {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);      /* 36 → 52px (era até 72,8) */
+  font-weight: 700;
+  line-height: .95;
+  letter-spacing: -.03em;
+}
+
+.mooc-proof-main span {
+  max-width: 32ch;
+  margin-top: 8px;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.fatos {
+  gap: 10px;
+  padding-top: 26px;
+}
+
+.fato {
+  min-height: 104px;
+  padding: 16px;
+  font-size: .875rem;
+  line-height: 1.55;
+}
+
+.fato b {
+  margin-bottom: 6px;
+  font-size: .8125rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.mooc-flow {
+  padding: clamp(20px, 2.6vw, 30px);
+}
+
+.mooc-flow-head {
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.mooc-flow-head h2 {
+  font-size: clamp(1.375rem, 1.9vw, 1.75rem);   /* 22 → 28px (era até 37,6) */
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: var(--track-h2);
+}
+
+.passos {
+  gap: 10px;
+}
+
+.passos li {
+  min-height: 118px;
+  grid-template-columns: 46px minmax(0, 1fr);
+  column-gap: 14px;
+  padding: 16px;
+}
+
+/* Numeração fantasma atrás do texto: 48px → 34px e mais discreta. */
+.passos li::after {
+  right: 14px;
+  bottom: 8px;
+  font-size: 2.125rem;
+  color: rgba(0, 95, 95, .07);
+}
+
+.passo-icon {
+  width: 46px;
+  height: 46px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.passos h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: var(--track-h3);
+}
+
+.passos p {
+  margin-top: 5px;
+  font-size: .875rem;
+  line-height: 1.55;
+}
+
+/* ── Projetos e séries ────────────────────────────────────────────────────── */
+
+.projetos {
+  gap: 20px;
+}
+
+.projeto {
+  min-height: 292px;
+  gap: 6px;
+  padding: 22px;
+}
+
+.projeto-logo {
+  height: 152px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.projeto .n,
+.serie .rotulo {
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+
+.projeto h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: var(--track-h3);
+}
+
+.projeto p {
+  max-width: 44ch;
+  margin-top: 4px;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.projeto .link,
+.serie .link {
+  font-size: .8125rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.colecoes-subhead {
+  margin: 40px 0 16px;
+  gap: 28px;
+}
+
+.colecoes-subhead h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: var(--track-h3);
+}
+
+.colecoes-subhead p {
+  max-width: 52ch;
+  margin-top: 6px;
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
+.series {
+  gap: 14px;
+}
+
+.serie {
+  min-height: 176px;
+  gap: 8px;
+  padding: 20px;
+}
+
+.serie-topo {
+  margin-bottom: 6px;
+}
+
+.serie .n {
+  padding: 3px 9px;
+  font-size: .6875rem;
+  font-weight: 700;
+}
+
+.serie h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: var(--track-h3);
+}
+
+.serie p {
+  max-width: 38ch;
+  font-size: .875rem;
+  line-height: 1.55;
+}
+
+.serie-lovelace {
+  min-height: 366px;
+}
+
+.serie-lovelace h3 {
+  font-size: clamp(1.25rem, 2vw, 1.625rem);     /* 20 → 26px (era até 32) */
+  font-weight: 700;
+  letter-spacing: -.015em;
+}
+
+.serie-lovelace p {
+  max-width: 40ch;
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
+/* ── Faixa de licença capacitação ─────────────────────────────────────────── */
+
+.service-band::after {
+  right: clamp(-12px, 3vw, 40px);
+  bottom: -12px;
+  font-size: clamp(4rem, 10vw, 8.5rem);         /* 64 → 136px (era até 192) */
+  color: rgba(255, 255, 255, .05);
+}
+
+.service-band h2 {
+  max-width: 24ch;
+  margin-top: 16px;
+  font-size: clamp(1.625rem, 2.6vw, 2.25rem);   /* 26 → 36px (era até 50,4) */
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: var(--track-h2);
+}
+
+.service-copy p {
+  max-width: 56ch;
+  margin-top: 14px;
+  font-size: clamp(.9375rem, .4vw + .86rem, 1.0625rem);  /* 15 → 17px */
+  line-height: 1.68;
+}
+
+.service-actions {
+  margin-top: 26px;
+}
+
+.service-panel {
+  padding: clamp(20px, 2.6vw, 30px);
+}
+
+.service-panel-head span {
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.service-panel-head strong {
+  font-size: clamp(1.625rem, 3vw, 2.25rem);     /* 26 → 36px (era até 48) */
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.025em;
+}
+
+.service-panel-lead {
+  max-width: 44ch;
+  margin-top: 14px;
+  font-size: .9375rem;
+  font-weight: 500;                             /* era 600 */
+  line-height: 1.6;
+}
+
+.license-meter {
+  margin-top: 22px;
+  padding: 16px;
+}
+
+.meter-row span {
+  font-size: .8125rem;
+  font-weight: 600;
+}
+
+.meter-row strong {
+  font-size: 1.75rem;                           /* era 33,6px */
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+
+.meter-track {
+  height: 8px;
+  margin-top: 12px;
+}
+
+.license-stack {
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.license-stack span {
+  min-height: 32px;
+  padding: 0 11px;
+  font-size: .8125rem;
+  font-weight: 600;
+}
+
+.license-note {
+  margin-top: 18px;
+  padding: 16px;
+}
+
+.license-note strong {
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .005em;
+}
+
+.license-note p {
+  margin-top: 5px;
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+
+/* ── FAQ ──────────────────────────────────────────────────────────────────── */
+
+.faq-list {
+  gap: 8px;
+}
+
+.faq summary,
+summary {
+  padding: 15px 18px;
+  font-size: .9375rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.faq summary::after {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #7fa2a2;
+}
+
+.faq .resp,
+details p {
+  padding: 0 18px 16px;
+  font-size: .9375rem;
+  line-height: 1.65;
+}
+
+.faq .resp p {
+  margin-bottom: 10px;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.faq .resp a {
+  font-weight: 600;
+}
+
+.faq-actions {
+  margin-top: 20px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CATÁLOGO (cursos-v3.html)
+   O catálogo é ferramenta, não vitrine: a lista precisa aparecer cedo e as
+   facetas precisam ser densas sem virar ruído. Os cards já vêm refinados acima.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Faixa de abertura ────────────────────────────────────────────────────── */
+
+/* 48px → 38px. Fica abaixo do h1 da home (44px), que é o correto: a home
+   apresenta, o catálogo só rotula onde você está. */
+.catalog-hero h1 {
+  font-size: clamp(1.75rem, 2.8vw, 2.375rem);   /* 28 → 38px (era até 48) */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: var(--track-display);
+}
+
+.catalog-hero .kicker {
+  margin-bottom: 16px;
+  padding: 6px 14px 6px 11px;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+}
+
+.catalog-hero .kicker::before {
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 0 3px rgba(242, 184, 75, .22);
+}
+
+.catalog-hero p {
+  max-width: 56ch;
+  margin-top: 14px;
+  font-size: clamp(.9375rem, .4vw + .86rem, 1.0625rem);  /* 15 → 17px */
+  line-height: 1.62;
+}
+
+.catalog-summary {
+  gap: 12px;
+}
+
+.summary-box {
+  gap: 5px;
+  padding: 18px 18px 16px;
+}
+
+.summary-icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+}
+
+.summary-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* Alinhado com o `.stat strong` da home (26,4 → 32,8px): é o mesmo papel. */
+.summary-box strong {
+  font-size: clamp(1.6rem, 2.1vw, 2rem);        /* 25,6 → 32px (era até 37,6) */
+  font-weight: 700;
+  letter-spacing: -.025em;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-label {
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: var(--track-eyebrow);
+}
+
+/* ── Barra de facetas ─────────────────────────────────────────────────────── */
+
+.catalog-layout {
+  gap: 32px;
+}
+
+.filters {
+  gap: 16px;
+  padding: 18px;
+}
+
+.filters input[type="search"],
+.filters select,
+.toolbar select {
+  padding: 10px 12px;
+  font-size: .9375rem;
+}
+
+.filters input[type="search"]::placeholder {
+  color: #83999b;
+}
+
+/* Título de faceta vira rótulo, como os eyebrows do resto da página. Sete
+   grupos em 14,7px/700 competiam com os títulos dos cards ao lado. */
+.filter-group h3 {
+  margin: 0 0 10px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+}
+
+.filter-group ul {
+  gap: 7px;
+}
+
+.filter-option {
+  font-size: .875rem;
+  line-height: 1.4;
+}
+
+.filter-count {
+  font-size: .75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Resultados ───────────────────────────────────────────────────────────── */
+
+.results-head {
+  margin-bottom: 20px;
+}
+
+.results-count {
+  font-size: .8125rem;
+  letter-spacing: .005em;
+  font-variant-numeric: tabular-nums;
+}
+
+.toolbar {
+  margin-top: 6px;
+  gap: 20px;
+}
+
+.toolbar h2 {
+  font-size: clamp(1.375rem, 1.8vw, 1.625rem);  /* 22 → 26px (era até 28,8) */
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: var(--track-h2);
+}
+
+.sorter {
+  gap: 9px;
+  font-size: .8125rem;
+  font-weight: 600;
+}
+
+.active-chips {
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.chip {
+  padding: 6px 10px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.load-row {
+  margin-top: 26px;
+}
+
+.empty {
+  margin-top: 22px;
+  padding: 32px 24px;
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
+/* ── Rodapé ───────────────────────────────────────────────────────────────── */
+
+footer .wrap {
+  gap: 32px;
+  padding-block: 44px;
+}
+
+footer h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: var(--track-h3);
+}
+
+/* Título de coluna vira rótulo: menor, em caixa alta, com tracking. */
+footer h4 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+footer p {
+  max-width: 42ch;
+  margin-top: 10px;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+footer a {
+  font-size: .875rem;
+}
+
+footer ul {
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.footer-tagline {
+  max-width: 30ch;
+  font-size: .8125rem;
+  line-height: 1.5;
+}
+
+.foot-base .wrap {
+  padding-block: 16px;
+  font-size: .75rem;
+  letter-spacing: .01em;
+}
+
+/* ── Ajustes por viewport ─────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  :root {
+    --stat-card-h: 164px;
+  }
+
+  .stat {
+    padding: 22px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* O nome da marca cruzava o seletor de idioma: em 390px a .brand ia até 289px
+     e o seletor começava em 207px, sobrepondo 82px. Em tela estreita fica só o
+     símbolo do Ifes — vale para todas as páginas v3. */
+  .brand-name,
+  .brand-divider {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.875rem, 7.5vw, 2.375rem);  /* 30 → 38px (era até 44) */
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .mooc-intro h2,
+  .service-band h2 {
+    max-width: none;
+  }
+
+  .section-head,
+  .sec-head,
+  .colecoes-subhead {
+    gap: 12px;
+  }
+
+  .stat {
+    min-height: 78px;
+    padding: 16px 20px;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .stat-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  /* Marca d'água some no celular: em tela estreita ela vira ruído sobre o texto. */
+  .oquee::after,
+  .service-band::after {
+    display: none;
+  }
+
+  .passos li {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .passo-icon {
+    margin-bottom: 6px;
+  }
+}
+
+/* O menu vira hambúrguer a partir de 1200px, não de 860px como no canônico.
+   Entre essas duas larguras a marca (317px) mais os cinco links (490px) mais
+   idioma e CTA não cabem: a .main-nav tem `min-width: 0` e `justify-self: end`,
+   então o excedente vazava para a esquerda e passava POR CIMA do nome da marca.
+   Só a nav muda de forma — o botão "Acessar ambiente" continua visível aqui,
+   porque agora sobra espaço para ele. */
+@media (max-width: 1200px) {
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.open {
+    position: absolute;
+    inset: 68px 0 auto;
+    display: grid;
+    gap: 6px;
+    padding: 16px 20px;
+    background: var(--teal-deep);
+    border-bottom: 1px solid rgba(255, 255, 255, .18);
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   TESTE — MÁSCARA DO HERO, RÉPLICA DE ../proposta-refino/
+   Bloco isolado: apagar daqui até o fim do arquivo devolve o hero claro do
+   canônico. Só afeta a home — o catálogo usa .catalog-hero.
+
+   Os valores abaixo são os da proposta-refino, sem alteração. A única
+   diferença estrutural: lá a máscara vive em .hero::before (com .hero-bg em
+   z -2); aqui o canônico já usa .hero::after para o véu (com .hero-bg em z -3).
+   Mesma ordem de pintura, pseudo-elemento diferente.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: var(--teal-dark);
+  color: #fff;
+}
+
+.hero-bg img {
+  object-position: 72% center;
+}
+
+.hero::after {
+  background:
+    linear-gradient(100deg, rgba(0, 45, 45, .96) 0%, rgba(0, 50, 50, .9) 34%, rgba(0, 60, 60, .58) 58%, rgba(0, 60, 60, .3) 100%),
+    linear-gradient(to top, rgba(0, 40, 40, .82), transparent 46%);
+}
+
+/* Inversões de texto, também nos valores da proposta-refino. */
+.hero .kicker {
+  color: rgba(255, 255, 255, .78);
+}
+
+.hero .kicker::before {
+  background: var(--gold);
+}
+
+.hero h1 {
+  color: #fff;
+}
+
+.hero h1 span {
+  color: rgba(255, 255, 255, .62);
+}
+
+.hero .lead {
+  color: rgba(255, 255, 255, .8);
+}
+
+/* A busca segue a pílula branca do canônico — a proposta-refino usa uma versão
+   em vidro, mas ela depende dos tokens de lá. */
+.hero-search {
+  border-color: rgba(255, 255, 255, .3);
+  box-shadow: 0 20px 46px rgba(0, 30, 30, .4);
+}
+
+.hero .btn-outline {
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .44);
+}
+
+.hero .btn-outline:hover {
+  background: rgba(255, 255, 255, .18);
+  border-color: rgba(255, 255, 255, .72);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   HERO COM TEXTO À ESQUERDA — padrão oficial desde 22/07/2026
+   O gradiente de 100deg é escuro à esquerda: o texto cai na parte densa e a
+   foto abre à direita. A versão centralizada foi para _arquivo/.
+   ────────────────────────────────────────────────────────────────────────── */
+
+.hero-content {
+  width: min(var(--maxw), calc(100% - 40px));
+  text-align: left;
+}
+
+.hero h1,
+.hero .lead,
+.hero-search {
+  margin-inline: 0;
+}
+
+/* 34rem: mesma medida de leitura da proposta-refino. */
+.hero h1 {
+  max-width: 34rem;
+}
+
+.hero .lead {
+  max-width: 32rem;
+}
+
+.hero-search {
+  width: min(34rem, 100%);
+}
+
+.hero-actions {
+  justify-content: flex-start;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   INDICADORES DENTRO DO HERO — linha de índice em filete
+   O canônico trazia um cartão de vidro flutuando, com altura fixa, sombra de
+   24px/54px e ícone em caixa, ancorado por margem negativa em cima do hero.
+   Ele cobria a foto justamente na faixa onde as pessoas aparecem, e lia como
+   um objeto pousado ali, não como parte da abertura.
+
+   Vira o que é: uma linha de dados fechando o hero, separada por um filete de
+   1px. Sem caixa, sem sombra, sem ícone, sem altura fixa — o número já é o
+   elemento forte, não precisa de moldura para provar isso.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* O padding-bottom existia só para abrir espaço ao cartão sobreposto. */
+.hero {
+  padding-bottom: 0;
+}
+
+.stats {
+  margin: clamp(2.25rem, 5vw, 3.5rem) 0 0;
+  color: inherit;
+}
+
+.stats .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px clamp(2rem, 6vw, 4.5rem);
+  height: auto;
+  max-width: none;
+  padding-block: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: none;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.stat {
+  display: block;
+  height: auto;
+  padding: 0;
+  text-align: left;
+}
+
+/* Os filetes divisores saem: quem separa agora é o espaço entre as colunas. */
+.stat + .stat {
+  border-left: 0;
+  border-top: 0;
+}
+
+/* Ícone fica no HTML mas some — assim o bloco de teste continua reversível
+   apagando só o CSS. Se a proposta for aprovada, remover do HTML. */
+.stat-icon {
+  display: none;
+}
+
+.stat strong {
+  color: #fff;
+  font-size: clamp(1.5rem, 1.9vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.025em;
+}
+
+.stat-body span {
+  margin-top: 7px;
+  color: rgba(255, 255, 255, .58);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: var(--track-eyebrow);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .stats .wrap {
+    gap: 18px 32px;
+  }
+
+  .stat {
+    min-height: 0;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   PESSOAS NA FAIXA DE LICENÇA CAPACITAÇÃO
+   A faixa era teal chapado com textura de pontos e uma palavra gigante de marca
+   d'água. Foto mascarada atrás dá presença humana sem mexer em uma linha de
+   layout: as duas colunas continuam exatamente onde estavam.
+
+   pessoas-servidores.png — gente sentada, alguns de blazer: registro de
+   trabalho, não de estudante. É a seção que fala com servidor público. Vem do
+   mesmo ensaio do hero, mesmo estúdio, por isso a página não vira colagem.
+
+   A máscara é densa de propósito: a seção tem texto e um painel branco por
+   cima. A foto entra como presença tonal, não como fotografia em exibição.
+
+   A seção "O que é MOOC" TENTOU este mesmo tratamento e não funcionou — texto
+   demais por cima. Lá a foto ganhou moldura própria, na lateral (bloco abaixo).
+   ────────────────────────────────────────────────────────────────────────── */
+
+.service-band {
+  background-color: var(--teal-dark);
+  background-image:
+    linear-gradient(135deg,
+      rgba(0, 50, 50, .94) 0%,
+      rgba(0, 62, 62, .89) 46%,
+      rgba(0, 86, 86, .8) 100%),
+    url("assets/pessoas-servidores.png");
+  background-size: auto, cover;
+  background-position: center, center 24%;
+  background-repeat: no-repeat;
+}
+
+/* A textura de pontos existia para dar matéria ao teal chapado. Com foto atrás
+   ela vira ruído: dois padrões de alta frequência disputando o mesmo plano.
+   Vale só para a faixa de licença — a "O que é MOOC" voltou ao teal liso e
+   recuperou a textura (ver bloco do retrato lateral, mais abaixo). */
+.service-band::before {
+  display: none;
+}
+
+/* As marcas d'água ficam, mais discretas: sobre foto elas competiam. */
+.oquee::after,
+.service-band::after {
+  color: rgba(255, 255, 255, .04);
+}
+
+@media (max-width: 640px) {
+  /* No celular a faixa é estreita e o texto ocupa tudo: a foto vira só mancha
+     atrás da leitura. Sobe a densidade da máscara. */
+  .service-band {
+    background-image:
+      linear-gradient(160deg,
+        rgba(0, 50, 50, .96) 0%,
+        rgba(0, 64, 64, .93) 100%),
+      url("assets/pessoas-servidores.png");
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   "O QUE É MOOC" — retrato na lateral + passo a passo na horizontal
+   O fundo fotográfico não funcionou aqui: a seção tem texto demais por cima,
+   e o mosaico de sete painéis atrás de h2, lead, cópia, o "60%" e quatro
+   cards virava fundo agitado, não imagem. Foto boa em seção densa precisa de
+   moldura própria, não de largura total atrás da leitura.
+
+   Agora a seção tem três áreas em vez de duas colunas:
+
+     ┌──────────┬──────────────────────────┐
+     │  retrato │  O que é curso MOOC?     │
+     │  (lateral)│  lead, cópia, 60%, fatos │
+     ├──────────┴──────────────────────────┤
+     │  Como funciona — 01 02 03 04         │  ← faixa inteira, horizontal
+     └─────────────────────────────────────┘
+
+   O retrato entra à esquerda de propósito: o hero acima é texto à esquerda e
+   foto à direita. Espelhar aqui evita duas faixas escuras seguidas com a mesma
+   diagonal de leitura.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Volta ao teal chapado: a foto agora tem lugar próprio. */
+.oquee {
+  background-color: var(--teal-deep);
+  background-image:
+    linear-gradient(135deg, rgba(0, 70, 70, .98), rgba(0, 118, 118, .9));
+}
+
+.oquee .wrap {
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  grid-template-areas:
+    "foto intro"
+    "flow flow";
+  gap: clamp(28px, 4vw, 52px);
+  align-items: stretch;
+}
+
+.mooc-foto {
+  grid-area: foto;
+  margin: 0;
+  overflow: hidden;
+  border-radius: calc(var(--radius) * 2);
+  background: rgba(255, 255, 255, .06);
+}
+
+/* A foto acompanha a altura da coluna de texto: object-fit resolve o corte
+   sem deformar. O enquadramento sobe um pouco para não cortar o rosto. */
+.mooc-foto img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.mooc-intro {
+  grid-area: intro;
+}
+
+.mooc-flow {
+  grid-area: flow;
+}
+
+/* ── Passo a passo na horizontal ──────────────────────────────────────────── */
+
+.passos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Cada passo empilha: número em cima, título, texto. Antes era o número numa
+   coluna de 46px à esquerda, que só funciona em lista vertical. */
+.passos li {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "icon"
+    "title"
+    "text";
+  column-gap: 0;
+  padding: 18px;
+}
+
+.passo-icon {
+  margin-bottom: 14px;
+}
+
+/* A numeração fantasma sai: em card estreito ela encosta no texto. */
+.passos li::after {
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  .passos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  /* Uma coluna só: o retrato vira faixa larga acima do texto. */
+  .oquee .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "foto"
+      "intro"
+      "flow";
+  }
+
+  .mooc-foto img {
+    min-height: 0;
+    max-height: 300px;
+    object-position: center 18%;
+  }
+}
+
+@media (max-width: 640px) {
+  .passos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .passos li {
+    padding: 16px;
+  }
+}

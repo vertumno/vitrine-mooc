@@ -1,0 +1,431 @@
+@charset "UTF-8";
+
+/* ============================================================================
+   projeto-v3.css — camada da página de projeto parceiro (proposta)
+   Carregada DEPOIS de estilos.css e estilos-v3.css, só em projeto-v3.html.
+
+   Reaproveita o que já existe: .results-head / .toolbar / .sorter / .chip e
+   .course-grid.four (catálogo), .projeto / .projeto-logo (cards da home).
+   O que está aqui é só o que não existia: a faixa de abertura do projeto, a
+   barra de filtros em pills e as notas.
+
+   Se a proposta for aprovada, este arquivo funde em estilos.css.
+   ========================================================================= */
+
+/* ── Faixa de abertura ────────────────────────────────────────────────────── */
+
+.projeto-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(28px, 4vw, 44px) 0 clamp(32px, 4vw, 46px);
+  color: #fff;
+  border-bottom: 1px solid rgba(0, 63, 63, .22);
+}
+
+/* Mesmo gradiente do card do projeto na home: quem clica lá chega aqui sem
+   troca de identidade. */
+.projeto-hero[data-tema="unac"] {
+  background:
+    radial-gradient(1100px 380px at 88% -12%, rgba(51, 166, 166, .5), transparent 60%),
+    radial-gradient(760px 440px at 6% 128%, rgba(0, 63, 63, .55), transparent 62%),
+    linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-deep) 52%, var(--teal) 100%);
+}
+
+.projeto-hero[data-tema="riodoce"] {
+  background:
+    radial-gradient(1100px 380px at 88% -12%, rgba(90, 190, 70, .38), transparent 60%),
+    radial-gradient(760px 440px at 6% 128%, rgba(12, 48, 24, .6), transparent 62%),
+    linear-gradient(135deg, #133f20 0%, var(--green-deep) 50%, var(--green) 100%);
+}
+
+/* textura de pontos que esmaece na base — igual à do catálogo */
+.projeto-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .55;
+  background-image: radial-gradient(rgba(255, 255, 255, .14) 1px, transparent 1.4px);
+  background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+}
+
+.projeto-hero-decor {
+  position: absolute;
+  z-index: -1;
+  top: -160px;
+  right: -100px;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, .22), transparent 68%);
+  pointer-events: none;
+}
+
+.projeto-hero-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+/* ── Migalha de pão ───────────────────────────────────────────────────────── */
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, .7);
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.crumbs a {
+  color: rgba(255, 255, 255, .82);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.crumbs a:hover {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, .8);
+}
+
+.crumbs [aria-current] {
+  color: #fff;
+  font-weight: 600;
+}
+
+.crumbs-sep {
+  opacity: .5;
+}
+
+/* ── Identificação do projeto ─────────────────────────────────────────────── */
+
+.projeto-hero .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 16px;
+  padding: 6px 14px 6px 11px;
+  color: #fff;
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: var(--track-eyebrow, .09em);
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.projeto-hero .kicker::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(242, 184, 75, .22);
+}
+
+/* Abaixo do h1 do catálogo (38px): a página de projeto rotula um recorte. */
+.projeto-hero h1 {
+  color: #fff;
+  font-size: clamp(2rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: var(--track-display, -.022em);
+}
+
+.projeto-extenso {
+  display: block;
+  margin-top: 10px;
+  color: var(--teal-soft);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.projeto-hero[data-tema="riodoce"] .projeto-extenso {
+  color: #cfeccc;
+}
+
+.projeto-lead {
+  max-width: 62ch;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, .86);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Os números do projeto em uma linha só. Substituiu os quatro cards de vidro:
+   a mesma informação sem transformar a abertura em painel. */
+.projeto-meta {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, .74);
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .01em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Marca do projeto na mesma placa branca usada no card da home. */
+.projeto-brand .projeto-logo {
+  height: 176px;
+  margin-bottom: 0;
+  box-shadow: 0 18px 42px rgba(0, 30, 30, .26), inset 0 0 0 1px rgba(0, 63, 63, .08);
+}
+
+.projeto-brand .projeto-logo img {
+  max-width: min(84%, 290px);
+  max-height: 138px;
+}
+
+.projeto-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Botão claro sobre fundo escuro — mesmo tratamento do CTA do cabeçalho. */
+.projeto-hero .btn-primary {
+  color: var(--teal-dark);
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(0, 30, 30, .26);
+}
+
+.projeto-hero .btn-primary:hover {
+  background: var(--teal-soft);
+}
+
+.projeto-hero[data-tema="riodoce"] .btn-primary {
+  color: var(--green-deep);
+}
+
+.projeto-hero[data-tema="riodoce"] .btn-primary:hover {
+  background: #e2f4de;
+}
+
+/* ── Nota de pendência (o que ainda depende do Cefor) ─────────────────────── */
+
+.projeto-nota {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 62ch;
+  margin-top: 16px;
+  padding: 10px 14px;
+  color: rgba(255, 255, 255, .84);
+  font-size: .8125rem;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, .08);
+  border: 1px dashed rgba(255, 255, 255, .32);
+  border-radius: var(--radius);
+}
+
+.projeto-nota b {
+  color: #fff;
+  font-weight: 600;
+}
+
+.lista-nota {
+  margin-top: 26px;
+  padding-top: 16px;
+  color: var(--ink-soft);
+  font-size: .8125rem;
+  line-height: 1.55;
+  border-top: 1px solid var(--line);
+}
+
+/* ── Barra de filtros ─────────────────────────────────────────────────────── */
+
+.projeto-toolbar {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.projeto-busca input[type="search"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: .875rem;
+}
+
+.projeto-busca input[type="search"]::placeholder {
+  color: var(--ink-soft);
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* display:flex vence o [hidden] do navegador — a linha some de verdade quando
+   o projeto não tem o que filtrar. */
+.pill-row[hidden] {
+  display: none;
+}
+
+.pill-label {
+  margin-right: 4px;
+  color: var(--ink-soft);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: var(--track-eyebrow, .09em);
+  text-transform: uppercase;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 0 12px;
+  color: var(--teal-deep);
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+
+.pill:hover {
+  background: var(--teal-soft);
+  border-color: rgba(0, 128, 128, .34);
+}
+
+.pill .pill-n {
+  color: var(--ink-soft);
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pill[aria-pressed="true"] {
+  color: #fff;
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.pill[aria-pressed="true"] .pill-n {
+  color: rgba(255, 255, 255, .78);
+}
+
+/* No Rio Doce a seleção acompanha a cor do projeto. */
+body[data-tema="riodoce"] .pill:hover {
+  background: #e2f4de;
+  border-color: rgba(20, 122, 2, .34);
+}
+
+body[data-tema="riodoce"] .pill[aria-pressed="true"] {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+/* ── Resultados ───────────────────────────────────────────────────────────── */
+
+/* Chip que zera tudo: mesmo componente do catálogo, em contorno, para não
+   parecer mais um filtro ativo. */
+.chip-clear {
+  color: var(--ink-soft);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.chip-clear:hover {
+  color: var(--teal-deep);
+  box-shadow: inset 0 0 0 1px rgba(0, 128, 128, .34);
+}
+
+/* Quatro por linha: sem a barra lateral de facetas do catálogo, cabe uma
+   coluna a mais na mesma largura. O passo até 1 coluna é próprio porque a
+   regra base pula de 4 direto para 2 em 1060px. */
+#cards.course-grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ── Saída e navegação entre projetos ─────────────────────────────────────── */
+
+.projeto.geral {
+  background: linear-gradient(135deg, #0d2f2f, #0d6060);
+}
+
+.projeto.geral .projeto-logo {
+  background: rgba(255, 255, 255, .1);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18);
+}
+
+.projeto-geral-num {
+  color: #fff;
+  font-family: var(--display);
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* O verde do Rio Doce pede rótulo verde-claro; o teal padrão fica no resto. */
+.projeto.riodoce .n,
+.projeto.riodoce .link {
+  color: #b9e3b2;
+}
+
+/* ── Ajustes por viewport ─────────────────────────────────────────────────── */
+
+@media (max-width: 1120px) {
+  #cards.course-grid.four {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  #cards.course-grid.four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .projeto-hero-main {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-brand {
+    order: -1;
+    max-width: 320px;
+  }
+
+  .projeto-brand .projeto-logo {
+    height: 132px;
+  }
+}
+
+@media (max-width: 620px) {
+  #cards.course-grid.four {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-hero-actions .btn {
+    width: 100%;
+  }
+}

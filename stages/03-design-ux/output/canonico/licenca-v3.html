@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Licença para Capacitação | Cursos Abertos do Ifes · v3</title>
+  <meta name="description" content="Página de instrução da licença para capacitação nos Cursos Abertos do Ifes: o que é, como funciona, planejador que monta seu plano de cursos e o passo a passo da inscrição.">
+  <!-- v3: rota prevista /qualificacao/. Página de INSTRUÇÃO da licença, com o
+       planejador como ferramenta dentro dela. Planejador instrucional (decisão
+       da comissão MOOC em 09/07/2026): calcula, monta o plano e imprime. Não
+       inscreve e não emite declaração — isso é feito dentro de cada curso.
+       Fonte do procedimento: ../../references/licenca-capacitacao-pagina-oficial.md -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos-v3.css">
+  <link rel="stylesheet" href="licenca-v3.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site">
+    <div class="site-wrap">
+      <a class="brand" href="index-v3.html" aria-label="Cursos Abertos do Ifes">
+        <img class="brand-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-name">Cursos Abertos</span>
+      </a>
+      <nav class="main-nav" id="menu" aria-label="Navegação principal">
+        <a href="cursos-v3.html">Cursos</a>
+        <a href="index-v3.html#projetos">Projetos</a>
+        <a href="licenca-v3.html" aria-current="page">Licença capacitação</a>
+        <a href="index-v3.html#como-funciona">Como funciona</a>
+        <a href="index-v3.html#faq">Dúvidas</a>
+      </nav>
+      <div class="site-actions">
+        <div class="lang-switch" data-lang-switch>
+          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Selecionar idioma / Select language">
+            <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>
+            <span class="lang-current" data-lang-current>PT</span>
+            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="menu">
+            <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English<span class="lang-soon">em breve</span></a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français<span class="lang-soon">em breve</span></a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español<span class="lang-soon">em breve</span></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Acessar ambiente</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" onclick="toggleMenu(this)"><span class="menu-bars" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ══ ABERTURA ══════════════════════════════════════════════════════ -->
+    <section class="lic-hero">
+      <div class="wrap">
+        <div class="lic-hero-copy">
+          <span class="kicker">Servidoras e servidores públicos</span>
+          <h1>Licença para <span>capacitação</span></h1>
+          <p>Use os cursos abertos do Ifes no seu período de licença. Aqui você entende as regras, monta o plano de cursos com a carga horária certa e vê o passo a passo da inscrição.</p>
+          <div class="lic-hero-acts">
+            <a class="btn btn-gold" href="#planejador">Abrir o planejador</a>
+            <a class="btn btn-ghost" href="#como-funciona">Como funciona</a>
+          </div>
+        </div>
+        <ul class="lic-facts">
+          <li><b>30h</b><span>de curso por semana de licença</span></li>
+          <li><b>155</b><span>cursos gratuitos e certificados</span></li>
+          <li><b>Grátis</b><span>inscrição, curso e certificado</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══ O QUE É / REGRAS ══════════════════════════════════════════════ -->
+    <section class="lic-sobre" id="como-funciona">
+      <div class="wrap">
+        <div class="lic-sobre-texto">
+          <h2>O que é a licença para capacitação</h2>
+          <p>É o afastamento remunerado do exercício do cargo para participar de ação de capacitação, previsto no <b>art. 87 da Lei nº 8.112/1990</b>. Quem tem direito, por quantos dias e com que antecedência solicitar são definidos pela <b>regulamentação do seu órgão</b> — confirme com a sua unidade de gestão de pessoas antes de montar o plano.</p>
+          <p>Nos Cursos Abertos do Ifes, você escolhe os cursos, informa em cada um o período em que vai realizá-lo e emite a declaração que instrui o seu processo.</p>
+          <p class="lic-fonte">Passo a passo oficial: <a href="https://mooc.cefor.ifes.edu.br/v/licenca-capacitacao/">mooc.cefor.ifes.edu.br/v/licenca-capacitacao</a></p>
+        </div>
+
+        <ul class="lic-regras-cards">
+          <li>
+            <b>30h por semana</b>
+            <span>É a carga horária mínima de curso para cada semana de licença. O planejador calcula o total para você.</span>
+          </li>
+          <li>
+            <b>Oferta anual</b>
+            <span>Um curso precisa começar e terminar no mesmo ano. O período não pode atravessar a virada.</span>
+          </li>
+          <li>
+            <b>Declaração no mesmo dia</b>
+            <span>Ao informar as datas, o curso é desabilitado no dia seguinte e só reabre na data de início. Emita a declaração na hora.</span>
+          </li>
+          <li>
+            <b>Certificado na data de fim</b>
+            <span>O certificado de cada curso fica disponível na data final que você informou.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══ PLANEJADOR (a ferramenta) ═════════════════════════════════════ -->
+    <section class="lic-planner" id="planejador">
+      <div class="wrap">
+        <div class="plc-app" id="plc-app">
+          <header class="plc-app-head">
+            <span class="plc-app-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2.5"/><path d="M3 9h18M8 2.5V5M16 2.5V5"/><path d="m8.5 14 2.2 2.2 4.3-4.3"/></svg>
+            </span>
+            <div>
+              <h2>Planejador de licença para capacitação</h2>
+              <p>Informe seu período, escolha os cursos e leve o plano pronto para o processo.</p>
+            </div>
+            <span class="plc-status" id="plc-status">Passo 1 de 2</span>
+          </header>
+
+          <!-- ETAPA 1 — parâmetros -->
+          <form class="plc-form" id="plc-form" novalidate>
+            <div class="plc-field">
+              <label for="plc-dias">Dias de licença</label>
+              <input class="plc-input" id="plc-dias" type="number" min="1" max="180" step="1" inputmode="numeric" placeholder="Ex.: 30" value="30" required>
+              <small>quantos dias você vai usufruir</small>
+            </div>
+            <div class="plc-field">
+              <label for="plc-inicio">Data de início prevista</label>
+              <input class="plc-input" id="plc-inicio" type="date" required>
+              <small>o acesso aos cursos abre nesta data</small>
+            </div>
+            <div class="plc-field">
+              <label for="plc-area">Área de interesse <i>(opcional)</i></label>
+              <select class="plc-input" id="plc-area">
+                <option value="">Todas as áreas</option>
+              </select>
+              <small>usada para sugerir os cursos</small>
+            </div>
+            <div class="plc-field plc-field-go">
+              <button class="btn btn-primary btn-lg" type="submit" id="plc-gerar">Gerar plano de capacitação →</button>
+              <small>ou <a href="#escolher" id="plc-manual">escolher os cursos por conta própria</a></small>
+            </div>
+          </form>
+
+          <!-- ETAPA 2 — resultado -->
+          <div class="plc-result" id="plc-result" hidden>
+            <div class="plc-result-top">
+              <div class="plc-result-num">
+                <span>Carga horária do plano</span>
+                <strong id="plc-somado">0h</strong>
+                <small id="plc-de">de 129h necessárias</small>
+              </div>
+              <div class="plc-result-bar">
+                <span class="plc-flag" id="plc-flag" aria-live="polite">faltam 129h</span>
+                <div class="plc-track" aria-hidden="true"><i id="plc-fill"></i></div>
+                <div class="plc-scale">
+                  <span id="plc-periodo">—</span>
+                  <span>mínimo <b id="plc-escala">129h</b></span>
+                </div>
+              </div>
+            </div>
+
+            <p class="plc-alerta" id="plc-alerta" hidden></p>
+
+            <div class="plc-cols">
+              <div class="plc-col">
+                <div class="plc-col-head">
+                  <h3>Cursos do plano</h3>
+                  <span class="plc-tip" id="plc-resumo">nenhum curso</span>
+                </div>
+                <p class="plc-blank" id="plc-blank">Nenhum curso ainda. Use <b>Gerar plano</b> ou escolha no catálogo abaixo.</p>
+                <ul class="plc-picked" id="plc-lista" hidden></ul>
+                <div class="plc-col-acts">
+                  <a class="btn btn-outline" href="#escolher">Trocar / adicionar cursos</a>
+                  <button class="btn btn-ghost-line" type="button" id="plc-limpar">Limpar plano</button>
+                </div>
+              </div>
+
+              <div class="plc-col">
+                <div class="plc-col-head">
+                  <h3>Linha do tempo</h3>
+                  <div class="plc-chips" role="group" aria-label="Como distribuir os cursos">
+                    <button class="plc-chip" type="button" data-ritmo="concomitante" aria-pressed="true">Juntos</button>
+                    <button class="plc-chip" type="button" data-ritmo="sequencial" aria-pressed="false">Em sequência</button>
+                  </div>
+                </div>
+                <div class="plc-gantt" id="plc-gantt"></div>
+                <p class="plc-blank" id="plc-gantt-blank">As datas de cada curso aparecem aqui.</p>
+                <small class="plc-tip">em todos os dias da licença você precisa estar cursando algo</small>
+              </div>
+            </div>
+
+            <div class="plc-final">
+              <button class="btn btn-gold btn-lg" type="button" id="plc-imprimir">Imprimir plano / salvar PDF</button>
+              <p><b>O plano sai com o endereço de cada sala, as datas a informar e o passo a passo.</b> A inscrição e a declaração são feitas dentro de cada curso — <a href="#passo-a-passo">veja como</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CATÁLOGO — escolha dos cursos ═════════════════════════════════ -->
+    <section class="lic-catalogo" id="escolher">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Escolha os cursos do seu plano</h2>
+            <p>O mesmo catálogo dos Cursos Abertos, com os filtros de sempre. Clique em <b>Adicionar</b> para somar o curso ao plano.</p>
+          </div>
+          <a class="text-link" href="cursos-v3.html">Ver catálogo completo</a>
+        </div>
+      </div>
+
+      <div class="wrap catalog-layout">
+        <aside class="filters" aria-label="Filtros do catálogo">
+          <div>
+            <label class="sr-only" for="plc-busca">Buscar curso</label>
+            <input id="plc-busca" type="search" placeholder="Buscar curso">
+          </div>
+
+          <!-- No celular as facetas viram um bloco recolhido: 19 áreas em lista
+               empurravam os cards para fora da tela. JS abre no desktop. -->
+          <details class="plc-facetas" id="plc-facetas" open>
+            <summary>Filtrar por área, carga e nível</summary>
+
+            <div class="filter-group" data-group="categoria">
+              <h3>Área</h3>
+              <ul id="f-categoria"></ul>
+            </div>
+
+            <div class="filter-group" data-group="carga">
+              <h3>Carga horária</h3>
+              <ul id="f-carga"></ul>
+            </div>
+
+            <div class="filter-group" data-group="nivel">
+              <h3>Nível</h3>
+              <ul id="f-nivel"></ul>
+            </div>
+
+            <div class="filter-group" data-group="acessibilidade">
+              <h3>Acessibilidade</h3>
+              <ul>
+                <li class="filter-option">
+                  <label><input type="checkbox" id="f-libras" value="libras"> Com Libras</label>
+                  <span class="filter-count" id="count-libras">0</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-outline" type="button" id="plc-limpar-filtros">Limpar filtros</button>
+          </details>
+        </aside>
+
+        <div>
+          <div class="results-head">
+            <p class="results-count" id="plc-count" aria-live="polite">Carregando cursos</p>
+            <div class="toolbar">
+              <h2>Cursos disponíveis</h2>
+              <label class="sorter">Ordenar
+                <select id="plc-ordenar">
+                  <option value="az">A–Z</option>
+                  <option value="maior">Maior carga horária</option>
+                  <option value="menor">Menor carga horária</option>
+                </select>
+              </label>
+            </div>
+            <div class="active-chips" id="plc-chips"></div>
+          </div>
+
+          <div class="course-grid" id="plc-grid"></div>
+          <p class="empty" id="plc-vazio" hidden>Nenhum curso com esses filtros. Tente ampliar a área ou apagar a busca.</p>
+          <div class="load-row"><button class="btn btn-outline" type="button" id="plc-mais">Mostrar mais cursos</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PASSO A PASSO (prints reais do ambiente) ══════════════════════ -->
+    <section class="plc-passos" id="passo-a-passo">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Como se inscrever em cada curso</h2>
+            <p>A inscrição para licença é feita <b>dentro de cada curso</b> do seu plano, uma vez por curso. Depois de entrar na sala e se inscrever:</p>
+          </div>
+          <a class="text-link" href="https://mooc.cefor.ifes.edu.br/v/licenca-capacitacao/">Página oficial do Cefor</a>
+        </div>
+
+        <ol class="plc-passos-grid">
+          <li>
+            <h3>Abra "Licença para capacitação"</h3>
+            <p>Na <b>Área do curso</b>, na seção inicial.</p>
+            <a href="assets/licenca/passo-1-area-do-curso.png" target="_blank" rel="noopener" title="Ver a imagem em tamanho real"><img src="assets/licenca/passo-1-area-do-curso.png" alt="Lista da Área do curso com o item Licença para capacitação destacado" loading="lazy"></a>
+          </li>
+          <li>
+            <h3>Clique no link do bloco</h3>
+            <p>O bloco expande e traz o link para preencher os dados.</p>
+            <a href="assets/licenca/passo-2-bloco-expandido.png" target="_blank" rel="noopener" title="Ver a imagem em tamanho real"><img src="assets/licenca/passo-2-bloco-expandido.png" alt="Bloco expandido explicando a licença, com link para preenchimento" loading="lazy"></a>
+          </li>
+          <li>
+            <h3>Clique em "Responda as questões"</h3>
+            <p>Abre a página da atividade.</p>
+            <a href="assets/licenca/passo-3-responda-as-questoes.png" target="_blank" rel="noopener" title="Ver a imagem em tamanho real"><img src="assets/licenca/passo-3-responda-as-questoes.png" alt="Página da atividade com o botão Responda as questões" loading="lazy"></a>
+          </li>
+          <li>
+            <h3>Informe as datas e declare</h3>
+            <p>As datas <b>deste curso</b> no formato DD/MM/AAAA, marque a declaração de veracidade e submeta.</p>
+            <a href="assets/licenca/passo-4-datas-e-veracidade.png" target="_blank" rel="noopener" title="Ver a imagem em tamanho real"><img src="assets/licenca/passo-4-datas-e-veracidade.png" alt="Formulário com data de início, data de fim e declaração de veracidade" loading="lazy"></a>
+          </li>
+          <li>
+            <h3>Clique em "Continuar"</h3>
+            <p>As respostas ficam gravadas.</p>
+            <a href="assets/licenca/passo-5-continuar.png" target="_blank" rel="noopener" title="Ver a imagem em tamanho real"><img src="assets/licenca/passo-5-continuar.png" alt="Aviso de respostas gravadas com o botão Continuar" loading="lazy"></a>
+          </li>
+          <li>
+            <h3>Gere e salve a declaração</h3>
+            <p>No <b>mesmo dia</b>. É ela que vai no seu processo.</p>
+            <a href="assets/licenca/passo-6-gerar-declaracao.png" target="_blank" rel="noopener" title="Ver a imagem em tamanho real"><img src="assets/licenca/passo-6-gerar-declaracao.png" alt="Tela da declaração com o botão Gerar" loading="lazy"></a>
+          </li>
+        </ol>
+
+        <ul class="plc-regras">
+          <li><b>Salve a declaração no mesmo dia.</b> No dia seguinte o curso é desabilitado e só reabre na data de início que você informou.</li>
+          <li><b>As datas saem na declaração e no certificado.</b> Informe o período em que você realmente vai fazer o curso.</li>
+          <li><b>Não vai usar um curso para a licença?</b> Não preencha as datas nele — assim ele continua livre para ser feito a qualquer tempo.</li>
+          <li><b>Dúvidas sobre o processo</b> são com a gestão de pessoas da sua unidade. Problemas na plataforma, com o <a href="https://mooc.cefor.ifes.edu.br/suporte/">suporte</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══ DÚVIDAS ═══════════════════════════════════════════════════════ -->
+    <section class="faq" id="duvidas">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Dúvidas sobre a licença</h2>
+            <p>As perguntas do FAQ que tratam de licença para capacitação.</p>
+          </div>
+          <a class="text-link" href="index-v3.html#faq">Ver todas as dúvidas</a>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Posso usar o MOOC para licença capacitação?</summary>
+            <div class="resp"><p>Pode sim. Os MOOCs do Ifes são uma ótima oportunidade para você se atualizar no seu período de capacitação.</p></div>
+          </details>
+          <details>
+            <summary>Qual a equivalência de horas do curso com a quantidade de dias de licença capacitação?</summary>
+            <div class="resp"><p>A carga horária semanal mínima é de 30 horas de curso.</p></div>
+          </details>
+          <details>
+            <summary>Posso me inscrever em mais de um curso para completar a carga horária?</summary>
+            <div class="resp">
+              <p>Sim. A carga horária necessária em cursos durante o seu período de licença irá variar de acordo com a quantidade de dias que você irá usufruir. É importante que você se inscreva em um quantitativo de cursos em que a soma das cargas horárias sejam suficientes.</p>
+              <p>Planeje quando iniciará e quando finalizará cada curso. Uma opção é colocar a data de início e fim da licença capacitação em todos e realizá-los concomitantemente. Outra opção é realizar sequencialmente, um após o outro. Esteja atento para que em todos os dias da licença você esteja realizando um curso e que a carga horária semanal seja de, no mínimo, 30h</p>
+            </div>
+          </details>
+          <details>
+            <summary>Minha licença começa em certa data, posso adiantar a realização do curso?</summary>
+            <div class="resp"><p>Não. Ao se inscrever no curso e informar que ele será usado para licença capacitação, você informará a data de início e término do curso. O sistema então, só habilita o seu acesso ao curso na data informada. Então, você irá iniciar e precisa finalizar, dentro do prazo que você informou no cadastro.</p></div>
+          </details>
+          <details>
+            <summary>Como gerar a declaração para anexar ao meu processo?</summary>
+            <div class="resp">
+              <p>Você deverá gerar e salvar a sua declaração no mesmo dia em que se inscrever no curso e informar as datas de sua licença, pois, no dia seguinte o seu acesso será suspenso até a data de início da sua licença para capacitação.</p>
+              <p>Na tela de confirmação do período de realização do curso, clique primeiro em <b>Continuar</b> e, em seguida, em <b>Gerar</b>. A declaração será aberta na sua tela.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barra do plano: acompanha a pessoa enquanto ela escolhe cursos. -->
+    <div class="plc-dock" id="plc-dock" hidden>
+      <div class="wrap">
+        <div class="plc-dock-num">
+          <strong id="plc-dock-horas">0h</strong>
+          <span id="plc-dock-meta">de 129h</span>
+        </div>
+        <div class="plc-dock-bar" aria-hidden="true"><i id="plc-dock-fill"></i></div>
+        <span class="plc-dock-flag" id="plc-dock-flag"></span>
+        <a class="btn btn-primary" href="#planejador">Ver meu plano</a>
+      </div>
+    </div>
+
+    <!-- Só aparece na impressão. Montado por JS a partir do plano da tela. -->
+    <div class="plc-doc" id="plc-doc"></div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <h3>Cursos Abertos do Ifes</h3>
+        <p>Catálogo público dos cursos abertos do Cefor/Ifes, organizado para busca, descoberta e acesso ao Moodle.</p>
+      </div>
+      <div>
+        <h4>Cursos Abertos</h4>
+        <ul>
+          <li><a href="index-v3.html#validar-certificado">Validar Certificado</a></li>
+          <li><a href="licenca-v3.html">Licença para Capacitação</a></li>
+          <li><a href="index-v3.html#painel-indicadores">Painel de Indicadores</a></li>
+          <li><a href="index-v3.html#termos-de-uso">Termos de Uso</a></li>
+          <li><a href="https://mooc.cefor.ifes.edu.br/suporte/">Suporte</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="https://www.ifes.edu.br/">O Ifes</a></li>
+          <li><a href="https://cefor.ifes.edu.br/">O Cefor</a></li>
+          <li><a href="https://mooc.cefor.ifes.edu.br/v/licenca-capacitacao/">Instrução oficial da licença</a></li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Instituto Federal do Espírito Santo">
+        <span class="footer-tagline">Centro de Referência em Formação e em Educação a Distância</span>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div class="wrap">
+        <span>Ifes - Cefor</span>
+        <span>Planejador instrucional — não realiza inscrição</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cursos-dados.js"></script>
+  <script>
+    function toggleMenu(button) {
+      const menu = document.getElementById("menu");
+      const open = menu.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(open));
+    }
+
+    function initLangSwitch() {
+      const root = document.querySelector("[data-lang-switch]");
+      if (!root) return;
+      const btn = root.querySelector(".lang-btn");
+      const close = () => {
+        root.removeAttribute("data-open");
+        btn.setAttribute("aria-expanded", "false");
+      };
+
+      btn.addEventListener("click", () => {
+        if (root.hasAttribute("data-open")) return close();
+        root.setAttribute("data-open", "");
+        btn.setAttribute("aria-expanded", "true");
+      });
+
+      // Esta pagina so existe em PT: os demais idiomas ficam desabilitados.
+      root.querySelectorAll(".lang-menu a").forEach(item =>
+        item.addEventListener("click", event => {
+          if (item.hasAttribute("data-soon")) event.preventDefault();
+        }));
+
+      document.addEventListener("click", event => {
+        if (!root.contains(event.target)) close();
+      });
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && root.hasAttribute("data-open")) {
+          close();
+          btn.focus();
+        }
+      });
+    }
+
+    initLangSwitch();
+
+    /* ══════════════════════════════════════════════════════════════════════
+       PLANEJADOR DE LICENÇA PARA CAPACITAÇÃO
+
+       Uma regra de cálculo, a do Cefor: 30 horas de curso por semana de
+       licença. O resto é consequência dela.
+
+       Fluxo: parâmetros -> "Gerar plano" -> plano montado -> ajuste no
+       catálogo abaixo -> impressão. Escopo instrucional (comissão, 09/07/2026):
+       não inscreve e não emite declaração — isso é feito dentro de cada curso.
+       ══════════════════════════════════════════════════════════════════════ */
+
+    const HORAS_SEMANA = 30;
+    const CHAVE = "plc-v3";
+    const PAGINA = 12;
+
+    /* Os passos da inscrição, na ordem das telas do ambiente (fonte: página
+       oficial do Cefor). Vão para o plano impresso. */
+    const PASSOS = [
+      ['Entre na sala do curso', 'Pelo endereço da tabela, e inscreva-se no curso.'],
+      ['Abra "Licença para capacitação"', 'O item fica na <b>Área do curso</b>, na seção inicial.'],
+      ['Clique no link do bloco', 'Ele expande e leva ao preenchimento dos dados.'],
+      ['Clique em "Responda as questões"', 'Abre a atividade com o formulário.'],
+      ['Informe as datas deste curso', 'Início e fim no formato DD/MM/AAAA, exatamente como estão na tabela. Marque a declaração de veracidade e clique em <b>Submeter as suas respostas</b>.'],
+      ['Clique em "Continuar" e depois em "Gerar"', 'A declaração abre em nova tela. <b>Salve o arquivo no mesmo dia</b> — é ele que vai no seu processo.'],
+      ['Repita nos demais cursos do plano', 'Depois junte as declarações e abra o processo no seu órgão.']
+    ];
+
+    const el = id => document.getElementById(id);
+
+    const esc = value => String(value == null ? "" : value).replace(/[&<>"']/g, char => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[char]));
+
+    const norm = value => String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    // Entram só cursos com carga horária conhecida — sem ela não há o que somar.
+    const CURSOS = (window.CURSOS_MOOC || [])
+      .filter(curso => !curso.obsoleto && /^\d+\s*h$/i.test(String(curso.cargaLabel || "").trim()))
+      .map(curso => ({ ...curso, horas: parseInt(curso.cargaLabel, 10) }));
+
+    const FACETAS = window.CURSOS_FILTROS || {};
+    const NOMES = {};
+    ["categoria", "carga", "nivel"].forEach(grupo =>
+      (FACETAS[grupo] || []).forEach(item => (NOMES[grupo + ":" + item.slug] = item.nome)));
+
+    const estado = carregar();
+    const filtros = { q: "", categoria: new Set(), carga: new Set(), nivel: new Set(), libras: false };
+    let ordem = "az";
+    let visiveis = PAGINA;
+
+    function carregar() {
+      const base = { dias: 30, inicio: "", area: "", ritmo: "concomitante", escolhidos: [], gerado: false };
+      try {
+        const salvo = JSON.parse(localStorage.getItem(CHAVE) || "null");
+        if (salvo && typeof salvo === "object") {
+          return {
+            dias: Number(salvo.dias) > 0 ? Math.min(180, Math.round(Number(salvo.dias))) : base.dias,
+            inicio: typeof salvo.inicio === "string" ? salvo.inicio : base.inicio,
+            area: typeof salvo.area === "string" ? salvo.area : "",
+            ritmo: salvo.ritmo === "sequencial" ? "sequencial" : base.ritmo,
+            escolhidos: Array.isArray(salvo.escolhidos)
+              ? salvo.escolhidos.filter(n => CURSOS.some(curso => curso.n === n))
+              : [],
+            gerado: Boolean(salvo.gerado)
+          };
+        }
+      } catch (erro) {
+        // localStorage bloqueado (modo privado, file://): segue sem persistir.
+      }
+      return base;
+    }
+
+    function salvar() {
+      try {
+        localStorage.setItem(CHAVE, JSON.stringify(estado));
+      } catch (erro) {
+        /* sem persistência; a sessão continua funcionando */
+      }
+    }
+
+    /* ── Datas ─────────────────────────────────────────────────────────────── */
+
+    const iso = data => data.toISOString().slice(0, 10);
+    const somaDias = (data, dias) => new Date(data.getTime() + dias * 86400000);
+    const dois = n => String(n).padStart(2, "0");
+    const curta = data => dois(data.getUTCDate()) + "/" + dois(data.getUTCMonth() + 1);
+    const longa = data => curta(data) + "/" + data.getUTCFullYear();
+
+    function paraData(texto) {
+      if (!texto) return null;
+      const [ano, mes, dia] = String(texto).split("-").map(Number);
+      if (!ano || !mes || !dia) return null;
+      return new Date(Date.UTC(ano, mes - 1, dia));
+    }
+
+    /* ── Cálculo ───────────────────────────────────────────────────────────── */
+
+    const dias = () => Math.max(1, Math.min(180, Number(estado.dias) || 1));
+    const meta = () => Math.ceil(dias() / 7 * HORAS_SEMANA);
+    const escolhidos = () => estado.escolhidos.map(n => CURSOS.find(c => c.n === n)).filter(Boolean);
+    const somado = () => escolhidos().reduce((total, curso) => total + curso.horas, 0);
+
+    function periodo() {
+      const inicio = paraData(estado.inicio);
+      if (!inicio) return null;
+      return { inicio, fim: somaDias(inicio, dias() - 1) };
+    }
+
+    /* Distribui os cursos no período. "Juntos": todos com as datas da licença
+       inteira. "Em sequência": o período é dividido na proporção da carga
+       horária, sem que nenhuma data saia do período declarado. */
+    function cronograma() {
+      const lista = escolhidos();
+      const intervalo = periodo();
+      if (!lista.length || !intervalo) return [];
+
+      if (estado.ritmo === "concomitante") {
+        return lista.map(curso => ({ curso, inicio: intervalo.inicio, fim: intervalo.fim }));
+      }
+
+      const totalHoras = somado() || 1;
+      const totalDias = dias();
+      const limite = data => (data > intervalo.fim ? intervalo.fim : data);
+      let usados = 0;
+      return lista.map((curso, indice) => {
+        const restantes = lista.length - indice - 1;
+        let bloco = Math.max(1, Math.round(curso.horas / totalHoras * totalDias));
+        bloco = Math.min(bloco, totalDias - usados - restantes);
+        if (indice === lista.length - 1) bloco = totalDias - usados;
+        bloco = Math.max(1, bloco);
+        const inicio = limite(somaDias(intervalo.inicio, usados));
+        const fim = limite(somaDias(inicio, bloco - 1));
+        usados += bloco;
+        return { curso, inicio, fim };
+      });
+    }
+
+    /* Sugestão: maiores primeiro para fechar com poucos cursos e, na última
+       vaga, o menor curso que ainda resolve o que falta — o excesso fica no
+       mínimo. Respeita a área escolhida no formulário. */
+    function montar() {
+      const alvo = meta();
+      const pool = CURSOS
+        .filter(curso => !estado.area || curso.categoria.includes(estado.area))
+        .slice()
+        .sort((a, b) => b.horas - a.horas);
+      const plano = [];
+      let total = 0;
+
+      for (const curso of pool) {
+        if (total >= alvo) break;
+        const falta = alvo - total;
+        const fecha = pool
+          .filter(item => !plano.includes(item) && item.horas >= falta)
+          .sort((a, b) => a.horas - b.horas)[0];
+        const escolhido = fecha && fecha.horas <= curso.horas ? fecha : curso;
+        if (plano.includes(escolhido)) continue;
+        plano.push(escolhido);
+        total += escolhido.horas;
+      }
+
+      estado.escolhidos = plano.map(curso => curso.n);
+    }
+
+    /* ── Catálogo ──────────────────────────────────────────────────────────── */
+
+    function filtrados() {
+      return CURSOS.filter(curso => {
+        if (filtros.libras && !curso.libras) return false;
+        if (filtros.categoria.size && !curso.categoria.some(c => filtros.categoria.has(c))) return false;
+        if (filtros.carga.size && !filtros.carga.has(curso.carga)) return false;
+        if (filtros.nivel.size && !filtros.nivel.has(curso.nivel)) return false;
+        if (filtros.q && !norm(curso.search).includes(filtros.q)) return false;
+        return true;
+      }).sort((a, b) =>
+        ordem === "maior" ? b.horas - a.horas
+        : ordem === "menor" ? a.horas - b.horas
+        : a.titulo.localeCompare(b.titulo, "pt-BR"));
+    }
+
+    function montarFacetas() {
+      const linha = (grupo, slug, nome) => {
+        const total = CURSOS.filter(curso =>
+          grupo === "categoria" ? curso.categoria.includes(slug) : curso[grupo] === slug).length;
+        if (!total) return "";
+        return '<li class="filter-option"><label><input type="checkbox" data-grupo="' + grupo
+          + '" value="' + esc(slug) + '"> ' + esc(nome) + "</label>"
+          + '<span class="filter-count">' + total + "</span></li>";
+      };
+
+      el("f-categoria").innerHTML = (FACETAS.categoria || [])
+        .slice().sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"))
+        .map(item => linha("categoria", item.slug, item.nome)).join("");
+      el("f-carga").innerHTML = (FACETAS.carga || [])
+        .filter(item => item.slug !== "nao-informada")
+        .map(item => linha("carga", item.slug, item.nome)).join("");
+      el("f-nivel").innerHTML = (FACETAS.nivel || [])
+        .map(item => linha("nivel", item.slug, item.nome)).join("");
+      el("count-libras").textContent = CURSOS.filter(curso => curso.libras).length;
+    }
+
+    function cardHtml(curso) {
+      const dentro = estado.escolhidos.includes(curso.n);
+      return '<article class="course-card plc-card" data-curso="' + curso.n + '"'
+        + (dentro ? " data-on" : "") + ">"
+        + '<div class="course-media">'
+        + '<img src="' + esc(curso.thumb) + '" alt="Imagem do curso ' + esc(curso.titulo) + '" loading="lazy">'
+        + (curso.libras
+            ? '<img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">'
+            : "")
+        + (dentro ? '<span class="plc-card-selo">No plano</span>' : "")
+        + "</div>"
+        + '<div class="course-body">'
+        + '<span class="course-cat">' + esc(curso.categoriaNomes[0] || "Curso aberto") + "</span>"
+        + "<h3>" + esc(curso.titulo) + "</h3>"
+        + '<p class="course-meta"><span>' + curso.horas + "h</span><span>" + esc(curso.nivelLabel) + "</span></p>"
+        + '<span class="course-footer">'
+        + '<button class="mini-cta plc-add" type="button" data-add="' + curso.n + '">'
+        + (dentro ? "Remover do plano" : "Adicionar ao plano") + "</button>"
+        + '<a class="plc-ver" href="' + esc(curso.link) + '" target="_blank" rel="noopener">ver curso ↗</a>'
+        + "</span></div></article>";
+    }
+
+    function renderCatalogo() {
+      const lista = filtrados();
+      const mostrar = lista.slice(0, visiveis);
+
+      el("plc-grid").innerHTML = mostrar.map(cardHtml).join("");
+      el("plc-vazio").hidden = lista.length > 0;
+      el("plc-mais").hidden = lista.length <= visiveis;
+      el("plc-count").textContent = lista.length
+        ? "Mostrando " + mostrar.length + " de " + lista.length + (lista.length === 1 ? " curso" : " cursos")
+        : "Nenhum curso encontrado";
+
+      const chips = [];
+      if (filtros.q) chips.push('<button class="chip" type="button" data-chip="q">Busca: ' + esc(filtros.q) + "</button>");
+      ["categoria", "carga", "nivel"].forEach(grupo =>
+        filtros[grupo].forEach(valor =>
+          chips.push('<button class="chip" type="button" data-chip="' + grupo + '" data-valor="' + esc(valor) + '">'
+            + esc(NOMES[grupo + ":" + valor] || valor) + "</button>")));
+      if (filtros.libras) chips.push('<button class="chip" type="button" data-chip="libras">Com Libras</button>');
+      el("plc-chips").innerHTML = chips.join("");
+    }
+
+    /* ── Render do planejador ──────────────────────────────────────────────── */
+
+    function renderResultado() {
+      const lista = escolhidos();
+      const total = somado();
+      const alvo = meta();
+      const falta = alvo - total;
+      const fechou = total > 0 && falta <= 0;
+      const intervalo = periodo();
+
+      el("plc-result").hidden = !estado.gerado;
+      el("plc-status").textContent = estado.gerado ? "Plano em edição" : "Passo 1 de 2";
+      el("plc-app").toggleAttribute("data-pronto", estado.gerado);
+
+      el("plc-somado").textContent = total + "h";
+      el("plc-de").textContent = "de " + alvo + "h necessárias";
+      el("plc-escala").textContent = alvo + "h";
+      el("plc-fill").style.width = Math.min(100, alvo ? total / alvo * 100 : 0) + "%";
+      el("plc-result").toggleAttribute("data-ok", fechou);
+      el("plc-flag").textContent = fechou
+        ? (falta === 0 ? "carga horária fechada" : "fechada · " + Math.abs(falta) + "h a mais")
+        : "faltam " + falta + "h";
+      el("plc-periodo").textContent = intervalo
+        ? longa(intervalo.inicio) + " a " + longa(intervalo.fim) + " · " + dias() + " dias"
+        : dias() + " dias";
+
+      // A oferta dos cursos é anual: nenhum curso pode começar em um ano e
+      // terminar no seguinte. Se o período atravessa o réveillon, avisa.
+      const vira = intervalo && intervalo.inicio.getUTCFullYear() !== intervalo.fim.getUTCFullYear();
+      el("plc-alerta").hidden = !vira;
+      if (vira) {
+        el("plc-alerta").innerHTML = "<b>Seu período atravessa a virada do ano ("
+          + intervalo.inicio.getUTCFullYear() + " → " + intervalo.fim.getUTCFullYear()
+          + ").</b> A oferta dos cursos é anual: cada curso precisa começar e terminar no mesmo ano. "
+          + "Ajuste as datas ou divida o plano em dois processos.";
+      }
+
+      const maior = lista.reduce((max, curso) => Math.max(max, curso.horas), 0) || 1;
+      el("plc-blank").hidden = lista.length > 0;
+      el("plc-lista").hidden = lista.length === 0;
+      el("plc-resumo").textContent = lista.length
+        ? lista.length + (lista.length === 1 ? " curso · " : " cursos · ") + total + "h"
+        : "nenhum curso";
+      el("plc-lista").innerHTML = lista.map(curso =>
+        '<li style="--p:' + Math.round(curso.horas / maior * 100) + '%">'
+        + '<span><a href="' + esc(curso.link) + '" target="_blank" rel="noopener"><strong>'
+        + esc(curso.titulo) + "</strong></a></span>"
+        + "<b>" + curso.horas + "h</b>"
+        + '<button class="plc-x" type="button" data-remove="' + curso.n + '" aria-label="Tirar '
+        + esc(curso.titulo) + ' do plano">×</button></li>'
+      ).join("");
+    }
+
+    function renderGantt() {
+      const linhas = cronograma();
+      const intervalo = periodo();
+      el("plc-gantt-blank").hidden = linhas.length > 0;
+
+      if (!linhas.length || !intervalo) {
+        el("plc-gantt").innerHTML = "";
+        return;
+      }
+
+      const total = dias();
+      const offset = data => Math.round((data - intervalo.inicio) / 86400000);
+
+      el("plc-gantt").innerHTML =
+        '<div class="plc-gantt-rule"><span>' + curta(intervalo.inicio) + "</span>"
+        + "<span>" + curta(somaDias(intervalo.inicio, Math.floor((total - 1) / 2))) + "</span>"
+        + "<span>" + curta(intervalo.fim) + "</span></div>"
+        + linhas.map(linha => {
+            const inicio = offset(linha.inicio) / total * 100;
+            const largura = Math.max(2, (offset(linha.fim) - offset(linha.inicio) + 1) / total * 100);
+            return '<div class="plc-gantt-row"><span>' + esc(linha.curso.titulo)
+              + " <em>" + curta(linha.inicio) + "–" + curta(linha.fim) + "</em></span>"
+              + '<span class="plc-gantt-track"><i style="left:' + inicio + "%;width:" + largura + '%"></i></span></div>';
+          }).join("");
+    }
+
+    function renderDock() {
+      const total = somado();
+      const alvo = meta();
+      const fechou = total > 0 && total >= alvo;
+      el("plc-dock").hidden = !estado.escolhidos.length;
+      // A barra é fixa: sem esta folga ela cobriria o fim do rodapé.
+      document.body.classList.toggle("com-dock", Boolean(estado.escolhidos.length));
+      el("plc-dock-horas").textContent = total + "h";
+      el("plc-dock-meta").textContent = "de " + alvo + "h · " + estado.escolhidos.length
+        + (estado.escolhidos.length === 1 ? " curso" : " cursos");
+      el("plc-dock-fill").style.width = Math.min(100, alvo ? total / alvo * 100 : 0) + "%";
+      el("plc-dock").toggleAttribute("data-ok", fechou);
+      el("plc-dock-flag").textContent = fechou ? "meta atingida" : "faltam " + (alvo - total) + "h";
+    }
+
+    /* O plano em papel: endereços das salas, datas a informar em cada curso e o
+       passo a passo da inscrição, que acontece dentro de cada curso. */
+    function renderDoc() {
+      const linhas = cronograma();
+      const intervalo = periodo();
+
+      if (!linhas.length) {
+        el("plc-doc").innerHTML = "";
+        return;
+      }
+
+      el("plc-doc").innerHTML = ''
+        + '<div class="plc-doc-head"><span>Cursos Abertos do Ifes · Cefor</span>'
+        + "<h1>Plano de cursos para licença para capacitação</h1></div>"
+        + '<div class="plc-doc-meta">'
+        + "<div><span>Período</span><strong>" + (intervalo ? longa(intervalo.inicio) + " a " + longa(intervalo.fim) : dias() + " dias") + "</strong></div>"
+        + "<div><span>Carga horária mínima</span><strong>" + meta() + "h</strong></div>"
+        + "<div><span>Carga horária do plano</span><strong>" + somado() + "h</strong></div>"
+        + "</div>"
+        + "<h2>Cursos do plano — datas a informar em cada um</h2>"
+        + "<table><thead><tr><th></th><th>Curso e endereço da sala</th><th>Carga</th><th>Datas a informar</th></tr></thead><tbody>"
+        + linhas.map((linha, i) =>
+            '<tr><td class="plc-doc-box">&#9744;</td>'
+            + "<td><b>" + (i + 1) + ". " + esc(linha.curso.titulo) + "</b>"
+            + "<small>" + esc(linha.curso.link) + "</small></td>"
+            + "<td>" + linha.curso.horas + "h</td>"
+            + "<td>" + longa(linha.inicio) + "<br>a " + longa(linha.fim) + "</td></tr>"
+          ).join("")
+        + "</tbody></table>"
+        + "<h2>Inscrição — repita em cada curso da tabela</h2><ol>"
+        + PASSOS.map(passo => "<li><b>" + passo[0] + ".</b> " + passo[1] + "</li>").join("")
+        + "</ol>"
+        + "<h2>Atenção</h2><ul>"
+        + "<li><b>Salve a declaração no mesmo dia</b> em que informar as datas: no dia seguinte o curso é desabilitado e só reabre na data de início informada.</li>"
+        + "<li>As datas informadas <b>saem na declaração e no certificado</b>. O certificado só fica disponível na data de fim do período.</li>"
+        + "<li>A oferta dos cursos é anual: <b>início e fim precisam ser no mesmo ano</b>.</li>"
+        + "<li>Se você não vai usar um curso para a licença, <b>não preencha as datas nele</b> — assim ele continua livre para ser feito a qualquer tempo.</li>"
+        + "<li>Confirme com a sua unidade de gestão de pessoas as regras da licença: quem tem direito, prazos e documentos exigidos.</li>"
+        + "</ul>"
+        + '<p class="plc-doc-foot">Documento de apoio gerado pelo planejador dos Cursos Abertos do Ifes. '
+        + "Não constitui inscrição, declaração ou comprovação oficial — a inscrição e a declaração são feitas dentro de cada curso. "
+        + "A carga horária mínima considerada é de " + HORAS_SEMANA + "h de curso por semana de licença, conforme orientação do Cefor. "
+        + "Passo a passo completo: mooc.cefor.ifes.edu.br/v/licenca-capacitacao/</p>";
+    }
+
+    function render() {
+      renderResultado();
+      renderGantt();
+      renderDock();
+      renderDoc();
+      renderCatalogo();
+    }
+
+    /* ── Ligações ──────────────────────────────────────────────────────────── */
+
+    // As facetas ficam abertas no desktop e recolhidas no celular.
+    const facetas = el("plc-facetas");
+    const ajustarFacetas = () => (facetas.open = window.innerWidth > 980);
+    ajustarFacetas();
+    window.addEventListener("resize", ajustarFacetas);
+
+    montarFacetas();
+    el("plc-area").insertAdjacentHTML("beforeend", (FACETAS.categoria || [])
+      .slice().sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"))
+      .map(area => '<option value="' + esc(area.slug) + '">' + esc(area.nome) + "</option>").join(""));
+
+    el("plc-dias").value = estado.dias;
+    // Sem data salva, o padrão é daqui a 30 dias: licença se pede com antecedência.
+    el("plc-inicio").value = estado.inicio || iso(somaDias(new Date(), 30));
+    estado.inicio = el("plc-inicio").value;
+    el("plc-area").value = estado.area;
+    document.querySelectorAll("[data-ritmo]").forEach(chip =>
+      chip.setAttribute("aria-pressed", String(chip.dataset.ritmo === estado.ritmo)));
+
+    function lerFormulario() {
+      estado.dias = Math.max(1, Math.min(180, Number(el("plc-dias").value) || 30));
+      estado.inicio = el("plc-inicio").value;
+      estado.area = el("plc-area").value;
+      el("plc-dias").value = estado.dias;
+    }
+
+    el("plc-form").addEventListener("submit", event => {
+      event.preventDefault();
+      lerFormulario();
+      montar();
+      estado.gerado = true;
+      salvar();
+      render();
+      el("plc-result").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    // "Escolher por conta própria": calcula a meta e leva ao catálogo, sem
+    // montar sugestão nenhuma.
+    el("plc-manual").addEventListener("click", () => {
+      lerFormulario();
+      estado.gerado = true;
+      salvar();
+      render();
+    });
+
+    ["plc-dias", "plc-inicio", "plc-area"].forEach(id =>
+      el(id).addEventListener("change", () => {
+        lerFormulario();
+        salvar();
+        if (estado.gerado) render();
+      }));
+
+    document.querySelectorAll("[data-ritmo]").forEach(chip =>
+      chip.addEventListener("click", () => {
+        estado.ritmo = chip.dataset.ritmo;
+        document.querySelectorAll("[data-ritmo]").forEach(outro =>
+          outro.setAttribute("aria-pressed", String(outro === chip)));
+        salvar();
+        renderGantt();
+        renderDoc();
+      }));
+
+    el("plc-lista").addEventListener("click", event => {
+      const botao = event.target.closest("[data-remove]");
+      if (!botao) return;
+      estado.escolhidos = estado.escolhidos.filter(n => n !== Number(botao.dataset.remove));
+      salvar();
+      render();
+    });
+
+    el("plc-limpar").addEventListener("click", () => {
+      estado.escolhidos = [];
+      salvar();
+      render();
+    });
+
+    el("plc-grid").addEventListener("click", event => {
+      const botao = event.target.closest("[data-add]");
+      if (!botao) return;
+      const n = Number(botao.dataset.add);
+      estado.escolhidos = estado.escolhidos.includes(n)
+        ? estado.escolhidos.filter(item => item !== n)
+        : estado.escolhidos.concat(n);
+      estado.gerado = true;
+      salvar();
+      render();
+    });
+
+    el("plc-busca").addEventListener("input", () => {
+      filtros.q = norm(el("plc-busca").value.trim());
+      visiveis = PAGINA;
+      renderCatalogo();
+    });
+
+    document.querySelectorAll(".filters").forEach(painel =>
+      painel.addEventListener("change", event => {
+        const campo = event.target;
+        if (campo.id === "f-libras") {
+          filtros.libras = campo.checked;
+        } else if (campo.dataset.grupo) {
+          const conjunto = filtros[campo.dataset.grupo];
+          if (campo.checked) conjunto.add(campo.value);
+          else conjunto.delete(campo.value);
+        } else {
+          return;
+        }
+        visiveis = PAGINA;
+        renderCatalogo();
+      }));
+
+    el("plc-ordenar").addEventListener("change", () => {
+      ordem = el("plc-ordenar").value;
+      renderCatalogo();
+    });
+
+    el("plc-mais").addEventListener("click", () => {
+      visiveis += PAGINA;
+      renderCatalogo();
+    });
+
+    el("plc-chips").addEventListener("click", event => {
+      const chip = event.target.closest("[data-chip]");
+      if (!chip) return;
+      const alvo = chip.dataset.chip;
+      if (alvo === "q") {
+        filtros.q = "";
+        el("plc-busca").value = "";
+      } else if (alvo === "libras") {
+        filtros.libras = false;
+        el("f-libras").checked = false;
+      } else {
+        filtros[alvo].delete(chip.dataset.valor);
+        const campo = document.querySelector('[data-grupo="' + alvo + '"][value="' + chip.dataset.valor + '"]');
+        if (campo) campo.checked = false;
+      }
+      visiveis = PAGINA;
+      renderCatalogo();
+    });
+
+    el("plc-limpar-filtros").addEventListener("click", () => {
+      filtros.q = "";
+      filtros.libras = false;
+      ["categoria", "carga", "nivel"].forEach(grupo => filtros[grupo].clear());
+      el("plc-busca").value = "";
+      document.querySelectorAll('.filters input[type="checkbox"]').forEach(campo => (campo.checked = false));
+      visiveis = PAGINA;
+      renderCatalogo();
+    });
+
+    el("plc-imprimir").addEventListener("click", () => {
+      if (!estado.escolhidos.length) {
+        el("plc-flag").textContent = "escolha ao menos um curso";
+        document.querySelector("#escolher").scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+      window.print();
+    });
+
+    render();
+  </script>
+</body>
+</html>

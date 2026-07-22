@@ -3,26 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cursos Abertos do Ifes - gratuitos, on-line e certificados</title>
+  <title>Cursos Abertos do Ifes - gratuitos, on-line e certificados · v3</title>
   <meta name="description" content="Cursos on-line gratuitos, abertos a toda a comunidade, com certificado do Ifes e catálogo com busca por área, carga horária, nível e acessibilidade.">
+  <!-- v3: mesmo layout do canonico. So muda tipografia, espacamento e margens.
+       O peso 500 do Inter nao existe no @import de estilos.css e e usado pelo refino. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos-v3.css">
 </head>
 <body>
   <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
   <header class="site">
     <div class="site-wrap">
-      <a class="brand" href="index.html" aria-label="Cursos Abertos do Ifes">
+      <a class="brand" href="index-v3.html" aria-label="Cursos Abertos do Ifes">
         <img class="brand-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
         <span class="brand-divider" aria-hidden="true"></span>
         <span class="brand-name">Cursos Abertos</span>
       </a>
       <nav class="main-nav" id="menu" aria-label="Navegação principal">
-        <a href="cursos.html">Cursos</a>
+        <a href="cursos-v3.html">Cursos</a>
         <a href="#projetos">Projetos</a>
-        <a href="#licenca">Licença capacitação</a>
+        <a href="licenca-v3.html">Licença capacitação</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMyN2UxZTktY2FiMi00ZDI1LWE5NTctOGZiZjUzOTdhMjUyIiwidCI6IjQ0ZTllMTcyLWZmYTUtNDNmMy1iMjJjLTM3MWNmY2QyNzJlZCJ9&amp;pageName=ReportSection">Painel de Indicadores</a>
         <a href="#faq">Dúvidas</a>
       </nav>
       <div class="site-actions">
@@ -34,7 +39,7 @@
           </button>
           <ul class="lang-menu" id="lang-menu" role="menu">
             <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="../_arquivo/canonico-en/index-en.html" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English<span class="lang-soon">em breve</span></a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français<span class="lang-soon">em breve</span></a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español<span class="lang-soon">em breve</span></a></li>
           </ul>
@@ -59,7 +64,7 @@
           <span>aprendizado no seu ritmo</span>
         </h1>
         <p class="lead">Encontre cursos livres do Ifes, amplie suas competências e habilidades, conquiste seu certificado e avance na carreira - tudo gratuito, no seu tempo e de onde você estiver.</p>
-        <form class="hero-search" action="cursos.html" method="get" role="search" aria-label="Buscar cursos no catálogo">
+        <form class="hero-search" action="cursos-v3.html" method="get" role="search" aria-label="Buscar cursos no catálogo">
           <span class="hero-search-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
           </span>
@@ -68,43 +73,43 @@
           <button class="btn btn-primary" type="submit">Buscar cursos</button>
         </form>
         <div class="hero-actions">
-          <a class="btn btn-accent" href="cursos.html">Explorar cursos</a>
+          <a class="btn btn-accent" href="cursos-v3.html">Explorar cursos</a>
           <a class="btn btn-outline" href="#como-funciona">Como funciona</a>
         </div>
       </div>
-    </section>
 
-    <div class="stats" aria-label="Indicadores dos cursos abertos">
-      <div class="wrap">
-        <div class="stat">
-          <span class="stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </span>
-          <span class="stat-body">
-            <strong>300.363</strong>
-            <span>Matrículas realizadas</span>
-          </span>
-        </div>
-        <div class="stat">
-          <span class="stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-5"/><path d="M22 10v5.5"/></svg>
-          </span>
-          <span class="stat-body">
-            <strong>+160</strong>
-            <span>Cursos disponíveis</span>
-          </span>
-        </div>
-        <div class="stat">
-          <span class="stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg>
-          </span>
-          <span class="stat-body">
-            <strong>15</strong>
-            <span>Áreas de conhecimento</span>
-          </span>
+      <div class="stats" aria-label="Indicadores dos cursos abertos">
+        <div class="wrap">
+          <div class="stat">
+            <span class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <span class="stat-body">
+              <strong>300.363</strong>
+              <span>Matrículas realizadas</span>
+            </span>
+          </div>
+          <div class="stat">
+            <span class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-5"/><path d="M22 10v5.5"/></svg>
+            </span>
+            <span class="stat-body">
+              <strong>+160</strong>
+              <span>Cursos disponíveis</span>
+            </span>
+          </div>
+          <div class="stat">
+            <span class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg>
+            </span>
+            <span class="stat-body">
+              <strong>15</strong>
+              <span>Áreas de conhecimento</span>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <section id="destaques">
       <div class="wrap">
@@ -113,7 +118,7 @@
             <h2>Cursos em destaque</h2>
             <p>Explore cursos selecionados para começar seus estudos com temas úteis, gratuitos e certificados pelo Ifes.</p>
           </div>
-          <a class="text-link" href="cursos.html">Ver todos os cursos</a>
+          <a class="text-link" href="cursos-v3.html">Ver todos os cursos</a>
         </div>
 
         <div class="course-carousel" data-carousel>
@@ -209,7 +214,7 @@
             <h2>Adicionados recentemente</h2>
             <p>Conheça os novos cursos lançados em nossa plataforma.</p>
           </div>
-          <a class="text-link" href="cursos.html?ordem=recentes">Ver todos os cursos</a>
+          <a class="text-link" href="cursos-v3.html?ordem=recentes">Ver todos os cursos</a>
         </div>
 
         <div class="course-carousel" data-carousel>
@@ -320,7 +325,7 @@
             <h2>Mais cursados</h2>
             <p>Conheça os cursos mais cursados em nossa plataforma</p>
           </div>
-          <a class="text-link" href="cursos.html?ordem=mais-cursados">Ver todos os cursos</a>
+          <a class="text-link" href="cursos-v3.html?ordem=mais-cursados">Ver todos os cursos</a>
         </div>
 
         <div class="course-carousel" data-carousel>
@@ -428,6 +433,10 @@
     <!-- O que é + Como funciona -->
     <section class="oquee reveal" id="como-funciona">
       <div class="wrap">
+        <figure class="mooc-foto">
+          <img src="assets/pessoa-notebook.png" alt="Estudante sentado em um banco alto, estudando em um notebook" loading="lazy">
+        </figure>
+
         <div class="mooc-intro">
           <span class="mooc-label">Curso aberto, on-line e gratuito</span>
           <h2>O que é curso MOOC?</h2>
@@ -490,14 +499,14 @@
           </div>
         </div>
         <div class="projetos">
-          <a class="projeto riodoce" href="#">
+          <a class="projeto riodoce" href="projeto-v3.html?p=rio-doce-escolar">
             <span class="projeto-logo"><img src="../../../../design-system/logo_riodoceescolar.png" alt="Marca Rio Doce Escolar"></span>
             <span class="n">Projeto parceiro · 31 cursos</span>
             <h3>Rio Doce Escolar</h3>
             <p>Educação ambiental a partir da bacia do Rio Doce: água, território, escola e comunidade.</p>
             <span class="link">Conhecer o projeto →</span>
           </a>
-          <a class="projeto unac" href="#">
+          <a class="projeto unac" href="projeto-v3.html?p=unac">
             <span class="projeto-logo"><img src="../../../../design-system/Logo_UnAC_WhatsApp.png" alt="Marca UnAC"></span>
             <span class="n">Projeto parceiro · 33 cursos</span>
             <h3>UnAC</h3>
@@ -511,34 +520,34 @@
             <h3>Séries para continuar aprendendo</h3>
             <p>Coleções curadas por tema, público ou progressão. Escolha uma série e avance pelos cursos relacionados.</p>
           </div>
-          <a class="sec-link" href="cursos.html">Ver todas as séries →</a>
+          <a class="sec-link" href="cursos-v3.html">Ver todas as séries →</a>
         </div>
         <div class="series series-destaque">
-          <a class="serie serie-lovelace" href="cursos.html">
+          <a class="serie serie-lovelace" href="cursos-v3.html">
             <span class="serie-topo"><span class="rotulo">Série</span><span class="n">6 cursos</span></span>
             <h3>Lovelace</h3>
             <p>Programação, pensamento computacional e tecnologia com foco em meninas e mulheres.</p>
             <span class="link">Explorar série →</span>
           </a>
-          <a class="serie" href="cursos.html">
+          <a class="serie" href="cursos-v3.html">
             <span class="serie-topo"><span class="rotulo">Série</span><span class="n">4 cursos</span></span>
             <h3>Educador Maker</h3>
             <p>Práticas mão na massa para professores que querem criar, prototipar e inovar em sala.</p>
             <span class="link">Explorar série →</span>
           </a>
-          <a class="serie" href="cursos.html">
+          <a class="serie" href="cursos-v3.html">
             <span class="serie-topo"><span class="rotulo">Série</span><span class="n">3 cursos</span></span>
             <h3>Atendente e Vendedor</h3>
             <p>Formação prática para atendimento, vendas e relacionamento com clientes.</p>
             <span class="link">Explorar série →</span>
           </a>
-          <a class="serie" href="cursos.html">
+          <a class="serie" href="cursos-v3.html">
             <span class="serie-topo"><span class="rotulo">Série</span><span class="n">3 cursos</span></span>
             <h3>Embrace</h3>
             <p>Conteúdos em rede, com abordagem internacional e temas de formação cidadã.</p>
             <span class="link">Explorar série →</span>
           </a>
-          <a class="serie" href="cursos.html">
+          <a class="serie" href="cursos-v3.html">
             <span class="serie-topo"><span class="rotulo">Série</span><span class="n">PT · EN</span></span>
             <h3>Lesson Study</h3>
             <p>Estudo de aula para formação docente, em versões em português e inglês.</p>
@@ -555,7 +564,7 @@
           <h2>Servidor público, organize sua trilha com os MOOCs do Ifes</h2>
           <p>Combine cursos gratuitos, on-line e certificados para planejar seu período de capacitação com mais clareza antes de abrir o processo no seu órgão.</p>
           <div class="service-actions">
-            <a class="btn btn-gold" href="cursos.html">Planejar Licença para Capacitação</a>
+            <a class="btn btn-gold" href="licenca-v3.html">Planejar Licença para Capacitação</a>
           </div>
         </div>
 
@@ -579,7 +588,7 @@
           <div class="license-stack" aria-label="Exemplo de composição de cursos">
             <span>Moodle <b>60h</b></span>
             <span>Acessibilidade <b>60h</b></span>
-            <span>Canva <b>6h</b></span>
+            <span>Classroom <b>10h</b></span>
           </div>
 
           <div class="license-note">
@@ -868,7 +877,7 @@
         <h4>Cursos Abertos</h4>
         <ul>
           <li><a href="#validar-certificado">Validar Certificado</a></li>
-          <li><a href="#licenca">Licença para Capacitação</a></li>
+          <li><a href="licenca-v3.html">Licença para Capacitação</a></li>
           <li><a href="#painel-indicadores">Painel de Indicadores</a></li>
           <li><a href="#termos-de-uso">Termos de Uso</a></li>
           <li><a href="#suporte">Suporte</a></li>

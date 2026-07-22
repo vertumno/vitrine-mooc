@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Course Catalog | Ifes Open Courses</title>
   <meta name="description" content="Catalog of Ifes Open Courses with search and filters by area, workload, level, accessibility, projects and series.">
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="../../canonico/estilos.css">
 </head>
 <body>
   <a class="skip" href="#conteudo">Skip to content</a>
@@ -13,7 +13,7 @@
   <header class="site">
     <div class="site-wrap">
       <a class="brand" href="index-en.html" aria-label="Ifes Open Courses">
-        <img class="brand-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
+        <img class="brand-logo" src="../../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
         <span class="brand-divider" aria-hidden="true"></span>
         <span class="brand-name">Open Courses</span>
       </a>
@@ -31,7 +31,7 @@
             <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <ul class="lang-menu" id="lang-menu" role="menu">
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="cursos.html" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" href="../../canonico/cursos.html" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
             <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français</a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español</a></li>
@@ -176,7 +176,7 @@
         </ul>
       </div>
       <div class="footer-brand">
-        <img class="footer-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Federal Institute of Espírito Santo">
+        <img class="footer-logo" src="../../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Federal Institute of Espírito Santo">
         <span class="footer-tagline">Center of Reference in Training and Distance Education</span>
       </div>
     </div>
@@ -188,7 +188,7 @@
     </div>
   </footer>
 
-  <script src="cursos-dados.js"></script>
+  <script src="../../canonico/cursos-dados.js"></script>
   <script>
     function toggleMenu(button) {
       const menu = document.getElementById("menu");
@@ -488,7 +488,7 @@
 
     function librasRibbonHtml(course) {
       return course.libras
-        ? `<img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Course available in Libras (Brazilian Sign Language)" loading="lazy">`
+        ? `<img class="img-libras course-libras-ribbon" src="../../canonico/assets/ribbon_mooc_libras.png" alt="Course available in Libras (Brazilian Sign Language)" loading="lazy">`
         : "";
     }
 

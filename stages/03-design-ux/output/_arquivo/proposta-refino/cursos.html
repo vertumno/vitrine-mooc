@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de cursos | Cursos Abertos do Ifes</title>
+  <meta name="description" content="Catálogo dos Cursos Abertos do Ifes com busca e filtros por área, carga horária, nível, idioma, acessibilidade, projetos e séries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page-catalog">
+  <a class="skip" href="#lista">Ir para a lista de cursos</a>
+
+  <header class="site">
+    <div class="site-wrap">
+      <a class="brand" href="index.html" aria-label="Cursos Abertos do Ifes — início">
+        <img class="brand-logo" src="../../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
+        <span class="brand-rule" aria-hidden="true"></span>
+        <span class="brand-name">Cursos Abertos</span>
+      </a>
+
+      <nav class="main-nav" id="menu" aria-label="Navegação principal">
+        <a href="cursos.html" aria-current="page">Cursos</a>
+        <a href="index.html#projetos">Projetos</a>
+        <a href="index.html#licenca">Licença capacitação</a>
+        <a href="index.html#como-funciona">Como funciona</a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMyN2UxZTktY2FiMi00ZDI1LWE5NTctOGZiZjUzOTdhMjUyIiwidCI6IjQ0ZTllMTcyLWZmYTUtNDNmMy1iMjJjLTM3MWNmY2QyNzJlZCJ9&amp;pageName=ReportSection">Indicadores</a>
+        <a href="index.html#faq">Dúvidas</a>
+      </nav>
+
+      <div class="site-actions">
+        <div class="lang" data-lang>
+          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Selecionar idioma / Select language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>
+            <span data-lang-current>PT</span>
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="menu">
+            <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang-code="PT"><span class="flag flag-br" aria-hidden="true"></span>Português</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" href="../canonico-en/cursos-en.html" hreflang="en" lang="en" data-lang-code="EN"><span class="flag flag-gb" aria-hidden="true"></span>English</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="fr" lang="fr" data-lang-code="FR"><span class="flag flag-fr" aria-hidden="true"></span>Français<span class="lang-soon">em breve</span></a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="es" lang="es" data-lang-code="ES"><span class="flag flag-es" aria-hidden="true"></span>Español<span class="lang-soon">em breve</span></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-solid" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Acessar ambiente</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu" data-menu-toggle><span aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= FAIXA DE ABERTURA ================= -->
+    <section class="catalog-band" aria-labelledby="titulo-catalogo">
+      <div class="wrap">
+        <span class="eyebrow">Catálogo completo</span>
+        <h1 id="titulo-catalogo">Catálogo de cursos</h1>
+        <p class="catalog-lead">Todos os cursos abertos e gratuitos do Ifes. Busque por palavra-chave ou refine por área, carga horária, nível, idioma, projeto e série.</p>
+
+        <div class="catalog-search" role="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <label class="sr-only" for="q">Buscar curso por nome, tema ou palavra-chave</label>
+          <input id="q" type="search" placeholder="Busque por nome, tema ou palavra-chave" autocomplete="off">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LISTA + FACETAS ================= -->
+    <section id="lista">
+      <div class="wrap catalog-layout">
+
+        <aside class="filters" id="filtros" aria-label="Filtros do catálogo">
+          <div class="filters-title">
+            <h2>Filtrar</h2>
+            <button class="filters-clear" type="button" id="limpar" disabled>Limpar</button>
+          </div>
+
+          <details class="filter-group" data-group="categoria" open>
+            <summary class="filter-head">
+              <h3>Área</h3>
+              <span class="filter-tally" data-tally hidden></span>
+              <span class="filter-mark" aria-hidden="true"></span>
+            </summary>
+            <ul id="f-categoria"></ul>
+          </details>
+
+          <details class="filter-group" data-group="carga" open>
+            <summary class="filter-head">
+              <h3>Carga horária</h3>
+              <span class="filter-tally" data-tally hidden></span>
+              <span class="filter-mark" aria-hidden="true"></span>
+            </summary>
+            <ul id="f-carga"></ul>
+          </details>
+
+          <details class="filter-group" data-group="nivel" open>
+            <summary class="filter-head">
+              <h3>Nível</h3>
+              <span class="filter-tally" data-tally hidden></span>
+              <span class="filter-mark" aria-hidden="true"></span>
+            </summary>
+            <ul id="f-nivel"></ul>
+          </details>
+
+          <details class="filter-group" data-group="idioma" open>
+            <summary class="filter-head">
+              <h3>Idioma</h3>
+              <span class="filter-tally" data-tally hidden></span>
+              <span class="filter-mark" aria-hidden="true"></span>
+            </summary>
+            <ul id="f-idioma"></ul>
+          </details>
+
+          <details class="filter-group" data-group="acessibilidade" open>
+            <summary class="filter-head">
+              <h3>Acessibilidade</h3>
+              <span class="filter-tally" data-tally hidden></span>
+              <span class="filter-mark" aria-hidden="true"></span>
+            </summary>
+            <ul>
+              <li class="filter-option">
+                <label><input type="checkbox" value="libras"> Com Libras</label>
+                <span class="filter-count" id="count-libras">0</span>
+              </li>
+            </ul>
+          </details>
+
+          <details class="filter-group" data-group="projeto" open>
+            <summary class="filter-head">
+              <h3>Projetos</h3>
+              <span class="filter-tally" data-tally hidden></span>
+              <span class="filter-mark" aria-hidden="true"></span>
+            </summary>
+            <ul id="f-projeto"></ul>
+          </details>
+
+          <details class="filter-group" data-group="serie" open>
+            <summary class="filter-head">
+              <h3>Séries</h3>
+              <span class="filter-tally" data-tally hidden></span>
+              <span class="filter-mark" aria-hidden="true"></span>
+            </summary>
+            <ul id="f-serie"></ul>
+          </details>
+        </aside>
+
+        <div>
+          <button class="filters-toggle" type="button" data-filters-toggle aria-expanded="false" aria-controls="filtros">
+            Filtrar cursos <b data-filters-badge></b>
+          </button>
+
+          <div class="results-head">
+            <p class="results-count" id="resultado" aria-live="polite">Carregando cursos</p>
+            <label class="sorter">Ordenar
+              <select id="ordenar">
+                <option value="relevancia">Relevância</option>
+                <option value="mais-cursados">Mais cursados</option>
+                <option value="recentes">Recentes</option>
+                <option value="az">A–Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="chips" id="chips" aria-label="Filtros ativos"></div>
+
+          <div class="grid" id="cards" aria-live="polite"></div>
+
+          <div class="empty" id="vazio" hidden>
+            <strong>Nenhum curso com esses filtros</strong>
+            <span>Remova uma seleção ou busque por outro termo.</span>
+            <button class="btn btn-outline" type="button" data-reset>Limpar filtros</button>
+          </div>
+
+          <div class="load-row" id="load-row" hidden>
+            <button class="btn btn-outline btn-lg" type="button" id="carregar">Carregar mais cursos</button>
+            <span class="data" id="load-info"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="site-foot">
+    <div class="foot-main wrap">
+      <div>
+        <h3>Cursos Abertos do Ifes</h3>
+        <p>Catálogo público dos cursos abertos do Cefor/Ifes, organizado para busca, descoberta e acesso à plataforma.</p>
+      </div>
+      <div>
+        <h4>Cursos Abertos</h4>
+        <ul>
+          <li><a href="index.html#validar-certificado">Validar certificado</a></li>
+          <li><a href="index.html#licenca">Licença para capacitação</a></li>
+          <li><a href="index.html#painel-indicadores">Painel de indicadores</a></li>
+          <li><a href="index.html#termos-de-uso">Termos de uso</a></li>
+          <li><a href="https://mooc.cefor.ifes.edu.br/suporte/">Suporte</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="https://www.ifes.edu.br/">O Ifes</a></li>
+          <li><a href="https://cefor.ifes.edu.br/">O Cefor</a></li>
+          <li><a href="index.html#base-de-conhecimento">Base de conhecimento</a></li>
+        </ul>
+      </div>
+      <div class="foot-brand">
+        <img src="../../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Instituto Federal do Espírito Santo">
+        <span>Centro de Referência em Formação e em Educação a Distância</span>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div class="wrap">
+        <span>Ifes · Cefor</span>
+        <span>Catálogo com carregamento progressivo</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fonte unica de dados: o mesmo arquivo gerado que o canonico usa. -->
+  <script src="../../canonico/cursos-dados.js"></script>
+  <script>
+    /* ---------------------------------------------------------------
+       Cabecalho, menu e idioma — mesmo comportamento da home
+       --------------------------------------------------------------- */
+    document.querySelector("[data-menu-toggle]").addEventListener("click", (event) => {
+      const button = event.currentTarget;
+      const open = document.getElementById("menu").classList.toggle("open");
+      button.setAttribute("aria-expanded", String(open));
+    });
+
+    (() => {
+      const root = document.querySelector("[data-lang]");
+      const button = root.querySelector(".lang-btn");
+      const current = root.querySelector("[data-lang-current]");
+      const items = Array.from(root.querySelectorAll(".lang-menu a"));
+
+      const close = () => {
+        root.removeAttribute("data-open");
+        button.setAttribute("aria-expanded", "false");
+      };
+
+      button.addEventListener("click", () => {
+        const open = root.toggleAttribute("data-open");
+        button.setAttribute("aria-expanded", String(open));
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("click", (event) => {
+          // FR/ES ainda nao tem pagina propria — sinalizam o roadmap, nao navegam.
+          if (item.hasAttribute("data-soon")) {
+            event.preventDefault();
+            return;
+          }
+          const href = item.getAttribute("href");
+          if (href && href !== "#") return;
+          event.preventDefault();
+          items.forEach((other) => other.setAttribute("aria-checked", String(other === item)));
+          current.textContent = item.dataset.langCode;
+          document.documentElement.lang = item.getAttribute("hreflang");
+          close();
+          button.focus();
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!root.contains(event.target)) close();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && root.hasAttribute("data-open")) {
+          close();
+          button.focus();
+        }
+      });
+    })();
+
+    /* ---------------------------------------------------------------
+       Normalizacao do catalogo — identica a do canonico
+       --------------------------------------------------------------- */
+    const norm = (value) => String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    const esc = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[char]));
+
+    const CANONICAL_CATEGORIES = [
+      { slug: "ambiente-e-saude", nome: "Ambiente e Saúde" },
+      { slug: "artes-e-humanidades", nome: "Artes e Humanidades" },
+      { slug: "ciencias-da-natureza", nome: "Ciências da Natureza" },
+      { slug: "design", nome: "Design" },
+      { slug: "desenvolvimento-pessoal", nome: "Desenvolvimento Pessoal" },
+      { slug: "educacao", nome: "Educação" },
+      { slug: "educacao-a-distancia", nome: "Educação a Distância" },
+      { slug: "engenharia", nome: "Engenharia" },
+      { slug: "financas-e-contabilidade", nome: "Finanças e Contabilidade" },
+      { slug: "gestao", nome: "Gestão" },
+      { slug: "inclusao-e-acessibilidade", nome: "Inclusão e Acessibilidade" },
+      { slug: "linguas", nome: "Línguas" },
+      { slug: "matematica", nome: "Matemática" },
+      { slug: "tecnologias-e-informatica", nome: "Tecnologias e Informática" },
+      { slug: "tecnologias-educacionais", nome: "Tecnologias Educacionais" }
+    ];
+
+    const CATEGORY_ALIASES = {
+      "ciencias-humanas": "artes-e-humanidades",
+      "ciencias-sociais-aplicadas": "gestao",
+      "ciencias-exatas-e-da-terra": "ciencias-da-natureza",
+      "desenvolvimento-educacional-e-social": "educacao",
+      "producao-cultural-e-design": "design"
+    };
+
+    const CATEGORY_NAMES = Object.fromEntries(CANONICAL_CATEGORIES.map((item) => [item.slug, item.nome]));
+
+    // Placeholder ate o estagio 05: so os 4 primeiros colocados sao conhecidos.
+    const DEMAND_RANK = {
+      "ingles-comunicativo": 1,
+      "moodle-para-educadores": 2,
+      "moodle-4-para-educadores": 2,
+      "uso-educacional-canva": 3,
+      "google-drive-colaboracao-pratica": 4
+    };
+
+    function canonicalizeCourse(course) {
+      const search = norm(course.search + " " + course.titulo);
+      let cats = (course.categoria || []).map((slug) => CATEGORY_ALIASES[slug] || slug);
+
+      if (/(financ|contabil|orcamento|orçament|tesour|custos)/.test(search)) {
+        cats.push("financas-e-contabilidade");
+      }
+
+      cats = [...new Set(cats.filter((slug) => CATEGORY_NAMES[slug]))];
+      if (!cats.length) cats = ["educacao"];
+
+      const slugFromLink = String(course.link || "").split("?").pop() || "";
+
+      return {
+        ...course,
+        categoriaCanonica: cats,
+        categoriaCanonicaNomes: cats.map((slug) => CATEGORY_NAMES[slug]),
+        demanda: DEMAND_RANK[slugFromLink]
+          || DEMAND_RANK[norm(course.titulo).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")]
+          || 999,
+        recente: Number(course.n || 999)
+      };
+    }
+
+    const courses = (window.CURSOS_MOOC || []).map(canonicalizeCourse);
+
+    const el = {
+      q: document.getElementById("q"),
+      cards: document.getElementById("cards"),
+      result: document.getElementById("resultado"),
+      empty: document.getElementById("vazio"),
+      load: document.getElementById("carregar"),
+      loadRow: document.getElementById("load-row"),
+      loadInfo: document.getElementById("load-info"),
+      sort: document.getElementById("ordenar"),
+      chips: document.getElementById("chips"),
+      clear: document.getElementById("limpar"),
+      filters: document.getElementById("filtros")
+    };
+
+    const filterGroups = [
+      ["categoria", "f-categoria", CANONICAL_CATEGORIES],
+      ["carga", "f-carga", window.CURSOS_FILTROS?.carga || []],
+      ["nivel", "f-nivel", window.CURSOS_FILTROS?.nivel || []],
+      ["idioma", "f-idioma", window.CURSOS_FILTROS?.idioma || []],
+      ["projeto", "f-projeto", window.CURSOS_FILTROS?.projeto || []],
+      ["serie", "f-serie", window.CURSOS_FILTROS?.serie || []]
+    ];
+
+    const FILTER_ORDER = {
+      carga: ["ate-10", "10-20", "20-40", "40-60", "mais-60", "nao-informada"],
+      nivel: ["basico", "intermediario", "avancado", "nao-informado"],
+      idioma: ["pt", "en", "es", "pom"]
+    };
+
+    let filtered = [];
+    const pageSize = 24;
+    let visibleLimit = pageSize;
+
+    function valuesFor(course, group) {
+      if (group === "categoria") return course.categoriaCanonica;
+      if (group === "acessibilidade") return course.libras ? ["libras"] : [];
+      if (group === "idioma") return course.idiomas || [];
+      const value = course[group];
+      return Array.isArray(value) ? value : [value].filter(Boolean);
+    }
+
+    function labelFor(group, slug) {
+      if (group === "categoria") return CATEGORY_NAMES[slug] || slug;
+      if (group === "acessibilidade") return "Com Libras";
+      const list = window.CURSOS_FILTROS?.[group] || [];
+      return list.find((item) => item.slug === slug)?.nome || slug;
+    }
+
+    const countFor = (group, slug) =>
+      courses.filter((course) => valuesFor(course, group).includes(slug)).length;
+
+    function sortFilterItems(group, items) {
+      const order = FILTER_ORDER[group];
+      if (!order) return [...items].sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+      return [...items].sort((a, b) => {
+        const rankA = order.indexOf(a.slug);
+        const rankB = order.indexOf(b.slug);
+        return (rankA === -1 ? order.length : rankA) - (rankB === -1 ? order.length : rankB)
+          || a.nome.localeCompare(b.nome, "pt-BR");
+      });
+    }
+
+    function renderFilters() {
+      filterGroups.forEach(([group, targetId, items]) => {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        target.innerHTML = sortFilterItems(group, items).map((item) => `
+          <li class="filter-option">
+            <label><input type="checkbox" value="${esc(item.slug)}"> ${esc(item.nome)}</label>
+            <span class="filter-count">${countFor(group, item.slug)}</span>
+          </li>`).join("");
+      });
+      document.getElementById("count-libras").textContent = countFor("acessibilidade", "libras");
+    }
+
+    const activeGroups = () =>
+      Array.from(document.querySelectorAll(".filter-group[data-group]"))
+        .map((group) => ({
+          name: group.dataset.group,
+          values: Array.from(group.querySelectorAll("input:checked")).map((input) => input.value)
+        }))
+        .filter((group) => group.values.length);
+
+    function courseMatchesProfile(course, profile) {
+      if (!profile) return true;
+      const text = norm(`${course.titulo} ${course.search} ${course.categoriaCanonicaNomes.join(" ")}`);
+      const profiles = {
+        professores: /(professor|educador|docente|moodle|sala de aula|formacao|formação)/,
+        comunidade: /(basico|básico|comunidade|iniciante|sem prerequisito|sem pré-requisito)/,
+        carreira: /(gestao|gestão|carreira|trabalho|atendimento|vendas|tecnologia|informatica|informática)/
+      };
+      return profiles[profile]?.test(text) ?? true;
+    }
+
+    function sortCourses(list) {
+      const mode = el.sort.value;
+      return [...list].sort((a, b) => {
+        if (mode === "az") return a.titulo.localeCompare(b.titulo, "pt-BR");
+        if (mode === "mais-cursados") return a.demanda - b.demanda || a.titulo.localeCompare(b.titulo, "pt-BR");
+        if (mode === "recentes") return a.recente - b.recente;
+        return a.n - b.n;
+      });
+    }
+
+    /* ---------------------------------------------------------------
+       Card — mesmo componente da home. Selos viram tags na linha de dados.
+       --------------------------------------------------------------- */
+    const LANGUAGE_TAGS = { en: "EN", es: "ES", pom: "POM" };
+
+    function tagsHtml(course) {
+      const tags = [];
+      if (course.libras) tags.push("Libras");
+      if (course.projetoNomes?.length) tags.push(course.projetoNomes[0]);
+      if (course.serieNomes?.length) tags.push(course.serieNomes[0]);
+      (course.idiomas || []).forEach((language) => {
+        if (LANGUAGE_TAGS[language]) tags.push(LANGUAGE_TAGS[language]);
+      });
+      // No maximo 2 tags: com 4 (Libras + projeto + serie + idioma) a linha de
+      // metadados quebra em tres alturas e o card perde o alinhamento do grid.
+      return tags.slice(0, 2)
+        .map((tag) => `<span class="card-tag">${esc(tag)}</span>`)
+        .join("");
+    }
+
+    function cardHtml(course) {
+      const meta = [course.cargaLabel, course.nivelLabel].filter(Boolean);
+      const metaHtml = meta
+        .map((item) => `<span>${esc(item)}</span>`)
+        .join('<i class="dot" aria-hidden="true"></i>');
+
+      return `<a class="card${course.obsoleto ? " is-obsolete" : ""}" href="${esc(course.link)}">
+        <div class="card-media">
+          <img src="${esc(course.thumb)}" alt="" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="card-cat">${esc(course.categoriaCanonicaNomes.join(" · "))}</span>
+          <h3>${esc(course.titulo)}</h3>
+          ${course.obsoleto ? `<p class="card-note">${esc(course.obsoletoNota)}</p>` : ""}
+          <p class="card-meta data">${metaHtml}${tagsHtml(course)}</p>
+        </div>
+      </a>`;
+    }
+
+    function renderChips(groups) {
+      const query = el.q.value.trim();
+      const chips = [];
+      if (query) {
+        chips.push(`<button class="chip" type="button" data-clear="q">Busca: ${esc(query)}</button>`);
+      }
+      groups.forEach((group) => {
+        group.values.forEach((value) => {
+          chips.push(`<button class="chip" type="button" data-group="${esc(group.name)}" data-value="${esc(value)}">${esc(labelFor(group.name, value))}</button>`);
+        });
+      });
+      el.chips.innerHTML = chips.join("");
+
+      const count = chips.length;
+      el.clear.disabled = count === 0;
+      const badge = document.querySelector("[data-filters-badge]");
+      if (badge) badge.textContent = count ? `(${count})` : "";
+    }
+
+    function renderCards() {
+      const visible = filtered.slice(0, visibleLimit);
+      el.cards.innerHTML = visible.map(cardHtml).join("");
+
+      el.result.innerHTML = filtered.length === 1
+        ? "<b>1</b> curso encontrado"
+        : `<b>${visible.length}</b> de <b>${filtered.length}</b> cursos`;
+
+      el.empty.hidden = filtered.length > 0;
+
+      const remaining = filtered.length - visible.length;
+      el.loadRow.hidden = remaining <= 0;
+      el.loadInfo.textContent = remaining > 0 ? `faltam ${remaining}` : "";
+    }
+
+    function applyFilters(resetLimit = true) {
+      if (resetLimit) visibleLimit = pageSize;
+      const query = norm(el.q.value.trim());
+      const groups = activeGroups();
+      const profile = new URLSearchParams(location.search).get("perfil");
+
+      filtered = courses.filter((course) => {
+        const text = norm(`${course.titulo} ${course.search} ${course.categoriaCanonicaNomes.join(" ")}`);
+        const okQuery = !query || text.includes(query);
+        const okGroups = groups.every((group) =>
+          group.values.some((value) => valuesFor(course, group.name).includes(value)));
+        return okQuery && okGroups && courseMatchesProfile(course, profile);
+      });
+
+      filtered = sortCourses(filtered);
+      syncGroupTallies();
+      renderChips(groups);
+      renderCards();
+    }
+
+    // Espelha no cabecalho de cada grupo quantas opcoes estao marcadas, para que
+    // o estado do filtro continue legivel com o grupo colapsado.
+    function syncGroupTallies() {
+      document.querySelectorAll(".filter-group[data-group]").forEach((group) => {
+        const tally = group.querySelector("[data-tally]");
+        if (!tally) return;
+        const total = group.querySelectorAll("input:checked").length;
+        tally.textContent = String(total);
+        tally.hidden = total === 0;
+        tally.setAttribute("aria-label", `${total} ${total === 1 ? "filtro ativo" : "filtros ativos"}`);
+      });
+    }
+
+    function resetAll() {
+      el.q.value = "";
+      document.querySelectorAll(".filters input[type='checkbox']").forEach((input) => {
+        input.checked = false;
+      });
+      applyFilters(true);
+      el.q.focus();
+    }
+
+    function checkFacet(group, value) {
+      const input = document.querySelector(
+        `.filter-group[data-group="${CSS.escape(group)}"] input[value="${CSS.escape(value)}"]`);
+      if (input) {
+        input.checked = true;
+        // Filtro que chega pela URL nao pode ficar escondido dentro de um grupo
+        // colapsado — o usuario veria a lista filtrada sem saber por que.
+        input.closest(".filter-group")?.setAttribute("open", "");
+      }
+      return Boolean(input);
+    }
+
+    // Qualquer faceta pode chegar pela URL — e como cada grupo aceita varios
+    // valores, ?serie=lovelace,embrace tambem funciona. E o que faz os cards de
+    // projeto e serie da home abrirem o catalogo ja filtrado.
+    function applyInitialParams() {
+      const params = new URLSearchParams(location.search);
+      const q = params.get("q");
+      const ordem = params.get("ordem");
+
+      if (q) el.q.value = q;
+      if (ordem && [...el.sort.options].some((option) => option.value === ordem)) {
+        el.sort.value = ordem;
+      }
+
+      ["categoria", "carga", "nivel", "idioma", "projeto", "serie"].forEach((group) => {
+        params.getAll(group)
+          .flatMap((value) => value.split(","))
+          .map((value) => value.trim())
+          .filter(Boolean)
+          .forEach((value) => checkFacet(group, value));
+      });
+
+      if (params.get("libras") === "1") checkFacet("acessibilidade", "libras");
+    }
+
+    /* --------------------------------------------------------------- */
+    renderFilters();
+    applyInitialParams();
+    applyFilters(true);
+
+    el.q.addEventListener("input", () => applyFilters(true));
+    el.sort.addEventListener("change", () => applyFilters(true));
+    el.clear.addEventListener("click", resetAll);
+    document.querySelector("[data-reset]").addEventListener("click", resetAll);
+
+    el.load.addEventListener("click", () => {
+      visibleLimit += pageSize;
+      renderCards();
+    });
+
+    el.filters.addEventListener("change", (event) => {
+      if (event.target.matches("input[type='checkbox']")) applyFilters(true);
+    });
+
+    el.chips.addEventListener("click", (event) => {
+      const chip = event.target.closest(".chip");
+      if (!chip) return;
+      if (chip.dataset.clear === "q") el.q.value = "";
+      if (chip.dataset.group && chip.dataset.value) {
+        const input = document.querySelector(`.filter-group[data-group="${CSS.escape(chip.dataset.group)}"] input[value="${CSS.escape(chip.dataset.value)}"]`);
+        if (input) input.checked = false;
+      }
+      applyFilters(true);
+    });
+
+    // Painel de facetas no mobile. No desktop a barra lateral fica sempre visivel.
+    (() => {
+      const toggle = document.querySelector("[data-filters-toggle]");
+      const mobile = window.matchMedia("(max-width: 900px)");
+
+      const sync = () => {
+        if (mobile.matches) {
+          el.filters.hidden = toggle.getAttribute("aria-expanded") !== "true";
+        } else {
+          el.filters.hidden = false;
+        }
+      };
+
+      toggle.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") !== "true";
+        toggle.setAttribute("aria-expanded", String(open));
+        sync();
+      });
+
+      mobile.addEventListener("change", sync);
+      sync();
+    })();
+  </script>
+</body>
+</html>

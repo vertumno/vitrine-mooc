@@ -1,0 +1,1236 @@
+@charset "UTF-8";
+
+/* ============================================================================
+   licenca-v3.css — Licença para Capacitação (licenca-v3.html)
+
+   Carregada DEPOIS de estilos.css + estilos-v3.css. Só componentes novos.
+   Prefixos: .lic- para a página (instrução) e .plc- para a ferramenta
+   (planejador). O catálogo de escolha reaproveita os componentes do
+   cursos-v3.html — .catalog-layout, .filters, .course-grid, .course-card — para
+   que a escolha de curso aqui seja igual à do catálogo.
+
+   A página tem três camadas, nesta ordem: entender (o que é / regras) →
+   planejar (o app) → executar (passo a passo com os prints do ambiente).
+   O texto operacional vive no plano impresso: ver @media print no fim.
+   ========================================================================= */
+
+:root {
+  --plc-mint: #f1fafa;
+  --plc-ok: #147a02;
+  --plc-ok-soft: #e8f5e6;
+  --plc-warn-bg: #fdf3dd;
+  --plc-warn-ink: #7a5300;
+}
+
+/* ══ Abertura ═══════════════════════════════════════════════════════════ */
+
+.lic-hero {
+  padding: clamp(30px, 4vw, 48px) 0;
+  color: #fff;
+  background:
+    radial-gradient(900px 320px at 88% -30%, rgba(51, 166, 166, .5), transparent 62%),
+    linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 56%, var(--teal-dark) 100%);
+}
+
+.lic-hero .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+
+.lic-hero .kicker {
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, .82);
+}
+
+.lic-hero .kicker::before {
+  background: var(--gold);
+}
+
+.lic-hero h1 {
+  color: #fff;
+  font-size: clamp(1.875rem, 3.2vw, 2.625rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.022em;
+}
+
+.lic-hero h1 span {
+  color: var(--teal-soft);
+}
+
+.lic-hero p {
+  max-width: 56ch;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, .86);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.lic-hero-acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, .12);
+  border-color: rgba(255, 255, 255, .4);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, .2);
+  border-color: rgba(255, 255, 255, .7);
+}
+
+.btn-lg {
+  min-height: 50px;
+  padding: 0 26px;
+  font-size: 1rem;
+}
+
+/* Três fatos, não um mosaico: o que a pessoa precisa saber antes de decidir. */
+.lic-facts {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lic-facts li {
+  display: grid;
+  grid-template-columns: minmax(74px, auto) minmax(0, 1fr);
+  align-items: center;
+  column-gap: 14px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lic-facts b {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.lic-facts span {
+  color: rgba(255, 255, 255, .82);
+  font-size: .8125rem;
+  line-height: 1.4;
+}
+
+/* ══ O que é / regras ═══════════════════════════════════════════════════ */
+
+.lic-sobre .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 460px);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: start;
+}
+
+.lic-sobre h2 {
+  font-size: clamp(1.375rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: var(--track-h2);
+}
+
+.lic-sobre-texto p {
+  max-width: 62ch;
+  margin-top: 14px;
+  font-size: .9375rem;
+  line-height: 1.7;
+}
+
+.lic-fonte {
+  color: var(--ink-soft);
+  font-size: .8125rem;
+}
+
+.lic-fonte a {
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
+.lic-regras-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lic-regras-cards li {
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--teal-light);
+  border-radius: 0 12px 12px 0;
+}
+
+.lic-regras-cards b {
+  display: block;
+  color: var(--teal-deep);
+  font-size: .9375rem;
+  font-weight: 700;
+}
+
+.lic-regras-cards span {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-size: .8125rem;
+  line-height: 1.55;
+}
+
+/* ══ O planejador — cara de aplicação ═══════════════════════════════════ */
+
+.lic-planner {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.plc-app {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.plc-app-head {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 14px;
+  padding: 18px clamp(18px, 2.4vw, 26px);
+  color: #fff;
+  background: linear-gradient(120deg, var(--teal-deep), var(--teal-dark));
+}
+
+.plc-app-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 13px;
+}
+
+.plc-app-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.plc-app-head h2 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.012em;
+}
+
+.plc-app-head p {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, .78);
+  font-size: .8125rem;
+  line-height: 1.45;
+}
+
+/* Estado do sistema: "Passo 1 de 2" antes de gerar, "Plano em edição" depois. */
+.plc-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .26);
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.plc-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+[data-pronto] .plc-status::before {
+  background: #7fd88a;
+}
+
+/* ── Formulário ───────────────────────────────────────────────────────── */
+
+.plc-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(230px, auto);
+  gap: 18px;
+  align-items: start;
+  padding: clamp(20px, 2.6vw, 28px);
+}
+
+.plc-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.plc-field label {
+  color: var(--ink);
+  font-size: .8125rem;
+  font-weight: 600;
+}
+
+.plc-field label i {
+  color: var(--ink-soft);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.plc-field small {
+  color: var(--ink-soft);
+  font-size: .75rem;
+  line-height: 1.45;
+}
+
+.plc-field small a {
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
+.plc-input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: .9375rem;
+}
+
+.plc-input:hover {
+  border-color: rgba(0, 128, 128, .42);
+}
+
+.plc-input::placeholder {
+  color: #93a7a7;
+}
+
+.plc-field-go {
+  align-self: end;
+  justify-items: stretch;
+}
+
+.plc-field-go small {
+  text-align: center;
+}
+
+/* ── Resultado ────────────────────────────────────────────────────────── */
+
+.plc-result {
+  padding: clamp(20px, 2.6vw, 28px);
+  border-top: 1px solid var(--line);
+  background: var(--paper-soft);
+}
+
+.plc-result[hidden] {
+  display: none;
+}
+
+.plc-result-top {
+  display: grid;
+  grid-template-columns: minmax(180px, auto) minmax(0, 1fr);
+  gap: 18px 30px;
+  align-items: center;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.plc-result-num span {
+  display: block;
+  color: var(--ink-soft);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.plc-result-num strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--teal-deep);
+  font-family: var(--display);
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: .9;
+  letter-spacing: -.035em;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-result-num small {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: .8125rem;
+}
+
+.plc-result-bar {
+  min-width: 0;
+}
+
+.plc-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  margin-bottom: 12px;
+  padding: 0 13px;
+  background: var(--plc-warn-bg);
+  border-radius: 999px;
+  color: var(--plc-warn-ink);
+  font-size: .8125rem;
+  font-weight: 700;
+}
+
+.plc-flag::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+[data-ok] .plc-flag {
+  background: var(--plc-ok-soft);
+  color: #0f5a02;
+}
+
+[data-ok] .plc-flag::before {
+  background: var(--plc-ok);
+}
+
+.plc-track {
+  height: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.plc-track i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal-light), var(--teal));
+  border-radius: 999px;
+  transition: width .35s ease;
+}
+
+[data-ok] .plc-track i {
+  background: linear-gradient(90deg, #4bb85e, var(--plc-ok));
+}
+
+.plc-scale {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 9px;
+  color: var(--ink-soft);
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-scale b {
+  color: var(--teal-deep);
+  font-weight: 700;
+}
+
+/* Aviso de regra quebrada (hoje só um caso: período atravessando o ano). */
+.plc-alerta {
+  margin-top: 14px;
+  padding: 12px 14px;
+  color: var(--plc-warn-ink);
+  background: var(--plc-warn-bg);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+
+.plc-alerta b {
+  color: #5c3e00;
+}
+
+/* ── Duas colunas: plano e linha do tempo ─────────────────────────────── */
+
+.plc-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.plc-col {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.plc-col-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.plc-col h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: var(--track-h3);
+}
+
+.plc-tip {
+  color: var(--ink-soft);
+  font-size: .75rem;
+  line-height: 1.45;
+}
+
+.plc-col > .plc-tip {
+  margin-top: 12px;
+}
+
+.plc-col-acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.plc-col-acts .btn {
+  flex: 1 1 auto;
+}
+
+.btn-ghost-line {
+  color: var(--ink-soft);
+  border-color: var(--line);
+}
+
+.btn-ghost-line:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+/* ── Cursos escolhidos ────────────────────────────────────────────────── */
+
+.plc-picked {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* O fundo preenchido mostra o peso do curso na carga horária total. */
+.plc-picked li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  column-gap: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, var(--teal-soft) 0 var(--p, 0%), var(--plc-mint) var(--p, 0%));
+  border: 1px solid var(--teal-soft);
+  border-radius: 12px;
+}
+
+.plc-picked strong {
+  display: block;
+  font-size: .9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.plc-picked a {
+  text-decoration: none;
+}
+
+.plc-picked a:hover strong {
+  color: var(--teal-deep);
+  text-decoration: underline;
+}
+
+.plc-picked b {
+  color: var(--teal-deep);
+  font-family: var(--display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-x {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 1.0625rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.plc-x:hover {
+  color: var(--red);
+  border-color: var(--red);
+  background: #fff;
+}
+
+.plc-blank {
+  padding: 22px 18px;
+  color: var(--ink-soft);
+  text-align: center;
+  background: var(--paper);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+/* ── Linha do tempo ───────────────────────────────────────────────────── */
+
+.plc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.plc-chip {
+  min-height: 34px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+
+.plc-chip:hover {
+  border-color: var(--teal);
+  background: var(--plc-mint);
+}
+
+.plc-chip[aria-pressed="true"] {
+  color: #fff;
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.plc-gantt {
+  display: grid;
+  gap: 10px;
+}
+
+.plc-gantt-rule {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-gantt-row {
+  display: grid;
+  gap: 5px;
+}
+
+.plc-gantt-row span {
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.plc-gantt-row em {
+  color: var(--ink-soft);
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-gantt-track {
+  position: relative;
+  height: 12px;
+  background: var(--paper);
+  border-radius: 999px;
+}
+
+.plc-gantt-track i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 6px;
+  background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  border-radius: 999px;
+}
+
+/* ── Fechamento do app ────────────────────────────────────────────────── */
+
+.plc-final {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  margin-top: 16px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.plc-final p {
+  flex: 1 1 320px;
+  color: var(--ink-soft);
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+
+.plc-final b {
+  color: var(--ink);
+}
+
+.plc-final a {
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
+/* ══ Catálogo de escolha ════════════════════════════════════════════════ */
+
+.lic-catalogo .catalog-layout {
+  margin-top: 8px;
+}
+
+/* No desktop as facetas ficam sempre abertas: o <details> existe para o
+   celular, onde 19 áreas empilhadas empurram os cards para fora da tela. */
+.plc-facetas {
+  display: grid;
+  gap: 16px;
+}
+
+.plc-facetas > summary {
+  display: none;
+}
+
+/* Card do catálogo com estado "no plano" e ação no rodapé. O resto vem de
+   estilos.css — é o mesmo card da página de cursos. */
+.plc-card[data-on] {
+  outline: 2px solid var(--teal);
+  outline-offset: -2px;
+}
+
+.plc-card-selo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  padding: 5px 11px;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 999px;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(0, 63, 63, .28);
+}
+
+.plc-add {
+  cursor: pointer;
+}
+
+.plc-card[data-on] .plc-add {
+  color: var(--teal-deep);
+  background: var(--plc-mint);
+  border-color: var(--teal);
+}
+
+.plc-ver {
+  color: var(--ink-soft);
+  font-size: .75rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.plc-ver:hover {
+  color: var(--teal-deep);
+  text-decoration: underline;
+}
+
+/* ══ Barra do plano (acompanha a escolha) ═══════════════════════════════ */
+
+.plc-dock {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 35;
+  padding: 12px 0;
+  color: #fff;
+  background: linear-gradient(120deg, var(--teal-deep), var(--teal-dark));
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  box-shadow: 0 -12px 34px rgba(0, 40, 40, .28);
+}
+
+.plc-dock[hidden] {
+  display: none;
+}
+
+body.com-dock {
+  padding-bottom: 84px;
+}
+
+.plc-dock .wrap {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.plc-dock-num strong {
+  font-family: var(--display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-dock-num span {
+  margin-left: 8px;
+  color: rgba(255, 255, 255, .8);
+  font-size: .8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-dock-bar {
+  height: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .2);
+  border-radius: 999px;
+}
+
+.plc-dock-bar i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--gold);
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+
+.plc-dock[data-ok] .plc-dock-bar i {
+  background: #7fd88a;
+}
+
+.plc-dock-flag {
+  font-size: .8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ══ Passo a passo com os prints do ambiente ════════════════════════════ */
+
+.plc-passos {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+/* Três colunas no máximo: com quatro, o print fica pequeno demais para se ler o
+   que está na tela — e a tela é a explicação. */
+.plc-passos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  counter-reset: plc-passo;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plc-passos-grid li {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 18px 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.plc-passos-grid h3 {
+  counter-increment: plc-passo;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: var(--track-h3);
+}
+
+.plc-passos-grid h3::before {
+  content: counter(plc-passo);
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 50%;
+  font-size: .8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.plc-passos-grid p {
+  margin: 8px 0 14px 36px;
+  color: var(--ink-soft);
+  font-size: .875rem;
+  line-height: 1.55;
+}
+
+/* Proporção fixa com `contain`: os prints têm tamanhos diferentes e, sem isso,
+   os cartões ficariam desalinhados — ou a imagem seria cortada. Clicar abre o
+   arquivo em tamanho real, para quem precisa enxergar o detalhe. */
+.plc-passos-grid a {
+  display: block;
+  width: calc(100% + 36px);
+  margin: auto -18px 0;
+  background: var(--paper-soft);
+  border-top: 1px solid var(--line);
+}
+
+.plc-passos-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  transition: transform .25s ease;
+}
+
+.plc-passos-grid a:hover img {
+  transform: scale(1.03);
+}
+
+.plc-regras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px 26px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plc-regras li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink-soft);
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.plc-regras li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.plc-regras b {
+  color: var(--ink);
+}
+
+.plc-regras a {
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
+/* ══ Documento de impressão: escondido na tela, montado por JS ══════════ */
+
+.plc-doc {
+  display: none;
+}
+
+/* ══ Viewports ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .plc-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plc-field-go {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 980px) {
+  .lic-hero .wrap,
+  .lic-sobre .wrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plc-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plc-passos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* O catálogo perde a coluna de facetas: elas viram um bloco acima da grade. */
+  .lic-catalogo .catalog-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lic-catalogo .filters {
+    position: static;
+  }
+
+  .plc-facetas > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 44px;
+    padding: 0 14px;
+    color: var(--teal-deep);
+    background: var(--plc-mint);
+    border: 1px solid var(--teal-soft);
+    border-radius: 10px;
+    font-size: .875rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .plc-facetas > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .plc-facetas > summary::after {
+    content: "▾";
+    font-size: 1rem;
+  }
+
+  .plc-facetas[open] > summary::after {
+    content: "▴";
+  }
+}
+
+@media (max-width: 700px) {
+  .plc-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plc-result-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plc-dock .wrap {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 14px;
+  }
+
+  .plc-dock-bar {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+
+  .plc-dock-flag {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .lic-regras-cards,
+  .plc-passos-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plc-final .btn,
+  .plc-field-go .btn {
+    width: 100%;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   IMPRESSÃO / PDF
+   Sai só o plano: cursos com endereço da sala, datas a informar em cada um,
+   passo a passo da inscrição e as regras. É o documento que instrui o processo.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@media print {
+  @page {
+    margin: 16mm 14mm;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  body::before,
+  .skip,
+  .site,
+  footer,
+  .lic-hero,
+  .lic-sobre,
+  .lic-planner,
+  .lic-catalogo,
+  .plc-passos,
+  .faq,
+  .plc-dock {
+    display: none !important;
+  }
+
+  /* Preto no papel: sem isso o texto sai com os teais da tela, que imprimem
+     lavados e gastam tinta colorida à toa. */
+  .plc-doc,
+  .plc-doc * {
+    color: #000;
+  }
+
+  .plc-doc {
+    display: block;
+    font-size: 11pt;
+  }
+
+  .plc-doc-head {
+    padding-bottom: 10pt;
+    border-bottom: 2pt solid #000;
+  }
+
+  .plc-doc-head span {
+    font-size: 9pt;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .plc-doc-head h1 {
+    margin-top: 6pt;
+    font-size: 17pt;
+  }
+
+  .plc-doc-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8pt;
+    margin-top: 12pt;
+  }
+
+  .plc-doc-meta span {
+    display: block;
+    font-size: 8.5pt;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .plc-doc-meta strong {
+    display: block;
+    margin-top: 2pt;
+    font-size: 12pt;
+  }
+
+  .plc-doc h2 {
+    margin-top: 16pt;
+    font-size: 11pt;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .plc-doc table {
+    width: 100%;
+    margin-top: 6pt;
+    border-collapse: collapse;
+    font-size: 10pt;
+  }
+
+  .plc-doc th,
+  .plc-doc td {
+    padding: 5pt 4pt;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: .5pt solid #999;
+  }
+
+  .plc-doc th {
+    font-size: 8.5pt;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  .plc-doc td small {
+    display: block;
+    margin-top: 2pt;
+    color: #444;
+    font-size: 8pt;
+    word-break: break-all;
+  }
+
+  /* Quadradinho para marcar o curso já inscrito, à caneta. */
+  .plc-doc-box {
+    width: 14pt;
+    font-size: 13pt;
+    line-height: 1;
+  }
+
+  .plc-doc ol,
+  .plc-doc ul {
+    margin: 6pt 0 0;
+    padding-left: 14pt;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  .plc-doc-foot {
+    margin-top: 16pt;
+    padding-top: 8pt;
+    border-top: .5pt solid #999;
+    font-size: 8.5pt;
+    line-height: 1.5;
+  }
+
+  .plc-doc tr,
+  .plc-doc li {
+    break-inside: avoid;
+  }
+}

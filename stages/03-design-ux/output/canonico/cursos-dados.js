@@ -4028,7 +4028,7 @@ window.CURSOS_MOOC = [
   },
   {
     "n": 140,
-    "titulo": "Acessibilidade em Processos Seletivos Discentes￼￼￼",
+    "titulo": "Acessibilidade em Processos Seletivos Discentes",
     "categoria": [
       "inclusao-e-acessibilidade"
     ],
@@ -4049,7 +4049,7 @@ window.CURSOS_MOOC = [
     "serieNomes": [],
     "link": "https://mooc.cefor.ifes.edu.br/moodle/course/view.php?acessibilidade-processos-seletivos-discentes",
     "thumb": "https://mooc.cefor.ifes.edu.br/v/wp-content/uploads/2022/07/vitrine_AcessibilidadeProcessoSeletivoDiscente.png",
-    "search": "Acessibilidade em Processos Seletivos Discentes￼￼￼ Inclusão e Acessibilidade acessibilidade discentes formacao pessoa-com-deficiencia processo-seletivo  Profissionais da educação do setor público e privado e comunidade em geral."
+    "search": "Acessibilidade em Processos Seletivos Discentes Inclusão e Acessibilidade acessibilidade discentes formacao pessoa-com-deficiencia processo-seletivo  Profissionais da educação do setor público e privado e comunidade em geral."
   },
   {
     "n": 141,

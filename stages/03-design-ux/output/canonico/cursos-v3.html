@@ -3,25 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catálogo de Cursos | Cursos Abertos do Ifes</title>
+  <title>Catálogo de Cursos | Cursos Abertos do Ifes · v3</title>
   <meta name="description" content="Catálogo dos Cursos Abertos do Ifes com busca, filtros por área, carga horária, nível, acessibilidade, projetos e séries.">
+  <!-- v3: mesmo layout do canonico. So muda tipografia, espacamento e margens.
+       O peso 500 do Inter nao existe no @import de estilos.css e e usado pelo refino. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos-v3.css">
 </head>
 <body>
   <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
   <header class="site">
     <div class="site-wrap">
-      <a class="brand" href="index.html" aria-label="Cursos Abertos do Ifes">
+      <a class="brand" href="index-v3.html" aria-label="Cursos Abertos do Ifes">
         <img class="brand-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
         <span class="brand-divider" aria-hidden="true"></span>
         <span class="brand-name">Cursos Abertos</span>
       </a>
       <nav class="main-nav" id="menu" aria-label="Navegação principal">
-        <a href="#como-funciona">Como funciona</a>
-        <a href="cursos.html">Cursos</a>
-        <a href="#licenca">Licença capacitação</a>
-        <a href="#faq">Dúvidas</a>
+        <a href="index-v3.html#como-funciona">Como funciona</a>
+        <a href="cursos-v3.html" aria-current="page">Cursos</a>
+        <a href="licenca-v3.html">Licença capacitação</a>
+        <a href="index-v3.html#faq">Dúvidas</a>
       </nav>
       <div class="site-actions">
         <div class="lang-switch" data-lang-switch>
@@ -32,7 +38,7 @@
           </button>
           <ul class="lang-menu" id="lang-menu" role="menu">
             <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
-            <li role="none"><a role="menuitemradio" aria-checked="false" href="../_arquivo/canonico-en/cursos-en.html" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English<span class="lang-soon">em breve</span></a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français<span class="lang-soon">em breve</span></a></li>
             <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español<span class="lang-soon">em breve</span></a></li>
           </ul>
@@ -160,11 +166,11 @@
       <div>
         <h4>Cursos Abertos</h4>
         <ul>
-          <li><a href="index.html#validar-certificado">Validar Certificado</a></li>
-          <li><a href="index.html#licenca">Licença para Capacitação</a></li>
-          <li><a href="index.html#painel-indicadores">Painel de Indicadores</a></li>
-          <li><a href="index.html#termos-de-uso">Termos de Uso</a></li>
-          <li><a href="index.html#suporte">Suporte</a></li>
+          <li><a href="index-v3.html#validar-certificado">Validar Certificado</a></li>
+          <li><a href="licenca-v3.html">Licença para Capacitação</a></li>
+          <li><a href="index-v3.html#painel-indicadores">Painel de Indicadores</a></li>
+          <li><a href="index-v3.html#termos-de-uso">Termos de Uso</a></li>
+          <li><a href="index-v3.html#suporte">Suporte</a></li>
         </ul>
       </div>
       <div>
@@ -172,7 +178,7 @@
         <ul>
           <li><a href="https://www.ifes.edu.br/">O Ifes</a></li>
           <li><a href="https://cefor.ifes.edu.br/">O Cefor</a></li>
-          <li><a href="index.html#base-de-conhecimento">Base de Conhecimento</a></li>
+          <li><a href="index-v3.html#base-de-conhecimento">Base de Conhecimento</a></li>
         </ul>
       </div>
       <div class="footer-brand">

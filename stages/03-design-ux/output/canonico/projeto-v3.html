@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto parceiro | Cursos Abertos do Ifes · v3</title>
+  <meta name="description" content="Página de projeto parceiro dos Cursos Abertos do Ifes: apresentação do projeto e todos os cursos vinculados a ele.">
+  <!-- Template único de projeto parceiro. O projeto vem da URL:
+         projeto-v3.html?p=unac
+         projeto-v3.html?p=rio-doce-escolar
+       Sem parâmetro, abre a UnAC. No WordPress isso vira o template de
+       arquivo da taxonomia "projeto" — uma página, N projetos. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos-v3.css">
+  <link rel="stylesheet" href="projeto-v3.css">
+</head>
+<!-- data-tema já vem preenchido com o projeto padrão para a faixa não pintar
+     branco sobre branco antes do script rodar. O script corrige se a URL pedir
+     o outro projeto. -->
+<body data-tema="unac">
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site">
+    <div class="site-wrap">
+      <a class="brand" href="index-v3.html" aria-label="Cursos Abertos do Ifes">
+        <img class="brand-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Ifes">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-name">Cursos Abertos</span>
+      </a>
+      <nav class="main-nav" id="menu" aria-label="Navegação principal">
+        <a href="cursos-v3.html">Cursos</a>
+        <a href="index-v3.html#projetos" aria-current="page">Projetos</a>
+        <a href="licenca-v3.html">Licença capacitação</a>
+        <a href="index-v3.html#como-funciona">Como funciona</a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMyN2UxZTktY2FiMi00ZDI1LWE5NTctOGZiZjUzOTdhMjUyIiwidCI6IjQ0ZTllMTcyLWZmYTUtNDNmMy1iMjJjLTM3MWNmY2QyNzJlZCJ9&amp;pageName=ReportSection">Painel de Indicadores</a>
+        <a href="index-v3.html#faq">Dúvidas</a>
+      </nav>
+      <div class="site-actions">
+        <div class="lang-switch" data-lang-switch>
+          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Selecionar idioma / Select language">
+            <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>
+            <span class="lang-current" data-lang-current>PT</span>
+            <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="menu">
+            <li role="none"><a role="menuitemradio" aria-checked="true" href="#" hreflang="pt-BR" lang="pt-BR" data-lang="PT"><span class="flag flag-brazil" aria-hidden="true"></span>Português</a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="en" lang="en" data-lang="EN"><span class="flag flag-great-britain" aria-hidden="true"></span>English<span class="lang-soon">em breve</span></a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="fr" lang="fr" data-lang="FR"><span class="flag flag-france" aria-hidden="true"></span>Français<span class="lang-soon">em breve</span></a></li>
+            <li role="none"><a role="menuitemradio" aria-checked="false" aria-disabled="true" data-soon href="#" hreflang="es" lang="es" data-lang="ES"><span class="flag flag-spain" aria-hidden="true"></span>Español<span class="lang-soon">em breve</span></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary" href="https://mooc.cefor.ifes.edu.br/moodle/login/">Acessar ambiente</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" onclick="toggleMenu(this)"><span class="menu-bars" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="projeto-hero" id="topo" data-hero data-tema="unac">
+      <span class="projeto-hero-decor" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="projeto-hero-main">
+          <div class="projeto-hero-intro">
+            <nav class="crumbs" aria-label="Você está em">
+              <a href="index-v3.html">Início</a>
+              <span class="crumbs-sep" aria-hidden="true">›</span>
+              <a href="index-v3.html#projetos">Projetos parceiros</a>
+              <span class="crumbs-sep" aria-hidden="true">›</span>
+              <span aria-current="page" data-crumb-atual>Projeto</span>
+            </nav>
+
+            <span class="kicker">Projeto parceiro</span>
+            <h1 data-projeto-nome>Projeto</h1>
+            <span class="projeto-extenso" data-projeto-extenso hidden></span>
+            <p class="projeto-lead" data-projeto-lead></p>
+
+            <p class="projeto-meta" data-projeto-meta></p>
+
+            <p class="projeto-nota" data-projeto-nota hidden></p>
+
+            <div class="projeto-hero-actions">
+              <a class="btn btn-primary" href="#cursos" data-cta-cursos>Ver os cursos do projeto</a>
+            </div>
+          </div>
+
+          <div class="projeto-brand">
+            <span class="projeto-logo"><img src="" alt="" data-projeto-logo></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="cursos">
+      <div class="wrap">
+        <!-- Mesma anatomia do catálogo: barra de filtros, cabeçalho de
+             resultados (contagem + título + ordenação + chips) e grade. A
+             diferença é que aqui a grade mostra tudo de uma vez. -->
+        <div class="projeto-toolbar">
+          <div class="projeto-busca">
+            <label class="sr-only" for="q">Buscar curso dentro do projeto</label>
+            <input id="q" type="search" placeholder="Buscar por nome, tema ou palavra-chave" autocomplete="off">
+          </div>
+
+          <div class="pill-row" id="pills-area" aria-label="Filtrar por área">
+            <span class="pill-label">Área</span>
+          </div>
+
+          <div class="pill-row" id="pills-extra" aria-label="Outros filtros">
+            <span class="pill-label">Acessibilidade</span>
+            <button class="pill" type="button" id="pill-libras" aria-pressed="false">Com Libras <span class="pill-n" id="n-libras">0</span></button>
+          </div>
+        </div>
+
+        <div class="results-head">
+          <p class="results-count" id="resultado-num" aria-live="polite">Carregando cursos</p>
+          <div class="toolbar">
+            <h2 data-lista-titulo>Cursos do projeto</h2>
+            <label class="sorter">Ordenar
+              <select id="ordenar">
+                <option value="catalogo">Ordem do catálogo</option>
+                <option value="az">A–Z</option>
+                <option value="carga-asc">Menor carga horária</option>
+                <option value="carga-desc">Maior carga horária</option>
+              </select>
+            </label>
+          </div>
+          <div class="active-chips" id="chips" aria-label="Filtros ativos"></div>
+        </div>
+
+        <div class="course-grid four" id="cards"></div>
+
+        <p class="empty" id="vazio" hidden>Nenhum curso do projeto corresponde a esses filtros. Tente remover uma seleção ou buscar por outro termo.</p>
+
+        <p class="lista-nota">A vinculação dos cursos a este projeto vem das <em>tags</em> da vitrine atual e está registrada em <code>curadoria.json</code>. <b>Precisa ser confirmada pelo Cefor</b> antes da publicação.</p>
+      </div>
+    </section>
+
+    <section class="colecoes-sec" id="outros">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <h2>Continue explorando</h2>
+            <p>Outro projeto parceiro e o catálogo completo dos cursos abertos.</p>
+          </div>
+        </div>
+        <div class="projetos" id="outros-projetos"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <h3>Cursos Abertos do Ifes</h3>
+        <p>Catálogo público dos cursos abertos do Cefor/Ifes, organizado para busca, descoberta e acesso ao Moodle.</p>
+      </div>
+      <div>
+        <h4>Cursos Abertos</h4>
+        <ul>
+          <li><a href="index-v3.html#validar-certificado">Validar Certificado</a></li>
+          <li><a href="licenca-v3.html">Licença para Capacitação</a></li>
+          <li><a href="index-v3.html#painel-indicadores">Painel de Indicadores</a></li>
+          <li><a href="index-v3.html#termos-de-uso">Termos de Uso</a></li>
+          <li><a href="index-v3.html#suporte">Suporte</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="https://www.ifes.edu.br/">O Ifes</a></li>
+          <li><a href="https://cefor.ifes.edu.br/">O Cefor</a></li>
+          <li><a href="index-v3.html#base-de-conhecimento">Base de Conhecimento</a></li>
+        </ul>
+      </div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="../../../../design-system/marca-ifes/_ifes/png/ifes-horizontal-branco.png" alt="Instituto Federal do Espírito Santo">
+        <span class="footer-tagline">Centro de Referência em Formação e em Educação a Distância</span>
+      </div>
+    </div>
+    <div class="foot-base">
+      <div class="wrap">
+        <span>Ifes - Cefor</span>
+        <span>Página de projeto parceiro</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cursos-dados.js"></script>
+  <script>
+    function toggleMenu(button) {
+      const menu = document.getElementById("menu");
+      const open = menu.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(open));
+    }
+
+    function initLangSwitch() {
+      const root = document.querySelector("[data-lang-switch]");
+      if (!root) return;
+      const btn = root.querySelector(".lang-btn");
+      const current = root.querySelector("[data-lang-current]");
+      const items = Array.from(root.querySelectorAll(".lang-menu a"));
+
+      const open = () => {
+        root.setAttribute("data-open", "");
+        btn.setAttribute("aria-expanded", "true");
+      };
+      const close = () => {
+        root.removeAttribute("data-open");
+        btn.setAttribute("aria-expanded", "false");
+      };
+      const toggle = () => (root.hasAttribute("data-open") ? close() : open());
+
+      btn.addEventListener("click", toggle);
+
+      // Esta página ainda não tem versão traduzida: todos os idiomas alem do
+      // portugues estao marcados com data-soon.
+      items.forEach(item => {
+        item.addEventListener("click", event => {
+          event.preventDefault();
+          if (item.hasAttribute("data-soon")) return;
+          items.forEach(other => other.setAttribute("aria-checked", String(other === item)));
+          current.textContent = item.dataset.lang;
+          document.documentElement.lang = item.getAttribute("hreflang");
+          close();
+          btn.focus();
+        });
+      });
+
+      document.addEventListener("click", event => {
+        if (!root.contains(event.target)) close();
+      });
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && root.hasAttribute("data-open")) {
+          close();
+          btn.focus();
+        }
+      });
+    }
+
+    initLangSwitch();
+
+    /* ─────────────────────────────────────────────────────────────────────────
+       Projetos parceiros
+       Textos: UnAC vem da descrição oficial do programa (ver
+       stages/02-catalogo/output/projetos-especiais.md). Rio Doce Escolar ainda
+       não tem texto oficial — o que está aqui é provisório e sinalizado na
+       propria página como pendente de confirmação do Cefor.
+       ───────────────────────────────────────────────────────────────────────── */
+    const PROJETOS = {
+      "unac": {
+        slug: "unac",
+        tema: "unac",
+        nome: "UnAC",
+        extenso: "Universidade Aberta Capixaba",
+        lead: "Programa do Governo do Estado do Espírito Santo para expandir e democratizar o Ensino Superior gratuito. O Ifes, por meio do Cefor, mantém parceria com o Governo do Estado na oferta de cursos abertos, massivos e on-line de alta qualidade para toda a sociedade.",
+        logo: "../../../../design-system/Logo_UnAC_WhatsApp.png",
+        resumo: "Cursos abertos oferecidos em parceria com o Governo do Estado do Espírito Santo, dentro do programa Universidade Aberta Capixaba."
+      },
+      "rio-doce-escolar": {
+        slug: "rio-doce-escolar",
+        tema: "riodoce",
+        nome: "Rio Doce Escolar",
+        extenso: "",
+        lead: "Educação ambiental a partir da bacia do Rio Doce: água, território, escola e comunidade.",
+        nota: "<b>Texto provisório.</b> A apresentação oficial do projeto e o escopo dos cursos ainda precisam ser confirmados com o Cefor.",
+        logo: "../../../../design-system/logo_riodoceescolar.png",
+        resumo: "Educação ambiental a partir da bacia do Rio Doce: água, território, escola e comunidade."
+      }
+    };
+
+    // Aliases toleradas na URL, para o link não quebrar por causa do formato.
+    const ALIAS_PROJETO = {
+      "riodoce": "rio-doce-escolar",
+      "rio-doce": "rio-doce-escolar",
+      "riodoceescolar": "rio-doce-escolar"
+    };
+
+    const params = new URLSearchParams(location.search);
+    const pedido = (params.get("p") || params.get("projeto") || "").toLowerCase();
+    const slugAtual = PROJETOS[pedido] ? pedido : (ALIAS_PROJETO[pedido] || "unac");
+    const projeto = PROJETOS[slugAtual];
+
+    /* ── Normalização compartilhada com o catálogo ─────────────────────────── */
+
+    const norm = value => String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "");
+
+    const esc = value => String(value || "").replace(/[&<>"']/g, char => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[char]));
+
+    // Mesma taxonomia canônica de cursos-v3.html: a área mostrada aqui precisa
+    // bater com a área mostrada no catálogo.
+    const CANONICAL_CATEGORIES = [
+      { slug: "ambiente-e-saude", nome: "Ambiente e Saúde" },
+      { slug: "artes-e-humanidades", nome: "Artes e Humanidades" },
+      { slug: "ciencias-da-natureza", nome: "Ciências da Natureza" },
+      { slug: "design", nome: "Design" },
+      { slug: "desenvolvimento-pessoal", nome: "Desenvolvimento Pessoal" },
+      { slug: "educacao", nome: "Educação" },
+      { slug: "educacao-a-distancia", nome: "Educação a Distância" },
+      { slug: "engenharia", nome: "Engenharia" },
+      { slug: "financas-e-contabilidade", nome: "Finanças e Contabilidade" },
+      { slug: "gestao", nome: "Gestão" },
+      { slug: "inclusao-e-acessibilidade", nome: "Inclusão e Acessibilidade" },
+      { slug: "linguas", nome: "Línguas" },
+      { slug: "matematica", nome: "Matemática" },
+      { slug: "tecnologias-e-informatica", nome: "Tecnologias e Informática" },
+      { slug: "tecnologias-educacionais", nome: "Tecnologias Educacionais" }
+    ];
+
+    const CATEGORY_ALIASES = {
+      "ciencias-humanas": "artes-e-humanidades",
+      "ciencias-sociais-aplicadas": "gestao",
+      "ciencias-exatas-e-da-terra": "ciencias-da-natureza",
+      "desenvolvimento-educacional-e-social": "educacao",
+      "producao-cultural-e-design": "design"
+    };
+
+    const CATEGORY_NAMES = Object.fromEntries(CANONICAL_CATEGORIES.map(item => [item.slug, item.nome]));
+
+    function canonicalizeCourse(course) {
+      const search = norm(course.search + " " + course.titulo);
+      let cats = (course.categoria || []).map(slug => CATEGORY_ALIASES[slug] || slug);
+
+      if (/(financ|contabil|orcamento|orçament|tesour|custos)/.test(search)) {
+        cats.push("financas-e-contabilidade");
+      }
+
+      cats = [...new Set(cats.filter(slug => CATEGORY_NAMES[slug]))];
+      if (!cats.length) cats = ["educacao"];
+
+      const horas = parseInt(String(course.cargaLabel || "").replace(/\D/g, ""), 10);
+
+      return {
+        ...course,
+        categoriaCanonica: cats,
+        categoriaCanonicaNomes: cats.map(slug => CATEGORY_NAMES[slug]),
+        horas: Number.isFinite(horas) ? horas : null
+      };
+    }
+
+    const todos = (window.CURSOS_MOOC || []).map(canonicalizeCourse);
+    const cursos = todos.filter(course => (course.projeto || []).includes(projeto.slug));
+
+    /* ── Cabeçalho do projeto ──────────────────────────────────────────────── */
+
+    const el = selector => document.querySelector(selector);
+
+    document.title = `${projeto.nome} | Cursos Abertos do Ifes · v3`;
+    document.body.dataset.tema = projeto.tema;
+    el("[data-hero]").dataset.tema = projeto.tema;
+    el("[data-crumb-atual]").textContent = projeto.nome;
+    el("[data-projeto-nome]").textContent = projeto.nome;
+    el("[data-projeto-lead]").textContent = projeto.lead;
+
+    const extenso = el("[data-projeto-extenso]");
+    if (projeto.extenso) {
+      extenso.textContent = projeto.extenso;
+      extenso.hidden = false;
+    }
+
+    const nota = el("[data-projeto-nota]");
+    if (projeto.nota) {
+      nota.innerHTML = projeto.nota;
+      nota.hidden = false;
+    }
+
+    const logo = el("[data-projeto-logo]");
+    logo.src = projeto.logo;
+    logo.alt = `Marca ${projeto.nome}`;
+
+    el("[data-cta-cursos]").textContent = `Ver os ${cursos.length} cursos`;
+
+    /* ── Linha de metadados do projeto ─────────────────────────────────────── */
+
+    const comCarga = cursos.filter(course => course.horas !== null);
+    const cargaTotal = comCarga.reduce((soma, course) => soma + course.horas, 0);
+    const areas = [...new Set(cursos.flatMap(course => course.categoriaCanonica))];
+    const comLibras = cursos.filter(course => course.libras);
+
+    // Cada item só entra se o dado sustentar. O Rio Doce Escolar tem uma área e
+    // nenhum curso em Libras; a UnAC tem 1 curso sem carga informada.
+    const meta = [`${cursos.length} cursos`];
+    if (cargaTotal) {
+      meta.push(comCarga.length < cursos.length
+        ? `${cargaTotal.toLocaleString("pt-BR")} horas (${cursos.length - comCarga.length} curso sem carga informada)`
+        : `${cargaTotal.toLocaleString("pt-BR")} horas`);
+    }
+    meta.push(areas.length === 1 ? "1 área temática" : `${areas.length} áreas temáticas`);
+    if (comLibras.length) meta.push(`${comLibras.length} com Libras`);
+    el("[data-projeto-meta]").textContent = meta.join(" · ");
+
+    /* ── Filtros ───────────────────────────────────────────────────────────── */
+
+    const byId = {
+      q: document.getElementById("q"),
+      sort: document.getElementById("ordenar"),
+      cards: document.getElementById("cards"),
+      vazio: document.getElementById("vazio"),
+      result: document.getElementById("resultado-num"),
+      chips: document.getElementById("chips"),
+      pillsArea: document.getElementById("pills-area"),
+      pillLibras: document.getElementById("pill-libras")
+    };
+
+    document.getElementById("n-libras").textContent = String(comLibras.length);
+
+    const areasOrdenadas = areas
+      .map(slug => ({
+        slug,
+        nome: CATEGORY_NAMES[slug],
+        total: cursos.filter(course => course.categoriaCanonica.includes(slug)).length
+      }))
+      .sort((a, b) => b.total - a.total || a.nome.localeCompare(b.nome, "pt-BR"));
+
+    byId.pillsArea.insertAdjacentHTML("beforeend", areasOrdenadas.map(area => `
+      <button class="pill" type="button" aria-pressed="false" data-area="${esc(area.slug)}">
+        ${esc(area.nome)} <span class="pill-n">${area.total}</span>
+      </button>`).join(""));
+
+    // Filtro que não filtra nada é ruído. O Rio Doce Escolar tem uma área só e
+    // nenhum curso em Libras: nos dois casos a linha de pills some.
+    const temFiltroArea = areasOrdenadas.length > 1;
+    if (!temFiltroArea) byId.pillsArea.hidden = true;
+    if (!comLibras.length) document.getElementById("pills-extra").hidden = true;
+
+    el("[data-lista-titulo]").textContent = `Todos os cursos do ${projeto.nome}`;
+
+    function areasAtivas() {
+      return Array.from(byId.pillsArea.querySelectorAll('[aria-pressed="true"]')).map(pill => pill.dataset.area);
+    }
+
+    function librasAtivo() {
+      return byId.pillLibras.getAttribute("aria-pressed") === "true";
+    }
+
+    /* ── Cards (mesma marcação do catálogo) ────────────────────────────────── */
+
+    const LANGUAGE_BADGES = {
+      en: { flagClass: "flag-great-britain", title: "Curso também disponível em inglês" },
+      es: { flagClass: "flag-spain", title: "Curso também disponível em espanhol" }
+    };
+
+    function footerBadgesHtml(course) {
+      const badges = [];
+      if (course.serieNomes?.length) {
+        badges.push(`<span class="course-badge badge-series" title="Série ${esc(course.serieNomes[0])}" aria-label="Série ${esc(course.serieNomes[0])}">Série</span>`);
+      }
+      (course.idiomas || []).forEach(language => {
+        const badge = LANGUAGE_BADGES[language];
+        if (badge) {
+          badges.push(`<span class="course-badge badge-language" title="${badge.title}" aria-label="${badge.title}"><span class="flag ${badge.flagClass}" aria-hidden="true"></span></span>`);
+        }
+      });
+      return badges.length ? `<span class="course-badges">${badges.join("")}</span>` : "";
+    }
+
+    function cardHtml(course) {
+      const meta = [course.cargaLabel, course.nivelLabel].filter(Boolean);
+      const ribbon = course.libras
+        ? `<img class="img-libras course-libras-ribbon" src="assets/ribbon_mooc_libras.png" alt="Curso disponível em Libras" loading="lazy">`
+        : "";
+      const aviso = course.obsoleto ? `<p class="course-notice">${esc(course.obsoletoNota)}</p>` : "";
+
+      return `<article class="course-card${course.obsoleto ? " is-obsolete" : ""}">
+        <div class="course-media">
+          <img src="${esc(course.thumb)}" alt="Imagem do curso ${esc(course.titulo)}" loading="lazy">
+          ${ribbon}
+        </div>
+        <div class="course-body">
+          <span class="course-cat">${esc(course.categoriaCanonicaNomes.join(" · "))}</span>
+          <h3>${esc(course.titulo)}</h3>
+          <p class="course-meta">${meta.map(item => `<span>${esc(item)}</span>`).join("")}</p>
+          ${aviso}
+          <span class="course-footer"><a class="mini-cta" href="${esc(course.link)}">Acessar curso</a>${footerBadgesHtml(course)}</span>
+        </div>
+      </article>`;
+    }
+
+    function ordenar(lista) {
+      const modo = byId.sort.value;
+      const semCarga = modo === "carga-desc" ? -1 : Number.MAX_SAFE_INTEGER;
+      return [...lista].sort((a, b) => {
+        if (modo === "az") return a.titulo.localeCompare(b.titulo, "pt-BR");
+        if (modo === "carga-asc") return (a.horas ?? semCarga) - (b.horas ?? semCarga);
+        if (modo === "carga-desc") return (b.horas ?? semCarga) - (a.horas ?? semCarga);
+        return a.n - b.n;
+      });
+    }
+
+    // Chips de filtro ativo, como no catálogo: cada um remove o próprio filtro.
+    function renderChips(busca, filtroAreas, filtroLibras) {
+      const chips = [];
+      if (busca) chips.push(`<button class="chip" type="button" data-limpar="q">Busca: ${esc(byId.q.value.trim())}</button>`);
+      filtroAreas.forEach(slug => {
+        chips.push(`<button class="chip" type="button" data-area="${esc(slug)}">${esc(CATEGORY_NAMES[slug])}</button>`);
+      });
+      if (filtroLibras) chips.push(`<button class="chip" type="button" data-limpar="libras">Com Libras</button>`);
+      if (chips.length > 1) chips.push(`<button class="chip chip-clear" type="button" data-limpar="tudo">Limpar filtros</button>`);
+      byId.chips.innerHTML = chips.join("");
+    }
+
+    function aplicar() {
+      const busca = norm(byId.q.value.trim());
+      const filtroAreas = areasAtivas();
+      const filtroLibras = librasAtivo();
+
+      const lista = ordenar(cursos.filter(course => {
+        const texto = norm(`${course.titulo} ${course.search} ${course.categoriaCanonicaNomes.join(" ")}`);
+        const okBusca = !busca || texto.includes(busca);
+        const okArea = !filtroAreas.length || filtroAreas.some(slug => course.categoriaCanonica.includes(slug));
+        const okLibras = !filtroLibras || course.libras;
+        return okBusca && okArea && okLibras;
+      }));
+
+      // Todos os cursos do projeto de uma vez: não há "carregar mais".
+      byId.cards.innerHTML = lista.map(cardHtml).join("");
+      byId.vazio.hidden = lista.length > 0;
+      renderChips(busca, filtroAreas, filtroLibras);
+
+      const filtrando = Boolean(busca || filtroAreas.length || filtroLibras);
+      byId.result.textContent = filtrando
+        ? `Mostrando ${lista.length} de ${cursos.length} cursos do projeto`
+        : (cursos.length === 1 ? "1 curso no projeto" : `Todos os ${cursos.length} cursos do projeto`);
+    }
+
+    function marcarPill(seletor, valor) {
+      byId.pillsArea.querySelectorAll(seletor).forEach(pill => pill.setAttribute("aria-pressed", valor));
+    }
+
+    byId.q.addEventListener("input", aplicar);
+    byId.sort.addEventListener("change", aplicar);
+
+    byId.pillsArea.addEventListener("click", event => {
+      const pill = event.target.closest(".pill");
+      if (!pill) return;
+      pill.setAttribute("aria-pressed", String(pill.getAttribute("aria-pressed") !== "true"));
+      aplicar();
+    });
+
+    byId.pillLibras.addEventListener("click", () => {
+      byId.pillLibras.setAttribute("aria-pressed", String(!librasAtivo()));
+      aplicar();
+    });
+
+    byId.chips.addEventListener("click", event => {
+      const chip = event.target.closest(".chip");
+      if (!chip) return;
+
+      if (chip.dataset.area) {
+        marcarPill(`[data-area="${CSS.escape(chip.dataset.area)}"]`, "false");
+      } else if (chip.dataset.limpar === "q") {
+        byId.q.value = "";
+      } else if (chip.dataset.limpar === "libras") {
+        byId.pillLibras.setAttribute("aria-pressed", "false");
+      } else {
+        byId.q.value = "";
+        marcarPill(".pill", "false");
+        byId.pillLibras.setAttribute("aria-pressed", "false");
+      }
+
+      aplicar();
+    });
+
+    aplicar();
+
+    /* ── Saída: outro projeto + catálogo completo ──────────────────────────── */
+
+    const outro = Object.values(PROJETOS).find(item => item.slug !== projeto.slug);
+    const totalOutro = todos.filter(course => (course.projeto || []).includes(outro.slug)).length;
+
+    document.getElementById("outros-projetos").innerHTML = `
+      <a class="projeto ${outro.tema}" href="projeto-v3.html?p=${encodeURIComponent(outro.slug)}">
+        <span class="projeto-logo"><img src="${esc(outro.logo)}" alt="Marca ${esc(outro.nome)}"></span>
+        <span class="n">Projeto parceiro · ${totalOutro} cursos</span>
+        <h3>${esc(outro.nome)}</h3>
+        <p>${esc(outro.resumo)}</p>
+        <span class="link">Conhecer o projeto →</span>
+      </a>
+      <a class="projeto geral" href="cursos-v3.html">
+        <span class="projeto-logo"><span class="projeto-geral-num">${todos.length}</span></span>
+        <span class="n">Catálogo completo</span>
+        <h3>Todos os cursos abertos</h3>
+        <p>Busca e filtros por área, carga horária, nível, idioma, série e projeto.</p>
+        <span class="link">Ir para o catálogo →</span>
+      </a>`;
+  </script>
+</body>
+</html>

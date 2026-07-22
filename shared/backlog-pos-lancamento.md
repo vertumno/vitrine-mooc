@@ -114,7 +114,8 @@ relacionados a ele também".
 
 **Origem:** Saymon perguntou, Vanessa delimitou (09/07).
 
-Hoje o planejador é **instrucional** por decisão da comissão (ver resumo da reunião, §4). A versão
+Hoje o planejador é **instrucional** por decisão da comissão (ver resumo da reunião, §4) — a versão
+instrucional está prototipada em `stages/03-design-ux/output/canonico/licenca-v3.html`. A versão
 operacional — inscrever nos cursos, emitir as declarações e entregar a documentação comprobatória —
 depende da DGP e do fluxo de bloqueio de curso, e exige autenticação.
 
@@ -126,9 +127,10 @@ meninos têm no momento para lançar a plataforma".
 
 ## 8. Páginas ainda sem protótipo
 
-O `stages/03-design-ux/output/mapa-paginas.md` prevê 10 páginas. Só **Home** e **Catálogo** têm
-protótipo canônico. Faltam: página do curso, área, série, projeto parceiro, `/qualificacao/`,
-certificação, sobre e FAQ. Há versões antigas de algumas em
+O `stages/03-design-ux/output/mapa-paginas.md` prevê 10 páginas. Já têm protótipo canônico:
+**Home**, **Catálogo**, **projeto parceiro** (`projeto-v3.html`) e **`/qualificacao/`**
+(`licenca-v3.html`, o planejador de licença — instrucional, ver §7). Faltam: página do curso, área,
+série, certificação, sobre e FAQ. Há versões antigas de algumas em
 `stages/03-design-ux/output/_arquivo/prototipo-vitrine-mooc/`, úteis como ponto de partida.
 
 ---
